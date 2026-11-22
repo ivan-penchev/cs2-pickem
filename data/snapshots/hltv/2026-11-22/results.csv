@@ -1,0 +1,513 @@
+date,team,opponent,maps_won,maps_lost
+2026-11-19,Ninjas in Pyjamas,BIG,1,2
+2026-11-18,Ninjas in Pyjamas,Luminosity,0,2
+2026-11-17,Ninjas in Pyjamas,UNiTY,2,0
+2026-10-17,Ninjas in Pyjamas,MIBR,2,1
+2026-10-17,Ninjas in Pyjamas,HEROIC,2,1
+2026-10-16,Ninjas in Pyjamas,Liquid,2,1
+2026-10-12,Ninjas in Pyjamas,Inner Circle,2,0
+2026-10-12,Ninjas in Pyjamas,Betclic,2,1
+2026-10-15,Ninjas in Pyjamas,Aurora,0,2
+2026-10-14,Ninjas in Pyjamas,Falcons,0,2
+2026-10-03,Ninjas in Pyjamas,Eternal Fire,2,0
+2026-10-03,Ninjas in Pyjamas,BBL,2,0
+2026-10-03,Ninjas in Pyjamas,SINNERS,2,1
+2026-10-02,Ninjas in Pyjamas,Johnny Speeds,2,0
+2026-10-02,Ninjas in Pyjamas,BBL,16,12
+2026-10-02,Ninjas in Pyjamas,SportsBetExpert,13,1
+2026-11-16,PARIVISION,HEROIC,0,2
+2026-11-15,PARIVISION,100 Thieves,1,2
+2026-11-15,PARIVISION,33,2,1
+2026-11-06,PARIVISION,Natus Vincere,1,2
+2026-11-04,PARIVISION,MOUZ,0,2
+2026-11-03,PARIVISION,Liquid,2,0
+2026-11-02,PARIVISION,G2,2,1
+2026-10-22,PARIVISION,The MongolZ,0,3
+2026-10-21,PARIVISION,BIG,2,0
+2026-10-20,PARIVISION,fnatic,2,1
+2026-10-19,PARIVISION,magic,2,0
+2026-10-15,PARIVISION,BETBOOM,1,2
+2026-10-14,PARIVISION,Legacy,0,2
+2026-10-09,PARIVISION,Vitality,0,2
+2026-10-07,PARIVISION,Natus Vincere,2,1
+2026-10-06,PARIVISION,G2,2,1
+2026-11-17,HEROIC,magic,0,2
+2026-11-16,HEROIC,PARIVISION,2,0
+2026-11-15,HEROIC,FaZe,2,0
+2026-11-15,HEROIC,magic,1,2
+2026-11-04,HEROIC,Falcons,0,2
+2026-11-03,HEROIC,The MongolZ,0,2
+2026-11-02,HEROIC,B8,2,0
+2026-10-21,HEROIC,FaZe,1,2
+2026-10-21,HEROIC,BBL,2,0
+2026-10-21,HEROIC,SINNERS,1,2
+2026-10-20,HEROIC,HYPERSPIRIT,2,0
+2026-10-17,HEROIC,100 Thieves,2,1
+2026-10-17,HEROIC,Ninjas in Pyjamas,1,2
+2026-10-16,HEROIC,fnatic,2,0
+2026-10-15,HEROIC,BC.Game,2,0
+2026-10-15,HEROIC,Envy,2,1
+2026-11-15,FaZe,HEROIC,0,2
+2026-11-15,FaZe,fnatic,1,2
+2026-11-03,FaZe,Falcons,1,2
+2026-11-02,FaZe,FURIA,1,2
+2026-10-29,FaZe,B8,2,0
+2026-10-29,FaZe,GamerLegion,1,2
+2026-10-27,FaZe,K27,2,0
+2026-10-27,FaZe,Alliance,2,0
+2026-10-22,FaZe,BC.Game,0,2
+2026-10-21,FaZe,HEROIC,2,1
+2026-10-21,FaZe,Envy,2,1
+2026-10-21,FaZe,JiJieHao,1,2
+2026-10-20,FaZe,ASTRAL,2,1
+2026-10-10,FaZe,NAVI Junior,2,0
+2026-10-10,FaZe,NAVI Junior,2,1
+2026-10-09,FaZe,PURE,2,0
+2026-11-04,Liquid,BETBOOM,1,2
+2026-11-04,Liquid,TYLOO,2,0
+2026-11-03,Liquid,PARIVISION,0,2
+2026-11-02,Liquid,Aurora,2,0
+2026-10-28,Liquid,FURIA,0,2
+2026-10-27,Liquid,Aurora,1,2
+2026-10-26,Liquid,Legacy,2,0
+2026-10-25,Liquid,FUT,0,2
+2026-10-24,Liquid,MOUZ,2,1
+2026-10-20,Liquid,magic,0,2
+2026-10-19,Liquid,fnatic,0,2
+2026-10-16,Liquid,Ninjas in Pyjamas,1,2
+2026-10-13,Liquid,JiJieHao,2,0
+2026-10-13,Liquid,100 Thieves,1,2
+2026-10-13,Liquid,BBL,2,1
+2026-09-27,Liquid,Wildcard,2,0
+2026-11-16,Eternal Fire,magic,0,2
+2026-11-15,Eternal Fire,33,2,0
+2026-11-15,Eternal Fire,100 Thieves,1,2
+2026-10-30,Eternal Fire,fnatic,3,2
+2026-10-30,Eternal Fire,MIBR,2,0
+2026-10-29,Eternal Fire,Astralis,2,1
+2026-10-29,Eternal Fire,BIG,2,0
+2026-10-28,Eternal Fire,Nemesis,2,1
+2026-10-27,Eternal Fire,MIBR,1,2
+2026-10-23,Eternal Fire,SINNERS,2,1
+2026-10-23,Eternal Fire,JiJieHao,2,1
+2026-10-22,Eternal Fire,SINNERS,1,2
+2026-10-21,Eternal Fire,BC.Game,2,1
+2026-10-21,Eternal Fire,BASEMENT BOYS,2,1
+2026-10-20,Eternal Fire,INFINITE,2,0
+2026-10-17,Eternal Fire,Nuclear TigeRES,0,2
+2026-11-17,100 Thieves,fnatic,2,1
+2026-11-15,100 Thieves,PARIVISION,2,1
+2026-11-15,100 Thieves,Eternal Fire,2,1
+2026-11-01,100 Thieves,Wildcard,2,0
+2026-11-01,100 Thieves,BESTIA,2,0
+2026-10-31,100 Thieves,Isurus,2,0
+2026-10-29,100 Thieves,Bounty Hunters,2,0
+2026-10-29,100 Thieves,Arena Pro,2,0
+2026-10-17,100 Thieves,HEROIC,1,2
+2026-10-17,100 Thieves,MIBR,0,2
+2026-10-16,100 Thieves,Sangal,2,0
+2026-10-13,100 Thieves,Liquid,2,1
+2026-10-13,100 Thieves,JiJieHao,2,0
+2026-10-03,100 Thieves,JiJieHao,1,2
+2026-10-02,100 Thieves,Voca,2,0
+2026-10-02,100 Thieves,SINNERS,5,13
+2026-11-03,9z,TYLOO,0,2
+2026-11-02,9z,BETBOOM,1,2
+2026-10-26,9z,TYLOO,1,2
+2026-10-25,9z,MOUZ,0,2
+2026-10-24,9z,Vitality,0,2
+2026-10-16,9z,Aurora,0,2
+2026-10-15,9z,Falcons,1,2
+2026-10-14,9z,Aurora,2,0
+2026-10-07,9z,FURIA,0,2
+2026-10-06,9z,BETBOOM,2,0
+2026-10-05,9z,Natus Vincere,0,2
+2026-10-04,9z,TYLOO,2,0
+2026-10-03,9z,Aurora,0,2
+2026-09-10,9z,G2,1,2
+2026-09-09,9z,MIBR,0,2
+2026-09-08,9z,5star,2,0
+2026-10-07,M80,Spirit,0,2
+2026-10-06,M80,Legacy,2,1
+2026-10-05,M80,TYLOO,2,1
+2026-10-04,M80,BETBOOM,0,2
+2026-10-03,M80,MOUZ,0,2
+2026-09-27,M80,DENDELE,2,1
+2026-09-26,M80,Liquid,0,2
+2026-09-26,M80,Voca,2,0
+2026-09-26,M80,DENDELE,0,2
+2026-09-25,M80,BESTIA,2,0
+2026-09-19,M80,3DMAX,1,2
+2026-09-17,M80,B8,9,13
+2026-09-17,M80,Luminosity,4,13
+2026-09-17,M80,Metizport,13,9
+2026-09-17,M80,GamerLegion,13,9
+2026-09-17,M80,Ninjas in Pyjamas,16,14
+2026-11-01,DENDELE,Imperial,3,0
+2026-10-31,DENDELE,NAOCOPULAS,2,0
+2026-10-30,DENDELE,Turma do Pagode,2,0
+2026-10-29,DENDELE,Low Cortisol,2,0
+2026-10-27,DENDELE,Nemiga,0,2
+2026-10-26,DENDELE,G2,2,1
+2026-10-25,DENDELE,Legacy,0,2
+2026-10-24,DENDELE,FURIA,0,2
+2026-10-11,DENDELE,Wildcard,2,3
+2026-10-11,DENDELE,Imperial,2,0
+2026-10-10,DENDELE,Wildcard,0,2
+2026-10-10,DENDELE,Imperial,13,7
+2026-10-10,DENDELE,Marsborne,13,2
+2026-09-27,DENDELE,M80,1,2
+2026-09-26,DENDELE,Wildcard,1,2
+2026-09-26,DENDELE,M80,2,0
+2026-11-01,Imperial,DENDELE,0,3
+2026-10-31,Imperial,Low Cortisol,2,1
+2026-10-30,Imperial,paiN,2,0
+2026-10-29,Imperial,QUINTESSÊNCIA,2,0
+2026-10-25,Imperial,paiN,2,0
+2026-10-24,Imperial,BESTIA,2,0
+2026-10-23,Imperial,paiN,2,1
+2026-10-22,Imperial,ShindeN,2,0
+2026-10-22,Imperial,BESTIA,0,2
+2026-10-22,Imperial,Turma do Pagode,2,0
+2026-10-11,Imperial,DENDELE,0,2
+2026-10-11,Imperial,NRG,2,1
+2026-10-10,Imperial,Without a Roof,2,0
+2026-10-10,Imperial,DENDELE,7,13
+2026-10-10,Imperial,SportsBetExpert,16,14
+2026-09-27,Imperial,paiN,3,0
+2026-11-01,Wildcard,100 Thieves,0,2
+2026-11-01,Wildcard,BARCA,2,0
+2026-10-31,Wildcard,NRG,2,1
+2026-10-31,Wildcard,Hacha,2,0
+2026-10-30,Wildcard,BESTIA,1,2
+2026-10-30,Wildcard,Hacha,2,0
+2026-10-11,Wildcard,DENDELE,3,2
+2026-10-10,Wildcard,DENDELE,2,0
+2026-10-10,Wildcard,NRG,16,12
+2026-10-10,Wildcard,Last Dance US,13,5
+2026-10-03,Wildcard,INFINITE,0,2
+2026-10-03,Wildcard,EAC,2,1
+2026-10-02,Wildcard,NT,1,2
+2026-09-27,Wildcard,Liquid,0,2
+2026-09-26,Wildcard,DENDELE,2,1
+2026-09-26,Wildcard,NRG,2,0
+2026-10-30,GOSH,OG,0,2
+2026-10-30,GOSH,Metizport,1,2
+2026-10-30,GOSH,OG,13,6
+2026-10-22,GOSH,JiJieHao,0,2
+2026-10-22,GOSH,FaZe,2,0
+2026-10-21,GOSH,Eternal Fire,1,2
+2026-10-21,GOSH,Nexus,2,1
+2026-10-20,GOSH,BBL,2,0
+2026-10-19,GOSH,WBT,13,10
+2026-10-19,GOSH,Drama,13,8
+2026-10-15,GOSH,MIBR,1,2
+2026-10-15,GOSH,HEROIC,0,2
+2026-10-15,GOSH,MIBR,2,1
+2026-10-03,GOSH,BBL,1,2
+2026-10-02,GOSH,Sashi,13,11
+2026-10-02,GOSH,BASEMENT BOYS,13,2
+2026-11-01,FlyQuest,Alter Ego,3,0
+2026-10-30,FlyQuest,Alter Ego,2,0
+2026-10-30,FlyQuest,NEXVOID,2,0
+2026-10-27,FlyQuest,Rooster,2,1
+2026-10-27,FlyQuest,Staqued,2,0
+2026-10-18,FlyQuest,NEXVOID,1,2
+2026-10-17,FlyQuest,NEXVOID,2,1
+2026-10-17,FlyQuest,Rooster,2,0
+2026-10-16,FlyQuest,Abyssal,2,0
+2026-10-16,FlyQuest,Off Chops,2,0
+2026-10-11,FlyQuest,Abyssal,2,0
+2026-10-11,FlyQuest,Ground Zero,2,0
+2026-10-10,FlyQuest,KZG,13,7
+2026-10-10,FlyQuest,Abyssal,2,0
+2026-10-10,FlyQuest,madlikewizards,13,8
+2026-09-29,FlyQuest,THUNDER dOWNUNDER,2,0
+2026-10-29,Chinggis Warriors,The Audacity,2,1
+2026-10-29,Chinggis Warriors,5star,2,1
+2026-10-28,Chinggis Warriors,The Audacity,1,2
+2026-10-27,Chinggis Warriors,the ONE,2,0
+2026-10-24,Chinggis Warriors,Lynn Vision,0,3
+2026-10-24,Chinggis Warriors,Rare Atom,2,0
+2026-10-23,Chinggis Warriors,Lynn Vision,1,2
+2026-10-21,Chinggis Warriors,NEXVOID,2,1
+2026-10-20,Chinggis Warriors,WXM,2,1
+2026-10-12,Chinggis Warriors,Alter Ego,0,2
+2026-10-11,Chinggis Warriors,Kaleido,2,1
+2026-10-10,Chinggis Warriors,THE UNIT,2,1
+2026-10-09,Chinggis Warriors,BORING PLAYERS,2,0
+2026-10-11,Chinggis Warriors,5star,2,1
+2026-10-11,Chinggis Warriors,NEXVOID,2,1
+2026-10-10,Chinggis Warriors,The Huns,2,0
+2026-10-24,Lynn Vision,Chinggis Warriors,3,0
+2026-10-23,Lynn Vision,Chinggis Warriors,2,1
+2026-10-21,Lynn Vision,Rare Atom,2,1
+2026-10-20,Lynn Vision,Morningstar,2,0
+2026-10-14,Lynn Vision,Alter Ego,2,1
+2026-10-12,Lynn Vision,Just Swing,2,0
+2026-10-08,Lynn Vision,Chinggis Warriors,2,1
+2026-09-29,Lynn Vision,NEXVOID,1,2
+2026-09-27,Lynn Vision,NEXVOID,2,0
+2026-09-25,Lynn Vision,The Huns,2,0
+2026-09-23,Lynn Vision,Vitalem Aerem,2,0
+2026-09-22,Lynn Vision,UR,1,0
+2026-09-03,Lynn Vision,DEPO,1,2
+2026-09-02,Lynn Vision,NEXVOID,2,0
+2026-09-02,Lynn Vision,Rare Atom,0,2
+2026-08-29,Lynn Vision,FUT,1,2
+2026-11-12,FUT,MOUZ,1,2
+2026-11-11,FUT,Spirit,1,2
+2026-10-29,FUT,Nemiga,0,2
+2026-10-26,FUT,Vitality,2,1
+2026-10-25,FUT,Liquid,2,0
+2026-10-24,FUT,TYLOO,2,0
+2026-08-31,FUT,Vitality,0,2
+2026-08-30,FUT,Inner Circle,2,0
+2026-08-29,FUT,Lynn Vision,2,1
+2026-08-27,FUT,Legacy,0,2
+2026-08-23,FUT,Spirit,1,3
+2026-08-22,FUT,FURIA,2,1
+2026-08-21,FUT,MOUZ,2,0
+2026-08-19,FUT,magic,2,1
+2026-08-14,FUT,MOUZ,2,1
+2026-08-12,FUT,TYLOO,13,10
+2026-10-31,Nemiga,FURIA,2,3
+2026-10-30,Nemiga,Vitality,2,0
+2026-10-29,Nemiga,FUT,2,0
+2026-10-28,Nemiga,The MongolZ,2,0
+2026-10-27,Nemiga,DENDELE,2,0
+2026-10-26,Nemiga,Aurora,0,2
+2026-10-25,Nemiga,BETBOOM,0,2
+2026-10-24,Nemiga,Legacy,2,0
+2026-10-10,Nemiga,Iberian Soul,1,2
+2026-10-09,Nemiga,Gothic,1,0
+2026-10-08,Nemiga,Lavked,2,0
+2026-10-04,Nemiga,Astralis,1,3
+2026-10-03,Nemiga,Luminosity,2,0
+2026-10-02,Nemiga,Alliance,2,0
+2026-10-01,Nemiga,FaZe,2,0
+2026-09-28,Nemiga,BET-M,2,0
+2026-11-13,G2,Falcons,1,2
+2026-11-12,G2,Spirit,1,2
+2026-11-11,G2,MOUZ,2,1
+2026-11-03,G2,Aurora,1,2
+2026-11-02,G2,PARIVISION,1,2
+2026-10-26,G2,DENDELE,1,2
+2026-10-25,G2,Aurora,0,2
+2026-10-24,G2,Natus Vincere,0,2
+2026-10-06,G2,PARIVISION,1,2
+2026-10-05,G2,ShindeN,2,0
+2026-10-04,G2,1win,1,2
+2026-10-03,G2,Natus Vincere,0,2
+2026-09-13,G2,Legacy,0,3
+2026-09-12,G2,BETBOOM,2,1
+2026-09-11,G2,FURIA,2,0
+2026-09-10,G2,5star,2,0
+2026-11-01,1win,HOTU,2,0
+2026-10-31,1win,5star,2,0
+2026-10-09,1win,Aurora,0,2
+2026-10-06,1win,Spirit,2,0
+2026-10-05,1win,Legacy,2,0
+2026-10-04,1win,G2,2,1
+2026-10-03,1win,Vitality,0,2
+2026-09-12,1win,HEROIC,1,2
+2026-09-11,1win,Ninjas in Pyjamas,2,1
+2026-09-10,1win,FOKUS,0,2
+2026-09-09,1win,INFINITE,2,1
+2026-09-12,1win,B8,0,2
+2026-09-11,1win,Nemiga,0,2
+2026-09-10,1win,B8,2,0
+2026-09-09,1win,Nuclear TigeRES,2,0
+2026-09-06,1win,HEROIC,2,1
+2026-11-08,Natus Vincere,BETBOOM,2,0
+2026-11-07,Natus Vincere,The MongolZ,0,2
+2026-11-06,Natus Vincere,PARIVISION,2,1
+2026-11-04,Natus Vincere,Falcons,2,1
+2026-11-04,Natus Vincere,B8,2,0
+2026-11-03,Natus Vincere,FURIA,1,2
+2026-11-02,Natus Vincere,Falcons,2,0
+2026-10-30,Natus Vincere,Toobisie,2,0
+2026-10-29,Natus Vincere,Vitality,1,2
+2026-10-28,Natus Vincere,Spirit,2,1
+2026-10-27,Natus Vincere,Vitality,0,2
+2026-10-26,Natus Vincere,BETBOOM,0,2
+2026-10-25,Natus Vincere,FURIA,2,0
+2026-10-24,Natus Vincere,G2,2,0
+2026-10-07,Natus Vincere,PARIVISION,1,2
+2026-10-06,Natus Vincere,Falcons,1,2
+2026-10-29,Astralis,Eternal Fire,1,2
+2026-10-29,Astralis,Inner Circle,2,1
+2026-10-28,Astralis,magic,2,1
+2026-10-27,Astralis,fnatic,0,2
+2026-10-16,Astralis,MIBR,1,2
+2026-10-14,Astralis,HOTU,2,1
+2026-10-14,Astralis,Sashi,2,0
+2026-10-04,Astralis,Nemiga,3,1
+2026-10-04,Astralis,Luminosity,2,1
+2026-10-03,Astralis,fnatic,2,0
+2026-10-03,Astralis,BIG,2,1
+2026-10-02,Astralis,FaZe,2,1
+2026-10-01,Astralis,Alliance,1,2
+2026-09-26,Astralis,100 Thieves,1,2
+2026-09-25,Astralis,Betclic,2,1
+2026-09-21,Astralis,FOKUS,2,0
+2026-11-08,The MongolZ,MOUZ,0,3
+2026-11-07,The MongolZ,Natus Vincere,2,0
+2026-11-04,The MongolZ,FURIA,2,1
+2026-11-03,The MongolZ,HEROIC,2,0
+2026-11-02,The MongolZ,Legacy,2,1
+2026-10-28,The MongolZ,Nemiga,0,2
+2026-10-27,The MongolZ,Legacy,2,0
+2026-10-26,The MongolZ,MOUZ,0,2
+2026-10-25,The MongolZ,Vitality,0,2
+2026-10-24,The MongolZ,Aurora,2,1
+2026-10-22,The MongolZ,PARIVISION,3,0
+2026-10-22,The MongolZ,BIG,2,1
+2026-10-21,The MongolZ,PRIVATE,2,0
+2026-10-21,The MongolZ,magic,2,0
+2026-10-20,The MongolZ,BIG,0,2
+2026-10-19,The MongolZ,Alliance,2,0
+2026-10-30,MIBR,Eternal Fire,0,2
+2026-10-29,MIBR,fnatic,0,2
+2026-10-28,MIBR,Inner Circle,2,0
+2026-10-27,MIBR,Eternal Fire,2,1
+2026-10-17,MIBR,Ninjas in Pyjamas,1,2
+2026-10-17,MIBR,100 Thieves,2,0
+2026-10-16,MIBR,Astralis,2,1
+2026-10-15,MIBR,BC.Game,2,1
+2026-10-15,MIBR,Envy,2,0
+2026-10-15,MIBR,BC.Game,1,2
+2026-09-19,MIBR,FURIA,0,2
+2026-09-19,MIBR,NRG,2,0
+2026-09-18,MIBR,magic,2,1
+2026-09-17,MIBR,FURIA,1,2
+2026-09-12,MIBR,Legacy,1,2
+2026-09-11,MIBR,Alliance,2,0
+2026-11-14,MOUZ,Spirit,0,2
+2026-11-13,MOUZ,Vitality,2,0
+2026-11-12,MOUZ,FUT,2,1
+2026-11-11,MOUZ,G2,1,2
+2026-11-08,MOUZ,The MongolZ,3,0
+2026-11-07,MOUZ,BETBOOM,2,0
+2026-11-04,MOUZ,PARIVISION,2,0
+2026-11-03,MOUZ,BETBOOM,2,0
+2026-11-02,MOUZ,TYLOO,2,0
+2026-10-31,MOUZ,Vitality,2,0
+2026-10-30,MOUZ,FURIA,1,2
+2026-10-29,MOUZ,Aurora,2,0
+2026-10-27,MOUZ,Spirit,2,1
+2026-10-26,MOUZ,The MongolZ,2,0
+2026-10-25,MOUZ,9z,2,0
+2026-10-24,MOUZ,Liquid,1,2
+2026-11-13,Vitality,MOUZ,0,2
+2026-11-12,Vitality,FURIA,1,2
+2026-11-11,Vitality,Falcons,2,0
+2026-10-31,Vitality,MOUZ,0,2
+2026-10-30,Vitality,Nemiga,0,2
+2026-10-29,Vitality,Natus Vincere,2,1
+2026-10-27,Vitality,Natus Vincere,2,0
+2026-10-26,Vitality,FUT,1,2
+2026-10-25,Vitality,The MongolZ,2,0
+2026-10-24,Vitality,9z,2,0
+2026-10-11,Vitality,MOUZ,3,0
+2026-10-10,Vitality,Aurora,2,1
+2026-10-09,Vitality,PARIVISION,2,0
+2026-10-05,Vitality,Falcons,2,1
+2026-10-04,Vitality,Natus Vincere,2,1
+2026-10-03,Vitality,1win,2,0
+2026-11-15,FURIA,Spirit,3,0
+2026-11-14,FURIA,Falcons,2,0
+2026-11-12,FURIA,Vitality,2,1
+2026-11-11,FURIA,Legacy,2,0
+2026-11-06,FURIA,BETBOOM,1,2
+2026-11-04,FURIA,The MongolZ,1,2
+2026-11-03,FURIA,Natus Vincere,2,1
+2026-11-02,FURIA,FaZe,2,1
+2026-10-31,FURIA,Nemiga,3,2
+2026-10-30,FURIA,MOUZ,2,1
+2026-10-29,FURIA,BETBOOM,2,0
+2026-10-28,FURIA,Liquid,2,0
+2026-10-27,FURIA,TYLOO,2,0
+2026-10-26,FURIA,Spirit,1,2
+2026-10-25,FURIA,Natus Vincere,0,2
+2026-10-24,FURIA,DENDELE,2,0
+2026-11-04,Aurora,BETBOOM,0,2
+2026-11-03,Aurora,G2,2,1
+2026-11-02,Aurora,Liquid,0,2
+2026-10-29,Aurora,MOUZ,0,2
+2026-10-27,Aurora,Liquid,2,1
+2026-10-26,Aurora,Nemiga,2,0
+2026-10-25,Aurora,G2,2,0
+2026-10-24,Aurora,The MongolZ,1,2
+2026-10-18,Aurora,Falcons,2,1
+2026-10-17,Aurora,FURIA,0,2
+2026-10-16,Aurora,9z,2,0
+2026-10-15,Aurora,Ninjas in Pyjamas,2,0
+2026-10-14,Aurora,9z,0,2
+2026-10-11,Aurora,Spirit,2,0
+2026-10-10,Aurora,Vitality,1,2
+2026-10-09,Aurora,1win,2,0
+2026-11-15,Spirit,FURIA,0,3
+2026-11-14,Spirit,MOUZ,2,0
+2026-11-12,Spirit,G2,2,1
+2026-11-11,Spirit,FUT,2,1
+2026-10-28,Spirit,Natus Vincere,1,2
+2026-10-27,Spirit,MOUZ,1,2
+2026-10-26,Spirit,FURIA,2,1
+2026-10-25,Spirit,TYLOO,2,0
+2026-10-24,Spirit,BETBOOM,1,2
+2026-10-11,Spirit,Aurora,0,2
+2026-10-10,Spirit,MOUZ,1,2
+2026-10-09,Spirit,Falcons,2,0
+2026-10-07,Spirit,M80,2,0
+2026-10-06,Spirit,1win,0,2
+2026-10-05,Spirit,MOUZ,0,2
+2026-10-04,Spirit,PARIVISION,2,1
+2026-11-08,BETBOOM,Natus Vincere,0,2
+2026-11-07,BETBOOM,MOUZ,0,2
+2026-11-06,BETBOOM,FURIA,2,1
+2026-11-04,BETBOOM,Liquid,2,1
+2026-11-04,BETBOOM,Aurora,2,0
+2026-11-03,BETBOOM,MOUZ,0,2
+2026-11-02,BETBOOM,9z,2,1
+2026-10-29,BETBOOM,FURIA,0,2
+2026-10-26,BETBOOM,Natus Vincere,2,0
+2026-10-25,BETBOOM,Nemiga,2,0
+2026-10-24,BETBOOM,Spirit,2,1
+2026-10-18,BETBOOM,FURIA,2,3
+2026-10-17,BETBOOM,Falcons,2,1
+2026-10-16,BETBOOM,Legacy,2,1
+2026-10-15,BETBOOM,PARIVISION,2,1
+2026-10-14,BETBOOM,FURIA,0,2
+2026-11-14,Falcons,FURIA,0,2
+2026-11-13,Falcons,G2,2,1
+2026-11-12,Falcons,Legacy,2,0
+2026-11-11,Falcons,Vitality,0,2
+2026-11-04,Falcons,Natus Vincere,1,2
+2026-11-04,Falcons,HEROIC,2,0
+2026-11-03,Falcons,FaZe,2,1
+2026-11-02,Falcons,Natus Vincere,0,2
+2026-10-18,Falcons,Aurora,1,2
+2026-10-17,Falcons,BETBOOM,1,2
+2026-10-15,Falcons,9z,2,1
+2026-10-14,Falcons,Ninjas in Pyjamas,2,0
+2026-10-09,Falcons,Spirit,0,2
+2026-10-06,Falcons,Natus Vincere,2,1
+2026-10-05,Falcons,Vitality,1,2
+2026-10-04,Falcons,Aurora,2,0
+2026-11-12,Legacy,Falcons,0,2
+2026-11-11,Legacy,FURIA,0,2
+2026-11-03,Legacy,B8,1,2
+2026-11-02,Legacy,The MongolZ,1,2
+2026-10-27,Legacy,The MongolZ,0,2
+2026-10-26,Legacy,Liquid,0,2
+2026-10-25,Legacy,DENDELE,2,0
+2026-10-24,Legacy,Nemiga,0,2
+2026-10-16,Legacy,BETBOOM,1,2
+2026-10-15,Legacy,FURIA,1,2
+2026-10-14,Legacy,PARIVISION,2,0
+2026-10-06,Legacy,M80,1,2
+2026-10-05,Legacy,1win,0,2
+2026-10-04,Legacy,ShindeN,2,0
+2026-10-03,Legacy,PARIVISION,1,2
+2026-09-13,Legacy,G2,3,0

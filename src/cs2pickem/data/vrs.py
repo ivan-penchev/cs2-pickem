@@ -42,8 +42,13 @@ class VrsFile:
 
 def latest_standings(year: str, refresh: bool = False) -> VrsFile:
     """Find the newest ``standings_global_<date>.md`` in ``live/<year>`` via the GitHub contents API."""
-    txt = get_text(f"{API}/live/{year}", ttl_hours=6, refresh=refresh, namespace="vrs",
-                   headers={"Accept": "application/vnd.github+json"})
+    txt = get_text(
+        f"{API}/live/{year}",
+        ttl_hours=6,
+        refresh=refresh,
+        namespace="vrs",
+        headers={"Accept": "application/vnd.github+json"},
+    )
     import json
 
     names = [e["name"] for e in json.loads(txt) if e["name"].startswith("standings_global_")]
@@ -58,13 +63,15 @@ def parse_standings(md: str) -> pd.DataFrame:
     for line in md.splitlines():
         m = _ROW.match(line)
         if m:
-            rows.append({
-                "rank": int(m.group(1)),
-                "points": int(m.group(2)),
-                "team": m.group(3).strip(),
-                "roster": ", ".join(p.strip() for p in m.group(4).split(",")),
-                "details": m.group(5).strip(),
-            })
+            rows.append(
+                {
+                    "rank": int(m.group(1)),
+                    "points": int(m.group(2)),
+                    "team": m.group(3).strip(),
+                    "roster": ", ".join(p.strip() for p in m.group(4).split(",")),
+                    "details": m.group(5).strip(),
+                }
+            )
     return pd.DataFrame(rows)
 
 
@@ -73,21 +80,24 @@ def parse_details(md: str, team: str) -> pd.DataFrame:
     for line in md.splitlines():
         m = _MATCH.match(line)
         if m:
-            rows.append({
-                "team": team,
-                "date": m.group(3),
-                "opponent": m.group(4).strip(),
-                "result": m.group(5),
-                "vrs_match_id": int(m.group(2)),
-                "age_weight": float(m.group(6)),
-                "h2h_adj": float(m.group(7)),
-                "roster": ", ".join(p.strip() for p in m.group(8).split(",")),
-            })
+            rows.append(
+                {
+                    "team": team,
+                    "date": m.group(3),
+                    "opponent": m.group(4).strip(),
+                    "result": m.group(5),
+                    "vrs_match_id": int(m.group(2)),
+                    "age_weight": float(m.group(6)),
+                    "h2h_adj": float(m.group(7)),
+                    "roster": ", ".join(p.strip() for p in m.group(8).split(",")),
+                }
+            )
     return pd.DataFrame(rows)
 
 
-def fetch(year: str, teams: list[str], date: str | None = None, refresh: bool = False
-          ) -> tuple[pd.DataFrame, pd.DataFrame, list[str]]:
+def fetch(
+    year: str, teams: list[str], date: str | None = None, refresh: bool = False
+) -> tuple[pd.DataFrame, pd.DataFrame, list[str]]:
     """Return (standings, matches, urls) for the given VRS team names.
 
     Only the first (highest-ranked) occurrence of a team name is used – academy/duplicate entries are ignored.
@@ -104,7 +114,9 @@ def fetch(year: str, teams: list[str], date: str | None = None, refresh: bool = 
             continue
         url = vf.details_url(row.iloc[0]["details"])
         try:
-            frames.append(parse_details(get_text(url, ttl_hours=24 * 30, refresh=refresh, namespace="vrs"), t))
+            frames.append(
+                parse_details(get_text(url, ttl_hours=24 * 30, refresh=refresh, namespace="vrs"), t)
+            )
             urls.append(url)
         except httpx.HTTPError:
             continue

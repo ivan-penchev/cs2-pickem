@@ -1,0 +1,3 @@
+# Extra series results used for the recent-form Elo (optional). One row per series, from `team`'s perspective.
+# result: W or L. weight: optional multiplier (default 1). Example: 2026-11-20,9z,Lynn Vision,W,1
+date,team,opponent,result,weight

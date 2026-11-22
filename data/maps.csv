@@ -1,0 +1,3 @@
+# Per-map record overrides (optional); replaces the snapshot rows for that (team, map).
+# Example: Lynn Vision,Mirage,12,4
+team,map,wins,losses

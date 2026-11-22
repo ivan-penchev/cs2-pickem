@@ -1,7 +1,7 @@
 {
   "source": "vrs",
   "snapshot_date": "2026-11-02",
-  "fetched_at": "2026-11-22T11:53:02+00:00",
+  "fetched_at": "2026-11-22T11:54:14+00:00",
   "tool_version": "0.1.0",
   "rows": {
     "standings": 347,
@@ -42,5 +42,5 @@
     "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2026/details/2026_11_02/0007--falcons--karrigan-kyousuke-m0nesy-niko-teses.md",
     "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2026/details/2026_11_02/0009--legacy--art-dumau-latto-n1ssim-try.md"
   ],
-  "notes": "Valve Regional Standings (global) + per-team match history of Major teams"
+  "notes": "Valve Regional Standings (global) + per-team series history for event teams"
 }

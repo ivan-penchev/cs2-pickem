@@ -32,8 +32,14 @@ def throttle(host: str, default: float = 0.3) -> None:
     _last_hit[host] = time.monotonic()
 
 
-def get_text(url: str, *, ttl_hours: float = 24.0, refresh: bool = False, namespace: str = "http",
-             headers: dict[str, str] | None = None) -> str:
+def get_text(
+    url: str,
+    *,
+    ttl_hours: float = 24.0,
+    refresh: bool = False,
+    namespace: str = "http",
+    headers: dict[str, str] | None = None,
+) -> str:
     """GET ``url`` returning text, served from cache when fresh (or when offline and a cached copy exists)."""
     path = _cache_path(url, namespace)
     if path.exists() and not refresh and (time.time() - path.stat().st_mtime) < ttl_hours * 3600:

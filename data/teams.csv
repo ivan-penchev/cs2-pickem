@@ -1,0 +1,4 @@
+# Manual strength inputs (optional). Rows here override snapshot values for that team.
+# team must match a team name/alias in configs/<event>/event.yaml. Leave a column blank to keep the snapshot value.
+# Example: GOSH,1450,29
+team,vrs_points,hltv_points

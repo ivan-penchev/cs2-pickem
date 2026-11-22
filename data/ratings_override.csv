@@ -1,0 +1,3 @@
+# Gut-feel rating adjustments in Elo points (applied after the blend). +50 ~ +7pp win prob vs an equal team.
+# Example: 9z,-25,new player (history) replaced meyern on 2026-11-10
+team,delta,note

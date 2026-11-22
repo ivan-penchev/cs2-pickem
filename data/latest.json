@@ -1,4 +1,13 @@
 {
+  "hltv": {
+    "date": "2026-11-22",
+    "path": "snapshots/hltv/2026-11-22",
+    "tables": [
+      "maps",
+      "ranking",
+      "results"
+    ]
+  },
   "vrs": {
     "date": "2026-11-02",
     "path": "snapshots/vrs/2026-11-02",
