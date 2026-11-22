@@ -5,7 +5,7 @@
 | [Valve Regional Standings](https://github.com/ValveSoftware/counter-strike_regional_standings) | VRS points, seeding, match history | `raw.githubusercontent.com` / GitHub API (httpx) | Published by Valve for public use; data © Valve |
 | [HLTV.org](https://www.hltv.org) | World ranking points, recent results, per-map stats | Headless Playwright, one page at a time, ≥4 s apart, cached | © HLTV. Personal and non-commercial research use only; respect their ToS |
 | [Liquipedia](https://liquipedia.net/counterstrike) | Rosters, stage formats, live and historical match results (backtests, `live update` fallback) | MediaWiki API (`action=parse`) with a descriptive User-Agent, ≥2.5 s between requests, cached | CC BY-SA 3.0 – results derived from Liquipedia are attributed here and shared under the same terms |
-| [DFRAG](https://dfrag.net) | Last-resort fallback for live match results | httpx, rate-limited, cached | © DFRAG; facts only (who beat whom) |
+| [DFRAG](https://dfrag.gg) | Last-resort fallback for live match results | httpx, rate-limited, cached | © DFRAG; facts only (who beat whom) |
 | PGL / Valve rulebooks | Swiss and playoff format, Pick'Em scoring | Manual | n/a |
 
 The snapshots in `data/snapshots/` are small derived tables (team-level aggregates), included so the tool works offline and results can be reproduced.

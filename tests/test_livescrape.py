@@ -113,3 +113,24 @@ def test_update_merges_and_is_idempotent(iso_event):
     rep3 = update(iso_event, today=date(2026, 11, 24), scraper=failing)
     assert not rep3.changed and len(load_results(iso_event, s1)) == 1
     assert "all sources failed" in rep3.markdown()
+
+
+def test_scraped_round1_draw_is_pinned(tmp_path):
+    import shutil
+
+    from cs2pickem.config import load_event
+    from cs2pickem.live import draw_from_results, write_stage_round1
+
+    root = tmp_path / "ev"
+    shutil.copytree(Path(__file__).resolve().parents[1] / "configs" / "singapore2026", root)
+    ev = load_event(root)
+    s1 = ev.stage("stage1")
+    teams = s1.teams
+    new = [[teams[i], teams[15 - i]] for i in range(8)]
+    res = [MatchResult(1, a, b, None) for a, b in new]
+    assert draw_from_results(s1, res[:7]) is None
+    assert draw_from_results(s1, res) == new
+    write_stage_round1(ev, s1, new)
+    again = load_event(root).stage("stage1")
+    assert again.round1 == new and again.teams == teams
+    assert (root / "stage1.yaml").read_text().count("round1:") == 1

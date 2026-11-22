@@ -184,6 +184,35 @@ def write_stage_teams(event: Event, stage: StageConfig, teams: list[str]) -> Pat
     return p
 
 
+def draw_from_results(stage: StageConfig, results: list[MatchResult]) -> list[list[str]] | None:
+    """The published Round 1 draw, if the (scraped) round-1 matches pair every stage team exactly once."""
+    pairs = [[r.a, r.b] for r in results if r.round == 1]
+    flat = [t for p in pairs for t in p]
+    if stage.type != "swiss" or not stage.teams or sorted(flat) != sorted(stage.teams):
+        return None
+    return pairs
+
+
+def write_stage_round1(event: Event, stage: StageConfig, pairs: list[list[str]]) -> Path:
+    """Pin the official Round 1 draw into the stage YAML (replacing any previous ``round1`` block)."""
+    p = event.root / f"{stage.id}.yaml"
+    out, skip = [], False
+    for ln in p.read_text().splitlines(keepends=True):
+        if ln.startswith("round1:"):
+            skip = not ln.split("#")[0].strip().endswith("[]")
+            continue
+        if skip and ln.startswith(("  - ", "- ")):
+            continue
+        skip = False
+        out.append(ln)
+    text = "".join(out)
+    if text and not text.endswith("\n"):
+        text += "\n"
+    text += "round1:  # official draw (scraped)\n" + "".join(f"  - [{a}, {b}]\n" for a, b in pairs)
+    p.write_text(text)
+    return p
+
+
 def merge_results(existing: list[MatchResult], new: list[MatchResult]) -> tuple[list[MatchResult], list[str]]:
     """Merge scraped results into recorded ones without ever deleting or overriding a known winner.
 

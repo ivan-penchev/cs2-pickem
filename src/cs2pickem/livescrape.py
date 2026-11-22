@@ -321,7 +321,15 @@ def update(
     """
     from datetime import date
 
-    from .live import load_results, merge_results, resolve_teams, save_results, write_stage_teams
+    from .live import (
+        draw_from_results,
+        load_results,
+        merge_results,
+        resolve_teams,
+        save_results,
+        write_stage_round1,
+        write_stage_teams,
+    )
 
     today = today or date.today()
     cfg = event.config
@@ -365,6 +373,11 @@ def update(
             if changes:
                 save_results(st, merged)
                 up.changes += changes
+            draw = draw_from_results(st, merged)
+            if draw and sorted(map(sorted, draw)) != sorted(map(sorted, st.round1 or [])):
+                write_stage_round1(event, st, draw)
+                st.round1 = draw
+                up.changes.append(f"{sid} Round 1 draw published: " + ", ".join(f"{a}–{b}" for a, b in draw))
         if _stage_finished(event, st):
             up.log.append("stage finished")
             nxt = [
