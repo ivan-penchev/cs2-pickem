@@ -47,7 +47,7 @@ Python ≥ 3.12. With uv instead of pip: `uv venv && uv pip install -e '.[dev]'`
 | `animate -s STAGE [-n SIMS] [--runs 300] [--out site/STAGE.html] [--open]` | Write an animated, self-contained HTML visualisation of the simulation |
 | `backtest prepare / backtest run [--event budapest2025]` | Point-in-time backtest → `data/backtests/<major>/report.json` + `site/backtest.html` |
 | `live update [--force] [--today YYYY-MM-DD]` | Scrape finished matches (HLTV → Liquipedia → DFRAG) into `data/results/`, build the next stage when one finishes |
-| `site build [-n SIMS] [--no-record]` | Re-run every stage, append to the prediction history, rebuild `site/` (index, stage pages, history, backtest) |
+| `site build [-n SIMS] [--no-record] [--note TEXT]` | Re-run every stage, append to the prediction history, rebuild `site/` (index, stage pages, history, backtest) |
 | `next-stage -s stage2 [--write]` | Seed the next stage (invites + qualifiers). `--write` stores the seeding in the YAML |
 
 `--event` selects the config directory under `configs/`. The default is the only (or first) event.
@@ -113,12 +113,31 @@ For every stage it records the Pick'Em picks and how many were right, the per-ma
 a reliability table and P(3-0)/P(adv)/P(0-3) vs reality, and compares the model with VRS-seed-only and coin-flip
 baselines. The results are in `site/backtest.html`.
 
-| event (20k sims) | model Brier | VRS-only Brier | coin flip | model log-loss | match accuracy | Pick'Em coins (model / VRS-only) |
-|---|---|---|---|---|---|---|
-| Budapest 2025 | **0.248** | 0.250 | 0.250 | 0.699 | 61.3% | 2/3 (S1 5, S2 4, S3 5 of 10) / 3/3 |
-| Cologne 2026 | **0.229** | 0.234 | 0.250 | 0.654 | 62.3% | 1/3 (S1 4, S2 5, S3 1 of 10) / 1/3 |
+| event (20k sims) | model (BT) Brier | legacy blend | VRS-only | coin flip | model log-loss | accuracy | coins model / legacy / VRS | Swiss picks right (model / legacy / VRS) |
+|---|---|---|---|---|---|---|---|---|
+| Budapest 2025 | **0.224** | 0.248 | 0.250 | 0.250 | 0.636 | 60.4% | 1 / 2 / 3 of 3 | 13 / 14 / 16 of 30 |
+| Cologne 2026 | **0.216** | 0.229 | 0.234 | 0.250 | 0.621 | 65.1% | 1 / 1 / 1 of 3 | 13 / 10 / 10 of 30 |
 
-The edge over seeding alone is real but small; CS2 Swiss Bo1s are noisy. Treat the picks as an informed baseline.
+The current model (v2) clearly improves the match probabilities: Brier 0.220 against 0.238 for the v1 blend
+across 212 matches, and log-loss 0.629 against 0.676. The v1 blend was overconfident; its predicted P(≥5 correct)
+of about 70% was paid out 3 times in 6. Coin counts don't separate the models. With 6 Swiss stages,
+±1 coin is noise; the totals are 26 / 24 / 26 correct picks of 60. CS2 Swiss Bo1s are noisy, so treat the picks
+as an informed baseline. The v2 P(≥5) figures (≈ 25–50%) are now honest.
+
+### What was tried (model exploration)
+These were scored by leave-one-Major-out on the same 212 matches:
+
+| variant | Brier | note |
+|---|---|---|
+| v1 blend (VRS .40 / HLTV .25 / Elo .35, 200 Elo per sd) | 0.238 | overconfident |
+| v1 blend, spread halved (`temperature: 0.5`) | 0.223 | most of the gain is calibration |
+| VRS only / Elo only / HLTV only | 0.242 / 0.235 / 0.248 | HLTV adds noise |
+| **Bradley-Terry, 120 d half-life, VRS prior 0.5, L2 3, temperature 0.85** | **0.220** | chosen |
+| BT without prior / with full-weight VRS prior | worse | the prior matters, but only at half strength |
+| separate Bo1/Bo3 temperatures | no gain | |
+
+The biggest remaining upside is in data the tool doesn't have yet: betting-market odds, which are the sharpest
+public probability, and enough per-map history to make the veto model matter.
 
 ## Animated visualisation
 
@@ -171,14 +190,28 @@ For example, `configs/singapore2026/stage3.yaml` sets `default_bo: 3`.
 ## Model
 
 ### 1. Team rating (`rating/`)
-Each component is z-scored across the event's teams:
+`rating.method` selects the strength model. The default since v2 is `bt`.
+
+**`bt` – Bradley-Terry with a VRS prior** (`rating/bt.py`)
+* Every series in the last `bt_window_days` (180) is fitted at once, including opponents outside the event:
+  `P(i beats j) = σ(θ_i − θ_j)`. It is a MAP fit by Newton's method.
+* Each series is weighted `0.5^(age / bt_half_life_days)` (120 days) times the roster weight. That weight
+  applies when fewer than `min_roster_overlap` current players played, or the match came before `roster_changed`.
+* Prior: `θ_i ~ N(bt_prior_weight · ln10/400 · (VRS_i − median VRS), 1/bt_l2)`. Teams with little data
+  stay close to their VRS standing.
+* Unlike the sequential Elo, the fit is order-independent and fully propagates strength of schedule.
+
+**`blend` – the v1 z-score blend.** Each component is z-scored across the event's teams:
 * **VRS** points
 * **HLTV** points (log scale)
 * **Form Elo**: an Elo run over the last `elo_window_days` of results, starting from VRS as the prior.
   Matches are exponentially time-weighted (`elo_half_life_days`).
   Matches played with a different roster (fewer than `min_roster_overlap` current players) count at `old_roster_weight`.
 
-The rating is `1500 + rating_scale · Σ w_k z_k / Σ w_k`, plus any manual `delta` from `data/ratings_override.csv`.
+The blend rating is `1500 + rating_scale · Σ w_k z_k / Σ w_k`.
+
+With either method, the spread around 1500 is multiplied by `temperature` (0.85 for BT; 0.5 would suit the blend).
+Then any manual `delta` from `data/ratings_override.csv` is added.
 If a component is missing, its weight is dropped and the remaining weights are renormalised.
 All weights are set under `rating:` in `event.yaml`.
 

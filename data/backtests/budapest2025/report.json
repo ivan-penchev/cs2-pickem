@@ -1,7 +1,7 @@
 {
  "id": "budapest2025",
  "name": "StarLadder Budapest Major 2025",
- "generated": "2026-11-22T13:41:10Z",
+ "generated": "2026-11-22T14:46:36Z",
  "n_sims": 20000,
  "inputs": {
   "vrs": "2025-11-03",
@@ -56,6 +56,506 @@
     "Rare Atom": "0-3"
    },
    "model": {
+    "picks": {
+     "perfect": [
+      {
+       "team": "Legacy",
+       "correct": false,
+       "actual": "2-3"
+      },
+      {
+       "team": "FaZe Clan",
+       "correct": false,
+       "actual": "3-2"
+      }
+     ],
+     "winless": [
+      {
+       "team": "Fluxo",
+       "correct": false,
+       "actual": "2-3"
+      },
+      {
+       "team": "The Huns Esports",
+       "correct": false,
+       "actual": "1-3"
+      }
+     ],
+     "advance": [
+      {
+       "team": "PARIVISION",
+       "correct": true,
+       "actual": "3-2"
+      },
+      {
+       "team": "B8",
+       "correct": true,
+       "actual": "3-1"
+      },
+      {
+       "team": "GamerLegion",
+       "correct": false,
+       "actual": "1-3"
+      },
+      {
+       "team": "Fnatic",
+       "correct": true,
+       "actual": "3-1"
+      },
+      {
+       "team": "Imperial Esports",
+       "correct": true,
+       "actual": "3-2"
+      },
+      {
+       "team": "Lynn Vision Gaming",
+       "correct": false,
+       "actual": "0-3"
+      }
+     ]
+    },
+    "n_correct": 4,
+    "coin": false,
+    "p_coin": 0.39735,
+    "expected_correct": 4.15735,
+    "matches": [
+     {
+      "round": 1,
+      "a": "B8",
+      "b": "M80",
+      "bo": 1,
+      "p_a": 0.6045,
+      "winner": "M80"
+     },
+     {
+      "round": 1,
+      "a": "Imperial Esports",
+      "b": "Rare Atom",
+      "bo": 1,
+      "p_a": 0.6185,
+      "winner": "Imperial Esports"
+     },
+     {
+      "round": 1,
+      "a": "Legacy",
+      "b": "FlyQuest",
+      "bo": 1,
+      "p_a": 0.7071,
+      "winner": "FlyQuest"
+     },
+     {
+      "round": 1,
+      "a": "PARIVISION",
+      "b": "The Huns Esports",
+      "bo": 1,
+      "p_a": 0.705,
+      "winner": "PARIVISION"
+     },
+     {
+      "round": 1,
+      "a": "GamerLegion",
+      "b": "Fluxo",
+      "bo": 1,
+      "p_a": 0.7104,
+      "winner": "Fluxo"
+     },
+     {
+      "round": 1,
+      "a": "Ninjas in Pyjamas",
+      "b": "NRG",
+      "bo": 1,
+      "p_a": 0.5489,
+      "winner": "NRG"
+     },
+     {
+      "round": 1,
+      "a": "FaZe Clan",
+      "b": "Lynn Vision Gaming",
+      "bo": 1,
+      "p_a": 0.669,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 1,
+      "a": "Fnatic",
+      "b": "RED Canids",
+      "bo": 1,
+      "p_a": 0.6586,
+      "winner": "Fnatic"
+     },
+     {
+      "round": 2,
+      "a": "Imperial Esports",
+      "b": "FlyQuest",
+      "bo": 1,
+      "p_a": 0.5254,
+      "winner": "FlyQuest"
+     },
+     {
+      "round": 2,
+      "a": "PARIVISION",
+      "b": "M80",
+      "bo": 1,
+      "p_a": 0.6118,
+      "winner": "M80"
+     },
+     {
+      "round": 2,
+      "a": "Fnatic",
+      "b": "Fluxo",
+      "bo": 1,
+      "p_a": 0.6776,
+      "winner": "Fluxo"
+     },
+     {
+      "round": 2,
+      "a": "FaZe Clan",
+      "b": "NRG",
+      "bo": 1,
+      "p_a": 0.7432,
+      "winner": "NRG"
+     },
+     {
+      "round": 2,
+      "a": "Legacy",
+      "b": "Rare Atom",
+      "bo": 1,
+      "p_a": 0.7795,
+      "winner": "Legacy"
+     },
+     {
+      "round": 2,
+      "a": "B8",
+      "b": "The Huns Esports",
+      "bo": 1,
+      "p_a": 0.6986,
+      "winner": "B8"
+     },
+     {
+      "round": 2,
+      "a": "GamerLegion",
+      "b": "RED Canids",
+      "bo": 1,
+      "p_a": 0.6924,
+      "winner": "RED Canids"
+     },
+     {
+      "round": 2,
+      "a": "Ninjas in Pyjamas",
+      "b": "Lynn Vision Gaming",
+      "bo": 1,
+      "p_a": 0.4594,
+      "winner": "Ninjas in Pyjamas"
+     },
+     {
+      "round": 3,
+      "a": "FlyQuest",
+      "b": "Fluxo",
+      "bo": 3,
+      "p_a": 0.6609,
+      "winner": "FlyQuest"
+     },
+     {
+      "round": 3,
+      "a": "M80",
+      "b": "NRG",
+      "bo": 3,
+      "p_a": 0.6034,
+      "winner": "M80"
+     },
+     {
+      "round": 3,
+      "a": "Legacy",
+      "b": "RED Canids",
+      "bo": 1,
+      "p_a": 0.7753,
+      "winner": "Legacy"
+     },
+     {
+      "round": 3,
+      "a": "B8",
+      "b": "PARIVISION",
+      "bo": 1,
+      "p_a": 0.4924,
+      "winner": "B8"
+     },
+     {
+      "round": 3,
+      "a": "Fnatic",
+      "b": "Imperial Esports",
+      "bo": 1,
+      "p_a": 0.5493,
+      "winner": "Fnatic"
+     },
+     {
+      "round": 3,
+      "a": "FaZe Clan",
+      "b": "Ninjas in Pyjamas",
+      "bo": 1,
+      "p_a": 0.704,
+      "winner": "Ninjas in Pyjamas"
+     },
+     {
+      "round": 3,
+      "a": "GamerLegion",
+      "b": "Rare Atom",
+      "bo": 3,
+      "p_a": 0.7809,
+      "winner": "GamerLegion"
+     },
+     {
+      "round": 3,
+      "a": "Lynn Vision Gaming",
+      "b": "The Huns Esports",
+      "bo": 3,
+      "p_a": 0.6787,
+      "winner": "The Huns Esports"
+     },
+     {
+      "round": 4,
+      "a": "Fluxo",
+      "b": "Ninjas in Pyjamas",
+      "bo": 3,
+      "p_a": 0.3447,
+      "winner": "Ninjas in Pyjamas"
+     },
+     {
+      "round": 4,
+      "a": "B8",
+      "b": "Legacy",
+      "bo": 3,
+      "p_a": 0.3572,
+      "winner": "B8"
+     },
+     {
+      "round": 4,
+      "a": "NRG",
+      "b": "Fnatic",
+      "bo": 3,
+      "p_a": 0.3159,
+      "winner": "Fnatic"
+     },
+     {
+      "round": 4,
+      "a": "RED Canids",
+      "b": "FaZe Clan",
+      "bo": 3,
+      "p_a": 0.1346,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 4,
+      "a": "PARIVISION",
+      "b": "GamerLegion",
+      "bo": 3,
+      "p_a": 0.5252,
+      "winner": "PARIVISION"
+     },
+     {
+      "round": 4,
+      "a": "Imperial Esports",
+      "b": "The Huns Esports",
+      "bo": 3,
+      "p_a": 0.6638,
+      "winner": "Imperial Esports"
+     },
+     {
+      "round": 5,
+      "a": "Fluxo",
+      "b": "FaZe Clan",
+      "bo": 3,
+      "p_a": 0.1192,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 5,
+      "a": "NRG",
+      "b": "Imperial Esports",
+      "bo": 3,
+      "p_a": 0.384,
+      "winner": "Imperial Esports"
+     },
+     {
+      "round": 5,
+      "a": "PARIVISION",
+      "b": "Legacy",
+      "bo": 3,
+      "p_a": 0.3678,
+      "winner": "PARIVISION"
+     }
+    ],
+    "match_scores": {
+     "n": 33,
+     "brier": 0.24364391335252353,
+     "log_loss": 0.6760751993240416,
+     "accuracy": 0.5454545454545454
+    },
+    "teams": [
+     {
+      "team": "Legacy",
+      "seed": 1,
+      "p_30": 0.3798,
+      "p_adv": 0.8902,
+      "p_03": 0.0121,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "FaZe Clan",
+      "seed": 2,
+      "p_30": 0.34005,
+      "p_adv": 0.86875,
+      "p_03": 0.0146,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "B8",
+      "seed": 3,
+      "p_30": 0.2082,
+      "p_adv": 0.73665,
+      "p_03": 0.03555,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "GamerLegion",
+      "seed": 4,
+      "p_30": 0.2193,
+      "p_adv": 0.7304,
+      "p_03": 0.0319,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "Fnatic",
+      "seed": 5,
+      "p_30": 0.15665,
+      "p_adv": 0.64475,
+      "p_03": 0.0472,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "PARIVISION",
+      "seed": 6,
+      "p_30": 0.2177,
+      "p_adv": 0.7542,
+      "p_03": 0.02915,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "Ninjas in Pyjamas",
+      "seed": 7,
+      "p_30": 0.0721,
+      "p_adv": 0.43735,
+      "p_03": 0.1024,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "Imperial Esports",
+      "seed": 8,
+      "p_30": 0.0978,
+      "p_adv": 0.508,
+      "p_03": 0.0773,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "FlyQuest",
+      "seed": 9,
+      "p_30": 0.05005,
+      "p_adv": 0.39525,
+      "p_03": 0.1496,
+      "actual": "3-0",
+      "advanced": true
+     },
+     {
+      "team": "Lynn Vision Gaming",
+      "seed": 10,
+      "p_30": 0.07035,
+      "p_adv": 0.47955,
+      "p_03": 0.1145,
+      "actual": "0-3",
+      "advanced": false
+     },
+     {
+      "team": "M80",
+      "seed": 11,
+      "p_30": 0.0639,
+      "p_adv": 0.4449,
+      "p_03": 0.1189,
+      "actual": "3-0",
+      "advanced": true
+     },
+     {
+      "team": "Fluxo",
+      "seed": 12,
+      "p_30": 0.01805,
+      "p_adv": 0.1876,
+      "p_03": 0.28025,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "RED Canids",
+      "seed": 13,
+      "p_30": 0.0239,
+      "p_adv": 0.2265,
+      "p_03": 0.24115,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "The Huns Esports",
+      "seed": 14,
+      "p_30": 0.02135,
+      "p_adv": 0.20855,
+      "p_03": 0.2737,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "NRG",
+      "seed": 15,
+      "p_30": 0.03655,
+      "p_adv": 0.28905,
+      "p_03": 0.1959,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "Rare Atom",
+      "seed": 16,
+      "p_30": 0.02425,
+      "p_adv": 0.1983,
+      "p_03": 0.2758,
+      "actual": "0-3",
+      "advanced": false
+     }
+    ]
+   },
+   "ratings": {
+    "Legacy": 1889.7,
+    "FaZe Clan": 1884.2,
+    "B8": 1821.9,
+    "GamerLegion": 1815.5,
+    "Fnatic": 1788.6,
+    "PARIVISION": 1827.2,
+    "Ninjas in Pyjamas": 1733.7,
+    "Imperial Esports": 1754.2,
+    "FlyQuest": 1736.6,
+    "Lynn Vision Gaming": 1762.0,
+    "M80": 1748.1,
+    "Fluxo": 1659.6,
+    "RED Canids": 1674.5,
+    "The Huns Esports": 1675.8,
+    "NRG": 1699.6,
+    "Rare Atom": 1670.3
+   },
+   "legacy": {
     "picks": {
      "perfect": [
       {
@@ -536,24 +1036,6 @@
       "advanced": false
      }
     ]
-   },
-   "ratings": {
-    "Legacy": 1641.4,
-    "FaZe Clan": 1597.1,
-    "B8": 1515.0,
-    "GamerLegion": 1516.2,
-    "Fnatic": 1417.9,
-    "PARIVISION": 1397.8,
-    "Ninjas in Pyjamas": 1349.7,
-    "Imperial Esports": 1321.0,
-    "FlyQuest": 1346.1,
-    "Lynn Vision Gaming": 1341.6,
-    "M80": 1324.8,
-    "Fluxo": 1236.3,
-    "RED Canids": 1195.2,
-    "The Huns Esports": 1184.9,
-    "NRG": 1225.5,
-    "Rare Atom": 1174.0
    },
    "vrs_only": {
     "picks": {
@@ -1564,6 +2046,506 @@
     "picks": {
      "perfect": [
       {
+       "team": "Natus Vincere",
+       "correct": true,
+       "actual": "3-0"
+      },
+      {
+       "team": "Aurora Gaming",
+       "correct": false,
+       "actual": "1-3"
+      }
+     ],
+     "winless": [
+      {
+       "team": "Passion UA",
+       "correct": false,
+       "actual": "3-2"
+      },
+      {
+       "team": "FlyQuest",
+       "correct": true,
+       "actual": "0-3"
+      }
+     ],
+     "advance": [
+      {
+       "team": "Team Liquid",
+       "correct": true,
+       "actual": "3-2"
+      },
+      {
+       "team": "3DMAX",
+       "correct": true,
+       "actual": "3-2"
+      },
+      {
+       "team": "FaZe Clan",
+       "correct": false,
+       "actual": "3-0"
+      },
+      {
+       "team": "B8",
+       "correct": true,
+       "actual": "3-1"
+      },
+      {
+       "team": "Astralis",
+       "correct": false,
+       "actual": "2-3"
+      },
+      {
+       "team": "PARIVISION",
+       "correct": true,
+       "actual": "3-1"
+      }
+     ]
+    },
+    "n_correct": 6,
+    "coin": true,
+    "p_coin": 0.3867,
+    "expected_correct": 4.0828,
+    "matches": [
+     {
+      "round": 1,
+      "a": "3DMAX",
+      "b": "Fnatic",
+      "bo": 1,
+      "p_a": 0.611,
+      "winner": "Fnatic"
+     },
+     {
+      "round": 1,
+      "a": "Astralis",
+      "b": "Ninjas in Pyjamas",
+      "bo": 1,
+      "p_a": 0.6095,
+      "winner": "Ninjas in Pyjamas"
+     },
+     {
+      "round": 1,
+      "a": "TYLOO",
+      "b": "PARIVISION",
+      "bo": 1,
+      "p_a": 0.4023,
+      "winner": "TYLOO"
+     },
+     {
+      "round": 1,
+      "a": "Passion UA",
+      "b": "FaZe Clan",
+      "bo": 1,
+      "p_a": 0.3062,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 1,
+      "a": "Aurora Gaming",
+      "b": "M80",
+      "bo": 1,
+      "p_a": 0.7074,
+      "winner": "Aurora Gaming"
+     },
+     {
+      "round": 1,
+      "a": "Natus Vincere",
+      "b": "FlyQuest",
+      "bo": 1,
+      "p_a": 0.7379,
+      "winner": "Natus Vincere"
+     },
+     {
+      "round": 1,
+      "a": "Team Liquid",
+      "b": "B8",
+      "bo": 1,
+      "p_a": 0.5682,
+      "winner": "B8"
+     },
+     {
+      "round": 1,
+      "a": "MIBR",
+      "b": "Imperial Esports",
+      "bo": 1,
+      "p_a": 0.5043,
+      "winner": "Imperial Esports"
+     },
+     {
+      "round": 2,
+      "a": "TYLOO",
+      "b": "Ninjas in Pyjamas",
+      "bo": 1,
+      "p_a": 0.5139,
+      "winner": "Ninjas in Pyjamas"
+     },
+     {
+      "round": 2,
+      "a": "Natus Vincere",
+      "b": "Imperial Esports",
+      "bo": 1,
+      "p_a": 0.7541,
+      "winner": "Natus Vincere"
+     },
+     {
+      "round": 2,
+      "a": "Aurora Gaming",
+      "b": "FaZe Clan",
+      "bo": 1,
+      "p_a": 0.5929,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 2,
+      "a": "B8",
+      "b": "Fnatic",
+      "bo": 1,
+      "p_a": 0.5596,
+      "winner": "B8"
+     },
+     {
+      "round": 2,
+      "a": "3DMAX",
+      "b": "FlyQuest",
+      "bo": 1,
+      "p_a": 0.6384,
+      "winner": "3DMAX"
+     },
+     {
+      "round": 2,
+      "a": "Astralis",
+      "b": "M80",
+      "bo": 1,
+      "p_a": 0.5734,
+      "winner": "M80"
+     },
+     {
+      "round": 2,
+      "a": "MIBR",
+      "b": "Passion UA",
+      "bo": 1,
+      "p_a": 0.5482,
+      "winner": "Passion UA"
+     },
+     {
+      "round": 2,
+      "a": "Team Liquid",
+      "b": "PARIVISION",
+      "bo": 1,
+      "p_a": 0.5695,
+      "winner": "PARIVISION"
+     },
+     {
+      "round": 3,
+      "a": "FaZe Clan",
+      "b": "Ninjas in Pyjamas",
+      "bo": 3,
+      "p_a": 0.7298,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 3,
+      "a": "Natus Vincere",
+      "b": "B8",
+      "bo": 3,
+      "p_a": 0.7364,
+      "winner": "Natus Vincere"
+     },
+     {
+      "round": 3,
+      "a": "TYLOO",
+      "b": "M80",
+      "bo": 1,
+      "p_a": 0.4766,
+      "winner": "M80"
+     },
+     {
+      "round": 3,
+      "a": "Passion UA",
+      "b": "3DMAX",
+      "bo": 1,
+      "p_a": 0.3036,
+      "winner": "3DMAX"
+     },
+     {
+      "round": 3,
+      "a": "Aurora Gaming",
+      "b": "PARIVISION",
+      "bo": 1,
+      "p_a": 0.6412,
+      "winner": "PARIVISION"
+     },
+     {
+      "round": 3,
+      "a": "Fnatic",
+      "b": "Imperial Esports",
+      "bo": 1,
+      "p_a": 0.5505,
+      "winner": "Imperial Esports"
+     },
+     {
+      "round": 3,
+      "a": "Astralis",
+      "b": "FlyQuest",
+      "bo": 3,
+      "p_a": 0.6269,
+      "winner": "Astralis"
+     },
+     {
+      "round": 3,
+      "a": "Team Liquid",
+      "b": "MIBR",
+      "bo": 3,
+      "p_a": 0.7426,
+      "winner": "Team Liquid"
+     },
+     {
+      "round": 4,
+      "a": "Ninjas in Pyjamas",
+      "b": "PARIVISION",
+      "bo": 3,
+      "p_a": 0.3362,
+      "winner": "PARIVISION"
+     },
+     {
+      "round": 4,
+      "a": "Imperial Esports",
+      "b": "M80",
+      "bo": 3,
+      "p_a": 0.4496,
+      "winner": "Imperial Esports"
+     },
+     {
+      "round": 4,
+      "a": "B8",
+      "b": "3DMAX",
+      "bo": 3,
+      "p_a": 0.4211,
+      "winner": "B8"
+     },
+     {
+      "round": 4,
+      "a": "Fnatic",
+      "b": "Passion UA",
+      "bo": 3,
+      "p_a": 0.6387,
+      "winner": "Passion UA"
+     },
+     {
+      "round": 4,
+      "a": "Aurora Gaming",
+      "b": "Astralis",
+      "bo": 3,
+      "p_a": 0.7082,
+      "winner": "Astralis"
+     },
+     {
+      "round": 4,
+      "a": "TYLOO",
+      "b": "Team Liquid",
+      "bo": 3,
+      "p_a": 0.2644,
+      "winner": "Team Liquid"
+     },
+     {
+      "round": 5,
+      "a": "Passion UA",
+      "b": "M80",
+      "bo": 3,
+      "p_a": 0.3852,
+      "winner": "Passion UA"
+     },
+     {
+      "round": 5,
+      "a": "Team Liquid",
+      "b": "Astralis",
+      "bo": 3,
+      "p_a": 0.6058,
+      "winner": "Team Liquid"
+     },
+     {
+      "round": 5,
+      "a": "Ninjas in Pyjamas",
+      "b": "3DMAX",
+      "bo": 3,
+      "p_a": 0.2666,
+      "winner": "3DMAX"
+     }
+    ],
+    "match_scores": {
+     "n": 33,
+     "brier": 0.2302445861377063,
+     "log_loss": 0.6481373431814266,
+     "accuracy": 0.48484848484848486
+    },
+    "teams": [
+     {
+      "team": "Aurora Gaming",
+      "seed": 1,
+      "p_30": 0.34905,
+      "p_adv": 0.8583,
+      "p_03": 0.01755,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "Natus Vincere",
+      "seed": 2,
+      "p_30": 0.38015,
+      "p_adv": 0.8858,
+      "p_03": 0.0131,
+      "actual": "3-0",
+      "advanced": true
+     },
+     {
+      "team": "Team Liquid",
+      "seed": 3,
+      "p_30": 0.20025,
+      "p_adv": 0.7231,
+      "p_03": 0.0452,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "3DMAX",
+      "seed": 4,
+      "p_30": 0.19365,
+      "p_adv": 0.70355,
+      "p_03": 0.0474,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "FaZe Clan",
+      "seed": 5,
+      "p_30": 0.2061,
+      "p_adv": 0.70535,
+      "p_03": 0.04145,
+      "actual": "3-0",
+      "advanced": true
+     },
+     {
+      "team": "Astralis",
+      "seed": 6,
+      "p_30": 0.134,
+      "p_adv": 0.5772,
+      "p_03": 0.07135,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "TYLOO",
+      "seed": 7,
+      "p_30": 0.0488,
+      "p_adv": 0.33,
+      "p_03": 0.17085,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "MIBR",
+      "seed": 8,
+      "p_30": 0.0532,
+      "p_adv": 0.3297,
+      "p_03": 0.1569,
+      "actual": "0-3",
+      "advanced": false
+     },
+     {
+      "team": "M80",
+      "seed": 9,
+      "p_30": 0.0427,
+      "p_adv": 0.3495,
+      "p_03": 0.17885,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "FlyQuest",
+      "seed": 10,
+      "p_30": 0.0417,
+      "p_adv": 0.31205,
+      "p_03": 0.21025,
+      "actual": "0-3",
+      "advanced": false
+     },
+     {
+      "team": "B8",
+      "seed": 11,
+      "p_30": 0.09505,
+      "p_adv": 0.54345,
+      "p_03": 0.0981,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "Fnatic",
+      "seed": 12,
+      "p_30": 0.0564,
+      "p_adv": 0.39075,
+      "p_03": 0.15905,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "Passion UA",
+      "seed": 13,
+      "p_30": 0.02225,
+      "p_adv": 0.19985,
+      "p_03": 0.2838,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "Ninjas in Pyjamas",
+      "seed": 14,
+      "p_30": 0.0352,
+      "p_adv": 0.2677,
+      "p_03": 0.21955,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "PARIVISION",
+      "seed": 15,
+      "p_30": 0.1039,
+      "p_adv": 0.53985,
+      "p_03": 0.08775,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "Imperial Esports",
+      "seed": 16,
+      "p_30": 0.0376,
+      "p_adv": 0.28385,
+      "p_03": 0.19885,
+      "actual": "3-1",
+      "advanced": true
+     }
+    ]
+   },
+   "ratings": {
+    "Aurora Gaming": 1933.8,
+    "Natus Vincere": 1951.7,
+    "Team Liquid": 1881.5,
+    "3DMAX": 1870.6,
+    "FaZe Clan": 1868.5,
+    "Astralis": 1831.8,
+    "TYLOO": 1764.1,
+    "MIBR": 1760.0,
+    "M80": 1780.4,
+    "FlyQuest": 1771.8,
+    "B8": 1833.8,
+    "Fnatic": 1792.2,
+    "Passion UA": 1726.4,
+    "Ninjas in Pyjamas": 1754.4,
+    "PARIVISION": 1832.9,
+    "Imperial Esports": 1757.0
+   },
+   "legacy": {
+    "picks": {
+     "perfect": [
+      {
        "team": "Aurora Gaming",
        "correct": false,
        "actual": "1-3"
@@ -2041,24 +3023,6 @@
       "advanced": true
      }
     ]
-   },
-   "ratings": {
-    "Aurora Gaming": 1716.4,
-    "Natus Vincere": 1710.6,
-    "Team Liquid": 1629.1,
-    "3DMAX": 1608.9,
-    "FaZe Clan": 1584.9,
-    "Astralis": 1575.8,
-    "TYLOO": 1431.7,
-    "MIBR": 1356.4,
-    "M80": 1337.2,
-    "FlyQuest": 1356.6,
-    "B8": 1518.7,
-    "Fnatic": 1416.2,
-    "Passion UA": 1384.6,
-    "Ninjas in Pyjamas": 1356.7,
-    "PARIVISION": 1401.5,
-    "Imperial Esports": 1320.5
    },
    "vrs_only": {
     "picks": {
@@ -3074,6 +4038,506 @@
        "actual": "3-1"
       },
       {
+       "team": "Team Falcons",
+       "correct": false,
+       "actual": "3-2"
+      }
+     ],
+     "winless": [
+      {
+       "team": "Passion UA",
+       "correct": false,
+       "actual": "2-3"
+      },
+      {
+       "team": "Imperial Esports",
+       "correct": false,
+       "actual": "1-3"
+      }
+     ],
+     "advance": [
+      {
+       "team": "Team Spirit",
+       "correct": false,
+       "actual": "3-0"
+      },
+      {
+       "team": "FURIA",
+       "correct": false,
+       "actual": "3-0"
+      },
+      {
+       "team": "Natus Vincere",
+       "correct": true,
+       "actual": "3-2"
+      },
+      {
+       "team": "MOUZ",
+       "correct": true,
+       "actual": "3-1"
+      },
+      {
+       "team": "The MongolZ",
+       "correct": true,
+       "actual": "3-1"
+      },
+      {
+       "team": "G2 Esports",
+       "correct": false,
+       "actual": "2-3"
+      }
+     ]
+    },
+    "n_correct": 3,
+    "coin": false,
+    "p_coin": 0.51455,
+    "expected_correct": 4.5733,
+    "matches": [
+     {
+      "round": 1,
+      "a": "The MongolZ",
+      "b": "Imperial Esports",
+      "bo": 1,
+      "p_a": 0.7526,
+      "winner": "Imperial Esports"
+     },
+     {
+      "round": 1,
+      "a": "MOUZ",
+      "b": "PARIVISION",
+      "bo": 1,
+      "p_a": 0.6821,
+      "winner": "MOUZ"
+     },
+     {
+      "round": 1,
+      "a": "Team Spirit",
+      "b": "Team Liquid",
+      "bo": 1,
+      "p_a": 0.6595,
+      "winner": "Team Spirit"
+     },
+     {
+      "round": 1,
+      "a": "G2 Esports",
+      "b": "Passion UA",
+      "bo": 1,
+      "p_a": 0.7431,
+      "winner": "G2 Esports"
+     },
+     {
+      "round": 1,
+      "a": "Team Vitality",
+      "b": "FaZe Clan",
+      "bo": 1,
+      "p_a": 0.7052,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 1,
+      "a": "paiN Gaming",
+      "b": "3DMAX",
+      "bo": 1,
+      "p_a": 0.461,
+      "winner": "paiN Gaming"
+     },
+     {
+      "round": 1,
+      "a": "FURIA",
+      "b": "Natus Vincere",
+      "bo": 1,
+      "p_a": 0.5765,
+      "winner": "FURIA"
+     },
+     {
+      "round": 1,
+      "a": "Team Falcons",
+      "b": "B8",
+      "bo": 1,
+      "p_a": 0.7306,
+      "winner": "B8"
+     },
+     {
+      "round": 2,
+      "a": "G2 Esports",
+      "b": "paiN Gaming",
+      "bo": 1,
+      "p_a": 0.6355,
+      "winner": "G2 Esports"
+     },
+     {
+      "round": 2,
+      "a": "Team Spirit",
+      "b": "FaZe Clan",
+      "bo": 1,
+      "p_a": 0.6506,
+      "winner": "Team Spirit"
+     },
+     {
+      "round": 2,
+      "a": "MOUZ",
+      "b": "B8",
+      "bo": 1,
+      "p_a": 0.6804,
+      "winner": "MOUZ"
+     },
+     {
+      "round": 2,
+      "a": "FURIA",
+      "b": "Imperial Esports",
+      "bo": 1,
+      "p_a": 0.7993,
+      "winner": "FURIA"
+     },
+     {
+      "round": 2,
+      "a": "Team Vitality",
+      "b": "3DMAX",
+      "bo": 1,
+      "p_a": 0.7249,
+      "winner": "Team Vitality"
+     },
+     {
+      "round": 2,
+      "a": "Team Falcons",
+      "b": "Passion UA",
+      "bo": 1,
+      "p_a": 0.8244,
+      "winner": "Team Falcons"
+     },
+     {
+      "round": 2,
+      "a": "The MongolZ",
+      "b": "Team Liquid",
+      "bo": 1,
+      "p_a": 0.6356,
+      "winner": "The MongolZ"
+     },
+     {
+      "round": 2,
+      "a": "Natus Vincere",
+      "b": "PARIVISION",
+      "bo": 1,
+      "p_a": 0.6673,
+      "winner": "Natus Vincere"
+     },
+     {
+      "round": 3,
+      "a": "MOUZ",
+      "b": "Team Spirit",
+      "bo": 3,
+      "p_a": 0.4714,
+      "winner": "Team Spirit"
+     },
+     {
+      "round": 3,
+      "a": "FURIA",
+      "b": "G2 Esports",
+      "bo": 3,
+      "p_a": 0.6745,
+      "winner": "FURIA"
+     },
+     {
+      "round": 3,
+      "a": "FaZe Clan",
+      "b": "The MongolZ",
+      "bo": 1,
+      "p_a": 0.3735,
+      "winner": "The MongolZ"
+     },
+     {
+      "round": 3,
+      "a": "B8",
+      "b": "Team Vitality",
+      "bo": 1,
+      "p_a": 0.2531,
+      "winner": "Team Vitality"
+     },
+     {
+      "round": 3,
+      "a": "Imperial Esports",
+      "b": "Team Falcons",
+      "bo": 1,
+      "p_a": 0.2005,
+      "winner": "Team Falcons"
+     },
+     {
+      "round": 3,
+      "a": "paiN Gaming",
+      "b": "Natus Vincere",
+      "bo": 1,
+      "p_a": 0.325,
+      "winner": "Natus Vincere"
+     },
+     {
+      "round": 3,
+      "a": "Team Liquid",
+      "b": "Passion UA",
+      "bo": 3,
+      "p_a": 0.7486,
+      "winner": "Passion UA"
+     },
+     {
+      "round": 3,
+      "a": "PARIVISION",
+      "b": "3DMAX",
+      "bo": 3,
+      "p_a": 0.4546,
+      "winner": "3DMAX"
+     },
+     {
+      "round": 4,
+      "a": "Natus Vincere",
+      "b": "Team Vitality",
+      "bo": 3,
+      "p_a": 0.3559,
+      "winner": "Team Vitality"
+     },
+     {
+      "round": 4,
+      "a": "MOUZ",
+      "b": "Team Falcons",
+      "bo": 3,
+      "p_a": 0.41,
+      "winner": "MOUZ"
+     },
+     {
+      "round": 4,
+      "a": "G2 Esports",
+      "b": "The MongolZ",
+      "bo": 3,
+      "p_a": 0.4203,
+      "winner": "The MongolZ"
+     },
+     {
+      "round": 4,
+      "a": "B8",
+      "b": "paiN Gaming",
+      "bo": 3,
+      "p_a": 0.516,
+      "winner": "B8"
+     },
+     {
+      "round": 4,
+      "a": "Imperial Esports",
+      "b": "Passion UA",
+      "bo": 3,
+      "p_a": 0.5612,
+      "winner": "Passion UA"
+     },
+     {
+      "round": 4,
+      "a": "FaZe Clan",
+      "b": "3DMAX",
+      "bo": 3,
+      "p_a": 0.5362,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 5,
+      "a": "B8",
+      "b": "Natus Vincere",
+      "bo": 3,
+      "p_a": 0.2607,
+      "winner": "Natus Vincere"
+     },
+     {
+      "round": 5,
+      "a": "FaZe Clan",
+      "b": "Passion UA",
+      "bo": 3,
+      "p_a": 0.7598,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 5,
+      "a": "G2 Esports",
+      "b": "Team Falcons",
+      "bo": 3,
+      "p_a": 0.3251,
+      "winner": "Team Falcons"
+     }
+    ],
+    "match_scores": {
+     "n": 33,
+     "brier": 0.18755271004821356,
+     "log_loss": 0.5625730882979167,
+     "accuracy": 0.7878787878787878
+    },
+    "teams": [
+     {
+      "team": "FURIA",
+      "seed": 1,
+      "p_30": 0.27065,
+      "p_adv": 0.8257,
+      "p_03": 0.0208,
+      "actual": "3-0",
+      "advanced": true
+     },
+     {
+      "team": "Team Vitality",
+      "seed": 2,
+      "p_30": 0.34745,
+      "p_adv": 0.8695,
+      "p_03": 0.0126,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "Team Falcons",
+      "seed": 3,
+      "p_30": 0.3017,
+      "p_adv": 0.8406,
+      "p_03": 0.01325,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "The MongolZ",
+      "seed": 4,
+      "p_30": 0.21865,
+      "p_adv": 0.73255,
+      "p_03": 0.0231,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "MOUZ",
+      "seed": 5,
+      "p_30": 0.1963,
+      "p_adv": 0.7286,
+      "p_03": 0.0269,
+      "actual": "3-1",
+      "advanced": true
+     },
+     {
+      "team": "Team Spirit",
+      "seed": 6,
+      "p_30": 0.1919,
+      "p_adv": 0.75275,
+      "p_03": 0.0234,
+      "actual": "3-0",
+      "advanced": true
+     },
+     {
+      "team": "G2 Esports",
+      "seed": 7,
+      "p_30": 0.1413,
+      "p_adv": 0.619,
+      "p_03": 0.03695,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "3DMAX",
+      "seed": 8,
+      "p_30": 0.0509,
+      "p_adv": 0.3516,
+      "p_03": 0.113,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "Natus Vincere",
+      "seed": 9,
+      "p_30": 0.11335,
+      "p_adv": 0.6479,
+      "p_03": 0.05095,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "FaZe Clan",
+      "seed": 10,
+      "p_30": 0.0371,
+      "p_adv": 0.3585,
+      "p_03": 0.1436,
+      "actual": "3-2",
+      "advanced": true
+     },
+     {
+      "team": "B8",
+      "seed": 11,
+      "p_30": 0.02445,
+      "p_adv": 0.25645,
+      "p_03": 0.19815,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "Imperial Esports",
+      "seed": 12,
+      "p_30": 0.0098,
+      "p_adv": 0.11395,
+      "p_03": 0.32505,
+      "actual": "1-3",
+      "advanced": false
+     },
+     {
+      "team": "PARIVISION",
+      "seed": 13,
+      "p_30": 0.0247,
+      "p_adv": 0.25535,
+      "p_03": 0.20655,
+      "actual": "0-3",
+      "advanced": false
+     },
+     {
+      "team": "Team Liquid",
+      "seed": 14,
+      "p_30": 0.03595,
+      "p_adv": 0.3345,
+      "p_03": 0.1648,
+      "actual": "0-3",
+      "advanced": false
+     },
+     {
+      "team": "Passion UA",
+      "seed": 15,
+      "p_30": 0.00655,
+      "p_adv": 0.0721,
+      "p_03": 0.42475,
+      "actual": "2-3",
+      "advanced": false
+     },
+     {
+      "team": "paiN Gaming",
+      "seed": 16,
+      "p_30": 0.02925,
+      "p_adv": 0.24095,
+      "p_03": 0.21615,
+      "actual": "1-3",
+      "advanced": false
+     }
+    ]
+   },
+   "ratings": {
+    "FURIA": 2021.3,
+    "Team Vitality": 2036.1,
+    "Team Falcons": 2021.4,
+    "The MongolZ": 1974.5,
+    "MOUZ": 1979.4,
+    "Team Spirit": 1992.6,
+    "G2 Esports": 1937.3,
+    "3DMAX": 1867.8,
+    "Natus Vincere": 1967.7,
+    "FaZe Clan": 1884.6,
+    "B8": 1848.1,
+    "Imperial Esports": 1781.2,
+    "PARIVISION": 1846.7,
+    "Team Liquid": 1877.8,
+    "Passion UA": 1752.7,
+    "paiN Gaming": 1840.7
+   },
+   "legacy": {
+    "picks": {
+     "perfect": [
+      {
+       "team": "Team Vitality",
+       "correct": false,
+       "actual": "3-1"
+      },
+      {
        "team": "FURIA",
        "correct": true,
        "actual": "3-0"
@@ -3546,24 +5010,6 @@
       "advanced": false
      }
     ]
-   },
-   "ratings": {
-    "FURIA": 1835.3,
-    "Team Vitality": 1815.3,
-    "Team Falcons": 1783.5,
-    "The MongolZ": 1748.7,
-    "MOUZ": 1726.3,
-    "Team Spirit": 1694.8,
-    "G2 Esports": 1675.5,
-    "3DMAX": 1603.2,
-    "Natus Vincere": 1713.9,
-    "FaZe Clan": 1596.1,
-    "B8": 1528.6,
-    "Imperial Esports": 1333.5,
-    "PARIVISION": 1412.2,
-    "Team Liquid": 1623.5,
-    "Passion UA": 1394.0,
-    "paiN Gaming": 1548.3
    },
    "vrs_only": {
     "picks": {
@@ -4549,6 +5995,136 @@
     "picks": [
      {
       "round": "Quarter-finals",
+      "pick": "Team Spirit",
+      "actual": "Team Spirit",
+      "correct": true,
+      "p": 0.51165
+     },
+     {
+      "round": "Quarter-finals",
+      "pick": "Team Vitality",
+      "actual": "Team Vitality",
+      "correct": true,
+      "p": 0.61375
+     },
+     {
+      "round": "Quarter-finals",
+      "pick": "MOUZ",
+      "actual": "FaZe Clan",
+      "correct": false,
+      "p": 0.7102
+     },
+     {
+      "round": "Quarter-finals",
+      "pick": "FURIA",
+      "actual": "Natus Vincere",
+      "correct": false,
+      "p": 0.6249
+     },
+     {
+      "round": "Semi-finals",
+      "pick": "Team Vitality",
+      "actual": "Team Vitality",
+      "correct": true,
+      "p": 0.3422
+     },
+     {
+      "round": "Semi-finals",
+      "pick": "FURIA",
+      "actual": "FaZe Clan",
+      "correct": false,
+      "p": 0.3873
+     },
+     {
+      "round": "Final",
+      "pick": "Team Vitality",
+      "actual": "Team Vitality",
+      "correct": true,
+      "p": 0.2088
+     }
+    ],
+    "n_correct": 4,
+    "n_picks": 7,
+    "expected_correct": 3.3988,
+    "matches": [
+     {
+      "round": 1,
+      "a": "Team Spirit",
+      "b": "Team Falcons",
+      "bo": 3,
+      "p_a": 0.5119,
+      "winner": "Team Spirit"
+     },
+     {
+      "round": 1,
+      "a": "The MongolZ",
+      "b": "Team Vitality",
+      "bo": 3,
+      "p_a": 0.3797,
+      "winner": "Team Vitality"
+     },
+     {
+      "round": 1,
+      "a": "MOUZ",
+      "b": "FaZe Clan",
+      "bo": 3,
+      "p_a": 0.7097,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 1,
+      "a": "Natus Vincere",
+      "b": "FURIA",
+      "bo": 3,
+      "p_a": 0.3749,
+      "winner": "Natus Vincere"
+     },
+     {
+      "round": 2,
+      "a": "Team Spirit",
+      "b": "Team Vitality",
+      "bo": 3,
+      "p_a": 0.4425,
+      "winner": "Team Vitality"
+     },
+     {
+      "round": 2,
+      "a": "FaZe Clan",
+      "b": "Natus Vincere",
+      "bo": 3,
+      "p_a": 0.3446,
+      "winner": "FaZe Clan"
+     },
+     {
+      "round": 3,
+      "a": "Team Vitality",
+      "b": "FaZe Clan",
+      "bo": 5,
+      "p_a": 0.8335,
+      "winner": "Team Vitality"
+     }
+    ],
+    "match_scores": {
+     "n": 7,
+     "brier": 0.27571870956554223,
+     "log_loss": 0.7424509959882212,
+     "accuracy": 0.5714285714285714
+    },
+    "p_champion": {
+     "Team Spirit": 0.13705,
+     "Team Falcons": 0.1291,
+     "The MongolZ": 0.07835,
+     "Team Vitality": 0.2088,
+     "MOUZ": 0.15305,
+     "FaZe Clan": 0.01755,
+     "Natus Vincere": 0.0685,
+     "FURIA": 0.2076
+    }
+   },
+   "legacy": {
+    "picks": [
+     {
+      "round": "Quarter-finals",
       "pick": "Team Falcons",
       "actual": "Team Spirit",
       "correct": false,
@@ -4941,7 +6517,77 @@
  },
  "summary": {
   "model": {
-   "label": "Blended model",
+   "label": "Configured model",
+   "match_scores": {
+    "n": 106,
+    "brier": 0.2241282158653531,
+    "log_loss": 0.6364253093248042,
+    "accuracy": 0.6037735849056604
+   },
+   "reliability": [
+    {
+     "lo": 0.1,
+     "hi": 0.2,
+     "n": 2,
+     "mean_p": 0.1268766744491654,
+     "freq": 0.0
+    },
+    {
+     "lo": 0.2,
+     "hi": 0.30000000000000004,
+     "n": 5,
+     "mean_p": 0.24907499085619658,
+     "freq": 0.0
+    },
+    {
+     "lo": 0.30000000000000004,
+     "hi": 0.4,
+     "n": 16,
+     "mean_p": 0.348717108319267,
+     "freq": 0.3125
+    },
+    {
+     "lo": 0.4,
+     "hi": 0.5,
+     "n": 12,
+     "mean_p": 0.4467794645942372,
+     "freq": 0.5833333333333334
+    },
+    {
+     "lo": 0.5,
+     "hi": 0.6000000000000001,
+     "n": 18,
+     "mean_p": 0.5461740923953733,
+     "freq": 0.3888888888888889
+    },
+    {
+     "lo": 0.6000000000000001,
+     "hi": 0.7000000000000001,
+     "n": 27,
+     "mean_p": 0.6479604238514314,
+     "freq": 0.6666666666666666
+    },
+    {
+     "lo": 0.7000000000000001,
+     "hi": 0.8,
+     "n": 24,
+     "mean_p": 0.7373275318659637,
+     "freq": 0.5833333333333334
+    },
+    {
+     "lo": 0.8,
+     "hi": 0.9,
+     "n": 2,
+     "mean_p": 0.8289775001359923,
+     "freq": 1.0
+    }
+   ],
+   "coins": 1,
+   "swiss_stages": 3,
+   "pickem_correct": 13
+  },
+  "legacy": {
+   "label": "Legacy blend (v1)",
    "match_scores": {
     "n": 106,
     "brier": 0.24769192775536553,
@@ -5123,103 +6769,89 @@
   },
   "outcome_calibration": {
    "3-0": {
-    "brier": 0.11983147260416666,
-    "reliability": [
-     {
-      "lo": 0.0,
-      "hi": 0.2,
-      "n": 36,
-      "mean_p": 0.036004166666666663,
-      "freq": 0.1111111111111111
-     },
-     {
-      "lo": 0.2,
-      "hi": 0.4,
-      "n": 6,
-      "mean_p": 0.2667833333333333,
-      "freq": 0.0
-     },
-     {
-      "lo": 0.4,
-      "hi": 0.6000000000000001,
-      "n": 5,
-      "mean_p": 0.49217000000000005,
-      "freq": 0.4
-     },
-     {
-      "lo": 0.6000000000000001,
-      "hi": 0.8,
-      "n": 1,
-      "mean_p": 0.6423,
-      "freq": 0.0
-     }
-    ],
-    "n": 48
-   },
-   "adv": {
-    "brier": 0.18969540635416668,
-    "reliability": [
-     {
-      "lo": 0.0,
-      "hi": 0.2,
-      "n": 14,
-      "mean_p": 0.10651785714285715,
-      "freq": 0.07142857142857142
-     },
-     {
-      "lo": 0.2,
-      "hi": 0.4,
-      "n": 7,
-      "mean_p": 0.3000785714285715,
-      "freq": 0.5714285714285714
-     },
-     {
-      "lo": 0.4,
-      "hi": 0.6000000000000001,
-      "n": 6,
-      "mean_p": 0.4418499999999999,
-      "freq": 0.5
-     },
-     {
-      "lo": 0.6000000000000001,
-      "hi": 0.8,
-      "n": 6,
-      "mean_p": 0.6828583333333333,
-      "freq": 0.8333333333333334
-     },
-     {
-      "lo": 0.8,
-      "hi": 1.0,
-      "n": 15,
-      "mean_p": 0.9106633333333334,
-      "freq": 0.7333333333333333
-     }
-    ],
-    "n": 48
-   },
-   "0-3": {
-    "brier": 0.10419058989583334,
+    "brier": 0.1044809678125,
     "reliability": [
      {
       "lo": 0.0,
       "hi": 0.2,
       "n": 35,
-      "mean_p": 0.046111428571428574,
+      "mean_p": 0.0674557142857143,
       "freq": 0.08571428571428572
      },
      {
       "lo": 0.2,
       "hi": 0.4,
-      "n": 10,
-      "mean_p": 0.29461499999999996,
+      "n": 13,
+      "mean_p": 0.2799269230769231,
+      "freq": 0.23076923076923078
+     }
+    ],
+    "n": 48
+   },
+   "adv": {
+    "brier": 0.17758345822916666,
+    "reliability": [
+     {
+      "lo": 0.0,
+      "hi": 0.2,
+      "n": 5,
+      "mean_p": 0.15436,
       "freq": 0.2
+     },
+     {
+      "lo": 0.2,
+      "hi": 0.4,
+      "n": 17,
+      "mean_p": 0.3047205882352941,
+      "freq": 0.17647058823529413
      },
      {
       "lo": 0.4,
       "hi": 0.6000000000000001,
-      "n": 3,
-      "mean_p": 0.4799833333333334,
-      "freq": 0.3333333333333333
+      "n": 7,
+      "mean_p": 0.5043285714285715,
+      "freq": 0.7142857142857143
+     },
+     {
+      "lo": 0.6000000000000001,
+      "hi": 0.8,
+      "n": 12,
+      "mean_p": 0.7065666666666667,
+      "freq": 0.8333333333333334
+     },
+     {
+      "lo": 0.8,
+      "hi": 1.0,
+      "n": 7,
+      "mean_p": 0.8626928571428573,
+      "freq": 0.7142857142857143
+     }
+    ],
+    "n": 48
+   },
+   "0-3": {
+    "brier": 0.10363621864583332,
+    "reliability": [
+     {
+      "lo": 0.0,
+      "hi": 0.2,
+      "n": 37,
+      "mean_p": 0.08224324324324325,
+      "freq": 0.08108108108108109
+     },
+     {
+      "lo": 0.2,
+      "hi": 0.4,
+      "n": 10,
+      "mean_p": 0.253225,
+      "freq": 0.3
+     },
+     {
+      "lo": 0.4,
+      "hi": 0.6000000000000001,
+      "n": 1,
+      "mean_p": 0.42475,
+      "freq": 0.0
      }
     ],
     "n": 48
