@@ -631,6 +631,26 @@ def backtest_prepare(
     console.print(f"[green]prepared[/] {path}")
 
 
+@backtest_app.command("backfill-hltv")
+def backtest_backfill_hltv(
+    event: Annotated[
+        list[str] | None, typer.Option("--event", "-e", help="Major id(s); default: all known Majors.")
+    ] = None,
+    window: Annotated[
+        int, typer.Option("--window", help="Lookback in days before the HLTV snapshot day.")
+    ] = 90,
+) -> None:
+    """Rebuild a backtest's HLTV results + per-map W/L from HLTV results/match pages (pre-cutoff only)."""
+    from .backtest import MAJORS
+    from .backtest.hltv_backfill import backfill
+
+    for m in event or list(MAJORS):
+        r = backfill(_major(m), log=console.print, window_days=window)
+        console.print(
+            f"[green]{m}[/]: {r['results']} results, {r['maps']} team-map rows ({r['map_games']} maps)"
+        )
+
+
 @backtest_app.command("run")
 def backtest_run(
     event: Annotated[

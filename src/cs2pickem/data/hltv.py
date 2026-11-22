@@ -25,7 +25,7 @@ UA = (
     "Chrome/130.0 Safari/537.36"
 )
 DELAY_S = 4.0
-MAP_NAMES = {"dust2": "Dust II", "dust ii": "Dust II"}
+MAP_NAMES = {"dust2": "Dust II", "dust ii": "Dust II", "de_dust2": "Dust II"}
 
 
 def _render(url: str, wait_ms: int = 3000) -> str:
@@ -162,3 +162,79 @@ def parse_team_results(page: str, team: str) -> pd.DataFrame:
 
 def team_page(hltv_id: int, slug: str, refresh: bool = False) -> str:
     return get_page(f"/team/{hltv_id}/{slug}", ttl_hours=24, refresh=refresh)
+
+
+# ---------------------------------------------------------------- results archive + match pages
+# Short map codes shown on /results for Bo1 series.
+MAP_CODES = {
+    "anc": "Ancient",
+    "anb": "Anubis",
+    "d2": "Dust II",
+    "inf": "Inferno",
+    "mrg": "Mirage",
+    "nuke": "Nuke",
+    "ovp": "Overpass",
+    "trn": "Train",
+    "vtg": "Vertigo",
+    "cbl": "Cobblestone",
+}
+
+
+def map_name(raw: str) -> str:
+    s = raw.strip()
+    return MAP_NAMES.get(s.lower(), s)
+
+
+def parse_results_list(page: str) -> list[dict]:
+    """One ``/results?team=ID`` page → list of series (newest first).
+
+    Each item: ``match_id, date, team1, team2, score1, score2, fmt`` where ``fmt`` is ``bo3``/``bo5``,
+    ``def`` (forfeit) or a map name for Bo1 series (scores are then round scores).
+    """
+    out = []
+    for block in page.split('class="result-con')[1:]:
+        unix = re.search(r'data-zonedgrouping-entry-unix="(\d+)"', block)
+        mid = re.search(r'href="/matches/(\d+)/([^"]+)"', block)
+        teams = re.findall(r'<div class="team[^"]*">([^<]+)</div>', block)
+        sc = re.findall(r'class="score-(?:lost|won|tie)">\s*(\d+)', block)
+        fmt = re.search(r'map-text">([^<]+)<', block)
+        if not (unix and mid and len(teams) >= 2 and len(sc) >= 2 and fmt):
+            continue
+        f = fmt.group(1).strip().lower()
+        out.append(
+            {
+                "match_id": int(mid.group(1)),
+                "slug": mid.group(2),
+                "date": datetime.fromtimestamp(int(unix.group(1)) / 1000, UTC).date().isoformat(),
+                "team1": htmllib.unescape(teams[0]).strip(),
+                "team2": htmllib.unescape(teams[1]).strip(),
+                "score1": int(sc[0]),
+                "score2": int(sc[1]),
+                "fmt": f if f in ("bo2", "bo3", "bo5", "def") else MAP_CODES.get(f, f),
+            }
+        )
+    return out
+
+
+def parse_match_maps(page: str) -> list[dict]:
+    """``/matches/<id>/<slug>`` page → played maps: ``map, team1, team2, score1, score2``."""
+    out = []
+    for block in page.split('class="mapholder"')[1:]:
+        name = re.search(r'class="mapname">([^<]+)<', block)
+        teams = re.findall(r'results-teamname text-ellipsis">([^<]+)<', block)
+        sc = re.findall(r'results-team-score">\s*([^<]*?)\s*<', block)
+        if not (name and len(teams) >= 2 and len(sc) >= 2):
+            continue
+        m = map_name(htmllib.unescape(name.group(1)))
+        if m in ("Default", "TBA") or not (sc[0].isdigit() and sc[1].isdigit()):
+            continue
+        out.append(
+            {
+                "map": m,
+                "team1": htmllib.unescape(teams[0]).strip(),
+                "team2": htmllib.unescape(teams[1]).strip(),
+                "score1": int(sc[0]),
+                "score2": int(sc[1]),
+            }
+        )
+    return out

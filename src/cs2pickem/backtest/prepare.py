@@ -5,7 +5,8 @@ Writes (all committed, so the backtest is reproducible offline):
 * ``configs/<major>/event.yaml`` + ``stage1..3.yaml`` + ``playoffs.yaml`` (teams in seed order, official
   Round-1 draw, ``snapshot_days`` pinned to the pre-event VRS file / HLTV ranking)
 * ``data/snapshots/vrs/<day>/`` – VRS standings + per-team series history from the pre-event file
-* ``data/snapshots/hltv/<day>/`` – archived HLTV ranking of that day (no map stats: none archived)
+* ``data/snapshots/hltv/<day>/`` – archived HLTV ranking of that day; results + per-map W/L are
+  added separately by :mod:`.hltv_backfill` (``cs2pickem backtest backfill-hltv``)
 * ``data/backtests/<major>/results/<stage>.yaml`` + ``actual.yaml`` – the real outcomes (Liquipedia)
 """
 
@@ -23,7 +24,7 @@ import yaml
 from ..data import hltv, vrs
 from ..data.liquipedia import LpMatch, stage_matches
 from ..paths import home
-from ..snapshots import write_snapshot
+from ..snapshots import load_table, write_snapshot
 from .majors import LP_TO_VRS, MAJORS, MajorSpec
 
 SINGAPORE_PARAMS = {
@@ -149,16 +150,25 @@ def prepare(major: str, log: Callable[[str], None] = print, ttl_hours: float = 1
         notes=vrs_notes,
         manifest=False,
     )
-    empty_maps = pd.DataFrame(columns=["team", "map", "wins", "losses", "pick_pct", "ban_pct"])
-    empty_res = pd.DataFrame(columns=["date", "team", "opponent", "maps_won", "maps_lost"])
-    write_snapshot(
-        "hltv",
-        spec.hltv_day,
-        {"ranking": hr, "maps": empty_maps, "results": empty_res},
-        urls=[hltv.BASE + rank_path],
-        notes=f"Archived HLTV world ranking before {spec.name} (backtest input; no map stats archived)",
-        manifest=False,
-    )
+    # Keep results/maps that ``backtest backfill-hltv`` already rebuilt for this snapshot.
+    hmaps = load_table("hltv", "maps", spec.hltv_day)
+    hres = load_table("hltv", "results", spec.hltv_day)
+    if hmaps is not None and not hmaps.empty and hres is not None and not hres.empty:
+        log(f"hltv/{spec.hltv_day}: keeping backfilled results/maps (ranking left as is)")
+    else:
+        empty_maps = pd.DataFrame(columns=["team", "map", "wins", "losses", "pick_pct", "ban_pct"])
+        empty_res = pd.DataFrame(columns=["date", "team", "opponent", "maps_won", "maps_lost"])
+        write_snapshot(
+            "hltv",
+            spec.hltv_day,
+            {"ranking": hr, "maps": empty_maps, "results": empty_res},
+            urls=[hltv.BASE + rank_path],
+            notes=(
+                f"Archived HLTV world ranking before {spec.name} (backtest input; results and map stats "
+                "are added by `cs2pickem backtest backfill-hltv`)"
+            ),
+            manifest=False,
+        )
     log(f"snapshots: vrs/{spec.vrs_day} ({len(vm)} match rows), hltv/{spec.hltv_day} ({len(hr)} teams)")
 
     vrs_rank = dict(zip(std_m.team, std_m["rank"], strict=False))
