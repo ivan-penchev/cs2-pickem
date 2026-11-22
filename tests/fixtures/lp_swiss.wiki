@@ -1,0 +1,484 @@
+{{DISPLAYTITLE:StarLadder Budapest Major 2025: Stage 1}}
+{{StarLadder Major 2025 Tabs}}<!--
+|tickername=StarLadder Budapest Major 2025: Stage 1
+-->{{HiddenDataBox
+|name=StarLadder Budapest Major 2025: Stage 1
+|tickername=SL Budapest Major 2025
+|liquipediatier=S-Tier
+|sdate=2025-11-24
+|edate=2025-11-27
+}}
+
+==Format==
+* '''16 Team Swiss System:''' ''November 24<sup>th</sup> – 27<sup>th</sup>, 2025''
+** Rounds 2 to 5 are seeded using the {{Abbr|Buchholz system|Ranking based on opponents' performance}} & teams' initial seeds
+** Elimination and Advancement matches are {{Abbr/Bo3}}
+** All other matches are {{Abbr/Bo1}}
+* Top 8 Teams proceed to '''[[StarLadder/2025/Major/Stage 2|Stage 2]]'''
+* Bottom 8 Teams are eliminated
+* {{Swiss Explained|width=790px|margin=45px|seeding=** The initial match-ups are seeded using teams' ranking on the Valve Global Standings.}}
+
+==Results==
+===Overview===
+{{LPDB storage|false}}<section begin="Results"/>
+{{SwissTableLeague|sort=<abbr title="Sorted by Swiss score & Buchholz score">#</abbr>|rounds=5|tiebreaker1=series|tiebreaker2=buchholz|show_buchholz=true|exclusive=false
+|pbg1=up|pbg2=up|pbg3=stayup|pbg4=stayup|pbg5=stayup|pbg6=stay|pbg7=stay|pbg8=stay|pbg9=down|pbg10=down|pbg11=down|pbg12=down|pbg13=down|pbg14=down|pbg15=down|pbg16=down
+|tournament=StarLadder/2025/Major/Stage 1
+|bg1=down|team1=legacy|temp_tie1=16
+|bg2=stay|team2=faze|temp_tie2=15
+|bg3=stayup|team3=b8|temp_tie3=14
+|bg4=down|team4=gl|temp_tie4=13
+|bg5=stayup|team5=fnc|temp_tie5=12
+|bg6=stay|team6=parivision|temp_tie6=11
+|bg7=stayup|team7=nip|temp_tie7=10
+|bg8=stay|team8=imp|temp_tie8=9
+|bg9=up|team9=fq|temp_tie9=8
+|bg10=down|team10=lvg|temp_tie10=7
+|bg11=up|team11=m80|temp_tie11=6
+|bg12=down|team12=fluxo|temp_tie12=5
+|bg13=down|team13=red canids|temp_tie13=4
+|bg14=down|team14=huns|temp_tie14=3
+|bg15=down|team15=nrg|temp_tie15=2
+|bg16=down|team16=rare atom|temp_tie16=1
+}}<section end="Results"/>{{LPDB storage|true}}
+
+===Detailed Results===
+{{Toggle group start|state=hide}}
+====Round 1====
+{{Matchlist|id=ie35VFzhIv|width=380px|collapsed=false|title=Round 1 Matches|matchsection=Round 1
+|M1header=November 24, 2025
+|{{Match
+	|opponent1={{TeamOpponent|b8}}|opponent2={{TeamOpponent|m80}}
+	|date=November 24, 2025 - 13:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=t|t1t=2|t1ct=9|t2t=3|t2ct=10
+		|stats=214391|vod=https://www.youtube.com/watch?v=uVqLCZnl0WE}}
+	|hltv=2387855
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|imp}}|opponent2={{TeamOpponent|rare atom}}
+	|date=November 24, 2025 - 13:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=4|t1ct=9|t2t=3|t2ct=8
+		|stats=214390|vod=https://www.youtube.com/watch?v=TogiogBm2oA}}
+	|hltv=2387858
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|legacy}}|opponent2={{TeamOpponent|fq}}
+	|date=November 24, 2025 - 14:10 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Train|finished=true
+		|t1firstside=ct|t1t=2|t1ct=8|t2t=4|t2ct=9
+		|stats=214395|vod=https://www.youtube.com/watch?v=ZVrJORHkeSc}}
+	|hltv=2387851
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|parivision}}|opponent2={{TeamOpponent|huns}}
+	|date=November 24, 2025 - 14:10 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=ct|t1t=8|t1ct=5|t2t=7|t2ct=1
+		|stats=214396|vod=https://www.youtube.com/watch?v=uVUrum5uzng}}
+	|hltv=2387854
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|gl}}|opponent2={{TeamOpponent|fluxo}}
+	|date=November 24, 2025 - 15:20 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=3|t1ct=7|t2t=5|t2ct=8
+		|stats=214401|vod=https://www.youtube.com/watch?v=hbqO7_DwxZM}}
+	|hltv=2387857
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|nip}}|opponent2={{TeamOpponent|nrg}}
+	|date=November 24, 2025 - 15:15 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Overpass|finished=true
+		|t1firstside=ct|t1t=1|t1ct=6|t2t=6|t2ct=7
+		|stats=214399|vod=https://www.youtube.com/watch?v=tQ_O_-3h5gg}}
+	|hltv=2387856
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|faze}}|opponent2={{TeamOpponent|lvg}}
+	|date=November 24, 2025 - 16:15 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=4|t1ct=9|t2t=3|t2ct=2
+		|stats=214415|vod=https://www.youtube.com/watch?v=Z2wO0mFaQlo}}
+	|hltv=2387853
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|fnc}}|opponent2={{TeamOpponent|red canids}}
+	|date=November 24, 2025 - 17:30 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Ancient|finished=true
+		|t1firstside=ct|t1t=7|t1ct=5|t2t=7|t2ct=5
+		|o1t1firstside=t|o1t1t=2|o1t1ct=2|o1t2t=1|o1t2ct=1
+		|stats=214419|vod=https://www.youtube.com/watch?v=f5vKzTwEleg}}
+	|hltv=2387852
+	}}
+}}
+
+====Round 2====
+{{Toggle group start|state=hide}}
+{{box|start|padding=2em}}
+=====High=====
+{{Matchlist|id=Ho3RojC9QG|width=380px|collapsed=false|title=Round 2 High Matches|matchsection=Round 2
+|M1header=November 24, 2025
+|{{Match
+	|opponent1={{TeamOpponent|imp}}|opponent2={{TeamOpponent|fq}}
+	|date=November 24, 2025 - 20:15 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Inferno|finished=true
+		|t1firstside=ct|t1t=3|t1ct=3|t2t=9|t2ct=4
+		|stats=214429|vod=https://www.youtube.com/watch?v=JNs701QbjLk}}
+	|hltv=2388033
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|parivision}}|opponent2={{TeamOpponent|m80}}
+	|date=November 24, 2025 - 21:35 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=ct|t1t=5|t1ct=4|t2t=8|t2ct=5
+		|stats=214443|vod=https://www.youtube.com/watch?v=LLZIuC9ljqQ}}
+	|hltv=2388035
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|fnc}}|opponent2={{TeamOpponent|fluxo}}
+	|date=November 24, 2025 - 23:25 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Train|finished=true
+		|t1firstside=ct|t1t=4|t1ct=5|t2t=7|t2ct=6
+		|stats=214447|vod=https://www.youtube.com/watch?v=IdqbqPdFq9A}}
+	|hltv=2388037
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|faze}}|opponent2={{TeamOpponent|nrg}}
+	|date=November 25, 2025 - 00:30 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=4|t1ct=6|t2t=6|t2ct=7
+		|stats=214448|vod=https://www.youtube.com/watch?v=-ToeU-9_sxI}}
+	|hltv=2388039
+	}}
+}}
+{{box|break|padding=2em}}
+
+=====Low=====
+{{Matchlist|id=TDlDKuOGPY|width=380px|collapsed=false|title=Round 2 Low Matches|matchsection=Round 2
+|M1header=November 24, 2025
+|{{Match
+	|opponent1={{TeamOpponent|legacy}}|opponent2={{TeamOpponent|rare atom}}
+	|date=November 24, 2025 - 20:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=5|t1ct=8|t2t=4|t2ct=2
+		|stats=214425|vod=https://www.youtube.com/watch?v=db9InJZjRII}}
+	|hltv=2388034
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|b8}}|opponent2={{TeamOpponent|huns}}
+	|date=November 24, 2025 - 21:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Ancient|finished=true
+		|t1firstside=ct|t1t=8|t1ct=5|t2t=7|t2ct=4
+		|stats=214434|vod=https://www.youtube.com/watch?v=xcy0VmVQWUQ}}
+	|hltv=2388036
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|gl}}|opponent2={{TeamOpponent|red canids}}
+	|date=November 24, 2025 - 22:05 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Train|finished=true
+		|t1firstside=ct|t1t=1|t1ct=5|t2t=7|t2ct=6
+		|stats=214442|vod=https://www.youtube.com/watch?v=X_p1hGjiDDU}}
+	|hltv=2388038
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|nip}}|opponent2={{TeamOpponent|lvg}}
+	|date=November 24, 2025 - 23:15 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Train|finished=true
+		|t1firstside=ct|t1t=3|t1ct=10|t2t=2|t2ct=0
+		|stats=214446|vod=https://www.youtube.com/watch?v=XUnQxjuHqS0}}
+	|hltv=2388040
+	}}
+}}
+{{box|end}}
+{{Toggle group end}}
+
+====Round 3====
+{{Toggle group start|state=hide}}
+{{box|start|padding=2em}}
+=====High=====
+{{Matchlist|id=nSHRzwoj7F|width=380px|collapsed=false|title=Round 3 High Matches|matchsection=Round 3
+|M1header=November 25, 2025
+|{{Match
+	|opponent1={{TeamOpponent|fq}}|opponent2={{TeamOpponent|fluxo}}
+	|date=November 25, 2025 - 17:20 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Overpass|finished=true
+		|t1firstside=ct|t1t=2|t1ct=11|t2t=1|t2ct=0
+		|stats=214481|vod=https://youtu.be/-8GPeZwhT7E?t=33}}
+	|map2={{Map|map=Inferno|finished=true
+		|t1firstside=t|t1t=9|t1ct=4|t2t=0|t2ct=3
+		|stats=214486|vod=https://youtu.be/-8GPeZwhT7E?t=1917}}
+	|map3={{Map|map=Train|finished=skip}}
+	|hltv=2388045
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|m80}}|opponent2={{TeamOpponent|nrg}}
+	|date=November 25, 2025 - 19:05 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=3|t1ct=10|t2t=2|t2ct=5
+		|stats=214493|vod=https://youtu.be/_e7lMANO2_g?t=26}}
+	|map2={{Map|map=Mirage|finished=true
+		|t1firstside=t|t1t=10|t1ct=3|t2t=0|t2ct=2
+		|stats=214496|vod=https://youtu.be/_e7lMANO2_g?t=2599}}
+	|map3={{Map|map=Train|finished=skip}}
+	|hltv=2388047
+	}}
+}}
+{{box|break|padding=2em}}
+
+=====Mid=====
+{{Matchlist|id=rsfj5PhUI2|width=380px|collapsed=false|title=Round 3 Mid Matches|matchsection=Round 3
+|M1header=November 25, 2025
+|{{Match
+	|opponent1={{TeamOpponent|legacy}}|opponent2={{TeamOpponent|red canids}}
+	|date=November 25, 2025 - 15:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=7|t1ct=6|t2t=6|t2ct=0
+		|stats=214473|vod=https://www.youtube.com/watch?v=kl-l0AP-6GM}}
+	|hltv=2388041
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|b8}}|opponent2={{TeamOpponent|parivision}}
+	|date=November 25, 2025 - 15:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Inferno|finished=true
+		|t1firstside=ct|t1t=8|t1ct=5|t2t=7|t2ct=4
+		|stats=214474|vod=https://www.youtube.com/watch?v=A-Q8_d3Wuf0}}
+	|hltv=2388042
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|fnc}}|opponent2={{TeamOpponent|imp}}
+	|date=November 25, 2025 - 16:10 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Train|finished=true
+		|t1firstside=ct|t1t=3|t1ct=10|t2t=2|t2ct=1
+		|stats=214479|vod=https://www.youtube.com/watch?v=X6y0z6Q03s8}}
+	|hltv=2388044
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|faze}}|opponent2={{TeamOpponent|nip}}
+	|date=November 25, 2025 - 16:10 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Overpass|finished=true
+		|t1firstside=ct|t1t=4|t1ct=4|t2t=8|t2ct=5
+		|stats=214480|vod=https://www.youtube.com/watch?v=ONW9QEfmhSw}}
+	|hltv=2388043
+	}}
+}}
+{{box|break|padding=2em}}
+
+=====Low=====
+{{Matchlist|id=9pPU6nWorR|width=380px|collapsed=false|title=Round 3 Low Matches|matchsection=Round 3
+|M1header=November 25, 2025
+|{{Match
+	|opponent1={{TeamOpponent|gl}}|opponent2={{TeamOpponent|rare atom}}
+	|date=November 25, 2025 - 17:05 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Inferno|finished=true
+		|t1firstside=t|t1t=7|t1ct=6|t2t=2|t2ct=5
+		|stats=214482|vod=https://youtu.be/W3VRonSm31E?t=37}}
+	|map2={{Map|map=Overpass|finished=true
+		|t1firstside=t|t1t=9|t1ct=4|t2t=2|t2ct=3
+		|stats=214488|vod=https://youtu.be/W3VRonSm31E?t=3991}}
+	|map3={{Map|map=Ancient|finished=skip}}
+	|hltv=2388046
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|lvg}}|opponent2={{TeamOpponent|huns}}
+	|date=November 25, 2025 - 19:30 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Ancient|finished=true
+		|t1firstside=ct|t1t=2|t1ct=5|t2t=7|t2ct=6
+		|stats=214495|vod=https://youtu.be/8FH5Kfo1iDQ?t=33}}
+	|map2={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=3|t1ct=5|t2t=7|t2ct=6
+		|stats=214498|vod=https://youtu.be/8FH5Kfo1iDQ?t=2703}}
+	|map3={{Map|map=Nuke|finished=skip}}
+	|hltv=2388048
+	}}
+}}
+{{box|end}}
+{{Toggle group end}}
+
+====Round 4====
+{{Toggle group start|state=hide}}
+{{box|start|padding=2em}}
+=====High=====
+{{Matchlist|id=PpoXpHMLKa|width=380px|collapsed=false|title=Round 4 High Matches|matchsection=Round 4
+|M1header=November 26, 2025
+|{{Match
+	|opponent1={{TeamOpponent|fluxo}}|opponent2={{TeamOpponent|nip}}
+	|date=November 26, 2025 - 15:00 {{Abbr/CET}}|finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=0|t1ct=5|t2t=7|t2ct=6
+		|stats=214525|vod=https://youtu.be/K7norf-2tbY?t=22}}
+	|map2={{Map|map=Train|finished=true
+		|t1firstside=t|t1t=4|t1ct=1|t2t=5|t2ct=8
+		|stats=214530|vod=https://youtu.be/K7norf-2tbY?t=2232}}
+	|map3={{Map|map=Overpass|finished=skip}}
+	|hltv=2388049
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|b8}}|opponent2={{TeamOpponent|legacy}}
+	|date=November 26, 2025 - 15:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=8|t1ct=4|t2t=8|t2ct=4
+		|o1t1firstside=t|o1t1t=3|o1t1ct=1|o1t2t=0|o1t2ct=0
+		|stats=214525|vod=https://youtu.be/HTNlBdjQnoY?t=34}}
+	|map2={{Map|map=Mirage|finished=true
+		|t1firstside=t|t1t=9|t1ct=4|t2t=2|t2ct=3
+		|stats=214532|vod=https://youtu.be/HTNlBdjQnoY?t=3875}}
+	|map3={{Map|map=Ancient|finished=skip}}
+	|hltv=2388050
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|nrg}}|opponent2={{TeamOpponent|fnc}}
+	|date=November 26, 2025 - 17:15 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=ct|t1t=4|t1ct=9|t2t=3|t2ct=0
+		|stats=214537|vod=https://youtu.be/O1iVLU4NSew?t=28}}
+	|map2={{Map|map=Inferno|finished=true
+		|t1firstside=t|t1t=4|t1ct=6|t2t=5|t2ct=8
+		|stats=214542|vod=https://youtu.be/O1iVLU4NSew?t=2102}}
+	|map3={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=5|t1ct=4|t2t=8|t2ct=5
+		|stats=214547|vod=https://youtu.be/O1iVLU4NSew?t=5161}}
+	|hltv=2388052
+	}}
+}}
+{{box|break|padding=2em}}
+
+=====Low=====
+{{Matchlist|id=ZICdI2fy9I|width=380px|collapsed=false|title=Round 4 Low Matches|matchsection=Round 4
+|M1header=November 26, 2025
+|{{Match
+	|opponent1={{TeamOpponent|red canids}}|opponent2={{TeamOpponent|faze}}
+	|date=November 26, 2025 - 16:55 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=ct|t1t=4|t1ct=9|t2t=3|t2ct=4
+		|stats=214535|vod=https://youtu.be/hCrmK4iufzo?t=24}}
+	|map2={{Map|map=Nuke|finished=true
+		|t1firstside=t|t1t=6|t1ct=6|t2t=6|t2ct=6
+		|o1t1firstside=ct|o1t1t=0|o1t1ct=3|o1t2t=0|o1t2ct=3
+		|o2t1firstside=t|o2t1t=2|o2t1ct=0|o2t2t=3|o2t2ct=1
+		|stats=214541|vod=https://youtu.be/hCrmK4iufzo?t=2650}}
+	|map3={{Map|map=Inferno|finished=true
+		|t1firstside=ct|t1t=1|t1ct=4|t2t=8|t2ct=5
+		|stats=214548|vod=https://youtu.be/hCrmK4iufzo?t=7454}}
+	|hltv=2388051
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|parivision}}|opponent2={{TeamOpponent|gl}}
+	|date=November 26, 2025 - 20:35 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Overpass|finished=true
+		|t1firstside=t|t1t=3|t1ct=9|t2t=3|t2ct=9
+		|o1t1firstside=ct|o1t1t=2|o1t1ct=2|o1t2t=1|o1t2ct=1
+		|stats=214551|vod=https://youtu.be/3r15GIwJqTM?t=30}}
+	|map2={{Map|map=Ancient|finished=true
+		|t1firstside=t|t1t=6|t1ct=6|t2t=6|t2ct=6
+		|o1t1firstside=ct|o1t1t=1|o1t1ct=3|o1t2t=0|o1t2ct=0
+		|stats=214556|vod=https://youtu.be/3r15GIwJqTM?t=4170}}
+	|map3={{Map|map=Dust II|finished=skip}}
+	|hltv=2388053
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|imp}}|opponent2={{TeamOpponent|huns}}
+	|date=November 26, 2025 - 20:20 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS 2 |youtube=StarLadder CS2 |kick=StarLadder 2
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=6|t1ct=7|t2t=5|t2ct=3
+		|stats=214550|vod=https://youtu.be/J2B9dz04cjg?t=30}}
+	|map2={{Map|map=Mirage|finished=true
+		|t1firstside=ct|t1t=3|t1ct=9|t2t=3|t2ct=9
+		|o1t1firstside=t|o1t1t=3|o1t1ct=1|o1t2t=0|o1t2ct=0
+		|stats=214554|vod=https://youtu.be/J2B9dz04cjg?t=3126}}
+	|map3={{Map|map=Dust II|finished=skip}}
+	|hltv=2388054
+	}}
+}}
+{{box|end}}
+{{Toggle group end}}
+
+====Round 5====
+{{Matchlist|id=k0H4Xo9XVR|width=380px|collapsed=false|title=Round 5 Matches|matchsection=Round 5
+|M1header=November 27, 2025
+|{{Match
+	|opponent1={{TeamOpponent|fluxo}}|opponent2={{TeamOpponent|faze}}
+	|date=November 27, 2025 - 15:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Inferno|finished=true
+		|t1firstside=ct|t1t=2|t1ct=4|t2t=8|t2ct=5
+		|stats=214577|vod=https://youtu.be/R9a7-AIkXyY?t=27}}
+	|map2={{Map|map=Nuke|finished=true
+		|t1firstside=t|t1t=7|t1ct=6|t2t=2|t2ct=5
+		|stats=214578|vod=https://youtu.be/R9a7-AIkXyY?t=2679}}
+	|map3={{Map|map=Mirage|finished=true
+		|t1firstside=ct|t1t=2|t1ct=8|t2t=4|t2ct=9
+		|stats=214581|vod=https://youtu.be/R9a7-AIkXyY?t=5304}}
+	|hltv=2388055
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|nrg}}|opponent2={{TeamOpponent|imp}}
+	|date=November 27, 2025 - 18:05 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=2|t1ct=6|t2t=6|t2ct=7
+		|stats=214582|vod=https://youtu.be/01zZffTaFNA?t=28}}
+	|map2={{Map|map=Train|finished=true
+		|t1firstside=t|t1t=2|t1ct=3|t2t=3|t2ct=10
+		|stats=214584|vod=https://youtu.be/01zZffTaFNA?t=2602}}
+	|map3={{Map|map=Dust II|finished=skip}}
+	|hltv=2388056
+	}}
+|{{Match
+	|opponent1={{TeamOpponent|parivision}}|opponent2={{TeamOpponent|legacy}}
+	|date=November 27, 2025 - 20:15 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Ancient|finished=true
+		|t1firstside=t|t1t=7|t1ct=6|t2t=4|t2ct=5
+		|stats=214586|vod=https://youtu.be/7Ax8k7N_GBI?t=25}}
+	|map2={{Map|map=Inferno|finished=true
+		|t1firstside=t|t1t=3|t1ct=2|t2t=4|t2ct=9
+		|stats=214587|vod=https://youtu.be/7Ax8k7N_GBI?t=3289}}
+	|map3={{Map|map=Dust II|finished=true
+		|t1firstside=t|t1t=5|t1ct=7|t2t=5|t2ct=7
+		|o1t1firstside=ct|o1t1t=2|o1t1ct=1|o1t2t=2|o1t2ct=1
+		|o2t1firstside=t|o2t1t=2|o2t1ct=2|o2t2t=0|o2t2ct=1
+		|stats=214588|vod=https://youtu.be/7Ax8k7N_GBI?t=5789}}
+	|hltv=2388057
+	}}
+}}
+{{Toggle group end}}
+
+==Streams==
+{{#section:StarLadder/2025/Major|streams}}
+
+==References==
+{{Reflist}}
+<br/>
+{{Majors Navbox}}

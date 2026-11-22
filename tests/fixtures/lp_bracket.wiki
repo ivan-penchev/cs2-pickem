@@ -1,0 +1,138 @@
+{{DISPLAYTITLE:StarLadder Budapest Major 2025: Playoffs}}
+{{StarLadder Major 2025 Tabs}}<!--
+|tickername=StarLadder Budapest Major 2025: Playoffs
+-->{{HiddenDataBox
+|name=StarLadder Budapest Major 2025
+|tickername=SL Budapest Major 2025
+|liquipediatier=S-Tier
+|sdate=2025-12-11
+|edate=2025-12-14
+}}
+
+==Format==
+* '''Single-Elimination bracket:''' ''December 11<sup>th</sup> – 14<sup>th</sup>, 2025''
+** Seeded using final [[StarLadder/2025/Major/Stage 3|Stage 3]] standings
+** The Quarterfinals & Semifinals are {{Abbr/Bo3}}
+** The Grand Final is {{Abbr/Bo5}}
+
+==Results==
+{{Bracket|Bracket/8|id=gxunBmdnIm
+<!-- Quarterfinals -->
+|R1M1={{Match
+	|opponent1={{TeamOpponent|spirit}}|opponent2={{TeamOpponent|falcons}}
+	|date=December 11, 2025 - 17:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=5|t1ct=8|t2t=4|t2ct=0
+		|stats=215404|vod=https://youtu.be/s6-0QwmLFW0?t=28}}
+	|map2={{Map|map=Dust II|finished=true
+		|t1firstside=t|t1t=5|t1ct=7|t2t=5|t2ct=7
+		|o1t1firstside=ct|o1t1t=1|o1t1ct=3|o1t2t=0|o1t2ct=0
+		|stats=215408|vod=https://youtu.be/s6-0QwmLFW0?t=2034}}
+	|map3={{Map|map=Ancient|finished=skip}}
+	|hltv=2388125
+	}}
+|R1M2={{Match
+	|opponent1={{TeamOpponent|mongolz}}|opponent2={{TeamOpponent|vit}}
+	|date=December 11, 2025 - 20:10 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=t|t1t=5|t1ct=0|t2t=6|t2ct=7
+		|stats=215412|vod=https://youtu.be/1k7B0Ycf3rw?t=32}}
+	|map2={{Map|map=Dust II|finished=true
+		|t1firstside=ct|t1t=0|t1ct=4|t2t=8|t2ct=5
+		|stats=215413|vod=https://youtu.be/1k7B0Ycf3rw?t=2950}}
+	|map3={{Map|map=Nuke|finished=skip}}
+	|hltv=2388124
+	}}
+|R1M3={{Match
+	|opponent1={{TeamOpponent|mouz}}|opponent2={{TeamOpponent|faze}}
+	|date=December 12, 2025 - 17:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=8|t1ct=3|t2t=9|t2ct=4
+		|stats=215448|vod=https://youtu.be/KrRzC81orqQ?t=30}}
+	|map2={{Map|map=Inferno|finished=true
+		|t1firstside=t|t1t=2|t1ct=0|t2t=3|t2ct=10
+		|stats=215451|vod=https://youtu.be/KrRzC81orqQ?t=3210}}
+	|map3={{Map|map=Mirage|finished=skip}}
+	|hltv=2388126
+	}}
+|R1M4={{Match
+	|opponent1={{TeamOpponent|navi}}|opponent2={{TeamOpponent|furia}}
+	|date=December 12, 2025 - 20:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=t|t1t=8|t1ct=5|t2t=1|t2ct=4
+		|stats=215455|vod=https://youtu.be/hIldRX4idpE?t=23}}
+	|map2={{Map|map=Inferno|finished=true
+		|t1firstside=ct|t1t=3|t1ct=9|t2t=3|t2ct=9
+		|o1t1firstside=t|o1t1t=1|o1t1ct=0|o1t2t=2|o1t2ct=2
+		|stats=215459|vod=https://youtu.be/hIldRX4idpE?t=2310}}
+	|map3={{Map|map=Train|finished=true
+		|t1firstside=t|t1t=10|t1ct=3|t2t=1|t2ct=2
+		|stats=215462|vod=https://youtu.be/hIldRX4idpE?t=6389}}
+	|hltv=2388127
+	}}
+
+<!-- Semifinals -->
+|R2M1={{Match
+	|opponent1={{TeamOpponent|spirit}}|opponent2={{TeamOpponent|vit}}
+	|date=December 13, 2025 - 17:00 {{Abbr/CET}} |finished=
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Mirage|finished=true
+		|t1firstside=ct|t1t=4|t1ct=8|t2t=4|t2ct=8
+		|o1t1firstside=t|o1t1t=2|o1t1ct=1|o1t2t=2|o1t2ct=1
+		|o2t1firstside=ct|o2t1t=1|o2t1ct=1|o2t2t=2|o2t2ct=2
+		|stats=215488|vod=https://youtu.be/4dIfPa0NrjY&t=24}}
+	|map2={{Map|map=Dust II|finished=true
+		|t1firstside=t|t1t=6|t1ct=2|t2t=7|t2ct=6
+		|stats=215493|vod=https://youtu.be/4dIfPa0NrjY&t=5324}}
+	|map3={{Map|map=Overpass|finished=skip}}
+	|hltv=2388128
+	}}
+|R2M2={{Match
+	|opponent1={{TeamOpponent|faze}}|opponent2={{TeamOpponent|navi}}
+	|date=December 13, 2025 - 21:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Ancient|finished=true
+		|t1firstside=ct|t1t=3|t1ct=2|t2t=10|t2ct=3
+		|stats=215496|vod=https://youtu.be/Y-b_JvVds84?t=24}}
+	|map2={{Map|map=Nuke|finished=true
+		|t1firstside=t|t1t=4|t1ct=9|t2t=3|t2ct=8
+		|stats=215498|vod=https://youtu.be/Y-b_JvVds84?t=2067}}
+	|map3={{Map|map=Inferno|finished=true
+		|t1firstside=ct|t1t=4|t1ct=9|t2t=3|t2ct=5
+		|stats=215499|vod=https://youtu.be/Y-b_JvVds84?t=5206}}
+	|hltv=2388129
+	}}
+
+<!-- Grand Final -->
+|R3M1={{Match
+	|opponent1={{TeamOpponent|vit}}|opponent2={{TeamOpponent|faze}}
+	|date=December 14, 2025 - 18:00 {{Abbr/CET}} |finished=true
+	|twitch=StarLadder CS |youtube=StarLadder CS2 |kick=StarLadder
+	|map1={{Map|map=Nuke|finished=true
+		|t1firstside=ct|t1t=2|t1ct=4|t2t=8|t2ct=5
+		|stats=215525|vod=https://youtu.be/9qqiaW7sjD0&t=26}}
+	|map2={{Map|map=Dust II|finished=true
+		|t1firstside=t|t1t=9|t1ct=4|t2t=0|t2ct=3
+		|stats=215528|vod=https://youtu.be/9qqiaW7sjD0&t=2734}}
+	|map3={{Map|map=Inferno|finished=true
+		|t1firstside=ct|t1t=5|t1ct=8|t2t=4|t2ct=5
+		|stats=215531|vod=https://youtu.be/9qqiaW7sjD0&t=4819}}
+	|map4={{Map|map=Overpass|finished=true
+		|t1firstside=t|t1t=11|t1ct=2|t2t=1|t2ct=1
+		|stats=215532|vod=https://youtu.be/9qqiaW7sjD0&t=7944}}
+	|map5={{Map|map=Mirage|finished=skip}}
+	|hltv=2388130
+	}}
+}}
+
+==Streams==
+{{#section:StarLadder/2025/Major|streams-primary}}
+
+==References==
+{{Reflist}}
+<br/>
+{{Majors Navbox}}
