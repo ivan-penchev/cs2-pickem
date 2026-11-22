@@ -2,3 +2,9 @@
 __pycache__/
 *.pyc
 .cache/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+out/
