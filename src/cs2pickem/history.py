@@ -80,7 +80,11 @@ def stages(root: Path | None = None) -> list[str]:
 
 
 def record(
-    entry: dict[str, Any], root: Path | None = None, now: datetime | None = None, force: bool = False
+    entry: dict[str, Any],
+    root: Path | None = None,
+    now: datetime | None = None,
+    force: bool = False,
+    note: str | None = None,
 ) -> Path | None:
     """Append ``entry`` unless the known results are unchanged since the last entry. Returns the new file."""
     hist = load(entry["stage"], root)
@@ -89,13 +93,15 @@ def record(
         prev = {_key(m) for m in _finished(hist[-1]["known"])}
         new = [m for m in fin if _key(m) not in prev]
         same_teams = [t["name"] for t in hist[-1]["teams"]] == [t["name"] for t in entry["teams"]]
-        if not new and same_teams and len(prev) == len(fin) and not force:
+        if not new and same_teams and len(prev) == len(fin) and not force and not note:
             return None
         trigger = "; ".join(describe(m) for m in new) if new else "re-run"
         baseline = False
     else:
         trigger = "pre-stage baseline" if not fin else f"baseline ({len(fin)} results already known)"
         baseline = True
+    if note and hist:
+        trigger = note
     now = now or datetime.now(UTC)
     out = {**entry, "ts": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "baseline": baseline, "trigger": trigger}
     d = root_dir(root) / entry["stage"]

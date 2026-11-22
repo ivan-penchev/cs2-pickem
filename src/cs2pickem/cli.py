@@ -539,6 +539,12 @@ def site_build(
         bool, typer.Option("--no-record", help="Don't append to the prediction history.")
     ] = False,
     today: Annotated[str | None, typer.Option("--today", help="Pretend today is YYYY-MM-DD.")] = None,
+    note: Annotated[
+        str | None,
+        typer.Option(
+            "--note", help="Force a history entry with this trigger text (e.g. after a model change)."
+        ),
+    ] = None,
 ) -> None:
     """Re-run every stage, append changed predictions to data/predictions/, and rebuild site/."""
     from datetime import date
@@ -552,6 +558,7 @@ def site_build(
         out_dir=out,
         record=not no_record,
         today=date.fromisoformat(today) if today else None,
+        note=note,
         log=lambda m: console.print(f"[dim]{m}[/]"),
     )
     console.print(f"[green]site ready:[/] {idx}")

@@ -64,6 +64,7 @@ def build(
     out_dir: Path | None = None,
     record: bool = True,
     today: date | None = None,
+    note: str | None = None,
     log: Callable[[str], None] = print,
 ) -> Path:
     from ..pipeline import Context
@@ -87,7 +88,7 @@ def build(
         entry = H.entry_from_payload(payload, status.get("source"))
         how = payload.get("teams_from") or ""
         if record and how != "projected":
-            p = H.record(entry)
+            p = H.record(entry, note=note)
             if p:
                 log(f"history: {p.relative_to(home()) if p.is_relative_to(home()) else p}")
         hist = H.load(sid)
