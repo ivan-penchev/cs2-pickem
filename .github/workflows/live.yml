@@ -37,7 +37,7 @@ jobs:
     outputs:
       go: ${{ steps.check.outputs.go }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           sparse-checkout: configs
       - id: check
@@ -63,7 +63,7 @@ jobs:
     outputs:
       pushed: ${{ steps.commit.outputs.pushed }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
       - uses: actions/setup-python@v5
@@ -99,20 +99,45 @@ jobs:
           echo "Committed $(git rev-parse --short HEAD)" >> "$GITHUB_STEP_SUMMARY"
 
   # Pushes made with GITHUB_TOKEN don't trigger pages.yml, so deploy from here.
-  deploy:
+  build:
     needs: update
     if: needs.update.outputs.pushed == 'true' || inputs.force
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          include-hidden-files: true
+
+  # Separate job so the artifact is registered before deploy-pages looks it up.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url }}
+    steps:
+      - id: deploy1
+        name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+      - name: Wait before retry
+        if: steps.deploy1.outcome == 'failure'
+        run: echo "::warning::Pages deploy failed, retrying in 30s"; sleep 30
+      - id: deploy2
+        name: Deploy to GitHub Pages (retry)
+        if: steps.deploy1.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+      - name: Summary
+        if: always()
+        run: |
+          if [ "${{ steps.deploy1.outcome }}" = success ]; then r="deployed on first attempt"
+          elif [ "${{ steps.deploy2.outcome }}" = success ]; then r="deployed on retry (first attempt failed)"
+          else r="FAILED after retry"; fi
+          echo "### Pages deploy" >> "$GITHUB_STEP_SUMMARY"
+          echo "$r: ${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
+          [ "$r" != "FAILED after retry" ] || { echo "::error::Pages deploy $r"; exit 1; }
