@@ -1,305 +1,154 @@
 # cs2-pickem
 
-Predictive analytics and an optimiser for **Counter-Strike 2 Major Pick'Em** (Valve's in-game Pick'Em).
-It ships configured for the **PGL Major Singapore 2026**. Every stage and every future Major is just another YAML file.
+Monte Carlo predictions and Pick'Em picks for Counter-Strike 2 Majors. It is set up for the PGL Major Singapore 2026 (Nov 24 to Dec 13). Another stage or another Major is another YAML file under `configs/`.
 
-* Team strength: Valve VRS points + HLTV ranking + recent-form Elo (current roster only), with manual overrides
-* Per-map strength (Bayesian-shrunk) and a game-theoretic **map veto** for Bo1 / Bo3 / Bo5
-* A fast **Monte Carlo Swiss** simulator that follows Valve's Major pairing rules (Buchholz, no rematches, Bo3 deciders)
-* A single-elimination **playoff bracket** simulator (Bo3, Bo5 final)
-* **Pick'Em optimisers**:
-  * Swiss: maximise P(≥5 of 10 correct), using the joint simulated outcomes rather than marginals
-  * Bracket: maximise expected correct picks
-* **Live mode**: enter finished matches and every remaining round is re-simulated conditional on them.
-  Stage N+1 is then built from the Stage N qualifiers plus the direct invites.
-* **Point-in-time backtests** on the last two Majors (Budapest 2025, Cologne 2026) against VRS-only and coin-flip baselines
-* **Hourly live updates** via GitHub Actions: scrape results, re-simulate, keep an append-only prediction history,
-  and publish a dashboard at **<https://ivan-penchev.github.io/cs2-pickem/>**
-* Offline by default from committed data snapshots. `fetch --refresh` re-scrapes the sources.
-  User-editable CSVs override anything.
+The live dashboard is at <https://ivan-penchev.github.io/cs2-pickem/>.
+
+For a Swiss stage it picks 2 teams to go 3-0, 2 to go 0-3 and 6 to advance, choosing the set with the highest chance of 5 or more correct, which is what Valve's coin needs. For the playoffs it picks the bracket with the most expected correct picks.
 
 ## Quick start
 
 ```bash
-make install                      # python3 -m venv .venv && pip install -e '.[dev]'
+make install                      # creates .venv and installs the package with dev extras
 source .venv/bin/activate
 
-cs2pickem rate -s stage1          # blended ratings
-cs2pickem simulate -s stage1      # P(3-0) / P(qualify) / P(0-3) + record distribution
-cs2pickem pickem -s stage1        # optimal 2x 3-0, 2x 0-3, 6x advance
-cs2pickem matchup NiP M80 --bo 3  # head-to-head, map probabilities, predicted veto
+cs2pickem rate -s stage1          # team ratings and their components
+cs2pickem simulate -s stage1      # P(3-0), P(advance), P(0-3) and record distribution
+cs2pickem pickem -s stage1        # recommended Pick'Em
+cs2pickem matchup NiP M80 --bo 3  # series odds, per-map odds and the predicted veto
 ```
 
-Python ≥ 3.12. With uv instead of pip: `uv venv && uv pip install -e '.[dev]'`.
+Requires Python 3.12 or newer. Everything runs offline from the data committed in `data/`.
 
-## CLI
+## Commands
 
 | command | what it does |
 |---|---|
-| `fetch [--refresh] [--source vrs\|hltv]` | Show the committed snapshots, or re-scrape VRS (GitHub) and HLTV (Playwright) into new snapshots |
-| `rate [-s STAGE]` | Rating table showing every component |
-| `matchup A B [--bo N]` | Series win probability, per-map probabilities and the predicted veto line |
-| `simulate -s STAGE [-n SIMS] [--no-results] [--flat] [--json out.json]` | Simulate a Swiss or playoff stage |
-| `pickem -s STAGE [--lock '3-0=Team'] [-n SIMS]` | Optimal Pick'Em for a Swiss stage or the playoff bracket |
-| `playoffs` | Bracket simulation. Teams come from config, from Stage 3 results, or from projection |
-| `result add A B WINNER [-s STAGE] [--round R]` | Record a finished match (live mode) |
-| `result list / result remove A B` | Show standings and results, or undo a result |
-| `animate -s STAGE [-n SIMS] [--runs 300] [--out site/STAGE.html] [--open]` | Write an animated, self-contained HTML visualisation of the simulation |
-| `backtest prepare / backtest run [--event budapest2025]` | Point-in-time backtest → `data/backtests/<major>/report.json` + `site/backtest.html` |
-| `live update [--force] [--today YYYY-MM-DD]` | Scrape finished matches (HLTV → Liquipedia → DFRAG) into `data/results/`, build the next stage when one finishes |
-| `site build [-n SIMS] [--no-record] [--note TEXT]` | Re-run every stage, append to the prediction history, rebuild `site/` (index, stage pages, history, backtest) |
-| `next-stage -s stage2 [--write]` | Seed the next stage (invites + qualifiers). `--write` stores the seeding in the YAML |
+| `fetch [--refresh] [--source vrs\|hltv]` | Lists the committed snapshots. `--refresh` scrapes VRS and HLTV into new ones |
+| `rate [-s STAGE]` | Rating table with every component |
+| `matchup A B [--bo N]` | Series win probability, per-map probabilities and the predicted veto |
+| `simulate -s STAGE [-n SIMS] [--no-results] [--flat] [--json FILE]` | Simulates a Swiss or playoff stage |
+| `pickem -s STAGE [--lock '3-0=Team'] [-n SIMS]` | Recommended Pick'Em for a Swiss stage or the playoff bracket |
+| `playoffs` | Bracket simulation, with teams from config, Stage 3 results or a projection |
+| `result add A B WINNER [-s STAGE] [--round R]` | Records a finished match |
+| `result list` / `result remove A B` | Shows standings, or removes a result |
+| `next-stage -s STAGE [--write]` | Seeds the next stage from invites and qualifiers. `--write` saves it to the YAML |
+| `animate -s STAGE [-n SIMS] [--runs 300] [--out FILE] [--open]` | Writes the animated HTML page for a stage |
+| `live update [--force] [--today YYYY-MM-DD]` | Scrapes finished matches into `data/results/` |
+| `site build [-n SIMS] [--no-record] [--note TEXT]` | Re-runs every stage, appends to the prediction history and rebuilds `site/`. `--note` forces a history entry, for example after a model change |
+| `backtest prepare -e MAJOR` / `backtest run [-e MAJOR]` | Point-in-time backtest of past Majors |
 
-`--event` selects the config directory under `configs/`. The default is the only (or first) event.
-`--flat` turns off the map/veto model, which leaves plain Elo.
+`-e/--event` picks a directory under `configs/`. It defaults to the first one. `--flat` turns off the map and veto model and uses the team ratings alone.
 
-### Live mode during an event
+## Entering results by hand
+
+The GitHub Action below does this automatically. To do it locally:
 
 ```bash
-cs2pickem result add "Ninjas in Pyjamas" M80 "Ninjas in Pyjamas"   # round inferred from standings
-cs2pickem result add Liquid GOSH GOSH
+cs2pickem result add "Ninjas in Pyjamas" M80 "Ninjas in Pyjamas"   # round is inferred
 cs2pickem result list -s stage1
-cs2pickem pickem -s stage1               # conditional on the results so far
-# once Stage 1 is over:
-cs2pickem next-stage -s stage2 --write
-cs2pickem pickem -s stage2
+cs2pickem pickem -s stage1               # re-simulated with these results fixed
+cs2pickem next-stage -s stage2 --write   # after Stage 1 finishes
 ```
 
-Results are stored in `data/results/<stage>.yaml`, which you can edit by hand. Team names accept any alias from `event.yaml`.
-Later stages that are not decided yet are **projected**: Stage 1 is simulated to obtain the most likely qualifiers.
-Projected output is labelled as such.
+Results go to `data/results/<stage>.yaml`, which you can also edit directly. Team names accept any alias listed in `event.yaml`. When a later stage has no teams yet, the tool simulates the earlier stage to guess them and labels the output as projected.
 
-### Automatic updates (GitHub Actions) and the dashboard
+## Automatic updates during the event
 
-`.github/workflows/live.yml` runs every hour. A tiny gate job reads `start`/`end` from the event config and exits
-within seconds outside the event window (± 1 day); `workflow_dispatch` with `force: true` overrides it.
-Inside the window it:
+`.github/workflows/live.yml` runs at minute 17 of every hour. Outside the event dates (plus one day either side) it exits straight away. Running it by hand with `force: true` skips that check. Inside the window it:
 
-1. **Scrapes** finished matches for the active stage(s): HLTV via headless Playwright first; when Cloudflare blocks
-   the runner it falls back to the Liquipedia MediaWiki API (`action=parse`, descriptive User-Agent, ≥2.5 s between
-   calls), then DFRAG. Team names are normalised through the aliases in `event.yaml`.
-2. **Merges** them into `data/results/<stage>.yaml`. This is idempotent: existing results are never deleted or
-   overwritten by a failed or partial scrape, and the source used is logged in the job summary.
-3. **Advances** the event: when a Swiss stage has 8 decided qualifiers, the next stage's seeding is written
-   (invites + qualifiers), using the published Round 1 draw when Liquipedia has it.
-4. **Re-predicts** with `cs2pickem site build`, commits `data/` and `site/` back to `main` as `github-actions[bot]`
-   with `[skip ci]`, and deploys GitHub Pages directly (pushes made with `GITHUB_TOKEN` don't trigger other workflows,
-   so there are no loops).
+1. Scrapes finished matches. It tries HLTV with headless Playwright, then the Liquipedia MediaWiki API (HLTV blocks most CI runners), then DFRAG.
+2. Merges them into `data/results/<stage>.yaml`. A failed or partial scrape never deletes or changes a recorded result.
+3. Writes the next stage's seeding once a Swiss stage has 8 qualifiers.
+4. Runs `cs2pickem site build`, commits `data/` and `site/` to `main` with `[skip ci]`, and deploys GitHub Pages.
 
-The job never fails because of a scrape problem. It reports "no new data" and leaves everything as it was.
+A scrape failure does not fail the job. The error goes to the job summary and nothing is changed.
 
-**Prediction history.** Every `site build` appends a snapshot to `data/predictions/<stage>/<UTC timestamp>.json`
-(per-team P(3-0)/P(advance)/P(0-3), recommended picks, P(≥5), known results and the match that triggered it) –
-but only when the known results changed. The first snapshot of a stage is flagged `"baseline": true` and is never
-overwritten. The dashboard (`site/index.html`) and the per-stage history pages (`site/<stage>-history.html`) show:
+Each `site build` that sees new results, or gets a `--note`, saves a snapshot to `data/predictions/<stage>/<UTC timestamp>.json`. The first one for a stage is the baseline and is never overwritten. The dashboard compares the baseline with the latest snapshot, plots each team's odds over time with the match that moved them, and grades the original picks as the stage plays out.
 
-* live Swiss standings, the last scraped matches, the data source and the last-updated time;
-* the **original vs current** probabilities side by side, with ▲▼ deltas;
-* a per-team **probability timeline** with each update labelled by its trigger (e.g. "R1: Wildcard beat FaZe");
-* a **picks changed** log, and the **original picks graded** against actual outcomes as the stage resolves.
+`pages.yml` also deploys when a push to `main` changes `site/`.
+
+## Animated page
 
 ```bash
-make live    # cs2pickem live update
-make site    # cs2pickem site build  → site/index.html
+cs2pickem animate -s stage1 --open   # writes site/stage1.html
 ```
+
+The page is one HTML file with no external scripts, so it works offline. It replays 300 logged runs on a Swiss bracket while P(3-0), P(advance) and P(0-3) settle over all N simulations, with 95% intervals. It also shows the recommended picks with a P(≥5) gauge, the share of upsets and a team-by-record heatmap. Space pauses, the right arrow steps one run. Add `?ff` to the URL to jump to the end or `?paused` to stop autoplay.
 
 ## Backtests
 
-`cs2pickem backtest run` replays the **StarLadder Budapest Major 2025** and the **IEM Cologne Major 2026** using only
-information available before each stage began: the VRS file dated just before the event, the HLTV ranking from
-that date, and match history cut off at the stage start (no leakage). Actual results are snapshotted in
-`data/backtests/<major>/actual.yaml`; the configs live in `configs/budapest2025/` and `configs/cologne2026/`.
-For every stage it records the Pick'Em picks and how many were right, the per-match Brier score / log-loss,
-a reliability table and P(3-0)/P(adv)/P(0-3) vs reality, and compares the model with VRS-seed-only and coin-flip
-baselines. The results are in `site/backtest.html`.
+`cs2pickem backtest run` replays the StarLadder Budapest Major 2025 and the IEM Cologne Major 2026 using only data from before each stage, meaning the VRS file and HLTV ranking from that date and match history cut at the stage start. It compares the current model with the previous blend model, a VRS-seed-only model and a coin flip. Lower Brier is better.
 
-| event (20k sims) | model (BT) Brier | legacy blend | VRS-only | coin flip | model log-loss | accuracy | coins model / legacy / VRS | Swiss picks right (model / legacy / VRS) |
-|---|---|---|---|---|---|---|---|---|
-| Budapest 2025 | **0.224** | 0.248 | 0.250 | 0.250 | 0.636 | 60.4% | 1 / 2 / 3 of 3 | 13 / 14 / 16 of 30 |
-| Cologne 2026 | **0.216** | 0.229 | 0.234 | 0.250 | 0.621 | 65.1% | 1 / 1 / 1 of 3 | 13 / 10 / 10 of 30 |
+| event (20k sims, 106 matches) | model Brier | old blend | VRS-only | coin flip | model log-loss | model accuracy | coins, model / old blend / VRS-only |
+|---|---|---|---|---|---|---|---|
+| Budapest 2025 | 0.224 | 0.248 | 0.250 | 0.250 | 0.636 | 60.4% | 1 / 2 / 3 of 3 |
+| Cologne 2026 | 0.216 | 0.229 | 0.234 | 0.250 | 0.621 | 65.1% | 1 / 1 / 1 of 3 |
 
-The current model (v2) clearly improves the match probabilities: Brier 0.220 against 0.238 for the v1 blend
-across 212 matches, and log-loss 0.629 against 0.676. The v1 blend was overconfident; its predicted P(≥5 correct)
-of about 70% was paid out 3 times in 6. Coin counts don't separate the models. With 6 Swiss stages,
-±1 coin is noise; the totals are 26 / 24 / 26 correct picks of 60. CS2 Swiss Bo1s are noisy, so treat the picks
-as an informed baseline. The v2 P(≥5) figures (≈ 25–50%) are now honest.
+The model gives clearly better match probabilities than seeding, but that has not turned into more coins. In Budapest, picking straight from VRS seeds earned two more. The model itself gives its picks a 40 to 50% chance of 5 correct per stage, so six stages are far too few to separate the models. Read the picks as a slightly better than seeded guess. Full results are in `site/backtest.html`.
 
-### What was tried (model exploration)
-These were scored by leave-one-Major-out on the same 212 matches:
+## Swiss rules
 
-| variant | Brier | note |
-|---|---|---|
-| v1 blend (VRS .40 / HLTV .25 / Elo .35, 200 Elo per sd) | 0.238 | overconfident |
-| v1 blend, spread halved (`temperature: 0.5`) | 0.223 | most of the gain is calibration |
-| VRS only / Elo only / HLTV only | 0.242 / 0.235 / 0.248 | HLTV adds noise |
-| **Bradley-Terry, 120 d half-life, VRS prior 0.5, L2 3, temperature 0.85** | **0.220** | chosen |
-| BT without prior / with full-weight VRS prior | worse | the prior matters, but only at half strength |
-| separate Bo1/Bo3 temperatures | no gain | |
+These follow Valve's Major Supplemental Rulebook.
 
-The biggest remaining upside is in data the tool doesn't have yet: betting-market odds, which are the sharpest
-public probability, and enough per-map history to make the veto model matter.
+* 16 teams. Three wins advance, three losses eliminate.
+* Round 1 uses the official draw if the config has one, otherwise seed *i* plays seed *i+8*.
+* From round 2, teams with the same record are ordered by Buchholz (sum of opponents' wins minus losses), then by seed.
+  * Rounds 2 and 3 pair the top team with the lowest team it has not played yet.
+  * Rounds 4 and 5 use Valve's six-team priority table and take the first row without a rematch.
+* Matches where either team can advance or be eliminated are Bo3. All others are Bo1.
+* The higher-placed team is the higher seed. In a Bo3 it is team A in the veto. In a Bo1 it chooses whether to be team A or team B.
+* Final order is wins, losses, Buchholz, seed.
 
-## Animated visualisation
-
-```bash
-cs2pickem animate --stage stage1 --open        # → site/stage1.html (or: make animate STAGE=stage1)
-cs2pickem animate --stage playoffs             # → site/playoffs.html
-```
-
-![Animated Swiss bracket – screenshot placeholder](docs/animate.png)
-
-<!-- TODO: replace docs/animate.png with a screenshot/GIF of site/stage1.html -->
-
-The output is **one static HTML file**. It has no build step and no CDN; it uses vanilla JS with SVG/CSS and works offline, so you can share it as an attachment or on GitHub Pages.
-The Python side embeds a compact JSON payload of about 0.3 MB for 100k sims:
-
-* **Replay runs.** About 300 fully logged simulated runs, with every match as round, teams, Bo1/Bo3, winner and whether it was a live result. Each match also carries its win probability and predicted veto line.
-* **Convergence tallies.** Cumulative counts over *all* N sims at about 240 log-spaced checkpoints: per-team final record, the correct-pick histogram and upsets. The browser animates 1 → N without the raw data.
-
-On screen you get:
-
-* **Swiss bracket.** It uses the classic Major layout: 0-0 → 1-0/0-1 → … → 3-x advanced / x-3 eliminated. Team badges move between record buckets round by round. Gold marks a Bo3 decider. Hover a match to see its win probability and likely maps.
-  For playoffs, the bracket fills in up to the champion.
-* **Converging probability bars.** Bars for P(3-0), P(advance) and P(0-3), or P(semis), P(final) and P(champion), each with a 95% CI band and a tick for the final value. A sim counter and a sims/sec display sit alongside.
-* **Pick'Em panel.** The recommended picks, a live P(≥5 correct) gauge and a histogram of the number of correct picks. Picks hit or missed in the current replay are highlighted.
-* **Chaos meter.** The share of matches won by the pre-match underdog.
-* **Heatmap.** The final record distribution, team × record.
-
-Controls are play/pause (space), step one run (→), fast-forward to N, reset and a speed slider.
-URL flags: `?ff` jumps straight to the converged state and `?paused` disables autoplay.
-Recorded live results (`data/results/<stage>.yaml`) are respected: those matches are fixed in every run and marked ✓.
-The whole `site/` folder is committed and published at <https://ivan-penchev.github.io/cs2-pickem/> by
-`.github/workflows/pages.yml` (on pushes to `main` that touch `site/`) and by `live.yml` after each update.
-
-## Swiss rules implemented (Valve Major Supplemental Rulebook)
-
-* 16 teams. 3 wins advance, 3 losses eliminate, at most 5 rounds.
-* **Round 1**: the official draw if one is configured, otherwise seed *i* vs *i+8*.
-* **Rounds 2–5**: teams are grouped by W-L record. Within a group, teams are ordered by Buchholz
-  (the sum of opponents' current W−L), then by initial seed.
-  * Rounds 2–3: the top team plays the lowest team it has not met yet. Backtracking guarantees a full pairing.
-  * Rounds 4–5: groups of six use Valve's priority table (1v6 2v5 3v4, 1v6 2v4 3v5, …).
-    The first row with no rematch is chosen.
-* **Bo3** for every match where either team is at 2 wins or 2 losses (advancement or elimination). All other matches are **Bo1**.
-* In each pairing the better-placed team is the higher seed. It is team A in the veto, and in Bo1 it gets the last ban.
-* Final standings: wins, then losses, then Buchholz, then seed. The top half qualifies, seeded in that order.
-
-Everything is configurable per stage (`wins_to_advance`, `losses_to_eliminate`, `default_bo`, `decider_bo`).
-For example, `configs/singapore2026/stage3.yaml` sets `default_bo: 3`.
+Each stage YAML can change `wins_to_advance`, `losses_to_eliminate`, `default_bo` and `decider_bo`. Stage 3 sets `default_bo: 3`.
 
 ## Model
 
-### 1. Team rating (`rating/`)
-`rating.method` selects the strength model. The default since v2 is `bt`.
+**Rating.** The default (`method: bt`) is a Bradley-Terry fit over every series in the last 180 days, including opponents outside the event, with each match's weight halving every 120 days. Each team's prior is centred on its VRS points, at half weight, with an L2 strength of 3. Matches played with fewer than 4 current players, or before a recorded roster change, count at 0.35. The fitted spread around 1500 is then multiplied by a temperature of 0.85, because the backtests showed the raw ratings were overconfident. `data/ratings_override.csv` adds manual deltas on top.
 
-**`bt` – Bradley-Terry with a VRS prior** (`rating/bt.py`)
-* Every series in the last `bt_window_days` (180) is fitted at once, including opponents outside the event:
-  `P(i beats j) = σ(θ_i − θ_j)`. It is a MAP fit by Newton's method.
-* Each series is weighted `0.5^(age / bt_half_life_days)` (120 days) times the roster weight. That weight
-  applies when fewer than `min_roster_overlap` current players played, or the match came before `roster_changed`.
-* Prior: `θ_i ~ N(bt_prior_weight · ln10/400 · (VRS_i − median VRS), 1/bt_l2)`. Teams with little data
-  stay close to their VRS standing.
-* Unlike the sequential Elo, the fit is order-independent and fully propagates strength of schedule.
+The older blend is still available with `method: blend`. It z-scores VRS points, HLTV points (log scale) and a form Elo across the event and computes `1500 + 200 · weighted mean` before the same temperature, with weights 0.4 VRS, 0.25 HLTV and 0.35 Elo. That Elo covers the last 90 days, starts from VRS and halves a match's weight every 30 days. All of these numbers live under `rating:` in `event.yaml`.
 
-**`blend` – the v1 z-score blend.** Each component is z-scored across the event's teams:
-* **VRS** points
-* **HLTV** points (log scale)
-* **Form Elo**: an Elo run over the last `elo_window_days` of results, starting from VRS as the prior.
-  Matches are exponentially time-weighted (`elo_half_life_days`).
-  Matches played with a different roster (fewer than `min_roster_overlap` current players) count at `old_roster_weight`.
+**Maps.** A team's win rate on each map is pulled toward its overall map win rate by 8 pseudo-games, then turned into a logit offset capped at ±0.8. The offsets move strength between maps without changing the total. Map win probability is `logit P = ln10·(R_i − R_j)/400 + off_i[m] − off_j[m]`.
 
-The blend rating is `1500 + rating_scale · Σ w_k z_k / Σ w_k`.
+**Veto.** Minimax over the 7-map pool. Bo1 is A ban, A ban, B ban ×3, A ban, decider. Bo3 is A ban, B ban, A pick, B pick, B ban, A ban, decider. Setting `veto_temperature` above 0 makes teams veto less perfectly.
 
-With either method, the spread around 1500 is multiplied by `temperature` (0.85 for BT; 0.5 would suit the blend).
-Then any manual `delta` from `data/ratings_override.csv` is added.
-If a component is missing, its weight is dropped and the remaining weights are renormalised.
-All weights are set under `rating:` in `event.yaml`.
+**Simulation.** 100k Swiss runs take about 5 seconds. Recorded results are fixed in every run. Playoffs are an 8-team bracket (1v8, 4v5, 2v7, 3v6) with Bo3 quarters and semis and a Bo5 final.
 
-### 2. Maps and veto (`maps/`)
-* **Per-map offsets.** A team's record on each Active Duty map is shrunk towards its own overall map win rate,
-  using `prior_maps` pseudo-games, and converted to a logit offset clamped to `±max_offset`.
-  The offsets only redistribute the team's strength across maps; they never change its overall level.
-* **Map win probability**: `logit P = ln10·(R_i − R_j)/400 + off_i[m] − off_j[m]`.
-* **Veto** is solved exactly by minimax over the 7-map pool:
-  * Bo1: A ban, A ban, B ban×3, A ban, then the decider.
-  * Bo3: A ban, B ban, A pick, B pick, B ban, A ban, then the decider.
-  * Bo5: ban, ban, then picks.
+**Pick'Em.** The Swiss optimiser scores each candidate set against the simulated runs directly, so it knows two teams that meet early can't both go 3-0. It starts greedy, then swaps picks with random restarts. `--lock` fixes picks you've already made. The bracket optimiser uses dynamic programming and only advances teams you picked in the previous round.
 
-  Set `veto_temperature > 0` for a softer, less-than-perfect veto policy.
-  The series probability is the probability of winning a majority of the selected maps.
+## Data
 
-### 3. Swiss simulator (`swiss/`)
-* 100k simulations take about 5 s.
-* Pairings for rounds 1–3 depend only on the result history, so they are cached.
-* Known results (live mode) are forced, including partly played rounds.
-* Output per team:
-  * P(3-0), P(qualify) and P(0-3)
-  * the full record distribution
-  * per-simulation outcome masks, which the optimiser uses
+See [DATA_SOURCES.md](DATA_SOURCES.md) for sources and licences.
 
-### 4. Playoffs (`playoffs.py`)
-* 8 teams, single elimination. QF and SF are Bo3; the Grand Final is Bo5 (configurable).
-* The bracket is `[[1,8],[4,5],[2,7],[3,6]]`.
-
-### 5. Pick'Em optimisers (`pickem/`)
-* **Swiss**: choose 2 teams for 3-0, 2 for 0-3 and 6 for advance (3-1/3-2), with no team used twice.
-  * The objective is P(correct ≥ 5), evaluated on the simulated outcomes themselves, so correlations count.
-    For example, two teams that would meet in a 2-0 Bo3 cannot both finish 3-0.
-  * Search is a greedy start followed by swap/move local search with random restarts.
-  * The output also reports E[correct] and the full distribution of correct picks.
-  * `--lock` forces specific picks.
-* **Bracket**: dynamic programming over the bracket tree. It maximises expected correct picks under the
-  consistency constraint that a pick can only advance a team you picked in the previous round.
-
-## Stage 1 prediction (pre-event, snapshot 2026-11-22, 100k sims)
-
-| pick | team | P(correct) |
-|---|---|---|
-| 3-0 | PARIVISION | 31.5% |
-| 3-0 | Liquid | 27.0% |
-| advance | FaZe, HEROIC, NiP, Eternal Fire, 100 Thieves, M80 | 52–56% each |
-| 0-3 | Chinggis Warriors | 51.7% |
-| 0-3 | Lynn Vision | 42.8% |
-
-The full set has **P(≥5 correct) = 56.5%** and E[correct] = 4.77.
-To reproduce it, run `cs2pickem pickem -s stage1`.
-
-## Data (`data/`, see [DATA_SOURCES.md](DATA_SOURCES.md))
-
-| file | purpose |
+| path | contents |
 |---|---|
-| `snapshots/vrs/<date>/` | Valve VRS standings and match details (from `ValveSoftware/counter-strike_regional_standings`) |
-| `snapshots/hltv/<date>/` | HLTV ranking, recent results and per-map stats |
-| `latest.json` | Which snapshot the tool uses |
-| `teams.csv` | Manual VRS/HLTV points that override the snapshot |
-| `matches.csv` | Extra series results for the form Elo |
-| `maps.csv` | Per-map record overrides |
-| `ratings_override.csv` | Gut-feel Elo adjustments (`+50` ≈ +7 pp vs an equal team) |
-| `results/<stage>.yaml` | Live results |
+| `data/snapshots/vrs/<date>/` | Valve VRS standings and match details |
+| `data/snapshots/hltv/<date>/` | HLTV ranking, recent results and map stats |
+| `data/latest.json` | Which snapshots the tool reads |
+| `data/teams.csv` | Manual VRS or HLTV points, overriding the snapshot |
+| `data/matches.csv` | Extra series results for the rating fit |
+| `data/maps.csv` | Per-map record overrides |
+| `data/ratings_override.csv` | Manual Elo deltas. +50 is about +7 points of win chance against an equal team |
+| `data/results/<stage>.yaml` | Match results for the current event |
+| `data/predictions/<stage>/` | Prediction history. The first file is the baseline |
+| `data/backtests/<major>/` | Backtest inputs and reports |
 
-`cs2pickem fetch --refresh` needs the scrape extra: `pip install -e '.[scrape]' && playwright install chromium`.
-It caches pages in `.cache/` and rate-limits politely.
+Scraping needs Playwright, which `make install-scrape` installs.
 
-## A new stage or a new Major
+## Adding a stage or a Major
 
 1. Copy `configs/singapore2026/` to `configs/<event>/`.
-2. Edit `event.yaml`: dates, map pool, team registry with aliases and rosters.
-3. Edit the per-stage YAMLs: teams in seed order and the Round-1 draw, or a `source:` with invites.
+2. In `event.yaml`, set the dates, map pool and teams with aliases and rosters.
+3. In each stage YAML, list teams in seed order with the Round 1 draw, or a `source:` with invites.
 4. Run `cs2pickem fetch --refresh -e <event>`, then `cs2pickem pickem -e <event> -s stage1`.
 
 ## Development
 
 ```bash
-make test      # pytest
-make lint      # ruff
-make predict   # simulate + pickem for STAGE=stage1
-make animate   # site/$STAGE.html
+make test    # pytest
+make lint    # ruff
 ```
 
-CI (`.github/workflows/ci.yml`) runs ruff, pytest and an offline CLI smoke test.
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+CI runs ruff, pytest and an offline CLI smoke test on every push and pull request. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Disclaimer
-
-This is a fan-made statistical tool with no affiliation to Valve, PGL, HLTV or Liquipedia.
-The predictions are probabilities, not guarantees.
+Fan project. Not affiliated with Valve, PGL, HLTV or Liquipedia.
