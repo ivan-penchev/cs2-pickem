@@ -1,0 +1,45 @@
+# StarLadder Budapest Major 2025 — Stage 1 (generated from Liquipedia)
+name: Stage 1
+type: swiss
+start: '2025-11-24'
+end: '2025-11-27'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/budapest2025/results/stage1.yaml
+liquipedia: StarLadder/2025/Major/Stage_1
+teams:
+- Legacy
+- FaZe Clan
+- B8
+- GamerLegion
+- Fnatic
+- PARIVISION
+- Ninjas in Pyjamas
+- Imperial Esports
+- FlyQuest
+- Lynn Vision Gaming
+- M80
+- Fluxo
+- RED Canids
+- The Huns Esports
+- NRG
+- Rare Atom
+round1:
+- - B8
+  - M80
+- - Imperial Esports
+  - Rare Atom
+- - Legacy
+  - FlyQuest
+- - PARIVISION
+  - The Huns Esports
+- - GamerLegion
+  - Fluxo
+- - Ninjas in Pyjamas
+  - NRG
+- - FaZe Clan
+  - Lynn Vision Gaming
+- - Fnatic
+  - RED Canids

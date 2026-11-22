@@ -1,0 +1,45 @@
+# IEM Cologne Major 2026 — Stage 3 (generated from Liquipedia)
+name: Stage 3
+type: swiss
+start: '2026-06-11'
+end: '2026-06-15'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 3
+decider_bo: 3
+results_file: data/backtests/cologne2026/results/stage3.yaml
+liquipedia: Intel_Extreme_Masters/2026/Cologne/Stage_3
+teams:
+- Team Vitality
+- Team Spirit
+- Team Falcons
+- MOUZ
+- The MongolZ
+- Aurora Gaming
+- FURIA
+- PARIVISION
+- FUT Esports
+- Natus Vincere
+- G2 Esports
+- Legacy
+- BetBoom Team
+- Monte
+- B8
+- 9z Team
+round1:
+- - The MongolZ
+  - BetBoom Team
+- - PARIVISION
+  - 9z Team
+- - Team Vitality
+  - FUT Esports
+- - MOUZ
+  - Legacy
+- - Team Falcons
+  - G2 Esports
+- - FURIA
+  - B8
+- - Natus Vincere
+  - Team Spirit
+- - Aurora Gaming
+  - Monte

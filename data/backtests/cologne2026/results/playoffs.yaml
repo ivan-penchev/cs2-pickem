@@ -1,0 +1,44 @@
+# IEM Cologne Major 2026 — Playoffs actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: Team Spirit
+  b: G2 Esports
+  winner: Team Spirit
+  bo: 3
+  date: '2026-06-19'
+- round: 1
+  a: Team Falcons
+  b: Team Vitality
+  winner: Team Falcons
+  bo: 3
+  date: '2026-06-19'
+- round: 1
+  a: Aurora Gaming
+  b: BetBoom Team
+  winner: Aurora Gaming
+  bo: 3
+  date: '2026-06-18'
+- round: 1
+  a: 9z Team
+  b: FURIA
+  winner: FURIA
+  bo: 3
+  date: '2026-06-18'
+- round: 2
+  a: Team Spirit
+  b: Team Falcons
+  winner: Team Falcons
+  bo: 3
+  date: '2026-06-20'
+- round: 2
+  a: Aurora Gaming
+  b: FURIA
+  winner: FURIA
+  bo: 3
+  date: '2026-06-20'
+- round: 3
+  a: Team Falcons
+  b: FURIA
+  winner: Team Falcons
+  bo: 5
+  date: '2026-06-21'

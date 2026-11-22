@@ -1,0 +1,44 @@
+# StarLadder Budapest Major 2025 — Playoffs actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: Team Spirit
+  b: Team Falcons
+  winner: Team Spirit
+  bo: 3
+  date: '2025-12-11'
+- round: 1
+  a: The MongolZ
+  b: Team Vitality
+  winner: Team Vitality
+  bo: 3
+  date: '2025-12-11'
+- round: 1
+  a: MOUZ
+  b: FaZe Clan
+  winner: FaZe Clan
+  bo: 3
+  date: '2025-12-12'
+- round: 1
+  a: Natus Vincere
+  b: FURIA
+  winner: Natus Vincere
+  bo: 3
+  date: '2025-12-12'
+- round: 2
+  a: Team Spirit
+  b: Team Vitality
+  winner: Team Vitality
+  bo: 3
+  date: '2025-12-13'
+- round: 2
+  a: FaZe Clan
+  b: Natus Vincere
+  winner: FaZe Clan
+  bo: 3
+  date: '2025-12-13'
+- round: 3
+  a: Team Vitality
+  b: FaZe Clan
+  winner: Team Vitality
+  bo: 5
+  date: '2025-12-14'

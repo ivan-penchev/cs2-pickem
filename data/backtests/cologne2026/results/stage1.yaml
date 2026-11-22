@@ -1,0 +1,200 @@
+# IEM Cologne Major 2026 — Stage 1 actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: M80
+  b: Lynn Vision Gaming
+  winner: M80
+  bo: 1
+  date: '2026-06-02'
+- round: 1
+  a: SINNERS Esports
+  b: FlyQuest
+  winner: FlyQuest
+  bo: 1
+  date: '2026-06-02'
+- round: 1
+  a: B8
+  b: TYLOO
+  winner: B8
+  bo: 1
+  date: '2026-06-02'
+- round: 1
+  a: MIBR
+  b: Off Chops
+  winner: Off Chops
+  bo: 1
+  date: '2026-06-02'
+- round: 1
+  a: GamerLegion
+  b: NRG
+  winner: GamerLegion
+  bo: 1
+  date: '2026-06-02'
+- round: 1
+  a: HEROIC
+  b: DENDELE CS
+  winner: DENDELE CS
+  bo: 1
+  date: '2026-06-02'
+- round: 1
+  a: BetBoom Team
+  b: Gaimin Gladiators
+  winner: BetBoom Team
+  bo: 1
+  date: '2026-06-02'
+- round: 1
+  a: BIG
+  b: Team Liquid
+  winner: Team Liquid
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: B8
+  b: Off Chops
+  winner: B8
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: GamerLegion
+  b: FlyQuest
+  winner: GamerLegion
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: M80
+  b: DENDELE CS
+  winner: M80
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: BetBoom Team
+  b: Team Liquid
+  winner: BetBoom Team
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: HEROIC
+  b: Lynn Vision Gaming
+  winner: Lynn Vision Gaming
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: MIBR
+  b: TYLOO
+  winner: MIBR
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: SINNERS Esports
+  b: NRG
+  winner: NRG
+  bo: 1
+  date: '2026-06-02'
+- round: 2
+  a: BIG
+  b: Gaimin Gladiators
+  winner: BIG
+  bo: 1
+  date: '2026-06-02'
+- round: 3
+  a: GamerLegion
+  b: BetBoom Team
+  winner: BetBoom Team
+  bo: 3
+  date: '2026-06-03'
+- round: 3
+  a: M80
+  b: B8
+  winner: B8
+  bo: 3
+  date: '2026-06-03'
+- round: 3
+  a: NRG
+  b: FlyQuest
+  winner: NRG
+  bo: 1
+  date: '2026-06-03'
+- round: 3
+  a: DENDELE CS
+  b: Lynn Vision Gaming
+  winner: Lynn Vision Gaming
+  bo: 1
+  date: '2026-06-03'
+- round: 3
+  a: Team Liquid
+  b: MIBR
+  winner: MIBR
+  bo: 1
+  date: '2026-06-03'
+- round: 3
+  a: Off Chops
+  b: BIG
+  winner: BIG
+  bo: 1
+  date: '2026-06-03'
+- round: 3
+  a: TYLOO
+  b: SINNERS Esports
+  winner: TYLOO
+  bo: 3
+  date: '2026-06-03'
+- round: 3
+  a: Gaimin Gladiators
+  b: HEROIC
+  winner: HEROIC
+  bo: 3
+  date: '2026-06-03'
+- round: 4
+  a: GamerLegion
+  b: BIG
+  winner: GamerLegion
+  bo: 3
+  date: '2026-06-04'
+- round: 4
+  a: Lynn Vision Gaming
+  b: MIBR
+  winner: MIBR
+  bo: 3
+  date: '2026-06-04'
+- round: 4
+  a: M80
+  b: NRG
+  winner: M80
+  bo: 3
+  date: '2026-06-04'
+- round: 4
+  a: Off Chops
+  b: FlyQuest
+  winner: FlyQuest
+  bo: 3
+  date: '2026-06-04'
+- round: 4
+  a: TYLOO
+  b: DENDELE CS
+  winner: TYLOO
+  bo: 3
+  date: '2026-06-04'
+- round: 4
+  a: Team Liquid
+  b: HEROIC
+  winner: Team Liquid
+  bo: 3
+  date: '2026-06-04'
+- round: 5
+  a: TYLOO
+  b: Lynn Vision Gaming
+  winner: TYLOO
+  bo: 3
+  date: '2026-06-05'
+- round: 5
+  a: Team Liquid
+  b: FlyQuest
+  winner: FlyQuest
+  bo: 3
+  date: '2026-06-05'
+- round: 5
+  a: NRG
+  b: BIG
+  winner: BIG
+  bo: 3
+  date: '2026-06-05'

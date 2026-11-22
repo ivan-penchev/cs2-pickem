@@ -1,0 +1,200 @@
+# IEM Cologne Major 2026 — Stage 2 actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: Astralis
+  b: GamerLegion
+  winner: Astralis
+  bo: 1
+  date: '2026-06-06'
+- round: 1
+  a: 9z Team
+  b: FlyQuest
+  winner: 9z Team
+  bo: 1
+  date: '2026-06-06'
+- round: 1
+  a: FUT Esports
+  b: B8
+  winner: FUT Esports
+  bo: 1
+  date: '2026-06-06'
+- round: 1
+  a: paiN Gaming
+  b: TYLOO
+  winner: TYLOO
+  bo: 1
+  date: '2026-06-06'
+- round: 1
+  a: G2 Esports
+  b: M80
+  winner: G2 Esports
+  bo: 1
+  date: '2026-06-06'
+- round: 1
+  a: Monte
+  b: BIG
+  winner: Monte
+  bo: 1
+  date: '2026-06-06'
+- round: 1
+  a: Team Spirit
+  b: BetBoom Team
+  winner: Team Spirit
+  bo: 1
+  date: '2026-06-06'
+- round: 1
+  a: Legacy
+  b: MIBR
+  winner: MIBR
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: FUT Esports
+  b: TYLOO
+  winner: FUT Esports
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: Astralis
+  b: 9z Team
+  winner: 9z Team
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: G2 Esports
+  b: Monte
+  winner: G2 Esports
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: Team Spirit
+  b: MIBR
+  winner: Team Spirit
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: paiN Gaming
+  b: BIG
+  winner: BIG
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: Legacy
+  b: FlyQuest
+  winner: Legacy
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: BetBoom Team
+  b: GamerLegion
+  winner: BetBoom Team
+  bo: 1
+  date: '2026-06-06'
+- round: 2
+  a: B8
+  b: M80
+  winner: M80
+  bo: 1
+  date: '2026-06-06'
+- round: 3
+  a: Team Spirit
+  b: 9z Team
+  winner: Team Spirit
+  bo: 3
+  date: '2026-06-07'
+- round: 3
+  a: G2 Esports
+  b: FUT Esports
+  winner: FUT Esports
+  bo: 3
+  date: '2026-06-07'
+- round: 3
+  a: Monte
+  b: Legacy
+  winner: Monte
+  bo: 1
+  date: '2026-06-07'
+- round: 3
+  a: Astralis
+  b: TYLOO
+  winner: TYLOO
+  bo: 1
+  date: '2026-06-07'
+- round: 3
+  a: MIBR
+  b: BIG
+  winner: BIG
+  bo: 1
+  date: '2026-06-07'
+- round: 3
+  a: BetBoom Team
+  b: M80
+  winner: BetBoom Team
+  bo: 1
+  date: '2026-06-07'
+- round: 3
+  a: B8
+  b: GamerLegion
+  winner: B8
+  bo: 3
+  date: '2026-06-07'
+- round: 3
+  a: FlyQuest
+  b: paiN Gaming
+  winner: paiN Gaming
+  bo: 3
+  date: '2026-06-07'
+- round: 4
+  a: Monte
+  b: BetBoom Team
+  winner: BetBoom Team
+  bo: 3
+  date: '2026-06-08'
+- round: 4
+  a: TYLOO
+  b: 9z Team
+  winner: 9z Team
+  bo: 3
+  date: '2026-06-08'
+- round: 4
+  a: G2 Esports
+  b: BIG
+  winner: G2 Esports
+  bo: 3
+  date: '2026-06-08'
+- round: 4
+  a: MIBR
+  b: B8
+  winner: B8
+  bo: 3
+  date: '2026-06-08'
+- round: 4
+  a: Astralis
+  b: paiN Gaming
+  winner: paiN Gaming
+  bo: 3
+  date: '2026-06-08'
+- round: 4
+  a: M80
+  b: Legacy
+  winner: Legacy
+  bo: 3
+  date: '2026-06-08'
+- round: 5
+  a: Monte
+  b: paiN Gaming
+  winner: Monte
+  bo: 3
+  date: '2026-06-09'
+- round: 5
+  a: TYLOO
+  b: Legacy
+  winner: Legacy
+  bo: 3
+  date: '2026-06-09'
+- round: 5
+  a: BIG
+  b: B8
+  winner: B8
+  bo: 3
+  date: '2026-06-09'

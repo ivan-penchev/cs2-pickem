@@ -1,0 +1,45 @@
+# IEM Cologne Major 2026 — Stage 2 (generated from Liquipedia)
+name: Stage 2
+type: swiss
+start: '2026-06-06'
+end: '2026-06-09'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/cologne2026/results/stage2.yaml
+liquipedia: Intel_Extreme_Masters/2026/Cologne/Stage_2
+teams:
+- Team Spirit
+- Legacy
+- GamerLegion
+- FUT Esports
+- G2 Esports
+- 9z Team
+- paiN Gaming
+- Monte
+- BetBoom Team
+- MIBR
+- Astralis
+- B8
+- M80
+- FlyQuest
+- TYLOO
+- BIG
+round1:
+- - Astralis
+  - GamerLegion
+- - 9z Team
+  - FlyQuest
+- - FUT Esports
+  - B8
+- - paiN Gaming
+  - TYLOO
+- - G2 Esports
+  - M80
+- - Monte
+  - BIG
+- - Team Spirit
+  - BetBoom Team
+- - Legacy
+  - MIBR

@@ -1,0 +1,27 @@
+# StarLadder Budapest Major 2025 — Playoffs (generated from Liquipedia)
+name: Playoffs
+type: playoffs
+start: '2025-12-11'
+end: '2025-12-14'
+playoff_bo: 3
+final_bo: 5
+bracket:
+- - 1
+  - 2
+- - 3
+  - 4
+- - 5
+  - 6
+- - 7
+  - 8
+results_file: data/backtests/budapest2025/results/playoffs.yaml
+liquipedia: StarLadder/2025/Major/Playoffs
+teams:
+- Team Spirit
+- Team Falcons
+- The MongolZ
+- Team Vitality
+- MOUZ
+- FaZe Clan
+- Natus Vincere
+- FURIA

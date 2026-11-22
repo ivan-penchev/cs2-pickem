@@ -1,0 +1,27 @@
+# IEM Cologne Major 2026 — Playoffs (generated from Liquipedia)
+name: Playoffs
+type: playoffs
+start: '2026-06-18'
+end: '2026-06-21'
+playoff_bo: 3
+final_bo: 5
+bracket:
+- - 1
+  - 2
+- - 3
+  - 4
+- - 5
+  - 6
+- - 7
+  - 8
+results_file: data/backtests/cologne2026/results/playoffs.yaml
+liquipedia: Intel_Extreme_Masters/2026/Cologne/Playoffs
+teams:
+- Team Spirit
+- G2 Esports
+- Team Falcons
+- Team Vitality
+- Aurora Gaming
+- BetBoom Team
+- 9z Team
+- FURIA

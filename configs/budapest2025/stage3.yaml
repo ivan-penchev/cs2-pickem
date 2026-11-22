@@ -1,0 +1,45 @@
+# StarLadder Budapest Major 2025 — Stage 3 (generated from Liquipedia)
+name: Stage 3
+type: swiss
+start: '2025-12-04'
+end: '2025-12-07'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/budapest2025/results/stage3.yaml
+liquipedia: StarLadder/2025/Major/Stage_3
+teams:
+- FURIA
+- Team Vitality
+- Team Falcons
+- The MongolZ
+- MOUZ
+- Team Spirit
+- G2 Esports
+- 3DMAX
+- Natus Vincere
+- FaZe Clan
+- B8
+- Imperial Esports
+- PARIVISION
+- Team Liquid
+- Passion UA
+- paiN Gaming
+round1:
+- - The MongolZ
+  - Imperial Esports
+- - MOUZ
+  - PARIVISION
+- - Team Spirit
+  - Team Liquid
+- - G2 Esports
+  - Passion UA
+- - Team Vitality
+  - FaZe Clan
+- - paiN Gaming
+  - 3DMAX
+- - FURIA
+  - Natus Vincere
+- - Team Falcons
+  - B8

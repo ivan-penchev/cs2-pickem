@@ -1,0 +1,45 @@
+# StarLadder Budapest Major 2025 — Stage 2 (generated from Liquipedia)
+name: Stage 2
+type: swiss
+start: '2025-11-29'
+end: '2025-12-02'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/budapest2025/results/stage2.yaml
+liquipedia: StarLadder/2025/Major/Stage_2
+teams:
+- Aurora Gaming
+- Natus Vincere
+- Team Liquid
+- 3DMAX
+- FaZe Clan
+- Astralis
+- TYLOO
+- MIBR
+- M80
+- FlyQuest
+- B8
+- Fnatic
+- Passion UA
+- Ninjas in Pyjamas
+- PARIVISION
+- Imperial Esports
+round1:
+- - 3DMAX
+  - Fnatic
+- - Astralis
+  - Ninjas in Pyjamas
+- - TYLOO
+  - PARIVISION
+- - Passion UA
+  - FaZe Clan
+- - Aurora Gaming
+  - M80
+- - Natus Vincere
+  - FlyQuest
+- - Team Liquid
+  - B8
+- - MIBR
+  - Imperial Esports
