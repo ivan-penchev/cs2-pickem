@@ -34,8 +34,15 @@ def read_manifest() -> dict:
     return json.loads(p.read_text()) if p.exists() else {}
 
 
-def write_snapshot(source: str, day: str, tables: dict[str, pd.DataFrame], *, urls: list[str] | None = None,
-                   notes: str | None = None, extra: dict | None = None) -> Path:
+def write_snapshot(
+    source: str,
+    day: str,
+    tables: dict[str, pd.DataFrame],
+    *,
+    urls: list[str] | None = None,
+    notes: str | None = None,
+    extra: dict | None = None,
+) -> Path:
     d = snapshot_root() / source / day
     d.mkdir(parents=True, exist_ok=True)
     for name, df in tables.items():

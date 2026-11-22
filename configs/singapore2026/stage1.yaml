@@ -1,5 +1,5 @@
 # Stage 1 — 16-team Swiss. Teams listed in seed order (seed 1 first), seeded by VRS (2026-11-02).
-# Round 1 pairs seed i vs seed i+8 (1v9 ... 8v16).
+# Round 1 pairs seed i vs seed i+8 (1v9 ... 8v16); the official draw is pinned in `round1`.
 name: Stage 1
 type: swiss
 start: 2026-11-24
@@ -25,3 +25,12 @@ teams:
   - FlyQuest            # 14 (1318)
   - Chinggis Warriors   # 15 (1272)
   - Lynn Vision         # 16 (1267)
+round1:  # official draw (data/stage1.json)
+  - [Ninjas in Pyjamas, M80]
+  - [PARIVISION, DENDELE]
+  - [HEROIC, Imperial]
+  - [FaZe, Wildcard]
+  - [Liquid, GOSH]
+  - [Eternal Fire, FlyQuest]
+  - [100 Thieves, Chinggis Warriors]
+  - [9z, Lynn Vision]

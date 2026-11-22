@@ -55,8 +55,11 @@ class RatingParams(BaseModel):
 class MapParams(BaseModel):
     prior_maps: float = 8.0  # Bayesian shrinkage strength (pseudo-maps at team-average)
     max_offset: float = 0.8  # clamp of per-map logit offset
-    veto_temperature: float = 0.0  # 0 = deterministic greedy veto, >0 = softmax-random bans/picks
-    bo1_side_choice: Literal["optimal", "random"] = "optimal"
+    # 0 = both teams veto optimally (minimax); >0 = quantal-response (softmax over win-prob, in
+    # probability units) – models imperfect/unpredictable vetoes. Computed exactly, no sampling.
+    veto_temperature: float = 0.0
+    bo1_side_choice: Literal["optimal", "random"] = "optimal"  # higher seed picks Team A/B in Bo1
+    unplayed_offset: float = -0.25  # logit offset for maps a team never plays (usually its permaban)
 
 
 class SimParams(BaseModel):
@@ -124,11 +127,15 @@ class StageConfig(BaseModel):
     final_bo: int = 5
     bracket: list[list[int]] = Field(default_factory=lambda: [[1, 8], [4, 5], [2, 7], [3, 6]])
     results_file: str | None = None
+    # Optional explicit Round-1 pairs (official draw). Default: seed i vs seed i+n/2.
+    round1: list[list[str]] | None = None
 
     @model_validator(mode="after")
     def _check(self) -> StageConfig:
         if self.type == "swiss" and self.teams and len(self.teams) % 2:
             raise ValueError("Swiss stage needs an even number of teams")
+        if self.round1 and any(len(p) != 2 for p in self.round1):
+            raise ValueError("round1 entries must be pairs")
         return self
 
 
@@ -162,6 +169,11 @@ def load_event(path: str | Path) -> Event:
         raw.setdefault("id", sid)
         st = StageConfig.model_validate(raw)
         st.teams = [cfg.canonical(t) for t in st.teams]
+        if st.round1:
+            st.round1 = [[cfg.canonical(a), cfg.canonical(b)] for a, b in st.round1]
+            flat = [t for pair in st.round1 for t in pair]
+            if st.teams and sorted(flat) != sorted(st.teams):
+                raise ValueError(f"{sid}: round1 must pair every stage team exactly once")
         if st.source:
             st.source.invites = [cfg.canonical(t) for t in st.source.invites]
         stages[sid] = st
