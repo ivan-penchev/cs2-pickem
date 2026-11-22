@@ -200,8 +200,8 @@ def play_out(
 ) -> tuple[list[int], list[int], list[list[int]], list[Pair] | None, int]:
     """Replay known results deterministically.
 
-    Returns wins, losses, opponents, the pairs of the next round to be played (None if it can't be
-    determined yet / stage finished) and that round number.
+    Returns wins, losses, opponents (including finished matches of a partially played round), the
+    pairs of the round currently being played (None once the stage is finished) and that round number.
     """
     T = len(teams)
     idx = {t: i for i, t in enumerate(teams)}
@@ -221,15 +221,18 @@ def play_out(
         else:
             pairs = r1 if rnd == 1 else pair_round(rnd, active, wins, losses, opps, played)
         done = {frozenset((idx[a], idx[b])): idx[w] for a, b, w in given if w}
-        if len(done) < len(pairs):
-            return wins, losses, opps, pairs, rnd
+        complete = len(done) >= len(pairs)
         for a, b, w in given:
+            if not w:
+                continue
             ia, ib, iw = idx[a], idx[b], idx[w]
             wins[iw] += 1
             losses[ib if iw == ia else ia] += 1
             opps[ia].append(ib)
             opps[ib].append(ia)
             played.add(frozenset((ia, ib)))
+        if not complete:  # standings include the finished matches of the round in progress
+            return wins, losses, opps, pairs, rnd
     return wins, losses, opps, None, fmt.max_rounds + 1
 
 
