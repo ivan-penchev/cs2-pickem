@@ -8,6 +8,12 @@ objective is evaluated on the joint simulation samples rather than on marginals:
 
     maximise  P(#correct >= threshold)   (tie-break: E[#correct])
 
+``objective="expected"`` swaps the two: maximise E[#correct], tie-break P(#correct >= threshold).
+
+``seed_rank`` enables the seed-anchored variant: after optimising, picks are moved toward the
+seed-favoured ones (better seeds for 3-0/advance, worse seeds for 0-3) as long as the objective stays
+within ``tie_tol`` of the optimum, so near-ties are broken by the seeding instead of by sim noise.
+
 Search: start from the best marginal assignment (Hungarian-style greedy), then steepest-ascent local
 search over "replace one pick" and "swap two picks' categories" moves, plus a few random restarts.
 """
@@ -38,11 +44,26 @@ class SwissPicks:
         return {c: [self.teams[t] for t in ts] for c, ts in self.picks.items()}
 
 
+OBJECTIVES = ("threshold", "expected")
+# Seed-favour weight per category: a better seed is worth more as a 3-0 pick than as an advance pick.
+_SEED_W = {"perfect": 1.5, "advance": 1.0, "winless": -1.5}
+
+
 class _Evaluator:
-    def __init__(self, masks: dict[str, np.ndarray], threshold: int, eps: float = 1e-4) -> None:
+    def __init__(
+        self, masks: dict[str, np.ndarray], threshold: int, eps: float = 1e-4, objective: str = "threshold"
+    ) -> None:
+        if objective not in OBJECTIVES:
+            raise ValueError(f"objective must be one of {OBJECTIVES}")
         self.cols = {c: masks[c].astype(np.int8) for c in CATS}
         self.threshold = threshold
         self.eps = eps
+        self.mode = objective
+
+    def primary(self, s: np.ndarray) -> float:
+        if self.mode == "expected":
+            return float(s.mean())
+        return float((s >= self.threshold).mean())
 
     def score(self, assign: list[tuple[str, int]]) -> np.ndarray:
         s = np.zeros(next(iter(self.cols.values())).shape[0], np.int8)
@@ -51,7 +72,57 @@ class _Evaluator:
         return s
 
     def objective(self, s: np.ndarray) -> float:
+        if self.mode == "expected":
+            return float(s.mean()) + self.eps * float((s >= self.threshold).mean())
         return float((s >= self.threshold).mean()) + self.eps * float(s.mean())
+
+
+def _seed_score(assign: list[tuple[str, int]], rank: np.ndarray) -> float:
+    return float(sum(-_SEED_W[c] * rank[t] for c, t in assign))
+
+
+def _anchor(
+    ev: _Evaluator,
+    assign: list[tuple[str, int]],
+    T: int,
+    rank: np.ndarray,
+    tol: float,
+    n_fixed: int = 0,
+    max_iter: int = 200,
+) -> list:
+    """Move picks toward the seed-favoured ones while the primary objective stays within ``tol``."""
+    assign = list(assign)
+    floor = ev.primary(ev.score(assign)) - tol
+    for _ in range(max_iter):
+        s = ev.score(assign)
+        cur = _seed_score(assign, rank)
+        used = {t for _, t in assign}
+        best, best_key = None, (cur + 1e-9, -np.inf)
+        for k in range(n_fixed, len(assign)):
+            c, t = assign[k]
+            base = s - ev.cols[c][:, t]
+            for u in range(T):
+                if u in used:
+                    continue
+                cand = assign[:k] + [(c, u)] + assign[k + 1 :]
+                key = (_seed_score(cand, rank), ev.objective(base + ev.cols[c][:, u]))
+                if key[0] > best_key[0] and ev.primary(base + ev.cols[c][:, u]) >= floor:
+                    best, best_key = cand, key
+        for a in range(n_fixed, len(assign)):
+            for b in range(a + 1, len(assign)):
+                (ca, ta), (cb, tb) = assign[a], assign[b]
+                if ca == cb:
+                    continue
+                cand = list(assign)
+                cand[a], cand[b] = (ca, tb), (cb, ta)
+                ns = s - ev.cols[ca][:, ta] - ev.cols[cb][:, tb] + ev.cols[ca][:, tb] + ev.cols[cb][:, ta]
+                key = (_seed_score(cand, rank), ev.objective(ns))
+                if key[0] > best_key[0] and ev.primary(ns) >= floor:
+                    best, best_key = cand, key
+        if best is None:
+            break
+        assign = best
+    return assign
 
 
 def _initial(marg: dict[str, np.ndarray], quota: dict[str, int], rng: np.random.Generator | None) -> list:
@@ -134,10 +205,14 @@ def optimise_swiss(
     restarts: int = 8,
     seed: int = 0,
     locked: dict[str, list[str]] | None = None,
+    objective: str = "threshold",
+    seed_rank: list[int] | np.ndarray | None = None,
+    tie_tol: float = 0.01,
 ) -> SwissPicks:
-    """Return the pick set maximising P(correct >= threshold).
+    """Return the pick set maximising P(correct >= threshold) (or E[correct] with ``objective="expected"``).
 
     ``locked`` optionally fixes some picks (``{"perfect": ["NiP"]}``) – they are kept in every candidate.
+    ``seed_rank[t]`` (0 = top seed) turns on the seed-anchored tie-break within ``tie_tol``.
     """
     masks = res.outcome_masks()
     T = len(res.teams)
@@ -145,7 +220,7 @@ def optimise_swiss(
     if n_30 + n_03 + n_advance > T:
         raise ValueError("more picks than teams")
     marg = {c: masks[c].mean(axis=0) for c in CATS}
-    ev = _Evaluator(masks, threshold)
+    ev = _Evaluator(masks, threshold, objective=objective)
     idx = {t: i for i, t in enumerate(res.teams)}
     fixed = [(c, idx[t]) for c, ts in (locked or {}).items() for t in ts]
     for c, _ in fixed:
@@ -167,6 +242,8 @@ def optimise_swiss(
             best_assign, best_val = assign, val
 
     assert best_assign is not None
+    if seed_rank is not None:
+        best_assign = _anchor(ev, best_assign, T, np.asarray(seed_rank, float), tie_tol, len(fixed))
     s = ev.score(best_assign)
     n = n_30 + n_03 + n_advance
     picks = {c: sorted((t for cc, t in best_assign if cc == c), key=lambda t: -marg[c][t]) for c in CATS}

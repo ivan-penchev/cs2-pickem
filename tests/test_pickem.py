@@ -84,3 +84,32 @@ def test_bracket_known_and_equal():
     assert reach["Final"].sum() == pytest.approx(1)
     assert np.allclose(reach["Final"][1:7], 1 / 8, atol=0.02)
     assert reach["Final"][7] == pytest.approx(1 / 4, abs=0.02)  # S8 already won its QF
+
+
+def test_swiss_expected_objective(swiss_res):
+    se = optimise_swiss(swiss_res, restarts=3, objective="expected")
+    st = optimise_swiss(swiss_res, restarts=3)
+    assert se.expected >= st.expected - 1e-12
+    assert se.p_threshold == pytest.approx(_score(swiss_res, se.picks)[0])
+    with pytest.raises(ValueError):
+        optimise_swiss(swiss_res, objective="nope")
+
+
+def test_swiss_seed_anchor_within_tolerance(swiss_res):
+    base = optimise_swiss(swiss_res, restarts=3)
+    # reversed seed order: anchoring must not cost more than the tolerance
+    rank = list(range(15, -1, -1))
+    anc = optimise_swiss(swiss_res, restarts=3, seed_rank=rank, tie_tol=0.01)
+    assert anc.p_threshold >= base.p_threshold - 0.01 - 1e-12
+    flat = [t for ts in anc.picks.values() for t in ts]
+    assert len(set(flat)) == 10
+
+
+def test_swiss_seed_anchor_breaks_exact_ties():
+    # identical teams: every pick set ties, so the anchor follows the seed order
+    teams = [f"T{i + 1}" for i in range(16)]
+    M = logistic([1500] * 16)
+    res = simulate_swiss(teams, {1: M, 3: M}, n_sims=2000, seed=3)
+    sp = optimise_swiss(res, restarts=2, seed_rank=list(range(16)), tie_tol=1.0)
+    assert set(sp.picks["perfect"]) == {0, 1}
+    assert set(sp.picks["winless"]) == {14, 15}
