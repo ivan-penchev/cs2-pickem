@@ -641,7 +641,7 @@ def backtest_run(
 ) -> None:
     """Run the point-in-time backtest (model vs VRS-only vs coin flip) and write report.json + backtest.html."""
     from .backtest import MAJORS
-    from .backtest.run import run_backtest
+    from .backtest.run import run_backtest, write_summary
     from .site import backtest as bt_html
 
     for m in event or list(MAJORS):
@@ -663,6 +663,23 @@ def backtest_run(
                 f"{v['pickem_correct']}/{10 * v['swiss_stages']}",
             )
         console.print(t)
+    summ = write_summary()
+    t = Table(title=f"Pick'Em strategies over {len(summ['stages'])} Swiss stages")
+    for c in ("strategy", "mean correct", "95% CI", "Δ vs VRS", "coins", "3-0", "adv", "0-3", "Brier"):
+        t.add_column(c, justify="right" if c != "strategy" else "left")
+    for v in summ["strategies"].values():
+        hr = v["hit_rate"]
+        d = v[f"diff_vs_{summ['baseline']}"]
+        t.add_row(
+            v["label"],
+            f"{v['mean_correct']:.2f}",
+            f"{v['ci'][0]:.2f}–{v['ci'][1]:.2f}",
+            f"{d['mean']:+.2f} ({d['ci'][0]:+.2f}, {d['ci'][1]:+.2f})",
+            f"{v['coins']}/{v['stages']}",
+            *(_pct(hr[c]) if hr[c] is not None else "–" for c in ("perfect", "advance", "winless")),
+            f"{v['brier']:.3f}" if v["brier"] is not None else "–",
+        )
+    console.print(t)
     if html:
         console.print(f"[green]wrote[/] {bt_html.write()}")
 

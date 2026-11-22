@@ -1,0 +1,26 @@
+chosen: bt
+decision: 'Keep BT (Bradley-Terry with a VRS prior, optimised for P(5 or more correct)) as the default. Over 13 Swiss stages
+  from five Majors it has the highest mean correct picks (4.31 of 10) and it was highest or tied for highest on all three simulation seeds tried
+  at 100k sims (4.31, 4.38, 4.31). The edge is small: +0.15 picks per stage over VRS seeds alone, with a paired 95% CI of
+  -0.54 to +0.92, so the data cannot tell BT from VRS-only, the BT+VRS ensembles or the seed-anchored tie-break. No alternative
+  beats BT either, and BT has the best Brier score (0.227 vs 0.244 for VRS), so there is no reason to switch. Maximising expected
+  correct picks instead of P(5 or more) never helped and usually cost a coin or two.'
+seed_check:
+  seeds:
+  - 2026
+  - 7
+  - 42
+  n_sims: 100000
+  mean_correct:
+    vrs_only: 4.179
+    legacy: 4.179
+    bt: 4.333
+    ensemble: 4.179
+    ensemble_prob: 4.154
+    seed_anchored: 4.256
+    vrs_only_exp: 4.077
+    legacy_exp: 4.026
+    bt_exp: 4.231
+    ensemble_exp: 4.154
+    ensemble_prob_exp: 4.077
+    seed_anchored_exp: 4.051

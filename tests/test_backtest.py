@@ -62,3 +62,37 @@ def test_committed_report_schema(major):
                 assert m["n_correct"] == sum(p["correct"] for p in m["picks"])
     html = bt_html.render([rep])
     assert rep["name"] in html and "<svg" in html
+
+
+def test_majors_cover_all_swiss_majors():
+    from cs2pickem.backtest.majors import MAJORS as M
+
+    assert len(M) == 5
+    assert {"copenhagen2024", "shanghai2024", "austin2025", "budapest2025", "cologne2026"} <= set(M)
+
+
+def test_bootstrap_ci_deterministic():
+    from cs2pickem.backtest.run import bootstrap_ci
+
+    x = np.array([3, 5, 4, 6, 2, 5, 4], float)
+    a, b = bootstrap_ci(x), bootstrap_ci(x)
+    assert a == b
+    assert a[0] <= x.mean() <= a[1]
+
+
+def test_summarise_majors_schema():
+    from cs2pickem.backtest.run import STRATEGIES, summarise_majors
+
+    reps = bt_html.load_reports()
+    summ = summarise_majors(reps)
+    n = len(summ["stages"])
+    assert n == sum(1 for r in reps for st in r["stages"].values() if st["type"] == "swiss")
+    assert set(summ["strategies"]) == set(STRATEGIES)
+    for v in summ["strategies"].values():
+        assert len(v["per_stage"]) == n
+        assert v["mean_correct"] == pytest.approx(np.mean(v["per_stage"]))
+        assert v["ci"][0] <= v["mean_correct"] <= v["ci"][1]
+        assert v["coins"] == sum(c >= 5 for c in v["per_stage"])
+    assert summ["strategies"]["vrs_only"]["diff_vs_vrs_only"]["mean"] == 0
+    html = bt_html.render(reps, summ)
+    assert 'id="strategies"' in html

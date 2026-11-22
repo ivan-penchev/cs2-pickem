@@ -32,14 +32,62 @@ from ..playoffs import simulate_bracket
 from ..swiss.simulator import simulate_swiss
 from .majors import MAJORS
 
-MODELS = ("model", "legacy", "vrs_only", "coin_flip")
+MODELS = ("model", "legacy", "vrs_only", "ens_logit", "ens_prob", "coin_flip")
 MODEL_LABEL = {
-    "model": "Configured model",
+    "model": "Configured model (BT)",
     "legacy": "Legacy blend (v1)",
     "vrs_only": "VRS seed/points only",
+    "ens_logit": "BT+VRS 50/50 (logit)",
+    "ens_prob": "BT+VRS 50/50 (prob)",
     "coin_flip": "Coin flip",
 }
+# Pick'Em strategies: probability source, optimiser objective, seed-anchored tie-break.
+STRATEGIES: dict[str, tuple[str, str, bool]] = {
+    "vrs_only": ("vrs_only", "threshold", False),
+    "legacy": ("legacy", "threshold", False),
+    "bt": ("model", "threshold", False),
+    "ensemble": ("ens_logit", "threshold", False),
+    "ensemble_prob": ("ens_prob", "threshold", False),
+    "seed_anchored": ("model", "threshold", True),
+}
+for _k, (_src, _obj, _anc) in list(STRATEGIES.items()):
+    STRATEGIES[f"{_k}_exp"] = (_src, "expected", _anc)
+STRATEGY_LABEL = {
+    "vrs_only": "VRS only",
+    "legacy": "Legacy blend",
+    "bt": "Bradley-Terry",
+    "ensemble": "BT+VRS ensemble (logit)",
+    "ensemble_prob": "BT+VRS ensemble (prob)",
+    "seed_anchored": "BT, seed-anchored ties",
+}
+for _k in list(STRATEGY_LABEL):
+    STRATEGY_LABEL[f"{_k}_exp"] = STRATEGY_LABEL[_k] + ", max E[correct]"
+# Tolerance for "near-tie" in the seed-anchored tie-break, in units of the primary objective.
+TIE_TOL = {"threshold": 0.01, "expected": 0.05}
+CATS3 = ("perfect", "advance", "winless")
 EPS = 1e-6
+
+
+def _ensemble(a: np.ndarray, b: np.ndarray, scale: str) -> np.ndarray:
+    if scale == "prob":
+        return 0.5 * (a + b)
+    la = np.log(np.clip(a, EPS, 1 - EPS) / np.clip(1 - a, EPS, 1 - EPS))
+    lb = np.log(np.clip(b, EPS, 1 - EPS) / np.clip(1 - b, EPS, 1 - EPS))
+    m = 1.0 / (1.0 + np.exp(-0.5 * (la + lb)))
+    np.fill_diagonal(m, 0.5)
+    return m
+
+
+def _matrices(ctxs: dict[str, Context], name: str, teams: list[str], bos: set[int]) -> dict[int, np.ndarray]:
+    n = len(teams)
+    if name == "coin_flip":
+        return {bo: np.full((n, n), 0.5) for bo in bos}
+    if name in ("ens_logit", "ens_prob"):
+        a, b = ctxs["model"].model(teams), ctxs["vrs_only"].model(teams)
+        scale = "prob" if name == "ens_prob" else "logit"
+        return {bo: _ensemble(a.matrix(bo), b.matrix(bo), scale) for bo in bos}
+    mm = ctxs[name].model(teams)
+    return {bo: mm.matrix(bo) for bo in bos}
 
 
 def load_actual(event: Event, stage: StageConfig) -> list[dict]:
@@ -139,12 +187,9 @@ def _swiss_stage(
     pk = event.config.pickem
     out: dict = {"type": "swiss", "teams": teams, "actual": {t: f"{w}-{lo}" for t, (w, lo) in rec.items()}}
     actual_cat = {t: _category(w, lo, W, L) for t, (w, lo) in rec.items()}
+    out["strategies"] = {}
     for name in MODELS:
-        if name == "coin_flip":
-            mats = {bo: np.full((len(teams), len(teams)), 0.5) for bo in {fmt.default_bo, fmt.decider_bo}}
-        else:
-            mm = ctxs[name].model(teams)
-            mats = {bo: mm.matrix(bo) for bo in {fmt.default_bo, fmt.decider_bo, 1, 3}}
+        mats = _matrices(ctxs, name, teams, {fmt.default_bo, fmt.decider_bo, 1, 3})
         idx = {t: i for i, t in enumerate(teams)}
         res = simulate_swiss(
             teams,
@@ -154,13 +199,23 @@ def _swiss_stage(
             seed=event.config.sim.seed,
             round1=[tuple(p) for p in stage.round1] if stage.round1 else None,  # type: ignore[misc]
         )
+        for sname, (src, obj, anchored) in STRATEGIES.items():
+            if src != name:
+                continue
+            sp = optimise_swiss(
+                res,
+                pk.n_30,
+                pk.n_03,
+                pk.n_advance,
+                pk.threshold,
+                objective=obj,
+                seed_rank=list(range(len(teams))) if anchored else None,
+                tie_tol=TIE_TOL[obj],
+            )
+            out["strategies"][sname] = _grade(sp, actual_cat, out["actual"], pk.threshold)
         picks = optimise_swiss(res, pk.n_30, pk.n_03, pk.n_advance, pk.threshold)
-        named = picks.named()
-        graded = {
-            c: [{"team": t, "correct": actual_cat[t] == c, "actual": out["actual"][t]} for t in ts]
-            for c, ts in named.items()
-        }
-        n_correct = sum(g["correct"] for gs in graded.values() for g in gs)
+        g = _grade(picks, actual_cat, out["actual"], pk.threshold)
+        graded, n_correct = g["picks"], g["n_correct"]
         probs, ys, rows = [], [], []
         for m in actual:
             p = float(mats[m["bo"]][idx[m["a"]], idx[m["b"]]])
@@ -210,6 +265,23 @@ def _swiss_stage(
     return out
 
 
+def _grade(picks, actual_cat: dict, actual: dict, threshold: int) -> dict:
+    graded = {
+        c: [{"team": t, "correct": actual_cat[t] == c, "actual": actual[t]} for t in ts]
+        for c, ts in picks.named().items()
+    }
+    n_correct = sum(g["correct"] for gs in graded.values() for g in gs)
+    return {
+        "picks": graded,
+        "n_correct": int(n_correct),
+        "coin": bool(n_correct >= threshold),
+        "p_coin": float(picks.p_threshold),
+        "expected_correct": float(picks.expected),
+        "hits": {c: int(sum(x["correct"] for x in graded.get(c, []))) for c in CATS3},
+        "n": {c: len(graded.get(c, [])) for c in CATS3},
+    }
+
+
 def _playoff_stage(
     ctxs: dict[str, Context], event: Event, stage: StageConfig, actual: list[dict], n_sims: int
 ) -> dict:
@@ -220,12 +292,7 @@ def _playoff_stage(
     out: dict = {"type": "playoffs", "teams": teams, "champion": known.get((n_rounds - 1, 0))}
     idx = {t: i for i, t in enumerate(teams)}
     for name in MODELS:
-        bos = {stage.playoff_bo, stage.final_bo}
-        if name == "coin_flip":
-            mats = {bo: np.full((len(teams), len(teams)), 0.5) for bo in bos}
-        else:
-            mm = ctxs[name].model(teams)
-            mats = {bo: mm.matrix(bo) for bo in bos}
+        mats = _matrices(ctxs, name, teams, {stage.playoff_bo, stage.final_bo})
         res = simulate_bracket(
             teams,
             mats,
@@ -288,7 +355,13 @@ def run_backtest(major: str, n_sims: int | None = None, log: Callable[[str], Non
         "name": spec.name,
         "generated": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "n_sims": n,
-        "inputs": {"vrs": spec.vrs_day, "hltv": spec.hltv_day, "map_pool": spec.map_pool},
+        "inputs": {
+            "vrs": spec.vrs_day,
+            "hltv": spec.hltv_day,
+            "map_pool": spec.map_pool,
+            "synthetic_vrs": spec.synthetic_vrs,
+            "note": spec.note,
+        },
         "stages": {},
     }
     earlier: list[dict] = []
@@ -371,3 +444,86 @@ def _json(o):
 
 
 __all__ = ["run_backtest", "reliability", "CAT_LABEL"]
+
+
+# ------------------------------------------------------------------------------------- cross-Major summary
+def bootstrap_ci(x: np.ndarray, n_boot: int = 10_000, seed: int = 2026, level: float = 0.95) -> tuple:
+    """Percentile bootstrap CI of the mean of ``x`` (resampling stages)."""
+    x = np.asarray(x, float)
+    if len(x) == 0:
+        return (float("nan"), float("nan"))
+    rng = np.random.default_rng(seed)
+    means = x[rng.integers(0, len(x), size=(n_boot, len(x)))].mean(axis=1)
+    a = (1 - level) / 2
+    return (float(np.quantile(means, a)), float(np.quantile(means, 1 - a)))
+
+
+def _brier_sources(reports: list[dict]) -> dict[str, float | None]:
+    out: dict[str, float | None] = {}
+    for name in MODELS:
+        num, den = 0.0, 0
+        for r in reports:
+            ms = r["summary"][name]["match_scores"]
+            if ms["n"]:
+                num += ms["brier"] * ms["n"]
+                den += ms["n"]
+        out[name] = num / den if den else None
+    return out
+
+
+def summarise_majors(reports: list[dict], baseline: str = "vrs_only", default: str = "bt") -> dict:
+    """Aggregate the per-Major reports into a strategy comparison over all Swiss stages."""
+    rows = []
+    for r in reports:
+        for sid, st in r["stages"].items():
+            if st["type"] == "swiss" and "strategies" in st:
+                rows.append((r["id"], sid, st["strategies"]))
+    brier = _brier_sources(reports)
+    correct = {k: np.array([s[k]["n_correct"] for *_, s in rows], float) for k in STRATEGIES}
+    strategies: dict = {}
+    for k, (src, obj, anchored) in STRATEGIES.items():
+        c = correct[k]
+        hits = {cat: sum(s[k]["hits"][cat] for *_, s in rows) for cat in CATS3}
+        ns = {cat: sum(s[k]["n"][cat] for *_, s in rows) for cat in CATS3}
+        entry = {
+            "label": STRATEGY_LABEL[k],
+            "source": src,
+            "objective": obj,
+            "seed_anchored": anchored,
+            "mean_correct": float(c.mean()),
+            "ci": bootstrap_ci(c),
+            "coins": int(sum(s[k]["coin"] for *_, s in rows)),
+            "stages": len(rows),
+            "mean_p_coin": float(np.mean([s[k]["p_coin"] for *_, s in rows])),
+            "hit_rate": {cat: (hits[cat] / ns[cat] if ns[cat] else None) for cat in CATS3},
+            "brier": brier[src],
+            "per_stage": [int(v) for v in c],
+        }
+        for ref in (baseline, default):
+            d = c - correct[ref]
+            entry[f"diff_vs_{ref}"] = {"mean": float(d.mean()), "ci": bootstrap_ci(d)}
+        strategies[k] = entry
+    return {
+        "generated": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "majors": [{"id": r["id"], "name": r["name"], "note": r["inputs"].get("note")} for r in reports],
+        "stages": [f"{m}/{s}" for m, s, _ in rows],
+        "baseline": baseline,
+        "default": default,
+        "strategies": strategies,
+        "brier": brier,
+    }
+
+
+def write_summary(majors: list[str] | None = None) -> dict:
+    root = home() / "data" / "backtests"
+    reports = []
+    for m in majors or list(MAJORS):
+        p = root / m / "report.json"
+        if p.exists():
+            reports.append(json.loads(p.read_text()))
+    summ = summarise_majors(reports)
+    dec = root / "decision.yaml"
+    if dec.exists():
+        summ.update(yaml.safe_load(dec.read_text()) or {})
+    (root / "summary.json").write_text(json.dumps(summ, indent=1))
+    return summ
