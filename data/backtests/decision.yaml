@@ -1,10 +1,11 @@
 chosen: bt
-decision: 'Keep BT (Bradley-Terry with a VRS prior, optimised for P(5 or more correct)) as the default. Over 13 Swiss stages
-  from five Majors it has the highest mean correct picks (4.31 of 10) and it was highest or tied for highest on all three simulation seeds tried
-  at 100k sims (4.31, 4.38, 4.31). The edge is small: +0.15 picks per stage over VRS seeds alone, with a paired 95% CI of
-  -0.54 to +0.92, so the data cannot tell BT from VRS-only, the BT+VRS ensembles or the seed-anchored tie-break. No alternative
-  beats BT either, and BT has the best Brier score (0.227 vs 0.244 for VRS), so there is no reason to switch. Maximising expected
-  correct picks instead of P(5 or more) never helped and usually cost a coin or two.'
+decision: 'Keep BT (Bradley-Terry with a VRS prior, optimised for P(5 or more correct)) as the default for now. This run uses
+  the full live-equivalent model: HLTV results and per-map stats from before each stage feed the ratings and the veto model.
+  Over 13 Swiss stages BT averages 4.46 correct picks of 10 and earns 8 coins. The BT+VRS 50/50 logit ensemble now has the
+  highest mean, 4.62 with 9 coins, but its paired edge over BT is +0.15 picks per stage with a 95% CI of -0.15 to +0.54, and
+  most of it comes from a single stage (Budapest Stage 3). At 100k sims averaged over three seeds the two are level (BT 4.36,
+  ensemble 4.38), so the data cannot separate them. BT also has the better Brier score (0.227 vs 0.233). Switching the default
+  is left to the maintainer. Maximising expected correct picks instead of P(5 or more) still never helped.'
 seed_check:
   seeds:
   - 2026
@@ -12,15 +13,197 @@ seed_check:
   - 42
   n_sims: 100000
   mean_correct:
-    vrs_only: 4.179
-    legacy: 4.179
-    bt: 4.333
-    ensemble: 4.179
-    ensemble_prob: 4.154
-    seed_anchored: 4.256
+    vrs_only: 4.154
+    legacy: 4.026
+    bt: 4.359
+    ensemble: 4.385
+    ensemble_prob: 4.333
+    seed_anchored: 4.0
     vrs_only_exp: 4.077
-    legacy_exp: 4.026
-    bt_exp: 4.231
-    ensemble_exp: 4.154
-    ensemble_prob_exp: 4.077
-    seed_anchored_exp: 4.051
+    legacy_exp: 4.0
+    bt_exp: 4.154
+    ensemble_exp: 4.256
+    ensemble_prob_exp: 4.308
+    seed_anchored_exp: 4.256
+hltv_effect:
+  note: Mean correct picks per Swiss stage without HLTV results and map stats (VRS match history only, flat map offsets) and
+    with them. Same sims (20k) and seed. Differences are paired per stage with bootstrap 95% CIs.
+  strategies:
+    vrs_only:
+      without: 4.154
+      with: 4.385
+      diff: 0.231
+      diff_ci:
+      - 0.0
+      - 0.62
+      coins_without: 7
+      coins_with: 8
+      brier_without: 0.2451
+      brier_with: 0.2446
+      brier_diff_ci:
+      - -0.0023
+      - 0.0016
+    legacy:
+      without: 4.154
+      with: 4.077
+      diff: -0.077
+      diff_ci:
+      - -0.23
+      - 0.0
+      coins_without: 6
+      coins_with: 6
+      brier_without: 0.243
+      brier_with: 0.2435
+      brier_diff_ci:
+      - -0.0012
+      - 0.0024
+    bt:
+      without: 4.308
+      with: 4.462
+      diff: 0.154
+      diff_ci:
+      - -0.31
+      - 0.54
+      coins_without: 7
+      coins_with: 8
+      brier_without: 0.2259
+      brier_with: 0.2278
+      brier_diff_ci:
+      - -0.0007
+      - 0.0045
+    ensemble:
+      without: 4.154
+      with: 4.615
+      diff: 0.462
+      diff_ci:
+      - 0.08
+      - 0.92
+      coins_without: 7
+      coins_with: 9
+      brier_without: 0.2326
+      brier_with: 0.2338
+      brier_diff_ci:
+      - -0.0011
+      - 0.0035
+    ensemble_prob:
+      without: 4.231
+      with: 4.385
+      diff: 0.154
+      diff_ci:
+      - -0.38
+      - 0.62
+      coins_without: 7
+      coins_with: 7
+      brier_without: 0.2312
+      brier_with: 0.2326
+      brier_diff_ci:
+      - -0.0009
+      - 0.0037
+    seed_anchored:
+      without: 4.308
+      with: 4.308
+      diff: 0.0
+      diff_ci:
+      - -0.62
+      - 0.69
+      coins_without: 8
+      coins_with: 6
+      brier_without: 0.2259
+      brier_with: 0.2278
+      brier_diff_ci:
+      - -0.0007
+      - 0.0045
+    vrs_only_exp:
+      without: 4.077
+      with: 4.077
+      diff: 0.0
+      diff_ci:
+      - -0.23
+      - 0.23
+      coins_without: 7
+      coins_with: 6
+      brier_without: 0.2451
+      brier_with: 0.2446
+      brier_diff_ci:
+      - -0.0023
+      - 0.0016
+    legacy_exp:
+      without: 4.0
+      with: 4.077
+      diff: 0.077
+      diff_ci:
+      - -0.15
+      - 0.31
+      coins_without: 6
+      coins_with: 7
+      brier_without: 0.243
+      brier_with: 0.2435
+      brier_diff_ci:
+      - -0.0012
+      - 0.0024
+    bt_exp:
+      without: 4.231
+      with: 4.154
+      diff: -0.077
+      diff_ci:
+      - -0.62
+      - 0.46
+      coins_without: 6
+      coins_with: 7
+      brier_without: 0.2259
+      brier_with: 0.2278
+      brier_diff_ci:
+      - -0.0007
+      - 0.0045
+    ensemble_exp:
+      without: 4.154
+      with: 4.462
+      diff: 0.308
+      diff_ci:
+      - 0.0
+      - 0.69
+      coins_without: 7
+      coins_with: 8
+      brier_without: 0.2326
+      brier_with: 0.2338
+      brier_diff_ci:
+      - -0.0011
+      - 0.0035
+    ensemble_prob_exp:
+      without: 4.077
+      with: 4.385
+      diff: 0.308
+      diff_ci:
+      - 0.0
+      - 0.69
+      coins_without: 6
+      coins_with: 8
+      brier_without: 0.2312
+      brier_with: 0.2326
+      brier_diff_ci:
+      - -0.0009
+      - 0.0037
+    seed_anchored_exp:
+      without: 4.0
+      with: 4.077
+      diff: 0.077
+      diff_ci:
+      - -0.54
+      - 0.69
+      coins_without: 6
+      coins_with: 5
+      brier_without: 0.2259
+      brier_with: 0.2278
+      brier_diff_ci:
+      - -0.0007
+      - 0.0045
+stage1_current:
+  file: data/predictions/stage1/20261122T144906Z.json
+  picks_30:
+  - HEROIC
+  - Liquid
+  picks_03:
+  - Chinggis Warriors
+  - GOSH
+  p_threshold: 0.268
+  note: Current Singapore Stage 1 picks from the BT model. The 58.3% NiP/9z picks were the earlier blend baseline (20261122T140308Z.json).

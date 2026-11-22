@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T15:45:49Z",
+ "generated": "2026-11-22T18:08:16Z",
  "majors": [
   {
    "id": "copenhagen2024",
@@ -50,25 +50,25 @@
    "source": "vrs_only",
    "objective": "threshold",
    "seed_anchored": false,
-   "mean_correct": 4.153846153846154,
+   "mean_correct": 4.384615384615385,
    "ci": [
-    3.3076923076923075,
-    4.923076923076923
+    3.5384615384615383,
+    5.153846153846154
    ],
-   "coins": 7,
+   "coins": 8,
    "stages": 13,
-   "mean_p_coin": 0.7587946153846153,
+   "mean_p_coin": 0.76,
    "hit_rate": {
-    "perfect": 0.3076923076923077,
-    "advance": 0.5,
+    "perfect": 0.38461538461538464,
+    "advance": 0.5128205128205128,
     "winless": 0.2692307692307692
    },
-   "brier": 0.2437448782029984,
+   "brier": 0.2431314750704241,
    "per_stage": [
     3,
     5,
-    3,
     5,
+    6,
     6,
     2,
     4,
@@ -87,9 +87,9 @@
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.15384615384615385,
+    "mean": -0.07692307692307693,
     "ci": [
-     -0.9230769230769231,
+     -0.6153846153846154,
      0.5384615384615384
     ]
    }
@@ -99,20 +99,20 @@
    "source": "legacy",
    "objective": "threshold",
    "seed_anchored": false,
-   "mean_correct": 4.153846153846154,
+   "mean_correct": 4.076923076923077,
    "ci": [
-    3.5384615384615383,
+    3.3846153846153846,
     4.769230769230769
    ],
    "coins": 6,
    "stages": 13,
-   "mean_p_coin": 0.7458092307692307,
+   "mean_p_coin": 0.7514230769230769,
    "hit_rate": {
     "perfect": 0.3076923076923077,
-    "advance": 0.48717948717948717,
-    "winless": 0.3076923076923077
+    "advance": 0.5,
+    "winless": 0.23076923076923078
    },
-   "brier": 0.24188027153643274,
+   "brier": 0.24187154974495156,
    "per_stage": [
     3,
     5,
@@ -126,20 +126,20 @@
     5,
     4,
     5,
-    2
+    1
    ],
    "diff_vs_vrs_only": {
-    "mean": 0.0,
+    "mean": -0.3076923076923077,
     "ci": [
-     -0.3076923076923077,
-     0.3076923076923077
+     -0.6923076923076923,
+     0.07692307692307693
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.15384615384615385,
+    "mean": -0.38461538461538464,
     "ci": [
-     -0.8461538461538461,
-     0.5384615384615384
+     -1.0769230769230769,
+     0.3076923076923077
     ]
    }
   },
@@ -148,40 +148,40 @@
    "source": "model",
    "objective": "threshold",
    "seed_anchored": false,
-   "mean_correct": 4.3076923076923075,
+   "mean_correct": 4.461538461538462,
    "ci": [
-    3.6923076923076925,
-    4.846153846153846
+    3.769230769230769,
+    5.153846153846154
    ],
-   "coins": 7,
+   "coins": 8,
    "stages": 13,
-   "mean_p_coin": 0.44698615384615387,
+   "mean_p_coin": 0.4727807692307693,
    "hit_rate": {
-    "perfect": 0.4230769230769231,
-    "advance": 0.5,
-    "winless": 0.23076923076923078
+    "perfect": 0.38461538461538464,
+    "advance": 0.5256410256410257,
+    "winless": 0.2692307692307692
    },
-   "brier": 0.22698314345460846,
+   "brier": 0.22698321474091118,
    "per_stage": [
     3,
     5,
+    6,
     5,
     5,
-    4,
-    2,
-    5,
+    3,
+    6,
     5,
     6,
     3,
     4,
     5,
-    4
+    2
    ],
    "diff_vs_vrs_only": {
-    "mean": 0.15384615384615385,
+    "mean": 0.07692307692307693,
     "ci": [
      -0.5384615384615384,
-     0.9230769230769231
+     0.6153846153846154
     ]
    },
    "diff_vs_bt": {
@@ -197,47 +197,47 @@
    "source": "ens_logit",
    "objective": "threshold",
    "seed_anchored": false,
-   "mean_correct": 4.153846153846154,
+   "mean_correct": 4.615384615384615,
    "ci": [
-    3.3846153846153846,
-    4.846153846153846
+    3.923076923076923,
+    5.230769230769231
    ],
-   "coins": 7,
+   "coins": 9,
    "stages": 13,
-   "mean_p_coin": 0.6277576923076923,
+   "mean_p_coin": 0.6395346153846155,
    "hit_rate": {
-    "perfect": 0.34615384615384615,
-    "advance": 0.5128205128205128,
-    "winless": 0.19230769230769232
+    "perfect": 0.4230769230769231,
+    "advance": 0.5512820512820513,
+    "winless": 0.23076923076923078
    },
-   "brier": 0.23233806164052082,
+   "brier": 0.23265150488941197,
    "per_stage": [
     3,
     5,
-    3,
     5,
     5,
-    2,
-    6,
-    6,
     5,
     3,
+    6,
+    6,
+    6,
+    5,
     4,
     5,
     2
    ],
    "diff_vs_vrs_only": {
-    "mean": 0.0,
+    "mean": 0.23076923076923078,
     "ci": [
-     -0.46153846153846156,
-     0.46153846153846156
+     -0.15384615384615385,
+     0.6923076923076923
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.15384615384615385,
+    "mean": 0.15384615384615385,
     "ci": [
-     -0.6923076923076923,
-     0.3076923076923077
+     -0.15384615384615385,
+     0.5384615384615384
     ]
    }
   },
@@ -246,47 +246,47 @@
    "source": "ens_prob",
    "objective": "threshold",
    "seed_anchored": false,
-   "mean_correct": 4.230769230769231,
+   "mean_correct": 4.384615384615385,
    "ci": [
-    3.4615384615384617,
-    4.923076923076923
+    3.769230769230769,
+    5.0
    ],
    "coins": 7,
    "stages": 13,
-   "mean_p_coin": 0.5996269230769231,
+   "mean_p_coin": 0.615726923076923,
    "hit_rate": {
-    "perfect": 0.34615384615384615,
+    "perfect": 0.38461538461538464,
     "advance": 0.5256410256410257,
-    "winless": 0.19230769230769232
+    "winless": 0.23076923076923078
    },
-   "brier": 0.2310294656628138,
+   "brier": 0.2314897982315882,
    "per_stage": [
     3,
     5,
     5,
-    4,
     5,
-    2,
-    6,
-    6,
     5,
     3,
     4,
+    6,
+    6,
     5,
+    4,
+    4,
     2
    ],
    "diff_vs_vrs_only": {
-    "mean": 0.07692307692307693,
+    "mean": 0.0,
     "ci": [
-     -0.46153846153846156,
-     0.6923076923076923
+     -0.38461538461538464,
+     0.38461538461538464
     ]
    },
    "diff_vs_bt": {
     "mean": -0.07692307692307693,
     "ci": [
-     -0.5384615384615384,
-     0.38461538461538464
+     -0.6153846153846154,
+     0.46153846153846156
     ]
    }
   },
@@ -297,44 +297,44 @@
    "seed_anchored": true,
    "mean_correct": 4.3076923076923075,
    "ci": [
-    3.6923076923076925,
-    4.923076923076923
+    3.769230769230769,
+    4.846153846153846
    ],
-   "coins": 8,
+   "coins": 6,
    "stages": 13,
-   "mean_p_coin": 0.44273461538461534,
+   "mean_p_coin": 0.46981538461538463,
    "hit_rate": {
     "perfect": 0.38461538461538464,
-    "advance": 0.5128205128205128,
-    "winless": 0.23076923076923078
+    "advance": 0.5,
+    "winless": 0.2692307692307692
    },
-   "brier": 0.22698314345460846,
+   "brier": 0.22698321474091118,
    "per_stage": [
-    3,
+    4,
+    4,
+    5,
+    5,
     5,
     3,
+    4,
+    5,
     6,
     5,
-    2,
-    5,
-    5,
-    5,
-    3,
-    5,
-    5,
-    4
+    4,
+    4,
+    2
    ],
    "diff_vs_vrs_only": {
-    "mean": 0.15384615384615385,
+    "mean": -0.07692307692307693,
     "ci": [
-     -0.46153846153846156,
-     0.7692307692307693
+     -0.5384615384615384,
+     0.38461538461538464
     ]
    },
    "diff_vs_bt": {
-    "mean": 0.0,
+    "mean": -0.15384615384615385,
     "ci": [
-     -0.46153846153846156,
+     -0.6923076923076923,
      0.38461538461538464
     ]
    }
@@ -349,15 +349,15 @@
     3.230769230769231,
     4.846153846153846
    ],
-   "coins": 7,
+   "coins": 6,
    "stages": 13,
-   "mean_p_coin": 0.7577815384615383,
+   "mean_p_coin": 0.7590384615384616,
    "hit_rate": {
     "perfect": 0.3076923076923077,
     "advance": 0.48717948717948717,
     "winless": 0.2692307692307692
    },
-   "brier": 0.2437448782029984,
+   "brier": 0.2431314750704241,
    "per_stage": [
     3,
     5,
@@ -369,22 +369,22 @@
     6,
     5,
     5,
-    3,
-    5,
+    4,
+    4,
     1
    ],
    "diff_vs_vrs_only": {
-    "mean": -0.07692307692307693,
+    "mean": -0.3076923076923077,
     "ci": [
-     -0.23076923076923078,
+     -0.6923076923076923,
      0.0
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.23076923076923078,
+    "mean": -0.38461538461538464,
     "ci": [
-     -1.0,
-     0.46153846153846156
+     -1.0769230769230769,
+     0.3076923076923077
     ]
    }
   },
@@ -393,20 +393,20 @@
    "source": "legacy",
    "objective": "expected",
    "seed_anchored": false,
-   "mean_correct": 4.0,
+   "mean_correct": 4.076923076923077,
    "ci": [
     3.3076923076923075,
-    4.6923076923076925
+    4.769230769230769
    ],
-   "coins": 6,
+   "coins": 7,
    "stages": 13,
-   "mean_p_coin": 0.7447176923076922,
+   "mean_p_coin": 0.7497461538461537,
    "hit_rate": {
     "perfect": 0.3076923076923077,
-    "advance": 0.47435897435897434,
+    "advance": 0.48717948717948717,
     "winless": 0.2692307692307692
    },
-   "brier": 0.24188027153643274,
+   "brier": 0.24187154974495156,
    "per_stage": [
     3,
     5,
@@ -416,24 +416,24 @@
     2,
     4,
     5,
+    5,
+    5,
     4,
     5,
-    3,
-    5,
-    2
+    1
    ],
    "diff_vs_vrs_only": {
-    "mean": -0.15384615384615385,
+    "mean": -0.3076923076923077,
     "ci": [
-     -0.46153846153846156,
-     0.15384615384615385
+     -0.6923076923076923,
+     0.0
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.3076923076923077,
+    "mean": -0.38461538461538464,
     "ci": [
-     -1.0,
-     0.38461538461538464
+     -1.0769230769230769,
+     0.23076923076923078
     ]
    }
   },
@@ -442,47 +442,47 @@
    "source": "model",
    "objective": "expected",
    "seed_anchored": false,
-   "mean_correct": 4.230769230769231,
+   "mean_correct": 4.153846153846154,
    "ci": [
-    3.6153846153846154,
-    4.769230769230769
+    3.3846153846153846,
+    4.846153846153846
    ],
-   "coins": 6,
+   "coins": 7,
    "stages": 13,
-   "mean_p_coin": 0.4464392307692308,
+   "mean_p_coin": 0.47091923076923076,
    "hit_rate": {
-    "perfect": 0.38461538461538464,
+    "perfect": 0.34615384615384615,
     "advance": 0.5,
     "winless": 0.23076923076923078
    },
-   "brier": 0.22698314345460846,
+   "brier": 0.22698321474091118,
    "per_stage": [
     3,
+    5,
     6,
     5,
-    4,
-    4,
+    5,
     2,
+    3,
     5,
-    5,
-    5,
+    6,
     3,
     4,
     5,
-    4
+    2
    ],
    "diff_vs_vrs_only": {
-    "mean": 0.07692307692307693,
+    "mean": -0.23076923076923078,
     "ci": [
-     -0.6153846153846154,
-     0.8461538461538461
+     -0.6923076923076923,
+     0.23076923076923078
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.07692307692307693,
+    "mean": -0.3076923076923077,
     "ci": [
-     -0.3076923076923077,
-     0.15384615384615385
+     -0.8461538461538461,
+     0.0
     ]
    }
   },
@@ -491,47 +491,47 @@
    "source": "ens_logit",
    "objective": "expected",
    "seed_anchored": false,
-   "mean_correct": 4.153846153846154,
+   "mean_correct": 4.461538461538462,
    "ci": [
-    3.4615384615384617,
-    4.769230769230769
+    3.6923076923076925,
+    5.153846153846154
    ],
-   "coins": 7,
+   "coins": 8,
    "stages": 13,
-   "mean_p_coin": 0.6259015384615384,
+   "mean_p_coin": 0.6379153846153847,
    "hit_rate": {
-    "perfect": 0.3076923076923077,
-    "advance": 0.5128205128205128,
-    "winless": 0.23076923076923078
+    "perfect": 0.38461538461538464,
+    "advance": 0.5256410256410257,
+    "winless": 0.2692307692307692
    },
-   "brier": 0.23233806164052082,
+   "brier": 0.23265150488941197,
    "per_stage": [
     3,
     5,
-    3,
     5,
+    6,
     5,
     2,
     4,
     6,
-    5,
+    6,
     5,
     4,
     5,
     2
    ],
    "diff_vs_vrs_only": {
-    "mean": 0.0,
+    "mean": 0.07692307692307693,
     "ci": [
-     -0.23076923076923078,
-     0.23076923076923078
+     -0.15384615384615385,
+     0.3076923076923077
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.15384615384615385,
+    "mean": 0.0,
     "ci": [
-     -0.7692307692307693,
-     0.46153846153846156
+     -0.5384615384615384,
+     0.5384615384615384
     ]
    }
   },
@@ -540,47 +540,47 @@
    "source": "ens_prob",
    "objective": "expected",
    "seed_anchored": false,
-   "mean_correct": 4.076923076923077,
+   "mean_correct": 4.384615384615385,
    "ci": [
-    3.3846153846153846,
-    4.6923076923076925
+    3.6923076923076925,
+    5.076923076923077
    ],
-   "coins": 6,
+   "coins": 8,
    "stages": 13,
-   "mean_p_coin": 0.5982469230769231,
+   "mean_p_coin": 0.6145846153846153,
    "hit_rate": {
-    "perfect": 0.3076923076923077,
-    "advance": 0.5128205128205128,
-    "winless": 0.19230769230769232
+    "perfect": 0.38461538461538464,
+    "advance": 0.5256410256410257,
+    "winless": 0.23076923076923078
    },
-   "brier": 0.2310294656628138,
+   "brier": 0.2314897982315882,
    "per_stage": [
     3,
     5,
-    3,
-    4,
+    5,
+    5,
     5,
     2,
     4,
     6,
-    5,
+    6,
     5,
     4,
     5,
     2
    ],
    "diff_vs_vrs_only": {
-    "mean": -0.07692307692307693,
+    "mean": 0.0,
     "ci": [
      -0.3076923076923077,
-     0.15384615384615385
+     0.3076923076923077
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.23076923076923078,
+    "mean": -0.07692307692307693,
     "ci": [
-     -0.8461538461538461,
-     0.38461538461538464
+     -0.5384615384615384,
+     0.46153846153846156
     ]
    }
   },
@@ -589,61 +589,61 @@
    "source": "model",
    "objective": "expected",
    "seed_anchored": true,
-   "mean_correct": 4.0,
+   "mean_correct": 4.076923076923077,
    "ci": [
-    3.3076923076923075,
+    3.4615384615384617,
     4.6923076923076925
    ],
-   "coins": 6,
+   "coins": 5,
    "stages": 13,
-   "mean_p_coin": 0.4389753846153846,
+   "mean_p_coin": 0.4609423076923077,
    "hit_rate": {
     "perfect": 0.3076923076923077,
-    "advance": 0.5,
-    "winless": 0.19230769230769232
+    "advance": 0.48717948717948717,
+    "winless": 0.2692307692307692
    },
-   "brier": 0.22698314345460846,
+   "brier": 0.22698321474091118,
    "per_stage": [
-    3,
-    2,
-    3,
-    5,
-    5,
-    2,
-    5,
-    6,
-    5,
+    4,
+    4,
     3,
     4,
     5,
-    4
+    2,
+    4,
+    5,
+    6,
+    5,
+    4,
+    5,
+    2
    ],
    "diff_vs_vrs_only": {
-    "mean": -0.15384615384615385,
+    "mean": -0.3076923076923077,
     "ci": [
-     -0.9230769230769231,
-     0.5384615384615384
+     -0.8461538461538461,
+     0.23076923076923078
     ]
    },
    "diff_vs_bt": {
-    "mean": -0.3076923076923077,
+    "mean": -0.38461538461538464,
     "ci": [
-     -0.9230769230769231,
+     -1.0769230769230769,
      0.23076923076923078
     ]
    }
   }
  },
  "brier": {
-  "model": 0.22698314345460846,
-  "legacy": 0.24188027153643274,
-  "vrs_only": 0.2437448782029984,
-  "ens_logit": 0.23233806164052082,
-  "ens_prob": 0.2310294656628138,
+  "model": 0.22698321474091118,
+  "legacy": 0.24187154974495156,
+  "vrs_only": 0.2431314750704241,
+  "ens_logit": 0.23265150488941197,
+  "ens_prob": 0.2314897982315882,
   "coin_flip": 0.25
  },
  "chosen": "bt",
- "decision": "Keep BT (Bradley-Terry with a VRS prior, optimised for P(5 or more correct)) as the default. Over 13 Swiss stages from five Majors it has the highest mean correct picks (4.31 of 10) and it was highest or tied for highest on all three simulation seeds tried at 100k sims (4.31, 4.38, 4.31). The edge is small: +0.15 picks per stage over VRS seeds alone, with a paired 95% CI of -0.54 to +0.92, so the data cannot tell BT from VRS-only, the BT+VRS ensembles or the seed-anchored tie-break. No alternative beats BT either, and BT has the best Brier score (0.227 vs 0.244 for VRS), so there is no reason to switch. Maximising expected correct picks instead of P(5 or more) never helped and usually cost a coin or two.",
+ "decision": "Keep BT (Bradley-Terry with a VRS prior, optimised for P(5 or more correct)) as the default for now. This run uses the full live-equivalent model: HLTV results and per-map stats from before each stage feed the ratings and the veto model. Over 13 Swiss stages BT averages 4.46 correct picks of 10 and earns 8 coins. The BT+VRS 50/50 logit ensemble now has the highest mean, 4.62 with 9 coins, but its paired edge over BT is +0.15 picks per stage with a 95% CI of -0.15 to +0.54, and most of it comes from a single stage (Budapest Stage 3). At 100k sims averaged over three seeds the two are level (BT 4.36, ensemble 4.38), so the data cannot separate them. BT also has the better Brier score (0.227 vs 0.233). Switching the default is left to the maintainer. Maximising expected correct picks instead of P(5 or more) still never helped.",
  "seed_check": {
   "seeds": [
    2026,
@@ -652,18 +652,240 @@
   ],
   "n_sims": 100000,
   "mean_correct": {
-   "vrs_only": 4.179,
-   "legacy": 4.179,
-   "bt": 4.333,
-   "ensemble": 4.179,
-   "ensemble_prob": 4.154,
-   "seed_anchored": 4.256,
+   "vrs_only": 4.154,
+   "legacy": 4.026,
+   "bt": 4.359,
+   "ensemble": 4.385,
+   "ensemble_prob": 4.333,
+   "seed_anchored": 4.0,
    "vrs_only_exp": 4.077,
-   "legacy_exp": 4.026,
-   "bt_exp": 4.231,
-   "ensemble_exp": 4.154,
-   "ensemble_prob_exp": 4.077,
-   "seed_anchored_exp": 4.051
+   "legacy_exp": 4.0,
+   "bt_exp": 4.154,
+   "ensemble_exp": 4.256,
+   "ensemble_prob_exp": 4.308,
+   "seed_anchored_exp": 4.256
   }
+ },
+ "hltv_effect": {
+  "note": "Mean correct picks per Swiss stage without HLTV results and map stats (VRS match history only, flat map offsets) and with them. Same sims (20k) and seed. Differences are paired per stage with bootstrap 95% CIs.",
+  "strategies": {
+   "vrs_only": {
+    "without": 4.154,
+    "with": 4.385,
+    "diff": 0.231,
+    "diff_ci": [
+     0.0,
+     0.62
+    ],
+    "coins_without": 7,
+    "coins_with": 8,
+    "brier_without": 0.2451,
+    "brier_with": 0.2446,
+    "brier_diff_ci": [
+     -0.0023,
+     0.0016
+    ]
+   },
+   "legacy": {
+    "without": 4.154,
+    "with": 4.077,
+    "diff": -0.077,
+    "diff_ci": [
+     -0.23,
+     0.0
+    ],
+    "coins_without": 6,
+    "coins_with": 6,
+    "brier_without": 0.243,
+    "brier_with": 0.2435,
+    "brier_diff_ci": [
+     -0.0012,
+     0.0024
+    ]
+   },
+   "bt": {
+    "without": 4.308,
+    "with": 4.462,
+    "diff": 0.154,
+    "diff_ci": [
+     -0.31,
+     0.54
+    ],
+    "coins_without": 7,
+    "coins_with": 8,
+    "brier_without": 0.2259,
+    "brier_with": 0.2278,
+    "brier_diff_ci": [
+     -0.0007,
+     0.0045
+    ]
+   },
+   "ensemble": {
+    "without": 4.154,
+    "with": 4.615,
+    "diff": 0.462,
+    "diff_ci": [
+     0.08,
+     0.92
+    ],
+    "coins_without": 7,
+    "coins_with": 9,
+    "brier_without": 0.2326,
+    "brier_with": 0.2338,
+    "brier_diff_ci": [
+     -0.0011,
+     0.0035
+    ]
+   },
+   "ensemble_prob": {
+    "without": 4.231,
+    "with": 4.385,
+    "diff": 0.154,
+    "diff_ci": [
+     -0.38,
+     0.62
+    ],
+    "coins_without": 7,
+    "coins_with": 7,
+    "brier_without": 0.2312,
+    "brier_with": 0.2326,
+    "brier_diff_ci": [
+     -0.0009,
+     0.0037
+    ]
+   },
+   "seed_anchored": {
+    "without": 4.308,
+    "with": 4.308,
+    "diff": 0.0,
+    "diff_ci": [
+     -0.62,
+     0.69
+    ],
+    "coins_without": 8,
+    "coins_with": 6,
+    "brier_without": 0.2259,
+    "brier_with": 0.2278,
+    "brier_diff_ci": [
+     -0.0007,
+     0.0045
+    ]
+   },
+   "vrs_only_exp": {
+    "without": 4.077,
+    "with": 4.077,
+    "diff": 0.0,
+    "diff_ci": [
+     -0.23,
+     0.23
+    ],
+    "coins_without": 7,
+    "coins_with": 6,
+    "brier_without": 0.2451,
+    "brier_with": 0.2446,
+    "brier_diff_ci": [
+     -0.0023,
+     0.0016
+    ]
+   },
+   "legacy_exp": {
+    "without": 4.0,
+    "with": 4.077,
+    "diff": 0.077,
+    "diff_ci": [
+     -0.15,
+     0.31
+    ],
+    "coins_without": 6,
+    "coins_with": 7,
+    "brier_without": 0.243,
+    "brier_with": 0.2435,
+    "brier_diff_ci": [
+     -0.0012,
+     0.0024
+    ]
+   },
+   "bt_exp": {
+    "without": 4.231,
+    "with": 4.154,
+    "diff": -0.077,
+    "diff_ci": [
+     -0.62,
+     0.46
+    ],
+    "coins_without": 6,
+    "coins_with": 7,
+    "brier_without": 0.2259,
+    "brier_with": 0.2278,
+    "brier_diff_ci": [
+     -0.0007,
+     0.0045
+    ]
+   },
+   "ensemble_exp": {
+    "without": 4.154,
+    "with": 4.462,
+    "diff": 0.308,
+    "diff_ci": [
+     0.0,
+     0.69
+    ],
+    "coins_without": 7,
+    "coins_with": 8,
+    "brier_without": 0.2326,
+    "brier_with": 0.2338,
+    "brier_diff_ci": [
+     -0.0011,
+     0.0035
+    ]
+   },
+   "ensemble_prob_exp": {
+    "without": 4.077,
+    "with": 4.385,
+    "diff": 0.308,
+    "diff_ci": [
+     0.0,
+     0.69
+    ],
+    "coins_without": 6,
+    "coins_with": 8,
+    "brier_without": 0.2312,
+    "brier_with": 0.2326,
+    "brier_diff_ci": [
+     -0.0009,
+     0.0037
+    ]
+   },
+   "seed_anchored_exp": {
+    "without": 4.0,
+    "with": 4.077,
+    "diff": 0.077,
+    "diff_ci": [
+     -0.54,
+     0.69
+    ],
+    "coins_without": 6,
+    "coins_with": 5,
+    "brier_without": 0.2259,
+    "brier_with": 0.2278,
+    "brier_diff_ci": [
+     -0.0007,
+     0.0045
+    ]
+   }
+  }
+ },
+ "stage1_current": {
+  "file": "data/predictions/stage1/20261122T144906Z.json",
+  "picks_30": [
+   "HEROIC",
+   "Liquid"
+  ],
+  "picks_03": [
+   "Chinggis Warriors",
+   "GOSH"
+  ],
+  "p_threshold": 0.268,
+  "note": "Current Singapore Stage 1 picks from the BT model. The 58.3% NiP/9z picks were the earlier blend baseline (20261122T140308Z.json)."
  }
 }

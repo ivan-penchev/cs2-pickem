@@ -1,8 +1,8 @@
 {
  "id": "shanghai2024",
  "name": "Perfect World Shanghai Major 2024",
- "generated": "2026-11-22T15:39:09Z",
- "n_sims": 100000,
+ "generated": "2026-11-22T17:44:17Z",
+ "n_sims": 20000,
  "inputs": {
   "vrs": "2024-11-25",
   "hltv": "2024-11-25",
@@ -79,6 +79,80 @@
         "actual": "1-3"
        },
        {
+        "team": "Imperial Esports",
+        "correct": true,
+        "actual": "0-3"
+       }
+      ],
+      "advance": [
+       {
+        "team": "FURIA",
+        "correct": true,
+        "actual": "3-1"
+       },
+       {
+        "team": "paiN Gaming",
+        "correct": true,
+        "actual": "3-1"
+       },
+       {
+        "team": "Complexity",
+        "correct": false,
+        "actual": "2-3"
+       },
+       {
+        "team": "Virtus.pro",
+        "correct": false,
+        "actual": "1-3"
+       },
+       {
+        "team": "FlyQuest",
+        "correct": false,
+        "actual": "2-3"
+       },
+       {
+        "team": "BIG",
+        "correct": true,
+        "actual": "3-2"
+       }
+      ]
+     },
+     "n_correct": 6,
+     "coin": true,
+     "p_coin": 0.3695,
+     "expected_correct": 4.0328,
+     "hits": {
+      "perfect": 2,
+      "advance": 3,
+      "winless": 1
+     },
+     "n": {
+      "perfect": 2,
+      "advance": 6,
+      "winless": 2
+     }
+    },
+    "seed_anchored": {
+     "picks": {
+      "perfect": [
+       {
+        "team": "The MongolZ",
+        "correct": true,
+        "actual": "3-0"
+       },
+       {
+        "team": "Team Liquid",
+        "correct": true,
+        "actual": "3-0"
+       }
+      ],
+      "winless": [
+       {
+        "team": "Rare Atom",
+        "correct": false,
+        "actual": "1-3"
+       },
+       {
         "team": "Passion UA",
         "correct": false,
         "actual": "2-3"
@@ -86,12 +160,12 @@
       ],
       "advance": [
        {
-        "team": "paiN Gaming",
+        "team": "FURIA",
         "correct": true,
         "actual": "3-1"
        },
        {
-        "team": "FURIA",
+        "team": "paiN Gaming",
         "correct": true,
         "actual": "3-1"
        },
@@ -119,85 +193,11 @@
      },
      "n_correct": 5,
      "coin": true,
-     "p_coin": 0.38901,
-     "expected_correct": 4.10042,
+     "p_coin": 0.3695,
+     "expected_correct": 4.0288,
      "hits": {
       "perfect": 2,
       "advance": 3,
-      "winless": 0
-     },
-     "n": {
-      "perfect": 2,
-      "advance": 6,
-      "winless": 2
-     }
-    },
-    "seed_anchored": {
-     "picks": {
-      "perfect": [
-       {
-        "team": "The MongolZ",
-        "correct": true,
-        "actual": "3-0"
-       },
-       {
-        "team": "FURIA",
-        "correct": false,
-        "actual": "3-1"
-       }
-      ],
-      "winless": [
-       {
-        "team": "Rare Atom",
-        "correct": false,
-        "actual": "1-3"
-       },
-       {
-        "team": "Passion UA",
-        "correct": false,
-        "actual": "2-3"
-       }
-      ],
-      "advance": [
-       {
-        "team": "Team Liquid",
-        "correct": false,
-        "actual": "3-0"
-       },
-       {
-        "team": "paiN Gaming",
-        "correct": true,
-        "actual": "3-1"
-       },
-       {
-        "team": "Complexity",
-        "correct": false,
-        "actual": "2-3"
-       },
-       {
-        "team": "Virtus.pro",
-        "correct": false,
-        "actual": "1-3"
-       },
-       {
-        "team": "FlyQuest",
-        "correct": false,
-        "actual": "2-3"
-       },
-       {
-        "team": "BIG",
-        "correct": true,
-        "actual": "3-2"
-       }
-      ]
-     },
-     "n_correct": 3,
-     "coin": false,
-     "p_coin": 0.38683,
-     "expected_correct": 4.09685,
-     "hits": {
-      "perfect": 1,
-      "advance": 2,
       "winless": 0
      },
      "n": {
@@ -227,19 +227,19 @@
         "actual": "1-3"
        },
        {
-        "team": "Passion UA",
-        "correct": false,
-        "actual": "2-3"
+        "team": "Imperial Esports",
+        "correct": true,
+        "actual": "0-3"
        }
       ],
       "advance": [
        {
-        "team": "paiN Gaming",
+        "team": "FURIA",
         "correct": true,
         "actual": "3-1"
        },
        {
-        "team": "FURIA",
+        "team": "paiN Gaming",
         "correct": true,
         "actual": "3-1"
        },
@@ -265,14 +265,14 @@
        }
       ]
      },
-     "n_correct": 5,
+     "n_correct": 6,
      "coin": true,
-     "p_coin": 0.38901,
-     "expected_correct": 4.10042,
+     "p_coin": 0.3695,
+     "expected_correct": 4.0328,
      "hits": {
       "perfect": 2,
       "advance": 3,
-      "winless": 0
+      "winless": 1
      },
      "n": {
       "perfect": 2,
@@ -341,8 +341,8 @@
      },
      "n_correct": 3,
      "coin": false,
-     "p_coin": 0.38683,
-     "expected_correct": 4.09685,
+     "p_coin": 0.35905,
+     "expected_correct": 3.99675,
      "hits": {
       "perfect": 1,
       "advance": 2,
@@ -415,8 +415,8 @@
      },
      "n_correct": 3,
      "coin": false,
-     "p_coin": 0.78686,
-     "expected_correct": 5.58588,
+     "p_coin": 0.7732,
+     "expected_correct": 5.53275,
      "hits": {
       "perfect": 1,
       "advance": 2,
@@ -489,8 +489,8 @@
      },
      "n_correct": 3,
      "coin": false,
-     "p_coin": 0.78684,
-     "expected_correct": 5.63406,
+     "p_coin": 0.7729,
+     "expected_correct": 5.5647,
      "hits": {
       "perfect": 1,
       "advance": 2,
@@ -511,9 +511,9 @@
         "actual": "3-0"
        },
        {
-        "team": "FURIA",
-        "correct": false,
-        "actual": "3-1"
+        "team": "Team Liquid",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
@@ -545,9 +545,9 @@
         "actual": "3-1"
        },
        {
-        "team": "Team Liquid",
-        "correct": false,
-        "actual": "3-0"
+        "team": "FURIA",
+        "correct": true,
+        "actual": "3-1"
        },
        {
         "team": "BIG",
@@ -561,13 +561,13 @@
        }
       ]
      },
-     "n_correct": 3,
-     "coin": false,
-     "p_coin": 0.81244,
-     "expected_correct": 5.68465,
+     "n_correct": 5,
+     "coin": true,
+     "p_coin": 0.8003,
+     "expected_correct": 5.5773,
      "hits": {
-      "perfect": 1,
-      "advance": 2,
+      "perfect": 2,
+      "advance": 3,
       "winless": 0
      },
      "n": {
@@ -597,9 +597,9 @@
         "actual": "1-3"
        },
        {
-        "team": "Cloud9",
+        "team": "Passion UA",
         "correct": false,
-        "actual": "1-3"
+        "actual": "2-3"
        }
       ],
       "advance": [
@@ -637,8 +637,8 @@
      },
      "n_correct": 3,
      "coin": false,
-     "p_coin": 0.8037,
-     "expected_correct": 5.69363,
+     "p_coin": 0.7977,
+     "expected_correct": 5.63945,
      "hits": {
       "perfect": 1,
       "advance": 2,
@@ -659,9 +659,9 @@
         "actual": "3-0"
        },
        {
-        "team": "FURIA",
-        "correct": false,
-        "actual": "3-1"
+        "team": "Team Liquid",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
@@ -688,9 +688,9 @@
         "actual": "2-3"
        },
        {
-        "team": "Team Liquid",
-        "correct": false,
-        "actual": "3-0"
+        "team": "FURIA",
+        "correct": true,
+        "actual": "3-1"
        },
        {
         "team": "Virtus.pro",
@@ -709,13 +709,13 @@
        }
       ]
      },
-     "n_correct": 3,
-     "coin": false,
-     "p_coin": 0.6361,
-     "expected_correct": 4.99658,
+     "n_correct": 5,
+     "coin": true,
+     "p_coin": 0.6251,
+     "expected_correct": 4.9268,
      "hits": {
-      "perfect": 1,
-      "advance": 2,
+      "perfect": 2,
+      "advance": 3,
       "winless": 0
      },
      "n": {
@@ -733,9 +733,9 @@
         "actual": "3-0"
        },
        {
-        "team": "FURIA",
-        "correct": false,
-        "actual": "3-1"
+        "team": "Team Liquid",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
@@ -762,9 +762,9 @@
         "actual": "2-3"
        },
        {
-        "team": "Team Liquid",
-        "correct": false,
-        "actual": "3-0"
+        "team": "FURIA",
+        "correct": true,
+        "actual": "3-1"
        },
        {
         "team": "Virtus.pro",
@@ -783,13 +783,13 @@
        }
       ]
      },
-     "n_correct": 3,
-     "coin": false,
-     "p_coin": 0.6361,
-     "expected_correct": 4.99658,
+     "n_correct": 5,
+     "coin": true,
+     "p_coin": 0.6251,
+     "expected_correct": 4.9268,
      "hits": {
-      "perfect": 1,
-      "advance": 2,
+      "perfect": 2,
+      "advance": 3,
       "winless": 0
      },
      "n": {
@@ -859,8 +859,8 @@
      },
      "n_correct": 5,
      "coin": true,
-     "p_coin": 0.59003,
-     "expected_correct": 4.80705,
+     "p_coin": 0.5773,
+     "expected_correct": 4.7615,
      "hits": {
       "perfect": 2,
       "advance": 3,
@@ -881,9 +881,9 @@
         "actual": "3-0"
        },
        {
-        "team": "FURIA",
-        "correct": false,
-        "actual": "3-1"
+        "team": "Team Liquid",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
@@ -910,9 +910,9 @@
         "actual": "2-3"
        },
        {
-        "team": "Team Liquid",
-        "correct": false,
-        "actual": "3-0"
+        "team": "FURIA",
+        "correct": true,
+        "actual": "3-1"
        },
        {
         "team": "Virtus.pro",
@@ -931,13 +931,13 @@
        }
       ]
      },
-     "n_correct": 3,
-     "coin": false,
-     "p_coin": 0.58992,
-     "expected_correct": 4.83351,
+     "n_correct": 5,
+     "coin": true,
+     "p_coin": 0.5773,
+     "expected_correct": 4.7615,
      "hits": {
-      "perfect": 1,
-      "advance": 2,
+      "perfect": 2,
+      "advance": 3,
       "winless": 0
      },
      "n": {
@@ -968,19 +968,19 @@
        "actual": "1-3"
       },
       {
-       "team": "Passion UA",
-       "correct": false,
-       "actual": "2-3"
+       "team": "Imperial Esports",
+       "correct": true,
+       "actual": "0-3"
       }
      ],
      "advance": [
       {
-       "team": "paiN Gaming",
+       "team": "FURIA",
        "correct": true,
        "actual": "3-1"
       },
       {
-       "team": "FURIA",
+       "team": "paiN Gaming",
        "correct": true,
        "actual": "3-1"
       },
@@ -1006,17 +1006,17 @@
       }
      ]
     },
-    "n_correct": 5,
+    "n_correct": 6,
     "coin": true,
-    "p_coin": 0.38901,
-    "expected_correct": 4.10042,
+    "p_coin": 0.3695,
+    "expected_correct": 4.0328,
     "matches": [
      {
       "round": 1,
       "a": "FURIA",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.6696,
+      "p_a": 0.5956,
       "winner": "GamerLegion"
      },
      {
@@ -1024,7 +1024,7 @@
       "a": "Virtus.pro",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.5972,
+      "p_a": 0.5658,
       "winner": "MIBR"
      },
      {
@@ -1032,7 +1032,7 @@
       "a": "Team Liquid",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.6714,
+      "p_a": 0.646,
       "winner": "Team Liquid"
      },
      {
@@ -1040,7 +1040,7 @@
       "a": "Complexity",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.5549,
+      "p_a": 0.5548,
       "winner": "FlyQuest"
      },
      {
@@ -1048,7 +1048,7 @@
       "a": "BIG",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.5999,
+      "p_a": 0.5937,
       "winner": "BIG"
      },
      {
@@ -1056,7 +1056,7 @@
       "a": "Fnatic",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.4926,
+      "p_a": 0.5174,
       "winner": "Wildcard"
      },
      {
@@ -1064,7 +1064,7 @@
       "a": "The MongolZ",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.8105,
+      "p_a": 0.7788,
       "winner": "The MongolZ"
      },
      {
@@ -1072,7 +1072,7 @@
       "a": "paiN Gaming",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.6921,
+      "p_a": 0.6988,
       "winner": "paiN Gaming"
      },
      {
@@ -1080,7 +1080,7 @@
       "a": "BIG",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.4826,
+      "p_a": 0.4627,
       "winner": "FlyQuest"
      },
      {
@@ -1088,7 +1088,7 @@
       "a": "The MongolZ",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.7091,
+      "p_a": 0.7198,
       "winner": "The MongolZ"
      },
      {
@@ -1096,7 +1096,7 @@
       "a": "Team Liquid",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.6625,
+      "p_a": 0.5944,
       "winner": "Team Liquid"
      },
      {
@@ -1104,7 +1104,7 @@
       "a": "paiN Gaming",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.6624,
+      "p_a": 0.6736,
       "winner": "GamerLegion"
      },
      {
@@ -1112,7 +1112,7 @@
       "a": "Fnatic",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.5026,
+      "p_a": 0.5167,
       "winner": "Cloud9"
      },
      {
@@ -1120,7 +1120,7 @@
       "a": "Complexity",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.6671,
+      "p_a": 0.6715,
       "winner": "Passion UA"
      },
      {
@@ -1128,7 +1128,7 @@
       "a": "Virtus.pro",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.7223,
+      "p_a": 0.6918,
       "winner": "Virtus.pro"
      },
      {
@@ -1136,7 +1136,7 @@
       "a": "FURIA",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.699,
+      "p_a": 0.7143,
       "winner": "FURIA"
      },
      {
@@ -1144,7 +1144,7 @@
       "a": "Team Liquid",
       "b": "FlyQuest",
       "bo": 3,
-      "p_a": 0.7029,
+      "p_a": 0.7055,
       "winner": "Team Liquid"
      },
      {
@@ -1152,7 +1152,7 @@
       "a": "GamerLegion",
       "b": "The MongolZ",
       "bo": 3,
-      "p_a": 0.2183,
+      "p_a": 0.2229,
       "winner": "The MongolZ"
      },
      {
@@ -1160,7 +1160,7 @@
       "a": "BIG",
       "b": "Virtus.pro",
       "bo": 1,
-      "p_a": 0.4584,
+      "p_a": 0.401,
       "winner": "BIG"
      },
      {
@@ -1168,7 +1168,7 @@
       "a": "MIBR",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.5443,
+      "p_a": 0.5421,
       "winner": "Passion UA"
      },
      {
@@ -1176,7 +1176,7 @@
       "a": "FURIA",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.638,
+      "p_a": 0.6141,
       "winner": "FURIA"
      },
      {
@@ -1184,7 +1184,7 @@
       "a": "paiN Gaming",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.6399,
+      "p_a": 0.6337,
       "winner": "paiN Gaming"
      },
      {
@@ -1192,7 +1192,7 @@
       "a": "Rare Atom",
       "b": "Fnatic",
       "bo": 3,
-      "p_a": 0.2499,
+      "p_a": 0.249,
       "winner": "Rare Atom"
      },
      {
@@ -1200,7 +1200,7 @@
       "a": "Complexity",
       "b": "Imperial Esports",
       "bo": 3,
-      "p_a": 0.7125,
+      "p_a": 0.7004,
       "winner": "Complexity"
      },
      {
@@ -1208,7 +1208,7 @@
       "a": "BIG",
       "b": "FURIA",
       "bo": 3,
-      "p_a": 0.3095,
+      "p_a": 0.2981,
       "winner": "FURIA"
      },
      {
@@ -1216,7 +1216,7 @@
       "a": "FlyQuest",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3435,
+      "p_a": 0.3427,
       "winner": "paiN Gaming"
      },
      {
@@ -1224,7 +1224,7 @@
       "a": "GamerLegion",
       "b": "Passion UA",
       "bo": 3,
-      "p_a": 0.5857,
+      "p_a": 0.6002,
       "winner": "GamerLegion"
      },
      {
@@ -1232,7 +1232,7 @@
       "a": "MIBR",
       "b": "Rare Atom",
       "bo": 3,
-      "p_a": 0.7003,
+      "p_a": 0.6613,
       "winner": "MIBR"
      },
      {
@@ -1240,7 +1240,7 @@
       "a": "Cloud9",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.366,
+      "p_a": 0.392,
       "winner": "Complexity"
      },
      {
@@ -1248,7 +1248,7 @@
       "a": "Wildcard",
       "b": "Virtus.pro",
       "bo": 3,
-      "p_a": 0.4249,
+      "p_a": 0.448,
       "winner": "Wildcard"
      },
      {
@@ -1256,7 +1256,7 @@
       "a": "BIG",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.3927,
+      "p_a": 0.394,
       "winner": "BIG"
      },
      {
@@ -1264,7 +1264,7 @@
       "a": "FlyQuest",
       "b": "MIBR",
       "bo": 3,
-      "p_a": 0.6097,
+      "p_a": 0.6373,
       "winner": "MIBR"
      },
      {
@@ -1272,180 +1272,180 @@
       "a": "Passion UA",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.3643,
+      "p_a": 0.3422,
       "winner": "Wildcard"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.21014528649575698,
-     "log_loss": 0.6085859704759868,
-     "accuracy": 0.6363636363636364
+     "brier": 0.21337260234704764,
+     "log_loss": 0.615987557228336,
+     "accuracy": 0.6060606060606061
     },
     "teams": [
      {
       "team": "The MongolZ",
       "seed": 1,
-      "p_30": 0.36984,
-      "p_adv": 0.85832,
-      "p_03": 0.01438,
+      "p_30": 0.3636,
+      "p_adv": 0.85625,
+      "p_03": 0.01565,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "FURIA",
       "seed": 2,
-      "p_30": 0.26542,
-      "p_adv": 0.78704,
-      "p_03": 0.02973,
+      "p_30": 0.2339,
+      "p_adv": 0.7625,
+      "p_03": 0.0405,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 3,
-      "p_30": 0.28528,
-      "p_adv": 0.82319,
-      "p_03": 0.02446,
+      "p_30": 0.27375,
+      "p_adv": 0.81015,
+      "p_03": 0.02895,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Complexity",
       "seed": 4,
-      "p_30": 0.15855,
-      "p_adv": 0.65251,
-      "p_03": 0.05582,
+      "p_30": 0.16315,
+      "p_adv": 0.6446,
+      "p_03": 0.05975,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Virtus.pro",
       "seed": 5,
-      "p_30": 0.13538,
-      "p_adv": 0.59383,
-      "p_03": 0.06494,
+      "p_30": 0.12745,
+      "p_adv": 0.5673,
+      "p_03": 0.0751,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 6,
-      "p_30": 0.23708,
-      "p_adv": 0.77126,
-      "p_03": 0.0303,
+      "p_30": 0.25265,
+      "p_adv": 0.78095,
+      "p_03": 0.0298,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "BIG",
       "seed": 7,
-      "p_30": 0.0999,
-      "p_adv": 0.4959,
-      "p_03": 0.08402,
+      "p_30": 0.099,
+      "p_adv": 0.485,
+      "p_03": 0.0894,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Fnatic",
       "seed": 8,
-      "p_30": 0.07508,
-      "p_adv": 0.43945,
-      "p_03": 0.10921,
+      "p_30": 0.08195,
+      "p_adv": 0.4493,
+      "p_03": 0.1067,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Rare Atom",
       "seed": 9,
-      "p_30": 0.01064,
-      "p_adv": 0.09792,
-      "p_03": 0.39686,
+      "p_30": 0.01175,
+      "p_adv": 0.11225,
+      "p_03": 0.3715,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "GamerLegion",
       "seed": 10,
-      "p_30": 0.04879,
-      "p_adv": 0.34923,
-      "p_03": 0.17107,
+      "p_30": 0.0633,
+      "p_adv": 0.37665,
+      "p_03": 0.15355,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Cloud9",
       "seed": 11,
-      "p_30": 0.0563,
-      "p_adv": 0.39411,
-      "p_03": 0.15541,
+      "p_30": 0.06315,
+      "p_adv": 0.41255,
+      "p_03": 0.1462,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FlyQuest",
       "seed": 12,
-      "p_30": 0.0828,
-      "p_adv": 0.4986,
-      "p_03": 0.10491,
+      "p_30": 0.08755,
+      "p_adv": 0.51295,
+      "p_03": 0.1016,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 13,
-      "p_30": 0.04603,
-      "p_adv": 0.32545,
-      "p_03": 0.17436,
+      "p_30": 0.0461,
+      "p_adv": 0.3143,
+      "p_03": 0.17845,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Imperial Esports",
       "seed": 14,
-      "p_30": 0.03059,
-      "p_adv": 0.26048,
-      "p_03": 0.22537,
+      "p_30": 0.0318,
+      "p_adv": 0.25635,
+      "p_03": 0.23435,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Passion UA",
       "seed": 15,
-      "p_30": 0.03107,
-      "p_adv": 0.2315,
-      "p_03": 0.22843,
+      "p_30": 0.03225,
+      "p_adv": 0.23475,
+      "p_03": 0.23035,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 16,
-      "p_30": 0.06725,
-      "p_adv": 0.42121,
-      "p_03": 0.13073,
+      "p_30": 0.06865,
+      "p_adv": 0.42415,
+      "p_03": 0.13815,
       "actual": "3-2",
       "advanced": true
      }
     ]
    },
    "ratings": {
-    "The MongolZ": 1829.2,
-    "FURIA": 1806.3,
-    "Team Liquid": 1825.0,
-    "Complexity": 1764.3,
+    "The MongolZ": 1829.1,
+    "FURIA": 1806.1,
+    "Team Liquid": 1824.8,
+    "Complexity": 1764.2,
     "Virtus.pro": 1742.8,
     "paiN Gaming": 1800.7,
-    "BIG": 1713.9,
-    "Fnatic": 1702.7,
+    "BIG": 1714.0,
+    "Fnatic": 1702.8,
     "Rare Atom": 1576.7,
     "GamerLegion": 1683.6,
-    "Cloud9": 1700.8,
+    "Cloud9": 1701.0,
     "FlyQuest": 1725.9,
-    "MIBR": 1674.4,
-    "Imperial Esports": 1659.9,
+    "MIBR": 1674.3,
+    "Imperial Esports": 1660.0,
     "Passion UA": 1643.5,
-    "Wildcard": 1707.8
+    "Wildcard": 1707.7
    },
    "legacy": {
     "picks": {
@@ -1508,15 +1508,15 @@
     },
     "n_correct": 3,
     "coin": false,
-    "p_coin": 0.78686,
-    "expected_correct": 5.58588,
+    "p_coin": 0.7732,
+    "expected_correct": 5.53275,
     "matches": [
      {
       "round": 1,
       "a": "FURIA",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7943,
+      "p_a": 0.7375,
       "winner": "GamerLegion"
      },
      {
@@ -1524,7 +1524,7 @@
       "a": "Virtus.pro",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.6893,
+      "p_a": 0.661,
       "winner": "MIBR"
      },
      {
@@ -1532,7 +1532,7 @@
       "a": "Team Liquid",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.8221,
+      "p_a": 0.8052,
       "winner": "Team Liquid"
      },
      {
@@ -1540,7 +1540,7 @@
       "a": "Complexity",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.6387,
+      "p_a": 0.6388,
       "winner": "FlyQuest"
      },
      {
@@ -1548,7 +1548,7 @@
       "a": "BIG",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.7329,
+      "p_a": 0.7279,
       "winner": "BIG"
      },
      {
@@ -1556,7 +1556,7 @@
       "a": "Fnatic",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.5537,
+      "p_a": 0.5778,
       "winner": "Wildcard"
      },
      {
@@ -1564,7 +1564,7 @@
       "a": "The MongolZ",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.9735,
+      "p_a": 0.968,
       "winner": "The MongolZ"
      },
      {
@@ -1572,7 +1572,7 @@
       "a": "paiN Gaming",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.7078,
+      "p_a": 0.7144,
       "winner": "paiN Gaming"
      },
      {
@@ -1580,7 +1580,7 @@
       "a": "BIG",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.5522,
+      "p_a": 0.5323,
       "winner": "FlyQuest"
      },
      {
@@ -1588,7 +1588,7 @@
       "a": "The MongolZ",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.8572,
+      "p_a": 0.8635,
       "winner": "The MongolZ"
      },
      {
@@ -1596,7 +1596,7 @@
       "a": "Team Liquid",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.7928,
+      "p_a": 0.7409,
       "winner": "Team Liquid"
      },
      {
@@ -1604,7 +1604,7 @@
       "a": "paiN Gaming",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.6658,
+      "p_a": 0.677,
       "winner": "GamerLegion"
      },
      {
@@ -1612,7 +1612,7 @@
       "a": "Fnatic",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.5997,
+      "p_a": 0.6132,
       "winner": "Cloud9"
      },
      {
@@ -1620,7 +1620,7 @@
       "a": "Complexity",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.7973,
+      "p_a": 0.8007,
       "winner": "Passion UA"
      },
      {
@@ -1628,7 +1628,7 @@
       "a": "Virtus.pro",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.9314,
+      "p_a": 0.9215,
       "winner": "Virtus.pro"
      },
      {
@@ -1636,7 +1636,7 @@
       "a": "FURIA",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.8245,
+      "p_a": 0.8351,
       "winner": "FURIA"
      },
      {
@@ -1644,7 +1644,7 @@
       "a": "Team Liquid",
       "b": "FlyQuest",
       "bo": 3,
-      "p_a": 0.784,
+      "p_a": 0.7859,
       "winner": "Team Liquid"
      },
      {
@@ -1652,7 +1652,7 @@
       "a": "GamerLegion",
       "b": "The MongolZ",
       "bo": 3,
-      "p_a": 0.0412,
+      "p_a": 0.0432,
       "winner": "The MongolZ"
      },
      {
@@ -1660,7 +1660,7 @@
       "a": "BIG",
       "b": "Virtus.pro",
       "bo": 1,
-      "p_a": 0.4043,
+      "p_a": 0.3492,
       "winner": "BIG"
      },
      {
@@ -1668,7 +1668,7 @@
       "a": "MIBR",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.6458,
+      "p_a": 0.6438,
       "winner": "Passion UA"
      },
      {
@@ -1676,7 +1676,7 @@
       "a": "FURIA",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.8126,
+      "p_a": 0.7966,
       "winner": "FURIA"
      },
      {
@@ -1684,7 +1684,7 @@
       "a": "paiN Gaming",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.7298,
+      "p_a": 0.7247,
       "winner": "paiN Gaming"
      },
      {
@@ -1692,7 +1692,7 @@
       "a": "Rare Atom",
       "b": "Fnatic",
       "bo": 3,
-      "p_a": 0.0609,
+      "p_a": 0.0612,
       "winner": "Rare Atom"
      },
      {
@@ -1700,7 +1700,7 @@
       "a": "Complexity",
       "b": "Imperial Esports",
       "bo": 3,
-      "p_a": 0.8532,
+      "p_a": 0.8449,
       "winner": "Complexity"
      },
      {
@@ -1708,7 +1708,7 @@
       "a": "BIG",
       "b": "FURIA",
       "bo": 3,
-      "p_a": 0.2391,
+      "p_a": 0.2306,
       "winner": "FURIA"
      },
      {
@@ -1716,7 +1716,7 @@
       "a": "FlyQuest",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3855,
+      "p_a": 0.3842,
       "winner": "paiN Gaming"
      },
      {
@@ -1724,7 +1724,7 @@
       "a": "GamerLegion",
       "b": "Passion UA",
       "bo": 3,
-      "p_a": 0.6533,
+      "p_a": 0.6661,
       "winner": "GamerLegion"
      },
      {
@@ -1732,7 +1732,7 @@
       "a": "MIBR",
       "b": "Rare Atom",
       "bo": 3,
-      "p_a": 0.9464,
+      "p_a": 0.9345,
       "winner": "MIBR"
      },
      {
@@ -1740,7 +1740,7 @@
       "a": "Cloud9",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.1261,
+      "p_a": 0.1409,
       "winner": "Complexity"
      },
      {
@@ -1748,7 +1748,7 @@
       "a": "Wildcard",
       "b": "Virtus.pro",
       "bo": 3,
-      "p_a": 0.1577,
+      "p_a": 0.1731,
       "winner": "Wildcard"
      },
      {
@@ -1756,7 +1756,7 @@
       "a": "BIG",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.3678,
+      "p_a": 0.3691,
       "winner": "BIG"
      },
      {
@@ -1764,7 +1764,7 @@
       "a": "FlyQuest",
       "b": "MIBR",
       "bo": 3,
-      "p_a": 0.5743,
+      "p_a": 0.6029,
       "winner": "MIBR"
      },
      {
@@ -1772,158 +1772,158 @@
       "a": "Passion UA",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.3873,
+      "p_a": 0.3644,
       "winner": "Wildcard"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.2308412134379795,
-     "log_loss": 0.6603358656331634,
+     "brier": 0.23084176026160566,
+     "log_loss": 0.6589265645487333,
      "accuracy": 0.5757575757575758
     },
     "teams": [
      {
       "team": "The MongolZ",
       "seed": 1,
-      "p_30": 0.71829,
-      "p_adv": 0.99255,
-      "p_03": 0.00014,
+      "p_30": 0.7161,
+      "p_adv": 0.9928,
+      "p_03": 0.00015,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "FURIA",
       "seed": 2,
-      "p_30": 0.36276,
-      "p_adv": 0.93238,
-      "p_03": 0.00382,
+      "p_30": 0.34825,
+      "p_adv": 0.92065,
+      "p_03": 0.0051,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 3,
-      "p_30": 0.29389,
-      "p_adv": 0.90716,
-      "p_03": 0.00509,
+      "p_30": 0.29035,
+      "p_adv": 0.9013,
+      "p_03": 0.0065,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Complexity",
       "seed": 4,
-      "p_30": 0.15201,
-      "p_adv": 0.80762,
-      "p_03": 0.0146,
+      "p_30": 0.1574,
+      "p_adv": 0.8002,
+      "p_03": 0.0161,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Virtus.pro",
       "seed": 5,
-      "p_30": 0.16354,
-      "p_adv": 0.82105,
-      "p_03": 0.0117,
+      "p_30": 0.15475,
+      "p_adv": 0.80925,
+      "p_03": 0.0147,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 6,
-      "p_30": 0.10211,
-      "p_adv": 0.69775,
-      "p_03": 0.02102,
+      "p_30": 0.1142,
+      "p_adv": 0.7095,
+      "p_03": 0.02115,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "BIG",
       "seed": 7,
-      "p_30": 0.09188,
-      "p_adv": 0.65619,
-      "p_03": 0.02307,
+      "p_30": 0.0926,
+      "p_adv": 0.641,
+      "p_03": 0.02575,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Fnatic",
       "seed": 8,
-      "p_30": 0.02835,
-      "p_adv": 0.36854,
-      "p_03": 0.07101,
+      "p_30": 0.034,
+      "p_adv": 0.3806,
+      "p_03": 0.06955,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Rare Atom",
       "seed": 9,
-      "p_30": 0.00013,
-      "p_adv": 0.00294,
-      "p_03": 0.7413,
+      "p_30": 5e-05,
+      "p_adv": 0.00335,
+      "p_03": 0.7243,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "GamerLegion",
       "seed": 10,
-      "p_30": 0.01219,
-      "p_adv": 0.27743,
-      "p_03": 0.15489,
+      "p_30": 0.01575,
+      "p_adv": 0.29285,
+      "p_03": 0.14345,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Cloud9",
       "seed": 11,
-      "p_30": 0.00596,
-      "p_adv": 0.1497,
-      "p_03": 0.26778,
+      "p_30": 0.00765,
+      "p_adv": 0.16195,
+      "p_03": 0.2572,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FlyQuest",
       "seed": 12,
-      "p_30": 0.03126,
-      "p_adv": 0.48885,
-      "p_03": 0.07041,
+      "p_30": 0.0331,
+      "p_adv": 0.5,
+      "p_03": 0.0709,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 13,
-      "p_30": 0.01823,
-      "p_adv": 0.37134,
-      "p_03": 0.10877,
+      "p_30": 0.0175,
+      "p_adv": 0.3515,
+      "p_03": 0.11475,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Imperial Esports",
       "seed": 14,
-      "p_30": 0.00714,
-      "p_adv": 0.19497,
-      "p_03": 0.1692,
+      "p_30": 0.0078,
+      "p_adv": 0.19525,
+      "p_03": 0.1772,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Passion UA",
       "seed": 15,
-      "p_30": 0.0034,
-      "p_adv": 0.11738,
-      "p_03": 0.2196,
+      "p_30": 0.003,
+      "p_adv": 0.1207,
+      "p_03": 0.22525,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 16,
-      "p_30": 0.00886,
-      "p_adv": 0.21415,
-      "p_03": 0.1176,
+      "p_30": 0.0075,
+      "p_adv": 0.2191,
+      "p_03": 0.12795,
       "actual": "3-2",
       "advanced": true
      }
@@ -1938,9 +1938,9 @@
        "actual": "3-0"
       },
       {
-       "team": "FURIA",
-       "correct": false,
-       "actual": "3-1"
+       "team": "Team Liquid",
+       "correct": true,
+       "actual": "3-0"
       }
      ],
      "winless": [
@@ -1972,9 +1972,9 @@
        "actual": "3-1"
       },
       {
-       "team": "Team Liquid",
-       "correct": false,
-       "actual": "3-0"
+       "team": "FURIA",
+       "correct": true,
+       "actual": "3-1"
       },
       {
        "team": "BIG",
@@ -1988,17 +1988,17 @@
       }
      ]
     },
-    "n_correct": 3,
-    "coin": false,
-    "p_coin": 0.81244,
-    "expected_correct": 5.68465,
+    "n_correct": 5,
+    "coin": true,
+    "p_coin": 0.8003,
+    "expected_correct": 5.5773,
     "matches": [
      {
       "round": 1,
       "a": "FURIA",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7992,
+      "p_a": 0.7433,
       "winner": "GamerLegion"
      },
      {
@@ -2006,7 +2006,7 @@
       "a": "Virtus.pro",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.686,
+      "p_a": 0.6575,
       "winner": "MIBR"
      },
      {
@@ -2014,7 +2014,7 @@
       "a": "Team Liquid",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.8242,
+      "p_a": 0.8075,
       "winner": "Team Liquid"
      },
      {
@@ -2030,7 +2030,7 @@
       "a": "BIG",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.7586,
+      "p_a": 0.7538,
       "winner": "BIG"
      },
      {
@@ -2038,7 +2038,7 @@
       "a": "Fnatic",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.591,
+      "p_a": 0.6145,
       "winner": "Wildcard"
      },
      {
@@ -2046,7 +2046,7 @@
       "a": "The MongolZ",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.9764,
+      "p_a": 0.9715,
       "winner": "The MongolZ"
      },
      {
@@ -2054,7 +2054,7 @@
       "a": "paiN Gaming",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.7283,
+      "p_a": 0.7346,
       "winner": "paiN Gaming"
      },
      {
@@ -2062,7 +2062,7 @@
       "a": "BIG",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.5566,
+      "p_a": 0.5366,
       "winner": "FlyQuest"
      },
      {
@@ -2070,7 +2070,7 @@
       "a": "The MongolZ",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.8873,
+      "p_a": 0.8924,
       "winner": "The MongolZ"
      },
      {
@@ -2078,7 +2078,7 @@
       "a": "Team Liquid",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.805,
+      "p_a": 0.7551,
       "winner": "Team Liquid"
      },
      {
@@ -2086,7 +2086,7 @@
       "a": "paiN Gaming",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7034,
+      "p_a": 0.7138,
       "winner": "GamerLegion"
      },
      {
@@ -2094,7 +2094,7 @@
       "a": "Fnatic",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.6214,
+      "p_a": 0.6346,
       "winner": "Cloud9"
      },
      {
@@ -2102,7 +2102,7 @@
       "a": "Complexity",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.8168,
+      "p_a": 0.8199,
       "winner": "Passion UA"
      },
      {
@@ -2110,7 +2110,7 @@
       "a": "Virtus.pro",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.9198,
+      "p_a": 0.9083,
       "winner": "Virtus.pro"
      },
      {
@@ -2118,7 +2118,7 @@
       "a": "FURIA",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.8182,
+      "p_a": 0.8291,
       "winner": "FURIA"
      },
      {
@@ -2126,7 +2126,7 @@
       "a": "Team Liquid",
       "b": "FlyQuest",
       "bo": 3,
-      "p_a": 0.7882,
+      "p_a": 0.79,
       "winner": "Team Liquid"
      },
      {
@@ -2134,7 +2134,7 @@
       "a": "GamerLegion",
       "b": "The MongolZ",
       "bo": 3,
-      "p_a": 0.026,
+      "p_a": 0.0274,
       "winner": "The MongolZ"
      },
      {
@@ -2142,7 +2142,7 @@
       "a": "BIG",
       "b": "Virtus.pro",
       "bo": 1,
-      "p_a": 0.4345,
+      "p_a": 0.3778,
       "winner": "BIG"
      },
      {
@@ -2150,7 +2150,7 @@
       "a": "MIBR",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.6518,
+      "p_a": 0.6499,
       "winner": "Passion UA"
      },
      {
@@ -2158,7 +2158,7 @@
       "a": "FURIA",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.8127,
+      "p_a": 0.7967,
       "winner": "FURIA"
      },
      {
@@ -2166,7 +2166,7 @@
       "a": "paiN Gaming",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.7459,
+      "p_a": 0.741,
       "winner": "paiN Gaming"
      },
      {
@@ -2174,7 +2174,7 @@
       "a": "Rare Atom",
       "b": "Fnatic",
       "bo": 3,
-      "p_a": 0.058,
+      "p_a": 0.0584,
       "winner": "Rare Atom"
      },
      {
@@ -2182,7 +2182,7 @@
       "a": "Complexity",
       "b": "Imperial Esports",
       "bo": 3,
-      "p_a": 0.8579,
+      "p_a": 0.8496,
       "winner": "Complexity"
      },
      {
@@ -2190,7 +2190,7 @@
       "a": "BIG",
       "b": "FURIA",
       "bo": 3,
-      "p_a": 0.2613,
+      "p_a": 0.2517,
       "winner": "FURIA"
      },
      {
@@ -2198,7 +2198,7 @@
       "a": "FlyQuest",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3555,
+      "p_a": 0.3546,
       "winner": "paiN Gaming"
      },
      {
@@ -2206,7 +2206,7 @@
       "a": "GamerLegion",
       "b": "Passion UA",
       "bo": 3,
-      "p_a": 0.6632,
+      "p_a": 0.6756,
       "winner": "GamerLegion"
      },
      {
@@ -2214,7 +2214,7 @@
       "a": "MIBR",
       "b": "Rare Atom",
       "bo": 3,
-      "p_a": 0.9314,
+      "p_a": 0.9168,
       "winner": "MIBR"
      },
      {
@@ -2222,7 +2222,7 @@
       "a": "Cloud9",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.1251,
+      "p_a": 0.1398,
       "winner": "Complexity"
      },
      {
@@ -2230,7 +2230,7 @@
       "a": "Wildcard",
       "b": "Virtus.pro",
       "bo": 3,
-      "p_a": 0.1678,
+      "p_a": 0.1839,
       "winner": "Wildcard"
      },
      {
@@ -2238,7 +2238,7 @@
       "a": "BIG",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.3714,
+      "p_a": 0.3727,
       "winner": "BIG"
      },
      {
@@ -2246,7 +2246,7 @@
       "a": "FlyQuest",
       "b": "MIBR",
       "bo": 3,
-      "p_a": 0.6075,
+      "p_a": 0.6351,
       "winner": "MIBR"
      },
      {
@@ -2254,158 +2254,158 @@
       "a": "Passion UA",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.3666,
+      "p_a": 0.3443,
       "winner": "Wildcard"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.23325173005690572,
-     "log_loss": 0.6662908642868938,
+     "brier": 0.23324920064297208,
+     "log_loss": 0.6650329742831304,
      "accuracy": 0.5757575757575758
     },
     "teams": [
      {
       "team": "The MongolZ",
       "seed": 1,
-      "p_30": 0.76818,
-      "p_adv": 0.99615,
-      "p_03": 6e-05,
+      "p_30": 0.76605,
+      "p_adv": 0.99655,
+      "p_03": 5e-05,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "FURIA",
       "seed": 2,
-      "p_30": 0.33946,
-      "p_adv": 0.92507,
-      "p_03": 0.00372,
+      "p_30": 0.3238,
+      "p_adv": 0.9127,
+      "p_03": 0.0056,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 3,
-      "p_30": 0.28954,
-      "p_adv": 0.91308,
-      "p_03": 0.00448,
+      "p_30": 0.2905,
+      "p_adv": 0.90825,
+      "p_03": 0.0057,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Complexity",
       "seed": 4,
-      "p_30": 0.14959,
-      "p_adv": 0.8158,
-      "p_03": 0.01303,
+      "p_30": 0.15235,
+      "p_adv": 0.80965,
+      "p_03": 0.01375,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Virtus.pro",
       "seed": 5,
-      "p_30": 0.13581,
-      "p_adv": 0.78402,
-      "p_03": 0.01337,
+      "p_30": 0.12875,
+      "p_adv": 0.77125,
+      "p_03": 0.0166,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 6,
-      "p_30": 0.11663,
-      "p_adv": 0.74576,
-      "p_03": 0.01526,
+      "p_30": 0.1288,
+      "p_adv": 0.76105,
+      "p_03": 0.0149,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "BIG",
       "seed": 7,
-      "p_30": 0.09276,
-      "p_adv": 0.67443,
-      "p_03": 0.01888,
+      "p_30": 0.0919,
+      "p_adv": 0.66095,
+      "p_03": 0.0205,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Fnatic",
       "seed": 8,
-      "p_30": 0.03453,
-      "p_adv": 0.43024,
-      "p_03": 0.05482,
+      "p_30": 0.0393,
+      "p_adv": 0.43865,
+      "p_03": 0.0532,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Rare Atom",
       "seed": 9,
-      "p_30": 0.0001,
-      "p_adv": 0.00356,
-      "p_03": 0.71202,
+      "p_30": 5e-05,
+      "p_adv": 0.0045,
+      "p_03": 0.69615,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "GamerLegion",
       "seed": 10,
-      "p_30": 0.00931,
-      "p_adv": 0.24569,
-      "p_03": 0.16824,
+      "p_30": 0.01195,
+      "p_adv": 0.25775,
+      "p_03": 0.1562,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Cloud9",
       "seed": 11,
-      "p_30": 0.00559,
-      "p_adv": 0.15508,
-      "p_03": 0.25744,
+      "p_30": 0.00685,
+      "p_adv": 0.16665,
+      "p_03": 0.24485,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FlyQuest",
       "seed": 12,
-      "p_30": 0.02957,
-      "p_adv": 0.49734,
-      "p_03": 0.06641,
+      "p_30": 0.0319,
+      "p_adv": 0.50885,
+      "p_03": 0.06705,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 13,
-      "p_30": 0.01437,
-      "p_adv": 0.3325,
-      "p_03": 0.11706,
+      "p_30": 0.0143,
+      "p_adv": 0.31475,
+      "p_03": 0.1237,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Imperial Esports",
       "seed": 14,
-      "p_30": 0.00612,
-      "p_adv": 0.19288,
-      "p_03": 0.1746,
+      "p_30": 0.0061,
+      "p_adv": 0.19065,
+      "p_03": 0.18285,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Passion UA",
       "seed": 15,
-      "p_30": 0.0023,
-      "p_adv": 0.09271,
-      "p_03": 0.24846,
+      "p_30": 0.0019,
+      "p_adv": 0.0964,
+      "p_03": 0.25765,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 16,
-      "p_30": 0.00614,
-      "p_adv": 0.19569,
-      "p_03": 0.13215,
+      "p_30": 0.0055,
+      "p_adv": 0.2014,
+      "p_03": 0.14125,
       "actual": "3-2",
       "advanced": true
      }
@@ -2420,9 +2420,9 @@
        "actual": "3-0"
       },
       {
-       "team": "FURIA",
-       "correct": false,
-       "actual": "3-1"
+       "team": "Team Liquid",
+       "correct": true,
+       "actual": "3-0"
       }
      ],
      "winless": [
@@ -2449,9 +2449,9 @@
        "actual": "2-3"
       },
       {
-       "team": "Team Liquid",
-       "correct": false,
-       "actual": "3-0"
+       "team": "FURIA",
+       "correct": true,
+       "actual": "3-1"
       },
       {
        "team": "Virtus.pro",
@@ -2470,17 +2470,17 @@
       }
      ]
     },
-    "n_correct": 3,
-    "coin": false,
-    "p_coin": 0.6361,
-    "expected_correct": 4.99658,
+    "n_correct": 5,
+    "coin": true,
+    "p_coin": 0.6251,
+    "expected_correct": 4.9268,
     "matches": [
      {
       "round": 1,
       "a": "FURIA",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7396,
+      "p_a": 0.6738,
       "winner": "GamerLegion"
      },
      {
@@ -2488,7 +2488,7 @@
       "a": "Virtus.pro",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.6428,
+      "p_a": 0.6126,
       "winner": "MIBR"
      },
      {
@@ -2496,7 +2496,7 @@
       "a": "Team Liquid",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.7558,
+      "p_a": 0.7345,
       "winner": "Team Liquid"
      },
      {
@@ -2512,7 +2512,7 @@
       "a": "BIG",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.6846,
+      "p_a": 0.679,
       "winner": "BIG"
      },
      {
@@ -2520,7 +2520,7 @@
       "a": "Fnatic",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.5422,
+      "p_a": 0.5666,
       "winner": "Wildcard"
      },
      {
@@ -2528,7 +2528,7 @@
       "a": "The MongolZ",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.9301,
+      "p_a": 0.9163,
       "winner": "The MongolZ"
      },
      {
@@ -2536,7 +2536,7 @@
       "a": "paiN Gaming",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.7106,
+      "p_a": 0.717,
       "winner": "paiN Gaming"
      },
      {
@@ -2544,7 +2544,7 @@
       "a": "BIG",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.5197,
+      "p_a": 0.4996,
       "winner": "FlyQuest"
      },
      {
@@ -2552,7 +2552,7 @@
       "a": "The MongolZ",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.8141,
+      "p_a": 0.8219,
       "winner": "The MongolZ"
      },
      {
@@ -2560,7 +2560,7 @@
       "a": "Team Liquid",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.74,
+      "p_a": 0.6801,
       "winner": "Team Liquid"
      },
      {
@@ -2568,7 +2568,7 @@
       "a": "paiN Gaming",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.6833,
+      "p_a": 0.6941,
       "winner": "GamerLegion"
      },
      {
@@ -2576,7 +2576,7 @@
       "a": "Fnatic",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.5629,
+      "p_a": 0.5768,
       "winner": "Cloud9"
      },
      {
@@ -2584,7 +2584,7 @@
       "a": "Complexity",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.7493,
+      "p_a": 0.7531,
       "winner": "Passion UA"
      },
      {
@@ -2592,7 +2592,7 @@
       "a": "Virtus.pro",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.8453,
+      "p_a": 0.825,
       "winner": "Virtus.pro"
      },
      {
@@ -2600,7 +2600,7 @@
       "a": "FURIA",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.7637,
+      "p_a": 0.7769,
       "winner": "FURIA"
      },
      {
@@ -2608,7 +2608,7 @@
       "a": "Team Liquid",
       "b": "FlyQuest",
       "bo": 3,
-      "p_a": 0.7479,
+      "p_a": 0.7501,
       "winner": "Team Liquid"
      },
      {
@@ -2616,7 +2616,7 @@
       "a": "GamerLegion",
       "b": "The MongolZ",
       "bo": 3,
-      "p_a": 0.0795,
+      "p_a": 0.0825,
       "winner": "The MongolZ"
      },
      {
@@ -2624,7 +2624,7 @@
       "a": "BIG",
       "b": "Virtus.pro",
       "bo": 1,
-      "p_a": 0.4464,
+      "p_a": 0.3894,
       "winner": "BIG"
      },
      {
@@ -2632,7 +2632,7 @@
       "a": "MIBR",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.5993,
+      "p_a": 0.5971,
       "winner": "Passion UA"
      },
      {
@@ -2640,7 +2640,7 @@
       "a": "FURIA",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.7345,
+      "p_a": 0.7141,
       "winner": "FURIA"
      },
      {
@@ -2648,7 +2648,7 @@
       "a": "paiN Gaming",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.6955,
+      "p_a": 0.6899,
       "winner": "paiN Gaming"
      },
      {
@@ -2656,7 +2656,7 @@
       "a": "Rare Atom",
       "b": "Fnatic",
       "bo": 3,
-      "p_a": 0.1253,
+      "p_a": 0.1254,
       "winner": "Rare Atom"
      },
      {
@@ -2664,7 +2664,7 @@
       "a": "Complexity",
       "b": "Imperial Esports",
       "bo": 3,
-      "p_a": 0.7945,
+      "p_a": 0.7842,
       "winner": "Complexity"
      },
      {
@@ -2672,7 +2672,7 @@
       "a": "BIG",
       "b": "FURIA",
       "bo": 3,
-      "p_a": 0.2848,
+      "p_a": 0.2743,
       "winner": "FURIA"
      },
      {
@@ -2680,7 +2680,7 @@
       "a": "FlyQuest",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3495,
+      "p_a": 0.3486,
       "winner": "paiN Gaming"
      },
      {
@@ -2688,7 +2688,7 @@
       "a": "GamerLegion",
       "b": "Passion UA",
       "bo": 3,
-      "p_a": 0.6252,
+      "p_a": 0.6388,
       "winner": "GamerLegion"
      },
      {
@@ -2696,7 +2696,7 @@
       "a": "MIBR",
       "b": "Rare Atom",
       "bo": 3,
-      "p_a": 0.8493,
+      "p_a": 0.8227,
       "winner": "MIBR"
      },
      {
@@ -2704,7 +2704,7 @@
       "a": "Cloud9",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.2232,
+      "p_a": 0.2445,
       "winner": "Complexity"
      },
      {
@@ -2712,7 +2712,7 @@
       "a": "Wildcard",
       "b": "Virtus.pro",
       "bo": 3,
-      "p_a": 0.2785,
+      "p_a": 0.2996,
       "winner": "Wildcard"
      },
      {
@@ -2720,7 +2720,7 @@
       "a": "BIG",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.382,
+      "p_a": 0.3833,
       "winner": "BIG"
      },
      {
@@ -2728,7 +2728,7 @@
       "a": "FlyQuest",
       "b": "MIBR",
       "bo": 3,
-      "p_a": 0.6086,
+      "p_a": 0.6362,
       "winner": "MIBR"
      },
      {
@@ -2736,158 +2736,158 @@
       "a": "Passion UA",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.3655,
+      "p_a": 0.3433,
       "winner": "Wildcard"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.21775626676211882,
-     "log_loss": 0.6223553375665845,
-     "accuracy": 0.5757575757575758
+     "brier": 0.2186291155277164,
+     "log_loss": 0.6247598307129469,
+     "accuracy": 0.6060606060606061
     },
     "teams": [
      {
       "team": "The MongolZ",
       "seed": 1,
-      "p_30": 0.6043,
-      "p_adv": 0.97481,
-      "p_03": 0.00133,
+      "p_30": 0.6017,
+      "p_adv": 0.97315,
+      "p_03": 0.0019,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "FURIA",
       "seed": 2,
-      "p_30": 0.30963,
-      "p_adv": 0.87109,
-      "p_03": 0.01135,
+      "p_30": 0.286,
+      "p_adv": 0.8524,
+      "p_03": 0.0141,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 3,
-      "p_30": 0.29832,
-      "p_adv": 0.87799,
-      "p_03": 0.01035,
+      "p_30": 0.29495,
+      "p_adv": 0.86755,
+      "p_03": 0.0134,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Complexity",
       "seed": 4,
-      "p_30": 0.15827,
-      "p_adv": 0.74605,
-      "p_03": 0.02891,
+      "p_30": 0.16365,
+      "p_adv": 0.73805,
+      "p_03": 0.02955,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Virtus.pro",
       "seed": 5,
-      "p_30": 0.13972,
-      "p_adv": 0.69826,
-      "p_03": 0.0316,
+      "p_30": 0.1303,
+      "p_adv": 0.68005,
+      "p_03": 0.0379,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 6,
-      "p_30": 0.17158,
-      "p_adv": 0.7595,
-      "p_03": 0.02148,
+      "p_30": 0.1876,
+      "p_adv": 0.77495,
+      "p_03": 0.02185,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "BIG",
       "seed": 7,
-      "p_30": 0.10011,
-      "p_adv": 0.59364,
-      "p_03": 0.04189,
+      "p_30": 0.09985,
+      "p_adv": 0.58235,
+      "p_03": 0.04285,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Fnatic",
       "seed": 8,
-      "p_30": 0.05251,
-      "p_adv": 0.43705,
-      "p_03": 0.07685,
+      "p_30": 0.0591,
+      "p_adv": 0.45015,
+      "p_03": 0.0758,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Rare Atom",
       "seed": 9,
-      "p_30": 0.00098,
-      "p_adv": 0.0206,
-      "p_03": 0.57998,
+      "p_30": 0.0009,
+      "p_adv": 0.02435,
+      "p_03": 0.56055,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "GamerLegion",
       "seed": 10,
-      "p_30": 0.0224,
-      "p_adv": 0.2909,
-      "p_03": 0.17053,
+      "p_30": 0.0289,
+      "p_adv": 0.31385,
+      "p_03": 0.1545,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Cloud9",
       "seed": 11,
-      "p_30": 0.01975,
-      "p_adv": 0.2559,
-      "p_03": 0.20442,
+      "p_30": 0.02105,
+      "p_adv": 0.2684,
+      "p_03": 0.19245,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FlyQuest",
       "seed": 12,
-      "p_30": 0.05077,
-      "p_adv": 0.49633,
-      "p_03": 0.08407,
+      "p_30": 0.0536,
+      "p_adv": 0.50755,
+      "p_03": 0.08425,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 13,
-      "p_30": 0.0254,
-      "p_adv": 0.32393,
-      "p_03": 0.14292,
+      "p_30": 0.02565,
+      "p_adv": 0.3083,
+      "p_03": 0.1512,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Imperial Esports",
       "seed": 14,
-      "p_30": 0.01476,
-      "p_adv": 0.22335,
-      "p_03": 0.20433,
+      "p_30": 0.01425,
+      "p_adv": 0.22265,
+      "p_03": 0.211,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Passion UA",
       "seed": 15,
-      "p_30": 0.00937,
-      "p_adv": 0.14459,
-      "p_03": 0.24967,
+      "p_30": 0.00895,
+      "p_adv": 0.1437,
+      "p_03": 0.25525,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 16,
-      "p_30": 0.02213,
-      "p_adv": 0.28601,
-      "p_03": 0.14032,
+      "p_30": 0.02355,
+      "p_adv": 0.29255,
+      "p_03": 0.15345,
       "actual": "3-2",
       "advanced": true
      }
@@ -2954,15 +2954,15 @@
     },
     "n_correct": 5,
     "coin": true,
-    "p_coin": 0.59003,
-    "expected_correct": 4.80705,
+    "p_coin": 0.5773,
+    "expected_correct": 4.7615,
     "matches": [
      {
       "round": 1,
       "a": "FURIA",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7344,
+      "p_a": 0.6695,
       "winner": "GamerLegion"
      },
      {
@@ -2970,7 +2970,7 @@
       "a": "Virtus.pro",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.6416,
+      "p_a": 0.6116,
       "winner": "MIBR"
      },
      {
@@ -2978,7 +2978,7 @@
       "a": "Team Liquid",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.7478,
+      "p_a": 0.7267,
       "winner": "Team Liquid"
      },
      {
@@ -2986,7 +2986,7 @@
       "a": "Complexity",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.5977,
+      "p_a": 0.5976,
       "winner": "FlyQuest"
      },
      {
@@ -2994,7 +2994,7 @@
       "a": "BIG",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.6793,
+      "p_a": 0.6738,
       "winner": "BIG"
      },
      {
@@ -3002,7 +3002,7 @@
       "a": "Fnatic",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.5418,
+      "p_a": 0.5659,
       "winner": "Wildcard"
      },
      {
@@ -3010,7 +3010,7 @@
       "a": "The MongolZ",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.8934,
+      "p_a": 0.8751,
       "winner": "The MongolZ"
      },
      {
@@ -3018,7 +3018,7 @@
       "a": "paiN Gaming",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.7102,
+      "p_a": 0.7167,
       "winner": "paiN Gaming"
      },
      {
@@ -3026,7 +3026,7 @@
       "a": "BIG",
       "b": "FlyQuest",
       "bo": 1,
-      "p_a": 0.5196,
+      "p_a": 0.4996,
       "winner": "FlyQuest"
      },
      {
@@ -3034,7 +3034,7 @@
       "a": "The MongolZ",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.7982,
+      "p_a": 0.8061,
       "winner": "The MongolZ"
      },
      {
@@ -3042,7 +3042,7 @@
       "a": "Team Liquid",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.7338,
+      "p_a": 0.6748,
       "winner": "Team Liquid"
      },
      {
@@ -3050,7 +3050,7 @@
       "a": "paiN Gaming",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.6829,
+      "p_a": 0.6937,
       "winner": "GamerLegion"
      },
      {
@@ -3058,7 +3058,7 @@
       "a": "Fnatic",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.562,
+      "p_a": 0.5757,
       "winner": "Cloud9"
      },
      {
@@ -3066,7 +3066,7 @@
       "a": "Complexity",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.742,
+      "p_a": 0.7457,
       "winner": "Passion UA"
      },
      {
@@ -3074,7 +3074,7 @@
       "a": "Virtus.pro",
       "b": "Rare Atom",
       "bo": 1,
-      "p_a": 0.8211,
+      "p_a": 0.8001,
       "winner": "Virtus.pro"
      },
      {
@@ -3082,7 +3082,7 @@
       "a": "FURIA",
       "b": "Imperial Esports",
       "bo": 1,
-      "p_a": 0.7586,
+      "p_a": 0.7717,
       "winner": "FURIA"
      },
      {
@@ -3090,7 +3090,7 @@
       "a": "Team Liquid",
       "b": "FlyQuest",
       "bo": 3,
-      "p_a": 0.7455,
+      "p_a": 0.7478,
       "winner": "Team Liquid"
      },
      {
@@ -3098,7 +3098,7 @@
       "a": "GamerLegion",
       "b": "The MongolZ",
       "bo": 3,
-      "p_a": 0.1222,
+      "p_a": 0.1252,
       "winner": "The MongolZ"
      },
      {
@@ -3106,7 +3106,7 @@
       "a": "BIG",
       "b": "Virtus.pro",
       "bo": 1,
-      "p_a": 0.4465,
+      "p_a": 0.3894,
       "winner": "BIG"
      },
      {
@@ -3114,7 +3114,7 @@
       "a": "MIBR",
       "b": "Passion UA",
       "bo": 1,
-      "p_a": 0.5981,
+      "p_a": 0.596,
       "winner": "Passion UA"
      },
      {
@@ -3122,7 +3122,7 @@
       "a": "FURIA",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.7254,
+      "p_a": 0.7054,
       "winner": "FURIA"
      },
      {
@@ -3130,7 +3130,7 @@
       "a": "paiN Gaming",
       "b": "Cloud9",
       "bo": 1,
-      "p_a": 0.6929,
+      "p_a": 0.6874,
       "winner": "paiN Gaming"
      },
      {
@@ -3138,7 +3138,7 @@
       "a": "Rare Atom",
       "b": "Fnatic",
       "bo": 3,
-      "p_a": 0.154,
+      "p_a": 0.1537,
       "winner": "Rare Atom"
      },
      {
@@ -3146,7 +3146,7 @@
       "a": "Complexity",
       "b": "Imperial Esports",
       "bo": 3,
-      "p_a": 0.7852,
+      "p_a": 0.775,
       "winner": "Complexity"
      },
      {
@@ -3154,7 +3154,7 @@
       "a": "BIG",
       "b": "FURIA",
       "bo": 3,
-      "p_a": 0.2854,
+      "p_a": 0.2749,
       "winner": "FURIA"
      },
      {
@@ -3162,7 +3162,7 @@
       "a": "FlyQuest",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3495,
+      "p_a": 0.3486,
       "winner": "paiN Gaming"
      },
      {
@@ -3170,7 +3170,7 @@
       "a": "GamerLegion",
       "b": "Passion UA",
       "bo": 3,
-      "p_a": 0.6244,
+      "p_a": 0.6379,
       "winner": "GamerLegion"
      },
      {
@@ -3178,7 +3178,7 @@
       "a": "MIBR",
       "b": "Rare Atom",
       "bo": 3,
-      "p_a": 0.8159,
+      "p_a": 0.7891,
       "winner": "MIBR"
      },
      {
@@ -3186,7 +3186,7 @@
       "a": "Cloud9",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.2456,
+      "p_a": 0.2659,
       "winner": "Complexity"
      },
      {
@@ -3194,7 +3194,7 @@
       "a": "Wildcard",
       "b": "Virtus.pro",
       "bo": 3,
-      "p_a": 0.2964,
+      "p_a": 0.316,
       "winner": "Wildcard"
      },
      {
@@ -3202,7 +3202,7 @@
       "a": "BIG",
       "b": "Complexity",
       "bo": 3,
-      "p_a": 0.3821,
+      "p_a": 0.3833,
       "winner": "BIG"
      },
      {
@@ -3210,7 +3210,7 @@
       "a": "FlyQuest",
       "b": "MIBR",
       "bo": 3,
-      "p_a": 0.6086,
+      "p_a": 0.6362,
       "winner": "MIBR"
      },
      {
@@ -3218,158 +3218,158 @@
       "a": "Passion UA",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.3655,
+      "p_a": 0.3433,
       "winner": "Wildcard"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.2170731887276678,
-     "log_loss": 0.6206532979669274,
-     "accuracy": 0.5757575757575758
+     "brier": 0.218282642666938,
+     "log_loss": 0.6237954347684938,
+     "accuracy": 0.6060606060606061
     },
     "teams": [
      {
       "team": "The MongolZ",
       "seed": 1,
-      "p_30": 0.54517,
-      "p_adv": 0.95664,
-      "p_03": 0.00314,
+      "p_30": 0.53885,
+      "p_adv": 0.9562,
+      "p_03": 0.00355,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "FURIA",
       "seed": 2,
-      "p_30": 0.3102,
-      "p_adv": 0.86132,
-      "p_03": 0.01312,
+      "p_30": 0.28575,
+      "p_adv": 0.8435,
+      "p_03": 0.0168,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 3,
-      "p_30": 0.30217,
-      "p_adv": 0.87172,
-      "p_03": 0.01172,
+      "p_30": 0.29965,
+      "p_adv": 0.86055,
+      "p_03": 0.015,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Complexity",
       "seed": 4,
-      "p_30": 0.16355,
-      "p_adv": 0.73654,
-      "p_03": 0.03152,
+      "p_30": 0.16885,
+      "p_adv": 0.7283,
+      "p_03": 0.0329,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Virtus.pro",
       "seed": 5,
-      "p_30": 0.14455,
-      "p_adv": 0.68963,
-      "p_03": 0.03448,
+      "p_30": 0.13395,
+      "p_adv": 0.67045,
+      "p_03": 0.04275,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 6,
-      "p_30": 0.18149,
-      "p_adv": 0.7587,
-      "p_03": 0.02293,
+      "p_30": 0.1999,
+      "p_adv": 0.77405,
+      "p_03": 0.0226,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "BIG",
       "seed": 7,
-      "p_30": 0.1052,
-      "p_adv": 0.58769,
-      "p_03": 0.04562,
+      "p_30": 0.10405,
+      "p_adv": 0.57575,
+      "p_03": 0.04635,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Fnatic",
       "seed": 8,
-      "p_30": 0.05706,
-      "p_adv": 0.43933,
-      "p_03": 0.08027,
+      "p_30": 0.06535,
+      "p_adv": 0.4516,
+      "p_03": 0.07955,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Rare Atom",
       "seed": 9,
-      "p_30": 0.00219,
-      "p_adv": 0.03258,
-      "p_03": 0.53713,
+      "p_30": 0.0024,
+      "p_adv": 0.0385,
+      "p_03": 0.5166,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "GamerLegion",
       "seed": 10,
-      "p_30": 0.02538,
-      "p_adv": 0.29629,
-      "p_03": 0.17257,
+      "p_30": 0.03245,
+      "p_adv": 0.3172,
+      "p_03": 0.156,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Cloud9",
       "seed": 11,
-      "p_30": 0.02344,
-      "p_adv": 0.26782,
-      "p_03": 0.20284,
+      "p_30": 0.02505,
+      "p_adv": 0.2804,
+      "p_03": 0.19215,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FlyQuest",
       "seed": 12,
-      "p_30": 0.05474,
-      "p_adv": 0.49526,
-      "p_03": 0.0883,
+      "p_30": 0.0582,
+      "p_adv": 0.50665,
+      "p_03": 0.08645,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 13,
-      "p_30": 0.02786,
-      "p_adv": 0.32312,
-      "p_03": 0.14813,
+      "p_30": 0.02845,
+      "p_adv": 0.30985,
+      "p_03": 0.1567,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Imperial Esports",
       "seed": 14,
-      "p_30": 0.01719,
-      "p_adv": 0.22854,
-      "p_03": 0.20999,
+      "p_30": 0.0167,
+      "p_adv": 0.22575,
+      "p_03": 0.21685,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Passion UA",
       "seed": 15,
-      "p_30": 0.01195,
-      "p_adv": 0.15508,
-      "p_03": 0.25317,
+      "p_30": 0.0116,
+      "p_adv": 0.15495,
+      "p_03": 0.2584,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 16,
-      "p_30": 0.02786,
-      "p_adv": 0.29974,
-      "p_03": 0.14507,
+      "p_30": 0.0288,
+      "p_adv": 0.3063,
+      "p_03": 0.15735,
       "actual": "3-2",
       "advanced": true
      }
@@ -3379,9 +3379,9 @@
     "picks": {
      "perfect": [
       {
-       "team": "BIG",
+       "team": "paiN Gaming",
        "correct": false,
-       "actual": "3-2"
+       "actual": "3-1"
       },
       {
        "team": "Fnatic",
@@ -3396,26 +3396,21 @@
        "actual": "3-2"
       },
       {
-       "team": "Passion UA",
-       "correct": false,
-       "actual": "2-3"
+       "team": "Imperial Esports",
+       "correct": true,
+       "actual": "0-3"
       }
      ],
      "advance": [
-      {
-       "team": "FlyQuest",
-       "correct": false,
-       "actual": "2-3"
-      },
       {
        "team": "Team Liquid",
        "correct": false,
        "actual": "3-0"
       },
       {
-       "team": "GamerLegion",
-       "correct": true,
-       "actual": "3-1"
+       "team": "Rare Atom",
+       "correct": false,
+       "actual": "1-3"
       },
       {
        "team": "FURIA",
@@ -3423,21 +3418,26 @@
        "actual": "3-1"
       },
       {
+       "team": "BIG",
+       "correct": true,
+       "actual": "3-2"
+      },
+      {
        "team": "The MongolZ",
        "correct": false,
        "actual": "3-0"
       },
       {
-       "team": "Complexity",
-       "correct": false,
-       "actual": "2-3"
+       "team": "GamerLegion",
+       "correct": true,
+       "actual": "3-1"
       }
      ]
     },
-    "n_correct": 2,
+    "n_correct": 4,
     "coin": false,
-    "p_coin": 0.09351,
-    "expected_correct": 2.75371,
+    "p_coin": 0.09765,
+    "expected_correct": 2.752,
     "matches": [
      {
       "round": 1,
@@ -3714,144 +3714,144 @@
      {
       "team": "The MongolZ",
       "seed": 1,
-      "p_30": 0.12509,
-      "p_adv": 0.49965,
-      "p_03": 0.12496,
+      "p_30": 0.1265,
+      "p_adv": 0.5023,
+      "p_03": 0.12285,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "FURIA",
       "seed": 2,
-      "p_30": 0.12559,
-      "p_adv": 0.50045,
-      "p_03": 0.12489,
+      "p_30": 0.13135,
+      "p_adv": 0.5072,
+      "p_03": 0.1241,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 3,
-      "p_30": 0.12448,
-      "p_adv": 0.50142,
-      "p_03": 0.123,
+      "p_30": 0.12465,
+      "p_adv": 0.50275,
+      "p_03": 0.12385,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Complexity",
       "seed": 4,
-      "p_30": 0.12571,
-      "p_adv": 0.50012,
-      "p_03": 0.12399,
+      "p_30": 0.12715,
+      "p_adv": 0.5037,
+      "p_03": 0.1231,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Virtus.pro",
       "seed": 5,
-      "p_30": 0.12579,
-      "p_adv": 0.50091,
-      "p_03": 0.12633,
+      "p_30": 0.1245,
+      "p_adv": 0.5003,
+      "p_03": 0.12405,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 6,
-      "p_30": 0.12619,
-      "p_adv": 0.4979,
-      "p_03": 0.1247,
+      "p_30": 0.12735,
+      "p_adv": 0.49995,
+      "p_03": 0.1252,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "BIG",
       "seed": 7,
-      "p_30": 0.12408,
-      "p_adv": 0.49875,
-      "p_03": 0.12514,
+      "p_30": 0.12235,
+      "p_adv": 0.49815,
+      "p_03": 0.12845,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Fnatic",
       "seed": 8,
-      "p_30": 0.12402,
-      "p_adv": 0.49823,
-      "p_03": 0.12618,
+      "p_30": 0.1238,
+      "p_adv": 0.49415,
+      "p_03": 0.12975,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Rare Atom",
       "seed": 9,
-      "p_30": 0.12518,
-      "p_adv": 0.50153,
-      "p_03": 0.12598,
+      "p_30": 0.1241,
+      "p_adv": 0.50005,
+      "p_03": 0.1252,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "GamerLegion",
       "seed": 10,
-      "p_30": 0.12446,
-      "p_adv": 0.49969,
-      "p_03": 0.12534,
+      "p_30": 0.12235,
+      "p_adv": 0.4937,
+      "p_03": 0.12315,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Cloud9",
       "seed": 11,
-      "p_30": 0.12513,
-      "p_adv": 0.4993,
-      "p_03": 0.12616,
+      "p_30": 0.12725,
+      "p_adv": 0.4982,
+      "p_03": 0.12815,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FlyQuest",
       "seed": 12,
-      "p_30": 0.12503,
-      "p_adv": 0.50237,
-      "p_03": 0.12468,
+      "p_30": 0.1243,
+      "p_adv": 0.5058,
+      "p_03": 0.1245,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 13,
-      "p_30": 0.12568,
-      "p_adv": 0.50345,
-      "p_03": 0.12437,
+      "p_30": 0.1261,
+      "p_adv": 0.5081,
+      "p_03": 0.12325,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "Imperial Esports",
       "seed": 14,
-      "p_30": 0.12466,
-      "p_adv": 0.50128,
-      "p_03": 0.12201,
+      "p_30": 0.1223,
+      "p_adv": 0.49945,
+      "p_03": 0.1211,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "Passion UA",
       "seed": 15,
-      "p_30": 0.12495,
-      "p_adv": 0.49956,
-      "p_03": 0.12578,
+      "p_30": 0.1199,
+      "p_adv": 0.49175,
+      "p_03": 0.1264,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 16,
-      "p_30": 0.12396,
-      "p_adv": 0.49539,
-      "p_03": 0.12649,
+      "p_30": 0.12605,
+      "p_adv": 0.49445,
+      "p_03": 0.1269,
       "actual": "3-2",
       "advanced": true
      }
@@ -3947,21 +3947,21 @@
         "actual": "3-2"
        },
        {
-        "team": "Team Liquid",
-        "correct": true,
-        "actual": "3-1"
-       },
-       {
         "team": "The MongolZ",
         "correct": false,
         "actual": "3-0"
+       },
+       {
+        "team": "HEROIC",
+        "correct": true,
+        "actual": "3-2"
        }
       ]
      },
      "n_correct": 5,
      "coin": true,
-     "p_coin": 0.47437,
-     "expected_correct": 4.42058,
+     "p_coin": 0.49665,
+     "expected_correct": 4.4999,
      "hits": {
       "perfect": 1,
       "advance": 4,
@@ -4021,9 +4021,9 @@
         "actual": "3-2"
        },
        {
-        "team": "Team Liquid",
-        "correct": true,
-        "actual": "3-1"
+        "team": "The MongolZ",
+        "correct": false,
+        "actual": "3-0"
        },
        {
         "team": "HEROIC",
@@ -4032,13 +4032,13 @@
        }
       ]
      },
-     "n_correct": 6,
+     "n_correct": 5,
      "coin": true,
-     "p_coin": 0.46761,
-     "expected_correct": 4.37969,
+     "p_coin": 0.49665,
+     "expected_correct": 4.4999,
      "hits": {
       "perfect": 1,
-      "advance": 5,
+      "advance": 4,
       "winless": 0
      },
      "n": {
@@ -4056,9 +4056,9 @@
         "actual": "3-1"
        },
        {
-        "team": "Natus Vincere",
-        "correct": false,
-        "actual": "2-3"
+        "team": "Team Vitality",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
@@ -4080,14 +4080,14 @@
         "actual": "3-1"
        },
        {
+        "team": "Natus Vincere",
+        "correct": false,
+        "actual": "2-3"
+       },
+       {
         "team": "MOUZ",
         "correct": true,
         "actual": "3-2"
-       },
-       {
-        "team": "Team Vitality",
-        "correct": false,
-        "actual": "3-0"
        },
        {
         "team": "FaZe Clan",
@@ -4095,23 +4095,23 @@
         "actual": "3-2"
        },
        {
-        "team": "Team Liquid",
-        "correct": true,
-        "actual": "3-1"
-       },
-       {
         "team": "The MongolZ",
         "correct": false,
         "actual": "3-0"
+       },
+       {
+        "team": "Team Liquid",
+        "correct": true,
+        "actual": "3-1"
        }
       ]
      },
-     "n_correct": 4,
-     "coin": false,
-     "p_coin": 0.47073,
-     "expected_correct": 4.4236,
+     "n_correct": 5,
+     "coin": true,
+     "p_coin": 0.49625,
+     "expected_correct": 4.50115,
      "hits": {
-      "perfect": 0,
+      "perfect": 1,
       "advance": 4,
       "winless": 0
      },
@@ -4154,14 +4154,14 @@
         "actual": "3-1"
        },
        {
-        "team": "MOUZ",
-        "correct": true,
-        "actual": "3-2"
-       },
-       {
         "team": "Team Vitality",
         "correct": false,
         "actual": "3-0"
+       },
+       {
+        "team": "MOUZ",
+        "correct": true,
+        "actual": "3-2"
        },
        {
         "team": "FaZe Clan",
@@ -4169,9 +4169,9 @@
         "actual": "3-2"
        },
        {
-        "team": "Team Liquid",
-        "correct": true,
-        "actual": "3-1"
+        "team": "The MongolZ",
+        "correct": false,
+        "actual": "3-0"
        },
        {
         "team": "HEROIC",
@@ -4180,13 +4180,13 @@
        }
       ]
      },
-     "n_correct": 5,
-     "coin": true,
-     "p_coin": 0.46158,
-     "expected_correct": 4.38271,
+     "n_correct": 4,
+     "coin": false,
+     "p_coin": 0.48405,
+     "expected_correct": 4.47005,
      "hits": {
       "perfect": 0,
-      "advance": 5,
+      "advance": 4,
       "winless": 0
      },
      "n": {
@@ -4211,14 +4211,14 @@
       ],
       "winless": [
        {
+        "team": "MIBR",
+        "correct": false,
+        "actual": "2-3"
+       },
+       {
         "team": "Wildcard",
         "correct": true,
         "actual": "0-3"
-       },
-       {
-        "team": "GamerLegion",
-        "correct": false,
-        "actual": "1-3"
        }
       ],
       "advance": [
@@ -4228,14 +4228,14 @@
         "actual": "3-0"
        },
        {
-        "team": "MOUZ",
-        "correct": true,
-        "actual": "3-2"
-       },
-       {
         "team": "Team Spirit",
         "correct": true,
         "actual": "3-1"
+       },
+       {
+        "team": "MOUZ",
+        "correct": true,
+        "actual": "3-2"
        },
        {
         "team": "FaZe Clan",
@@ -4256,8 +4256,8 @@
      },
      "n_correct": 5,
      "coin": true,
-     "p_coin": 0.77305,
-     "expected_correct": 5.65843,
+     "p_coin": 0.7685,
+     "expected_correct": 5.64675,
      "hits": {
       "perfect": 0,
       "advance": 4,
@@ -4285,14 +4285,14 @@
       ],
       "winless": [
        {
+        "team": "MIBR",
+        "correct": false,
+        "actual": "2-3"
+       },
+       {
         "team": "Wildcard",
         "correct": true,
         "actual": "0-3"
-       },
-       {
-        "team": "GamerLegion",
-        "correct": false,
-        "actual": "1-3"
        }
       ],
       "advance": [
@@ -4302,14 +4302,14 @@
         "actual": "3-0"
        },
        {
-        "team": "MOUZ",
-        "correct": true,
-        "actual": "3-2"
-       },
-       {
         "team": "Team Spirit",
         "correct": true,
         "actual": "3-1"
+       },
+       {
+        "team": "MOUZ",
+        "correct": true,
+        "actual": "3-2"
        },
        {
         "team": "FaZe Clan",
@@ -4330,8 +4330,8 @@
      },
      "n_correct": 5,
      "coin": true,
-     "p_coin": 0.77305,
-     "expected_correct": 5.65843,
+     "p_coin": 0.7685,
+     "expected_correct": 5.64675,
      "hits": {
       "perfect": 0,
       "advance": 4,
@@ -4352,21 +4352,21 @@
         "actual": "3-1"
        },
        {
-        "team": "Natus Vincere",
-        "correct": false,
-        "actual": "2-3"
+        "team": "Team Vitality",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
        {
+        "team": "MIBR",
+        "correct": false,
+        "actual": "2-3"
+       },
+       {
         "team": "Wildcard",
         "correct": true,
         "actual": "0-3"
-       },
-       {
-        "team": "GamerLegion",
-        "correct": false,
-        "actual": "1-3"
        }
       ],
       "advance": [
@@ -4376,14 +4376,14 @@
         "actual": "3-0"
        },
        {
-        "team": "MOUZ",
-        "correct": true,
-        "actual": "3-2"
-       },
-       {
         "team": "Team Spirit",
         "correct": true,
         "actual": "3-1"
+       },
+       {
+        "team": "MOUZ",
+        "correct": true,
+        "actual": "3-2"
        },
        {
         "team": "FaZe Clan",
@@ -4391,23 +4391,23 @@
         "actual": "3-2"
        },
        {
-        "team": "Team Vitality",
-        "correct": false,
-        "actual": "3-0"
-       },
-       {
         "team": "HEROIC",
         "correct": true,
         "actual": "3-2"
+       },
+       {
+        "team": "Natus Vincere",
+        "correct": false,
+        "actual": "2-3"
        }
       ]
      },
-     "n_correct": 5,
+     "n_correct": 6,
      "coin": true,
-     "p_coin": 0.76973,
-     "expected_correct": 5.64529,
+     "p_coin": 0.7655,
+     "expected_correct": 5.57085,
      "hits": {
-      "perfect": 0,
+      "perfect": 1,
       "advance": 4,
       "winless": 1
      },
@@ -4433,14 +4433,14 @@
       ],
       "winless": [
        {
+        "team": "MIBR",
+        "correct": false,
+        "actual": "2-3"
+       },
+       {
         "team": "Wildcard",
         "correct": true,
         "actual": "0-3"
-       },
-       {
-        "team": "GamerLegion",
-        "correct": false,
-        "actual": "1-3"
        }
       ],
       "advance": [
@@ -4450,14 +4450,14 @@
         "actual": "3-0"
        },
        {
-        "team": "MOUZ",
-        "correct": true,
-        "actual": "3-2"
-       },
-       {
         "team": "Team Spirit",
         "correct": true,
         "actual": "3-1"
+       },
+       {
+        "team": "MOUZ",
+        "correct": true,
+        "actual": "3-2"
        },
        {
         "team": "FaZe Clan",
@@ -4478,8 +4478,8 @@
      },
      "n_correct": 5,
      "coin": true,
-     "p_coin": 0.76973,
-     "expected_correct": 5.64529,
+     "p_coin": 0.758,
+     "expected_correct": 5.60665,
      "hits": {
       "perfect": 0,
       "advance": 4,
@@ -4507,14 +4507,14 @@
       ],
       "winless": [
        {
-        "team": "GamerLegion",
-        "correct": false,
-        "actual": "1-3"
-       },
-       {
         "team": "MIBR",
         "correct": false,
         "actual": "2-3"
+       },
+       {
+        "team": "GamerLegion",
+        "correct": false,
+        "actual": "1-3"
        }
       ],
       "advance": [
@@ -4552,8 +4552,8 @@
      },
      "n_correct": 5,
      "coin": true,
-     "p_coin": 0.64561,
-     "expected_correct": 5.0317,
+     "p_coin": 0.6619,
+     "expected_correct": 5.0988,
      "hits": {
       "perfect": 1,
       "advance": 4,
@@ -4574,16 +4574,16 @@
         "actual": "3-1"
        },
        {
-        "team": "Natus Vincere",
-        "correct": false,
-        "actual": "2-3"
+        "team": "Team Vitality",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
        {
-        "team": "GamerLegion",
+        "team": "MIBR",
         "correct": false,
-        "actual": "1-3"
+        "actual": "2-3"
        },
        {
         "team": "Wildcard",
@@ -4608,9 +4608,9 @@
         "actual": "3-2"
        },
        {
-        "team": "Team Vitality",
+        "team": "Natus Vincere",
         "correct": false,
-        "actual": "3-0"
+        "actual": "2-3"
        },
        {
         "team": "FaZe Clan",
@@ -4624,12 +4624,12 @@
        }
       ]
      },
-     "n_correct": 5,
+     "n_correct": 6,
      "coin": true,
-     "p_coin": 0.64417,
-     "expected_correct": 5.08182,
+     "p_coin": 0.6547,
+     "expected_correct": 5.10185,
      "hits": {
-      "perfect": 0,
+      "perfect": 1,
       "advance": 4,
       "winless": 1
      },
@@ -4648,21 +4648,21 @@
         "actual": "3-1"
        },
        {
-        "team": "Natus Vincere",
-        "correct": false,
-        "actual": "2-3"
+        "team": "Team Vitality",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
        {
-        "team": "GamerLegion",
-        "correct": false,
-        "actual": "1-3"
-       },
-       {
         "team": "MIBR",
         "correct": false,
         "actual": "2-3"
+       },
+       {
+        "team": "GamerLegion",
+        "correct": false,
+        "actual": "1-3"
        }
       ],
       "advance": [
@@ -4672,19 +4672,19 @@
         "actual": "3-1"
        },
        {
-        "team": "MOUZ",
-        "correct": true,
-        "actual": "3-2"
-       },
-       {
         "team": "The MongolZ",
         "correct": false,
         "actual": "3-0"
        },
        {
-        "team": "Team Vitality",
+        "team": "MOUZ",
+        "correct": true,
+        "actual": "3-2"
+       },
+       {
+        "team": "Natus Vincere",
         "correct": false,
-        "actual": "3-0"
+        "actual": "2-3"
        },
        {
         "team": "FaZe Clan",
@@ -4698,12 +4698,12 @@
        }
       ]
      },
-     "n_correct": 4,
-     "coin": false,
-     "p_coin": 0.61824,
-     "expected_correct": 4.97272,
+     "n_correct": 5,
+     "coin": true,
+     "p_coin": 0.6417,
+     "expected_correct": 5.0148,
      "hits": {
-      "perfect": 0,
+      "perfect": 1,
       "advance": 4,
       "winless": 0
      },
@@ -4722,21 +4722,21 @@
         "actual": "3-1"
        },
        {
-        "team": "Natus Vincere",
-        "correct": false,
-        "actual": "2-3"
+        "team": "Team Vitality",
+        "correct": true,
+        "actual": "3-0"
        }
       ],
       "winless": [
        {
-        "team": "GamerLegion",
-        "correct": false,
-        "actual": "1-3"
-       },
-       {
         "team": "MIBR",
         "correct": false,
         "actual": "2-3"
+       },
+       {
+        "team": "GamerLegion",
+        "correct": false,
+        "actual": "1-3"
        }
       ],
       "advance": [
@@ -4746,19 +4746,19 @@
         "actual": "3-1"
        },
        {
-        "team": "MOUZ",
-        "correct": true,
-        "actual": "3-2"
-       },
-       {
         "team": "The MongolZ",
         "correct": false,
         "actual": "3-0"
        },
        {
-        "team": "Team Vitality",
+        "team": "MOUZ",
+        "correct": true,
+        "actual": "3-2"
+       },
+       {
+        "team": "Natus Vincere",
         "correct": false,
-        "actual": "3-0"
+        "actual": "2-3"
        },
        {
         "team": "FaZe Clan",
@@ -4772,12 +4772,12 @@
        }
       ]
      },
-     "n_correct": 4,
-     "coin": false,
-     "p_coin": 0.61824,
-     "expected_correct": 4.97272,
+     "n_correct": 5,
+     "coin": true,
+     "p_coin": 0.6417,
+     "expected_correct": 5.0148,
      "hits": {
-      "perfect": 0,
+      "perfect": 1,
       "advance": 4,
       "winless": 0
      },
@@ -4836,28 +4836,28 @@
        "actual": "3-2"
       },
       {
-       "team": "Team Liquid",
-       "correct": true,
-       "actual": "3-1"
-      },
-      {
        "team": "The MongolZ",
        "correct": false,
        "actual": "3-0"
+      },
+      {
+       "team": "HEROIC",
+       "correct": true,
+       "actual": "3-2"
       }
      ]
     },
     "n_correct": 5,
     "coin": true,
-    "p_coin": 0.47437,
-    "expected_correct": 4.42058,
+    "p_coin": 0.49665,
+    "expected_correct": 4.4999,
     "matches": [
      {
       "round": 1,
       "a": "G2 Esports",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.6974,
+      "p_a": 0.6892,
       "winner": "The MongolZ"
      },
      {
@@ -4865,7 +4865,7 @@
       "a": "Natus Vincere",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.6658,
+      "p_a": 0.6346,
       "winner": "Natus Vincere"
      },
      {
@@ -4873,7 +4873,7 @@
       "a": "Team Vitality",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7914,
+      "p_a": 0.7964,
       "winner": "Team Vitality"
      },
      {
@@ -4881,7 +4881,7 @@
       "a": "Team Spirit",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.6465,
+      "p_a": 0.6556,
       "winner": "FURIA"
      },
      {
@@ -4889,7 +4889,7 @@
       "a": "MOUZ",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.5997,
+      "p_a": 0.5874,
       "winner": "MOUZ"
      },
      {
@@ -4897,7 +4897,7 @@
       "a": "FaZe Clan",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.6659,
+      "p_a": 0.6914,
       "winner": "FaZe Clan"
      },
      {
@@ -4905,7 +4905,7 @@
       "a": "HEROIC",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.613,
+      "p_a": 0.6378,
       "winner": "HEROIC"
      },
      {
@@ -4913,7 +4913,7 @@
       "a": "3DMAX",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.6086,
+      "p_a": 0.7372,
       "winner": "MIBR"
      },
      {
@@ -4921,7 +4921,7 @@
       "a": "Team Vitality",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.6716,
+      "p_a": 0.7091,
       "winner": "Team Vitality"
      },
      {
@@ -4929,7 +4929,7 @@
       "a": "MOUZ",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.5522,
+      "p_a": 0.5722,
       "winner": "The MongolZ"
      },
      {
@@ -4937,7 +4937,7 @@
       "a": "Natus Vincere",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.8286,
+      "p_a": 0.8519,
       "winner": "MIBR"
      },
      {
@@ -4945,7 +4945,7 @@
       "a": "FaZe Clan",
       "b": "HEROIC",
       "bo": 1,
-      "p_a": 0.5449,
+      "p_a": 0.542,
       "winner": "HEROIC"
      },
      {
@@ -4953,7 +4953,7 @@
       "a": "Team Liquid",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.6887,
+      "p_a": 0.6722,
       "winner": "Team Liquid"
      },
      {
@@ -4961,7 +4961,7 @@
       "a": "Team Spirit",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.7537,
+      "p_a": 0.7987,
       "winner": "Team Spirit"
      },
      {
@@ -4969,7 +4969,7 @@
       "a": "G2 Esports",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.8102,
+      "p_a": 0.8197,
       "winner": "G2 Esports"
      },
      {
@@ -4977,7 +4977,7 @@
       "a": "3DMAX",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.4439,
+      "p_a": 0.4828,
       "winner": "3DMAX"
      },
      {
@@ -4985,7 +4985,7 @@
       "a": "MIBR",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.0981,
+      "p_a": 0.0812,
       "winner": "Team Vitality"
      },
      {
@@ -4993,7 +4993,7 @@
       "a": "The MongolZ",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.5584,
+      "p_a": 0.5471,
       "winner": "The MongolZ"
      },
      {
@@ -5001,7 +5001,7 @@
       "a": "Natus Vincere",
       "b": "Team Spirit",
       "bo": 1,
-      "p_a": 0.5651,
+      "p_a": 0.5637,
       "winner": "Team Spirit"
      },
      {
@@ -5009,7 +5009,7 @@
       "a": "FURIA",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.4561,
+      "p_a": 0.5228,
       "winner": "Team Liquid"
      },
      {
@@ -5017,7 +5017,7 @@
       "a": "G2 Esports",
       "b": "3DMAX",
       "bo": 1,
-      "p_a": 0.7782,
+      "p_a": 0.7277,
       "winner": "G2 Esports"
      },
      {
@@ -5025,7 +5025,7 @@
       "a": "MOUZ",
       "b": "FaZe Clan",
       "bo": 1,
-      "p_a": 0.5463,
+      "p_a": 0.5679,
       "winner": "FaZe Clan"
      },
      {
@@ -5033,7 +5033,7 @@
       "a": "GamerLegion",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.4614,
+      "p_a": 0.412,
       "winner": "GamerLegion"
      },
      {
@@ -5041,7 +5041,7 @@
       "a": "BIG",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3465,
+      "p_a": 0.3391,
       "winner": "paiN Gaming"
      },
      {
@@ -5049,7 +5049,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.7743,
+      "p_a": 0.7569,
       "winner": "G2 Esports"
      },
      {
@@ -5057,7 +5057,7 @@
       "a": "MIBR",
       "b": "Team Liquid",
       "bo": 3,
-      "p_a": 0.2058,
+      "p_a": 0.2129,
       "winner": "Team Liquid"
      },
      {
@@ -5065,7 +5065,7 @@
       "a": "HEROIC",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.285,
+      "p_a": 0.2954,
       "winner": "Team Spirit"
      },
      {
@@ -5073,7 +5073,7 @@
       "a": "MOUZ",
       "b": "3DMAX",
       "bo": 3,
-      "p_a": 0.7215,
+      "p_a": 0.6861,
       "winner": "MOUZ"
      },
      {
@@ -5081,7 +5081,7 @@
       "a": "Natus Vincere",
       "b": "GamerLegion",
       "bo": 3,
-      "p_a": 0.91,
+      "p_a": 0.9284,
       "winner": "Natus Vincere"
      },
      {
@@ -5089,7 +5089,7 @@
       "a": "FURIA",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.5163,
+      "p_a": 0.4624,
       "winner": "FURIA"
      },
      {
@@ -5097,7 +5097,7 @@
       "a": "MIBR",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.1621,
+      "p_a": 0.1361,
       "winner": "MOUZ"
      },
      {
@@ -5105,7 +5105,7 @@
       "a": "Natus Vincere",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.7901,
+      "p_a": 0.7812,
       "winner": "HEROIC"
      },
      {
@@ -5113,180 +5113,180 @@
       "a": "FURIA",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.4347,
+      "p_a": 0.4114,
       "winner": "FaZe Clan"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.19921142823443938,
-     "log_loss": 0.5827647125600899,
-     "accuracy": 0.6666666666666666
+     "brier": 0.21036325898441252,
+     "log_loss": 0.6072073518690871,
+     "accuracy": 0.6060606060606061
     },
     "teams": [
      {
       "team": "G2 Esports",
       "seed": 1,
-      "p_30": 0.41622,
-      "p_adv": 0.91819,
-      "p_03": 0.00806,
+      "p_30": 0.4154,
+      "p_adv": 0.9195,
+      "p_03": 0.006,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Natus Vincere",
       "seed": 2,
-      "p_30": 0.34558,
-      "p_adv": 0.88969,
-      "p_03": 0.01144,
+      "p_30": 0.3291,
+      "p_adv": 0.8882,
+      "p_03": 0.0115,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Team Vitality",
       "seed": 3,
-      "p_30": 0.3284,
-      "p_adv": 0.85835,
-      "p_03": 0.01187,
+      "p_30": 0.3341,
+      "p_adv": 0.86835,
+      "p_03": 0.0087,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Spirit",
       "seed": 4,
-      "p_30": 0.22754,
-      "p_adv": 0.79802,
-      "p_03": 0.02166,
+      "p_30": 0.23135,
+      "p_adv": 0.80355,
+      "p_03": 0.01695,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "MOUZ",
       "seed": 5,
-      "p_30": 0.14899,
-      "p_adv": 0.6818,
-      "p_03": 0.03886,
+      "p_30": 0.1428,
+      "p_adv": 0.66565,
+      "p_03": 0.0372,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "FaZe Clan",
       "seed": 6,
-      "p_30": 0.11922,
-      "p_adv": 0.58641,
-      "p_03": 0.05369,
+      "p_30": 0.12685,
+      "p_adv": 0.6069,
+      "p_03": 0.04455,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "HEROIC",
       "seed": 7,
-      "p_30": 0.08038,
-      "p_adv": 0.47759,
-      "p_03": 0.07991,
+      "p_30": 0.09015,
+      "p_adv": 0.51325,
+      "p_03": 0.06425,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "3DMAX",
       "seed": 8,
-      "p_30": 0.04605,
-      "p_adv": 0.33384,
-      "p_03": 0.11626,
+      "p_30": 0.07,
+      "p_adv": 0.43875,
+      "p_03": 0.0639,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "The MongolZ",
       "seed": 9,
-      "p_30": 0.06493,
-      "p_adv": 0.50303,
-      "p_03": 0.09561,
+      "p_30": 0.06415,
+      "p_adv": 0.4942,
+      "p_03": 0.0891,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 10,
-      "p_30": 0.07041,
-      "p_adv": 0.52498,
-      "p_03": 0.08884,
+      "p_30": 0.06095,
+      "p_adv": 0.4853,
+      "p_03": 0.0931,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "GamerLegion",
       "seed": 11,
-      "p_30": 0.01181,
-      "p_adv": 0.13467,
-      "p_03": 0.32832,
+      "p_30": 0.0094,
+      "p_adv": 0.1113,
+      "p_03": 0.331,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FURIA",
       "seed": 12,
-      "p_30": 0.05134,
-      "p_adv": 0.42619,
-      "p_03": 0.12589,
+      "p_30": 0.04635,
+      "p_adv": 0.3938,
+      "p_03": 0.13285,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 13,
-      "p_30": 0.04553,
-      "p_adv": 0.39616,
-      "p_03": 0.13818,
+      "p_30": 0.0482,
+      "p_adv": 0.41695,
+      "p_03": 0.1199,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 14,
-      "p_30": 0.0145,
-      "p_adv": 0.17182,
-      "p_03": 0.27613,
+      "p_30": 0.01145,
+      "p_adv": 0.15515,
+      "p_03": 0.27125,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "BIG",
       "seed": 15,
-      "p_30": 0.01826,
-      "p_adv": 0.18872,
-      "p_03": 0.2649,
+      "p_30": 0.0145,
+      "p_adv": 0.16785,
+      "p_03": 0.2777,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 16,
-      "p_30": 0.01084,
-      "p_adv": 0.11054,
-      "p_03": 0.34038,
+      "p_30": 0.00525,
+      "p_adv": 0.0713,
+      "p_03": 0.43205,
       "actual": "2-3",
       "advanced": false
      }
     ]
    },
    "ratings": {
-    "G2 Esports": 1983.3,
-    "Natus Vincere": 1962.3,
-    "Team Vitality": 1936.2,
-    "Team Spirit": 1916.8,
-    "MOUZ": 1874.6,
-    "FaZe Clan": 1842.4,
-    "HEROIC": 1811.0,
-    "3DMAX": 1765.2,
-    "The MongolZ": 1838.2,
-    "Team Liquid": 1842.5,
-    "GamerLegion": 1704.6,
-    "FURIA": 1811.9,
-    "paiN Gaming": 1804.4,
-    "Wildcard": 1722.5,
-    "BIG": 1731.2,
-    "MIBR": 1688.5
+    "G2 Esports": 1981.7,
+    "Natus Vincere": 1962.1,
+    "Team Vitality": 1934.2,
+    "Team Spirit": 1911.3,
+    "MOUZ": 1875.9,
+    "FaZe Clan": 1842.5,
+    "HEROIC": 1812.4,
+    "3DMAX": 1765.1,
+    "The MongolZ": 1826.6,
+    "Team Liquid": 1825.1,
+    "GamerLegion": 1681.4,
+    "FURIA": 1805.6,
+    "paiN Gaming": 1800.6,
+    "Wildcard": 1710.0,
+    "BIG": 1723.1,
+    "MIBR": 1679.9
    },
    "legacy": {
     "picks": {
@@ -5304,14 +5304,14 @@
      ],
      "winless": [
       {
+       "team": "MIBR",
+       "correct": false,
+       "actual": "2-3"
+      },
+      {
        "team": "Wildcard",
        "correct": true,
        "actual": "0-3"
-      },
-      {
-       "team": "GamerLegion",
-       "correct": false,
-       "actual": "1-3"
       }
      ],
      "advance": [
@@ -5321,14 +5321,14 @@
        "actual": "3-0"
       },
       {
-       "team": "MOUZ",
-       "correct": true,
-       "actual": "3-2"
-      },
-      {
        "team": "Team Spirit",
        "correct": true,
        "actual": "3-1"
+      },
+      {
+       "team": "MOUZ",
+       "correct": true,
+       "actual": "3-2"
       },
       {
        "team": "FaZe Clan",
@@ -5349,15 +5349,15 @@
     },
     "n_correct": 5,
     "coin": true,
-    "p_coin": 0.77305,
-    "expected_correct": 5.65843,
+    "p_coin": 0.7685,
+    "expected_correct": 5.64675,
     "matches": [
      {
       "round": 1,
       "a": "G2 Esports",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.7501,
+      "p_a": 0.7326,
       "winner": "The MongolZ"
      },
      {
@@ -5365,7 +5365,7 @@
       "a": "Natus Vincere",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.8137,
+      "p_a": 0.7794,
       "winner": "Natus Vincere"
      },
      {
@@ -5373,7 +5373,7 @@
       "a": "Team Vitality",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.9207,
+      "p_a": 0.9196,
       "winner": "Team Vitality"
      },
      {
@@ -5381,7 +5381,7 @@
       "a": "Team Spirit",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.7502,
+      "p_a": 0.7545,
       "winner": "FURIA"
      },
      {
@@ -5389,7 +5389,7 @@
       "a": "MOUZ",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.802,
+      "p_a": 0.7905,
       "winner": "MOUZ"
      },
      {
@@ -5397,7 +5397,7 @@
       "a": "FaZe Clan",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.8557,
+      "p_a": 0.8682,
       "winner": "FaZe Clan"
      },
      {
@@ -5405,7 +5405,7 @@
       "a": "HEROIC",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.7359,
+      "p_a": 0.7495,
       "winner": "HEROIC"
      },
      {
@@ -5413,7 +5413,7 @@
       "a": "3DMAX",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.6731,
+      "p_a": 0.785,
       "winner": "MIBR"
      },
      {
@@ -5421,7 +5421,7 @@
       "a": "Team Vitality",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.7668,
+      "p_a": 0.7909,
       "winner": "Team Vitality"
      },
      {
@@ -5429,7 +5429,7 @@
       "a": "MOUZ",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.5289,
+      "p_a": 0.5327,
       "winner": "The MongolZ"
      },
      {
@@ -5437,7 +5437,7 @@
       "a": "Natus Vincere",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.9259,
+      "p_a": 0.9357,
       "winner": "MIBR"
      },
      {
@@ -5445,7 +5445,7 @@
       "a": "FaZe Clan",
       "b": "HEROIC",
       "bo": 1,
-      "p_a": 0.5235,
+      "p_a": 0.5225,
       "winner": "HEROIC"
      },
      {
@@ -5453,7 +5453,7 @@
       "a": "Team Liquid",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7632,
+      "p_a": 0.7528,
       "winner": "Team Liquid"
      },
      {
@@ -5461,7 +5461,7 @@
       "a": "Team Spirit",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.924,
+      "p_a": 0.9412,
       "winner": "Team Spirit"
      },
      {
@@ -5469,7 +5469,7 @@
       "a": "G2 Esports",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.9226,
+      "p_a": 0.9255,
       "winner": "G2 Esports"
      },
      {
@@ -5477,7 +5477,7 @@
       "a": "3DMAX",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.555,
+      "p_a": 0.5914,
       "winner": "3DMAX"
      },
      {
@@ -5485,7 +5485,7 @@
       "a": "MIBR",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.0221,
+      "p_a": 0.0186,
       "winner": "Team Vitality"
      },
      {
@@ -5493,7 +5493,7 @@
       "a": "The MongolZ",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.6303,
+      "p_a": 0.642,
       "winner": "The MongolZ"
      },
      {
@@ -5501,7 +5501,7 @@
       "a": "Natus Vincere",
       "b": "Team Spirit",
       "bo": 1,
-      "p_a": 0.5705,
+      "p_a": 0.562,
       "winner": "Team Spirit"
      },
      {
@@ -5509,7 +5509,7 @@
       "a": "FURIA",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.5227,
+      "p_a": 0.5816,
       "winner": "Team Liquid"
      },
      {
@@ -5517,7 +5517,7 @@
       "a": "G2 Esports",
       "b": "3DMAX",
       "bo": 1,
-      "p_a": 0.8967,
+      "p_a": 0.8688,
       "winner": "G2 Esports"
      },
      {
@@ -5525,7 +5525,7 @@
       "a": "MOUZ",
       "b": "FaZe Clan",
       "bo": 1,
-      "p_a": 0.593,
+      "p_a": 0.612,
       "winner": "FaZe Clan"
      },
      {
@@ -5533,7 +5533,7 @@
       "a": "GamerLegion",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.5511,
+      "p_a": 0.5164,
       "winner": "GamerLegion"
      },
      {
@@ -5541,7 +5541,7 @@
       "a": "BIG",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.4638,
+      "p_a": 0.4613,
       "winner": "paiN Gaming"
      },
      {
@@ -5549,7 +5549,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.8919,
+      "p_a": 0.8819,
       "winner": "G2 Esports"
      },
      {
@@ -5557,7 +5557,7 @@
       "a": "MIBR",
       "b": "Team Liquid",
       "bo": 3,
-      "p_a": 0.1667,
+      "p_a": 0.1619,
       "winner": "Team Liquid"
      },
      {
@@ -5565,7 +5565,7 @@
       "a": "HEROIC",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.2256,
+      "p_a": 0.2253,
       "winner": "Team Spirit"
      },
      {
@@ -5573,7 +5573,7 @@
       "a": "MOUZ",
       "b": "3DMAX",
       "bo": 3,
-      "p_a": 0.8598,
+      "p_a": 0.8316,
       "winner": "MOUZ"
      },
      {
@@ -5581,7 +5581,7 @@
       "a": "Natus Vincere",
       "b": "GamerLegion",
       "bo": 3,
-      "p_a": 0.9874,
+      "p_a": 0.9892,
       "winner": "Natus Vincere"
      },
      {
@@ -5589,7 +5589,7 @@
       "a": "FURIA",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.7247,
+      "p_a": 0.6853,
       "winner": "FURIA"
      },
      {
@@ -5597,7 +5597,7 @@
       "a": "MIBR",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.0464,
+      "p_a": 0.0405,
       "winner": "MOUZ"
      },
      {
@@ -5605,7 +5605,7 @@
       "a": "Natus Vincere",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8431,
+      "p_a": 0.8365,
       "winner": "HEROIC"
      },
      {
@@ -5613,158 +5613,158 @@
       "a": "FURIA",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.36,
+      "p_a": 0.3545,
       "winner": "FaZe Clan"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.18253768724734795,
-     "log_loss": 0.5431290356409476,
+     "brier": 0.1903250849159214,
+     "log_loss": 0.5645378193860626,
      "accuracy": 0.696969696969697
     },
     "teams": [
      {
       "team": "G2 Esports",
       "seed": 1,
-      "p_30": 0.56101,
-      "p_adv": 0.98694,
-      "p_03": 0.00037,
+      "p_30": 0.5452,
+      "p_adv": 0.98375,
+      "p_03": 0.0002,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Natus Vincere",
       "seed": 2,
-      "p_30": 0.45422,
-      "p_adv": 0.96407,
-      "p_03": 0.00081,
+      "p_30": 0.4342,
+      "p_adv": 0.9607,
+      "p_03": 0.0012,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Team Vitality",
       "seed": 3,
-      "p_30": 0.37188,
-      "p_adv": 0.94332,
-      "p_03": 0.00067,
+      "p_30": 0.37865,
+      "p_adv": 0.9484,
+      "p_03": 0.0003,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Spirit",
       "seed": 4,
-      "p_30": 0.24659,
-      "p_adv": 0.9157,
-      "p_03": 0.00231,
+      "p_30": 0.25955,
+      "p_adv": 0.918,
+      "p_03": 0.0014,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "MOUZ",
       "seed": 5,
-      "p_30": 0.14951,
-      "p_adv": 0.82282,
-      "p_03": 0.00472,
+      "p_30": 0.14325,
+      "p_adv": 0.7998,
+      "p_03": 0.004,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "FaZe Clan",
       "seed": 6,
-      "p_30": 0.07507,
-      "p_adv": 0.68331,
-      "p_03": 0.00962,
+      "p_30": 0.0836,
+      "p_adv": 0.682,
+      "p_03": 0.0073,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "HEROIC",
       "seed": 7,
-      "p_30": 0.05158,
-      "p_adv": 0.6081,
-      "p_03": 0.01438,
+      "p_30": 0.05645,
+      "p_adv": 0.61995,
+      "p_03": 0.0122,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "3DMAX",
       "seed": 8,
-      "p_30": 0.01045,
-      "p_adv": 0.2475,
-      "p_03": 0.06089,
+      "p_30": 0.01645,
+      "p_adv": 0.31485,
+      "p_03": 0.03035,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "The MongolZ",
       "seed": 9,
-      "p_30": 0.04808,
-      "p_adv": 0.73002,
-      "p_03": 0.01539,
+      "p_30": 0.05165,
+      "p_adv": 0.7356,
+      "p_03": 0.01205,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 10,
-      "p_30": 0.01121,
-      "p_adv": 0.35921,
-      "p_03": 0.06539,
+      "p_30": 0.01215,
+      "p_adv": 0.3483,
+      "p_03": 0.0629,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "GamerLegion",
       "seed": 11,
-      "p_30": 0.00042,
-      "p_adv": 0.0289,
-      "p_03": 0.40394,
+      "p_30": 0.00045,
+      "p_adv": 0.0253,
+      "p_03": 0.39615,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FURIA",
       "seed": 12,
-      "p_30": 0.01432,
-      "p_adv": 0.41369,
-      "p_03": 0.065,
+      "p_30": 0.0141,
+      "p_adv": 0.38305,
+      "p_03": 0.06965,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 13,
-      "p_30": 0.00244,
-      "p_adv": 0.13493,
-      "p_03": 0.21929,
+      "p_30": 0.00225,
+      "p_adv": 0.1445,
+      "p_03": 0.18875,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 14,
-      "p_30": 0.0003,
-      "p_adv": 0.02023,
-      "p_03": 0.4787,
+      "p_30": 0.0002,
+      "p_adv": 0.0191,
+      "p_03": 0.4641,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "BIG",
       "seed": 15,
-      "p_30": 0.00216,
-      "p_adv": 0.10373,
-      "p_03": 0.26807,
+      "p_30": 0.00145,
+      "p_adv": 0.09235,
+      "p_03": 0.2768,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 16,
-      "p_30": 0.00076,
-      "p_adv": 0.03753,
-      "p_03": 0.39045,
+      "p_30": 0.0004,
+      "p_adv": 0.02435,
+      "p_03": 0.47265,
       "actual": "2-3",
       "advanced": false
      }
@@ -5779,21 +5779,21 @@
        "actual": "3-1"
       },
       {
-       "team": "Natus Vincere",
-       "correct": false,
-       "actual": "2-3"
+       "team": "Team Vitality",
+       "correct": true,
+       "actual": "3-0"
       }
      ],
      "winless": [
       {
+       "team": "MIBR",
+       "correct": false,
+       "actual": "2-3"
+      },
+      {
        "team": "Wildcard",
        "correct": true,
        "actual": "0-3"
-      },
-      {
-       "team": "GamerLegion",
-       "correct": false,
-       "actual": "1-3"
       }
      ],
      "advance": [
@@ -5803,14 +5803,14 @@
        "actual": "3-0"
       },
       {
-       "team": "MOUZ",
-       "correct": true,
-       "actual": "3-2"
-      },
-      {
        "team": "Team Spirit",
        "correct": true,
        "actual": "3-1"
+      },
+      {
+       "team": "MOUZ",
+       "correct": true,
+       "actual": "3-2"
       },
       {
        "team": "FaZe Clan",
@@ -5818,28 +5818,28 @@
        "actual": "3-2"
       },
       {
-       "team": "Team Vitality",
-       "correct": false,
-       "actual": "3-0"
-      },
-      {
        "team": "HEROIC",
        "correct": true,
        "actual": "3-2"
+      },
+      {
+       "team": "Natus Vincere",
+       "correct": false,
+       "actual": "2-3"
       }
      ]
     },
-    "n_correct": 5,
+    "n_correct": 6,
     "coin": true,
-    "p_coin": 0.76973,
-    "expected_correct": 5.64529,
+    "p_coin": 0.7655,
+    "expected_correct": 5.57085,
     "matches": [
      {
       "round": 1,
       "a": "G2 Esports",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.7256,
+      "p_a": 0.7061,
       "winner": "The MongolZ"
      },
      {
@@ -5847,7 +5847,7 @@
       "a": "Natus Vincere",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.8057,
+      "p_a": 0.766,
       "winner": "Natus Vincere"
      },
      {
@@ -5855,7 +5855,7 @@
       "a": "Team Vitality",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.9331,
+      "p_a": 0.9272,
       "winner": "Team Vitality"
      },
      {
@@ -5863,7 +5863,7 @@
       "a": "Team Spirit",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.7668,
+      "p_a": 0.7731,
       "winner": "FURIA"
      },
      {
@@ -5871,7 +5871,7 @@
       "a": "MOUZ",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.7709,
+      "p_a": 0.7563,
       "winner": "MOUZ"
      },
      {
@@ -5879,7 +5879,7 @@
       "a": "FaZe Clan",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.8597,
+      "p_a": 0.865,
       "winner": "FaZe Clan"
      },
      {
@@ -5887,7 +5887,7 @@
       "a": "HEROIC",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.7292,
+      "p_a": 0.7394,
       "winner": "HEROIC"
      },
      {
@@ -5895,7 +5895,7 @@
       "a": "3DMAX",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.7118,
+      "p_a": 0.8093,
       "winner": "MIBR"
      },
      {
@@ -5903,7 +5903,7 @@
       "a": "Team Vitality",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.778,
+      "p_a": 0.803,
       "winner": "Team Vitality"
      },
      {
@@ -5911,7 +5911,7 @@
       "a": "MOUZ",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.4592,
+      "p_a": 0.4609,
       "winner": "The MongolZ"
      },
      {
@@ -5919,7 +5919,7 @@
       "a": "Natus Vincere",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.9293,
+      "p_a": 0.9371,
       "winner": "MIBR"
      },
      {
@@ -5927,7 +5927,7 @@
       "a": "FaZe Clan",
       "b": "HEROIC",
       "bo": 1,
-      "p_a": 0.5102,
+      "p_a": 0.5091,
       "winner": "HEROIC"
      },
      {
@@ -5935,7 +5935,7 @@
       "a": "Team Liquid",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7911,
+      "p_a": 0.7725,
       "winner": "Team Liquid"
      },
      {
@@ -5943,7 +5943,7 @@
       "a": "Team Spirit",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.9345,
+      "p_a": 0.9467,
       "winner": "Team Spirit"
      },
      {
@@ -5951,7 +5951,7 @@
       "a": "G2 Esports",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.9254,
+      "p_a": 0.9271,
       "winner": "G2 Esports"
      },
      {
@@ -5959,7 +5959,7 @@
       "a": "3DMAX",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.5543,
+      "p_a": 0.5875,
       "winner": "3DMAX"
      },
      {
@@ -5967,7 +5967,7 @@
       "a": "MIBR",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.0177,
+      "p_a": 0.0156,
       "winner": "Team Vitality"
      },
      {
@@ -5975,7 +5975,7 @@
       "a": "The MongolZ",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.6978,
+      "p_a": 0.711,
       "winner": "The MongolZ"
      },
      {
@@ -5983,7 +5983,7 @@
       "a": "Natus Vincere",
       "b": "Team Spirit",
       "bo": 1,
-      "p_a": 0.5453,
+      "p_a": 0.5364,
       "winner": "Team Spirit"
      },
      {
@@ -5991,7 +5991,7 @@
       "a": "FURIA",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.5125,
+      "p_a": 0.5629,
       "winner": "Team Liquid"
      },
      {
@@ -5999,7 +5999,7 @@
       "a": "G2 Esports",
       "b": "3DMAX",
       "bo": 1,
-      "p_a": 0.8939,
+      "p_a": 0.8661,
       "winner": "G2 Esports"
      },
      {
@@ -6007,7 +6007,7 @@
       "a": "MOUZ",
       "b": "FaZe Clan",
       "bo": 1,
-      "p_a": 0.5866,
+      "p_a": 0.606,
       "winner": "FaZe Clan"
      },
      {
@@ -6015,7 +6015,7 @@
       "a": "GamerLegion",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.5323,
+      "p_a": 0.5046,
       "winner": "GamerLegion"
      },
      {
@@ -6023,7 +6023,7 @@
       "a": "BIG",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.4372,
+      "p_a": 0.4378,
       "winner": "paiN Gaming"
      },
      {
@@ -6031,7 +6031,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.9104,
+      "p_a": 0.9024,
       "winner": "G2 Esports"
      },
      {
@@ -6039,7 +6039,7 @@
       "a": "MIBR",
       "b": "Team Liquid",
       "bo": 3,
-      "p_a": 0.1448,
+      "p_a": 0.1413,
       "winner": "Team Liquid"
      },
      {
@@ -6047,7 +6047,7 @@
       "a": "HEROIC",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.2059,
+      "p_a": 0.2046,
       "winner": "Team Spirit"
      },
      {
@@ -6055,7 +6055,7 @@
       "a": "MOUZ",
       "b": "3DMAX",
       "bo": 3,
-      "p_a": 0.8208,
+      "p_a": 0.7892,
       "winner": "MOUZ"
      },
      {
@@ -6063,7 +6063,7 @@
       "a": "Natus Vincere",
       "b": "GamerLegion",
       "bo": 3,
-      "p_a": 0.9897,
+      "p_a": 0.9898,
       "winner": "Natus Vincere"
      },
      {
@@ -6071,7 +6071,7 @@
       "a": "FURIA",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.686,
+      "p_a": 0.6384,
       "winner": "FURIA"
      },
      {
@@ -6079,7 +6079,7 @@
       "a": "MIBR",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.0464,
+      "p_a": 0.0424,
       "winner": "MOUZ"
      },
      {
@@ -6087,7 +6087,7 @@
       "a": "Natus Vincere",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8372,
+      "p_a": 0.8311,
       "winner": "HEROIC"
      },
      {
@@ -6095,158 +6095,158 @@
       "a": "FURIA",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.373,
+      "p_a": 0.3645,
       "winner": "FaZe Clan"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.17898565637561908,
-     "log_loss": 0.5359100206000114,
+     "brier": 0.18661552598246153,
+     "log_loss": 0.5579607223260888,
      "accuracy": 0.7272727272727273
     },
     "teams": [
      {
       "team": "G2 Esports",
       "seed": 1,
-      "p_30": 0.55471,
-      "p_adv": 0.98836,
-      "p_03": 0.00038,
+      "p_30": 0.53835,
+      "p_adv": 0.98555,
+      "p_03": 0.0002,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Natus Vincere",
       "seed": 2,
-      "p_30": 0.43336,
-      "p_adv": 0.95842,
-      "p_03": 0.001,
+      "p_30": 0.413,
+      "p_adv": 0.9546,
+      "p_03": 0.0012,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Team Vitality",
       "seed": 3,
-      "p_30": 0.38871,
-      "p_adv": 0.94775,
-      "p_03": 0.00051,
+      "p_30": 0.3934,
+      "p_adv": 0.9512,
+      "p_03": 0.0003,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Spirit",
       "seed": 4,
-      "p_30": 0.2704,
-      "p_adv": 0.92423,
-      "p_03": 0.00166,
+      "p_30": 0.2848,
+      "p_adv": 0.9272,
+      "p_03": 0.00105,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "MOUZ",
       "seed": 5,
-      "p_30": 0.12482,
-      "p_adv": 0.7816,
-      "p_03": 0.00558,
+      "p_30": 0.11815,
+      "p_adv": 0.7525,
+      "p_03": 0.00555,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "FaZe Clan",
       "seed": 6,
-      "p_30": 0.06781,
-      "p_adv": 0.64743,
-      "p_03": 0.00991,
+      "p_30": 0.07425,
+      "p_adv": 0.64,
+      "p_03": 0.00845,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "HEROIC",
       "seed": 7,
-      "p_30": 0.04902,
-      "p_adv": 0.592,
-      "p_03": 0.01407,
+      "p_30": 0.05395,
+      "p_adv": 0.6022,
+      "p_03": 0.01255,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "3DMAX",
       "seed": 8,
-      "p_30": 0.01292,
-      "p_adv": 0.28297,
-      "p_03": 0.04774,
+      "p_30": 0.0202,
+      "p_adv": 0.34525,
+      "p_03": 0.02515,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "The MongolZ",
       "seed": 9,
-      "p_30": 0.06688,
-      "p_adv": 0.79906,
-      "p_03": 0.00951,
+      "p_30": 0.0714,
+      "p_adv": 0.8017,
+      "p_03": 0.00725,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 10,
-      "p_30": 0.01159,
-      "p_adv": 0.36016,
-      "p_03": 0.05869,
+      "p_30": 0.0135,
+      "p_adv": 0.35855,
+      "p_03": 0.0569,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "GamerLegion",
       "seed": 11,
-      "p_30": 0.00027,
-      "p_adv": 0.01871,
-      "p_03": 0.43886,
+      "p_30": 0.0003,
+      "p_adv": 0.01965,
+      "p_03": 0.41205,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FURIA",
       "seed": 12,
-      "p_30": 0.01324,
-      "p_adv": 0.38939,
-      "p_03": 0.06595,
+      "p_30": 0.0132,
+      "p_adv": 0.35735,
+      "p_03": 0.07695,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 13,
-      "p_30": 0.00332,
-      "p_adv": 0.16164,
-      "p_03": 0.18078,
+      "p_30": 0.00335,
+      "p_adv": 0.1732,
+      "p_03": 0.1553,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 14,
-      "p_30": 0.00015,
-      "p_adv": 0.01471,
-      "p_03": 0.49393,
+      "p_30": 5e-05,
+      "p_adv": 0.0164,
+      "p_03": 0.4754,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "BIG",
       "seed": 15,
-      "p_30": 0.00221,
-      "p_adv": 0.10536,
-      "p_03": 0.25092,
+      "p_30": 0.0018,
+      "p_adv": 0.09465,
+      "p_03": 0.26065,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 16,
-      "p_30": 0.00059,
-      "p_adv": 0.02821,
-      "p_03": 0.42051,
+      "p_30": 0.0003,
+      "p_adv": 0.02,
+      "p_03": 0.50105,
       "actual": "2-3",
       "advanced": false
      }
@@ -6268,14 +6268,14 @@
      ],
      "winless": [
       {
-       "team": "GamerLegion",
-       "correct": false,
-       "actual": "1-3"
-      },
-      {
        "team": "MIBR",
        "correct": false,
        "actual": "2-3"
+      },
+      {
+       "team": "GamerLegion",
+       "correct": false,
+       "actual": "1-3"
       }
      ],
      "advance": [
@@ -6313,15 +6313,15 @@
     },
     "n_correct": 5,
     "coin": true,
-    "p_coin": 0.64561,
-    "expected_correct": 5.0317,
+    "p_coin": 0.6619,
+    "expected_correct": 5.0988,
     "matches": [
      {
       "round": 1,
       "a": "G2 Esports",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.7117,
+      "p_a": 0.6977,
       "winner": "The MongolZ"
      },
      {
@@ -6329,7 +6329,7 @@
       "a": "Natus Vincere",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.7419,
+      "p_a": 0.7045,
       "winner": "Natus Vincere"
      },
      {
@@ -6337,7 +6337,7 @@
       "a": "Team Vitality",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.8791,
+      "p_a": 0.8759,
       "winner": "Team Vitality"
      },
      {
@@ -6345,7 +6345,7 @@
       "a": "Team Spirit",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.7104,
+      "p_a": 0.718,
       "winner": "FURIA"
      },
      {
@@ -6353,7 +6353,7 @@
       "a": "MOUZ",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.6918,
+      "p_a": 0.6776,
       "winner": "MOUZ"
      },
      {
@@ -6361,7 +6361,7 @@
       "a": "FaZe Clan",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.7776,
+      "p_a": 0.7912,
       "winner": "FaZe Clan"
      },
      {
@@ -6369,7 +6369,7 @@
       "a": "HEROIC",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.6738,
+      "p_a": 0.6909,
       "winner": "HEROIC"
      },
      {
@@ -6377,7 +6377,7 @@
       "a": "3DMAX",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.6622,
+      "p_a": 0.7753,
       "winner": "MIBR"
      },
      {
@@ -6385,7 +6385,7 @@
       "a": "Team Vitality",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.7281,
+      "p_a": 0.7591,
       "winner": "Team Vitality"
      },
      {
@@ -6393,7 +6393,7 @@
       "a": "MOUZ",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.5057,
+      "p_a": 0.5168,
       "winner": "The MongolZ"
      },
      {
@@ -6401,7 +6401,7 @@
       "a": "Natus Vincere",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.8886,
+      "p_a": 0.9025,
       "winner": "MIBR"
      },
      {
@@ -6409,7 +6409,7 @@
       "a": "FaZe Clan",
       "b": "HEROIC",
       "bo": 1,
-      "p_a": 0.5276,
+      "p_a": 0.5256,
       "winner": "HEROIC"
      },
      {
@@ -6417,7 +6417,7 @@
       "a": "Team Liquid",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7432,
+      "p_a": 0.7251,
       "winner": "Team Liquid"
      },
      {
@@ -6425,7 +6425,7 @@
       "a": "Team Spirit",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.8686,
+      "p_a": 0.8936,
       "winner": "Team Spirit"
      },
      {
@@ -6433,7 +6433,7 @@
       "a": "G2 Esports",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.8791,
+      "p_a": 0.8838,
       "winner": "G2 Esports"
      },
      {
@@ -6441,7 +6441,7 @@
       "a": "3DMAX",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.4991,
+      "p_a": 0.5356,
       "winner": "3DMAX"
      },
      {
@@ -6449,7 +6449,7 @@
       "a": "MIBR",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.0423,
+      "p_a": 0.0361,
       "winner": "Team Vitality"
      },
      {
@@ -6457,7 +6457,7 @@
       "a": "The MongolZ",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.6308,
+      "p_a": 0.6329,
       "winner": "The MongolZ"
      },
      {
@@ -6465,7 +6465,7 @@
       "a": "Natus Vincere",
       "b": "Team Spirit",
       "bo": 1,
-      "p_a": 0.5552,
+      "p_a": 0.5501,
       "winner": "Team Spirit"
      },
      {
@@ -6473,7 +6473,7 @@
       "a": "FURIA",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.4842,
+      "p_a": 0.5429,
       "winner": "Team Liquid"
      },
      {
@@ -6481,7 +6481,7 @@
       "a": "G2 Esports",
       "b": "3DMAX",
       "bo": 1,
-      "p_a": 0.8446,
+      "p_a": 0.8061,
       "winner": "G2 Esports"
      },
      {
@@ -6489,7 +6489,7 @@
       "a": "MOUZ",
       "b": "FaZe Clan",
       "bo": 1,
-      "p_a": 0.5665,
+      "p_a": 0.5871,
       "winner": "FaZe Clan"
      },
      {
@@ -6497,7 +6497,7 @@
       "a": "GamerLegion",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.4969,
+      "p_a": 0.4579,
       "winner": "GamerLegion"
      },
      {
@@ -6505,7 +6505,7 @@
       "a": "BIG",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3909,
+      "p_a": 0.3873,
       "winner": "paiN Gaming"
      },
      {
@@ -6513,7 +6513,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.8552,
+      "p_a": 0.8429,
       "winner": "G2 Esports"
      },
      {
@@ -6521,7 +6521,7 @@
       "a": "MIBR",
       "b": "Team Liquid",
       "bo": 3,
-      "p_a": 0.1732,
+      "p_a": 0.1742,
       "winner": "Team Liquid"
      },
      {
@@ -6529,7 +6529,7 @@
       "a": "HEROIC",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.2433,
+      "p_a": 0.2472,
       "winner": "Team Spirit"
      },
      {
@@ -6537,7 +6537,7 @@
       "a": "MOUZ",
       "b": "3DMAX",
       "bo": 3,
-      "p_a": 0.775,
+      "p_a": 0.741,
       "winner": "MOUZ"
      },
      {
@@ -6545,7 +6545,7 @@
       "a": "Natus Vincere",
       "b": "GamerLegion",
       "bo": 3,
-      "p_a": 0.9689,
+      "p_a": 0.9726,
       "winner": "Natus Vincere"
      },
      {
@@ -6553,7 +6553,7 @@
       "a": "FURIA",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.6042,
+      "p_a": 0.552,
       "winner": "FURIA"
      },
      {
@@ -6561,7 +6561,7 @@
       "a": "MIBR",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.0885,
+      "p_a": 0.0771,
       "winner": "MOUZ"
      },
      {
@@ -6569,7 +6569,7 @@
       "a": "Natus Vincere",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8148,
+      "p_a": 0.8074,
       "winner": "HEROIC"
      },
      {
@@ -6577,158 +6577,158 @@
       "a": "FURIA",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.4035,
+      "p_a": 0.3877,
       "winner": "FaZe Clan"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.1852353127140591,
-     "log_loss": 0.5492544423893517,
+     "brier": 0.19495668569489788,
+     "log_loss": 0.5734108319592565,
      "accuracy": 0.6666666666666666
     },
     "teams": [
      {
       "team": "G2 Esports",
       "seed": 1,
-      "p_30": 0.49438,
-      "p_adv": 0.96892,
-      "p_03": 0.00173,
+      "p_30": 0.4835,
+      "p_adv": 0.9679,
+      "p_03": 0.0012,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Natus Vincere",
       "seed": 2,
-      "p_30": 0.39997,
-      "p_adv": 0.93538,
-      "p_03": 0.00347,
+      "p_30": 0.3779,
+      "p_adv": 0.93015,
+      "p_03": 0.00415,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Team Vitality",
       "seed": 3,
-      "p_30": 0.37153,
-      "p_adv": 0.91976,
-      "p_03": 0.00277,
+      "p_30": 0.37795,
+      "p_adv": 0.9241,
+      "p_03": 0.002,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Spirit",
       "seed": 4,
-      "p_30": 0.25251,
-      "p_adv": 0.87809,
-      "p_03": 0.00622,
+      "p_30": 0.2641,
+      "p_adv": 0.88115,
+      "p_03": 0.00405,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "MOUZ",
       "seed": 5,
-      "p_30": 0.14163,
-      "p_adv": 0.74192,
-      "p_03": 0.01473,
+      "p_30": 0.13495,
+      "p_adv": 0.71905,
+      "p_03": 0.0158,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "FaZe Clan",
       "seed": 6,
-      "p_30": 0.09562,
-      "p_adv": 0.62558,
-      "p_03": 0.0234,
+      "p_30": 0.1018,
+      "p_adv": 0.6313,
+      "p_03": 0.02185,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "HEROIC",
       "seed": 7,
-      "p_30": 0.06572,
-      "p_adv": 0.54103,
-      "p_03": 0.03683,
+      "p_30": 0.07345,
+      "p_adv": 0.56305,
+      "p_03": 0.03095,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "3DMAX",
       "seed": 8,
-      "p_30": 0.02621,
-      "p_adv": 0.31039,
-      "p_03": 0.07732,
+      "p_30": 0.0388,
+      "p_adv": 0.3959,
+      "p_03": 0.0422,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "The MongolZ",
       "seed": 9,
-      "p_30": 0.06831,
-      "p_adv": 0.67509,
-      "p_03": 0.03272,
+      "p_30": 0.0681,
+      "p_adv": 0.6694,
+      "p_03": 0.0297,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 10,
-      "p_30": 0.03069,
-      "p_adv": 0.44077,
-      "p_03": 0.07556,
+      "p_30": 0.0293,
+      "p_adv": 0.4207,
+      "p_03": 0.07375,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "GamerLegion",
       "seed": 11,
-      "p_30": 0.00187,
-      "p_adv": 0.05067,
-      "p_03": 0.40142,
+      "p_30": 0.0022,
+      "p_adv": 0.04475,
+      "p_03": 0.38425,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FURIA",
       "seed": 12,
-      "p_30": 0.02634,
-      "p_adv": 0.40596,
-      "p_03": 0.09698,
+      "p_30": 0.0248,
+      "p_adv": 0.36945,
+      "p_03": 0.1037,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 13,
-      "p_30": 0.01377,
-      "p_adv": 0.25773,
-      "p_03": 0.16493,
+      "p_30": 0.0141,
+      "p_adv": 0.27335,
+      "p_03": 0.1418,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 14,
-      "p_30": 0.00192,
-      "p_adv": 0.05374,
-      "p_03": 0.3999,
+      "p_30": 0.00115,
+      "p_adv": 0.0507,
+      "p_03": 0.3873,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "BIG",
       "seed": 15,
-      "p_30": 0.00685,
-      "p_adv": 0.13813,
-      "p_03": 0.27098,
+      "p_30": 0.0062,
+      "p_adv": 0.12235,
+      "p_03": 0.278,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 16,
-      "p_30": 0.00268,
-      "p_adv": 0.05684,
-      "p_03": 0.39104,
+      "p_30": 0.0017,
+      "p_adv": 0.0367,
+      "p_03": 0.4793,
       "actual": "2-3",
       "advanced": false
      }
@@ -6743,21 +6743,21 @@
        "actual": "3-1"
       },
       {
-       "team": "Natus Vincere",
-       "correct": false,
-       "actual": "2-3"
+       "team": "Team Vitality",
+       "correct": true,
+       "actual": "3-0"
       }
      ],
      "winless": [
       {
-       "team": "GamerLegion",
-       "correct": false,
-       "actual": "1-3"
-      },
-      {
        "team": "MIBR",
        "correct": false,
        "actual": "2-3"
+      },
+      {
+       "team": "GamerLegion",
+       "correct": false,
+       "actual": "1-3"
       }
      ],
      "advance": [
@@ -6767,19 +6767,19 @@
        "actual": "3-1"
       },
       {
-       "team": "MOUZ",
-       "correct": true,
-       "actual": "3-2"
-      },
-      {
        "team": "The MongolZ",
        "correct": false,
        "actual": "3-0"
       },
       {
-       "team": "Team Vitality",
+       "team": "MOUZ",
+       "correct": true,
+       "actual": "3-2"
+      },
+      {
+       "team": "Natus Vincere",
        "correct": false,
-       "actual": "3-0"
+       "actual": "2-3"
       },
       {
        "team": "FaZe Clan",
@@ -6793,17 +6793,17 @@
       }
      ]
     },
-    "n_correct": 4,
-    "coin": false,
-    "p_coin": 0.61824,
-    "expected_correct": 4.97272,
+    "n_correct": 5,
+    "coin": true,
+    "p_coin": 0.6417,
+    "expected_correct": 5.0148,
     "matches": [
      {
       "round": 1,
       "a": "G2 Esports",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.7115,
+      "p_a": 0.6976,
       "winner": "The MongolZ"
      },
      {
@@ -6811,7 +6811,7 @@
       "a": "Natus Vincere",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.7357,
+      "p_a": 0.7003,
       "winner": "Natus Vincere"
      },
      {
@@ -6819,7 +6819,7 @@
       "a": "Team Vitality",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.8622,
+      "p_a": 0.8618,
       "winner": "Team Vitality"
      },
      {
@@ -6827,7 +6827,7 @@
       "a": "Team Spirit",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.7067,
+      "p_a": 0.7143,
       "winner": "FURIA"
      },
      {
@@ -6835,7 +6835,7 @@
       "a": "MOUZ",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.6853,
+      "p_a": 0.6718,
       "winner": "MOUZ"
      },
      {
@@ -6843,7 +6843,7 @@
       "a": "FaZe Clan",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.7628,
+      "p_a": 0.7782,
       "winner": "FaZe Clan"
      },
      {
@@ -6851,7 +6851,7 @@
       "a": "HEROIC",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.6711,
+      "p_a": 0.6886,
       "winner": "HEROIC"
      },
      {
@@ -6859,7 +6859,7 @@
       "a": "3DMAX",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.6602,
+      "p_a": 0.7732,
       "winner": "MIBR"
      },
      {
@@ -6867,7 +6867,7 @@
       "a": "Team Vitality",
       "b": "FURIA",
       "bo": 1,
-      "p_a": 0.7248,
+      "p_a": 0.756,
       "winner": "Team Vitality"
      },
      {
@@ -6875,7 +6875,7 @@
       "a": "MOUZ",
       "b": "The MongolZ",
       "bo": 1,
-      "p_a": 0.5057,
+      "p_a": 0.5166,
       "winner": "The MongolZ"
      },
      {
@@ -6883,7 +6883,7 @@
       "a": "Natus Vincere",
       "b": "MIBR",
       "bo": 1,
-      "p_a": 0.879,
+      "p_a": 0.8945,
       "winner": "MIBR"
      },
      {
@@ -6891,7 +6891,7 @@
       "a": "FaZe Clan",
       "b": "HEROIC",
       "bo": 1,
-      "p_a": 0.5276,
+      "p_a": 0.5256,
       "winner": "HEROIC"
      },
      {
@@ -6899,7 +6899,7 @@
       "a": "Team Liquid",
       "b": "GamerLegion",
       "bo": 1,
-      "p_a": 0.7399,
+      "p_a": 0.7223,
       "winner": "Team Liquid"
      },
      {
@@ -6907,7 +6907,7 @@
       "a": "Team Spirit",
       "b": "Wildcard",
       "bo": 1,
-      "p_a": 0.8441,
+      "p_a": 0.8727,
       "winner": "Team Spirit"
      },
      {
@@ -6915,7 +6915,7 @@
       "a": "G2 Esports",
       "b": "BIG",
       "bo": 1,
-      "p_a": 0.8678,
+      "p_a": 0.8734,
       "winner": "G2 Esports"
      },
      {
@@ -6923,7 +6923,7 @@
       "a": "3DMAX",
       "b": "paiN Gaming",
       "bo": 1,
-      "p_a": 0.4991,
+      "p_a": 0.5352,
       "winner": "3DMAX"
      },
      {
@@ -6931,7 +6931,7 @@
       "a": "MIBR",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.0579,
+      "p_a": 0.0484,
       "winner": "Team Vitality"
      },
      {
@@ -6939,7 +6939,7 @@
       "a": "The MongolZ",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.6281,
+      "p_a": 0.6291,
       "winner": "The MongolZ"
      },
      {
@@ -6947,7 +6947,7 @@
       "a": "Natus Vincere",
       "b": "Team Spirit",
       "bo": 1,
-      "p_a": 0.5552,
+      "p_a": 0.55,
       "winner": "Team Spirit"
      },
      {
@@ -6955,7 +6955,7 @@
       "a": "FURIA",
       "b": "Team Liquid",
       "bo": 1,
-      "p_a": 0.4843,
+      "p_a": 0.5429,
       "winner": "Team Liquid"
      },
      {
@@ -6963,7 +6963,7 @@
       "a": "G2 Esports",
       "b": "3DMAX",
       "bo": 1,
-      "p_a": 0.8361,
+      "p_a": 0.7969,
       "winner": "G2 Esports"
      },
      {
@@ -6971,7 +6971,7 @@
       "a": "MOUZ",
       "b": "FaZe Clan",
       "bo": 1,
-      "p_a": 0.5664,
+      "p_a": 0.587,
       "winner": "FaZe Clan"
      },
      {
@@ -6979,7 +6979,7 @@
       "a": "GamerLegion",
       "b": "Wildcard",
       "bo": 3,
-      "p_a": 0.4969,
+      "p_a": 0.4583,
       "winner": "GamerLegion"
      },
      {
@@ -6987,7 +6987,7 @@
       "a": "BIG",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.3919,
+      "p_a": 0.3885,
       "winner": "paiN Gaming"
      },
      {
@@ -6995,7 +6995,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.8424,
+      "p_a": 0.8297,
       "winner": "G2 Esports"
      },
      {
@@ -7003,7 +7003,7 @@
       "a": "MIBR",
       "b": "Team Liquid",
       "bo": 3,
-      "p_a": 0.1753,
+      "p_a": 0.1771,
       "winner": "Team Liquid"
      },
      {
@@ -7011,7 +7011,7 @@
       "a": "HEROIC",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.2454,
+      "p_a": 0.25,
       "winner": "Team Spirit"
      },
      {
@@ -7019,7 +7019,7 @@
       "a": "MOUZ",
       "b": "3DMAX",
       "bo": 3,
-      "p_a": 0.7712,
+      "p_a": 0.7376,
       "winner": "MOUZ"
      },
      {
@@ -7027,7 +7027,7 @@
       "a": "Natus Vincere",
       "b": "GamerLegion",
       "bo": 3,
-      "p_a": 0.9498,
+      "p_a": 0.9591,
       "winner": "Natus Vincere"
      },
      {
@@ -7035,7 +7035,7 @@
       "a": "FURIA",
       "b": "paiN Gaming",
       "bo": 3,
-      "p_a": 0.6011,
+      "p_a": 0.5504,
       "winner": "FURIA"
      },
      {
@@ -7043,7 +7043,7 @@
       "a": "MIBR",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.1043,
+      "p_a": 0.0893,
       "winner": "MOUZ"
      },
      {
@@ -7051,7 +7051,7 @@
       "a": "Natus Vincere",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8136,
+      "p_a": 0.8061,
       "winner": "HEROIC"
      },
      {
@@ -7059,158 +7059,158 @@
       "a": "FURIA",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.4038,
+      "p_a": 0.3879,
       "winner": "FaZe Clan"
      }
     ],
     "match_scores": {
      "n": 33,
-     "brier": 0.18609388775712804,
-     "log_loss": 0.5523976383266518,
+     "brier": 0.19566720666482945,
+     "log_loss": 0.5757066690795941,
      "accuracy": 0.6666666666666666
     },
     "teams": [
      {
       "team": "G2 Esports",
       "seed": 1,
-      "p_30": 0.48239,
-      "p_adv": 0.96102,
-      "p_03": 0.00284,
+      "p_30": 0.47345,
+      "p_adv": 0.96145,
+      "p_03": 0.0017,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Natus Vincere",
       "seed": 2,
-      "p_30": 0.39494,
-      "p_adv": 0.92924,
-      "p_03": 0.00444,
+      "p_30": 0.3741,
+      "p_adv": 0.9231,
+      "p_03": 0.0052,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Team Vitality",
       "seed": 3,
-      "p_30": 0.3646,
-      "p_adv": 0.91045,
-      "p_03": 0.00383,
+      "p_30": 0.3729,
+      "p_adv": 0.9155,
+      "p_03": 0.00255,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Spirit",
       "seed": 4,
-      "p_30": 0.25222,
-      "p_adv": 0.86755,
-      "p_03": 0.00819,
+      "p_30": 0.2612,
+      "p_adv": 0.86955,
+      "p_03": 0.00565,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "MOUZ",
       "seed": 5,
-      "p_30": 0.14323,
-      "p_adv": 0.73392,
-      "p_03": 0.01756,
+      "p_30": 0.13615,
+      "p_adv": 0.7142,
+      "p_03": 0.0181,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "FaZe Clan",
       "seed": 6,
-      "p_30": 0.09809,
-      "p_adv": 0.62069,
-      "p_03": 0.02667,
+      "p_30": 0.10415,
+      "p_adv": 0.6272,
+      "p_03": 0.02375,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "HEROIC",
       "seed": 7,
-      "p_30": 0.06906,
-      "p_adv": 0.53507,
-      "p_03": 0.04183,
+      "p_30": 0.07655,
+      "p_adv": 0.5585,
+      "p_03": 0.0345,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "3DMAX",
       "seed": 8,
-      "p_30": 0.02934,
-      "p_adv": 0.31659,
-      "p_03": 0.08117,
+      "p_30": 0.0427,
+      "p_adv": 0.4031,
+      "p_03": 0.04495,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "The MongolZ",
       "seed": 9,
-      "p_30": 0.0687,
-      "p_adv": 0.64922,
-      "p_03": 0.04203,
+      "p_30": 0.069,
+      "p_adv": 0.64845,
+      "p_03": 0.03785,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 10,
-      "p_30": 0.03393,
-      "p_adv": 0.44894,
-      "p_03": 0.07827,
+      "p_30": 0.0314,
+      "p_adv": 0.4267,
+      "p_03": 0.0765,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "GamerLegion",
       "seed": 11,
-      "p_30": 0.00298,
-      "p_adv": 0.0631,
-      "p_03": 0.39053,
+      "p_30": 0.00275,
+      "p_adv": 0.05415,
+      "p_03": 0.37835,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FURIA",
       "seed": 12,
-      "p_30": 0.02809,
-      "p_adv": 0.40621,
-      "p_03": 0.10218,
+      "p_30": 0.0265,
+      "p_adv": 0.3685,
+      "p_03": 0.1084,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 13,
-      "p_30": 0.0168,
-      "p_adv": 0.27464,
-      "p_03": 0.16561,
+      "p_30": 0.01725,
+      "p_adv": 0.2901,
+      "p_03": 0.14215,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 14,
-      "p_30": 0.0036,
-      "p_adv": 0.07261,
-      "p_03": 0.37928,
+      "p_30": 0.00265,
+      "p_adv": 0.06775,
+      "p_03": 0.37215,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "BIG",
       "seed": 15,
-      "p_30": 0.00795,
-      "p_adv": 0.14569,
-      "p_03": 0.27171,
+      "p_30": 0.0071,
+      "p_adv": 0.12795,
+      "p_03": 0.27795,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 16,
-      "p_30": 0.00408,
-      "p_adv": 0.06506,
-      "p_03": 0.38386,
+      "p_30": 0.00215,
+      "p_adv": 0.0438,
+      "p_03": 0.47025,
       "actual": "2-3",
       "advanced": false
      }
@@ -7232,14 +7232,14 @@
      ],
      "winless": [
       {
-       "team": "MIBR",
-       "correct": false,
-       "actual": "2-3"
-      },
-      {
        "team": "BIG",
        "correct": true,
        "actual": "0-3"
+      },
+      {
+       "team": "MIBR",
+       "correct": false,
+       "actual": "2-3"
       }
      ],
      "advance": [
@@ -7254,7 +7254,7 @@
        "actual": "1-3"
       },
       {
-       "team": "Team Spirit",
+       "team": "G2 Esports",
        "correct": true,
        "actual": "3-1"
       },
@@ -7264,21 +7264,21 @@
        "actual": "2-3"
       },
       {
+       "team": "Team Liquid",
+       "correct": true,
+       "actual": "3-1"
+      },
+      {
        "team": "The MongolZ",
        "correct": false,
        "actual": "3-0"
-      },
-      {
-       "team": "G2 Esports",
-       "correct": true,
-       "actual": "3-1"
       }
      ]
     },
     "n_correct": 3,
     "coin": false,
-    "p_coin": 0.09374,
-    "expected_correct": 2.75273,
+    "p_coin": 0.09545,
+    "expected_correct": 2.7526,
     "matches": [
      {
       "round": 1,
@@ -7555,144 +7555,144 @@
      {
       "team": "G2 Esports",
       "seed": 1,
-      "p_30": 0.12624,
-      "p_adv": 0.50032,
-      "p_03": 0.1248,
+      "p_30": 0.13005,
+      "p_adv": 0.5054,
+      "p_03": 0.12335,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "Natus Vincere",
       "seed": 2,
-      "p_30": 0.12445,
-      "p_adv": 0.49968,
-      "p_03": 0.12462,
+      "p_30": 0.12465,
+      "p_adv": 0.49975,
+      "p_03": 0.1244,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "Team Vitality",
       "seed": 3,
-      "p_30": 0.12373,
-      "p_adv": 0.50061,
-      "p_03": 0.12475,
+      "p_30": 0.12325,
+      "p_adv": 0.5008,
+      "p_03": 0.1219,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Spirit",
       "seed": 4,
-      "p_30": 0.12544,
-      "p_adv": 0.50155,
-      "p_03": 0.12341,
+      "p_30": 0.12645,
+      "p_adv": 0.50435,
+      "p_03": 0.12515,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "MOUZ",
       "seed": 5,
-      "p_30": 0.12478,
-      "p_adv": 0.499,
-      "p_03": 0.12453,
+      "p_30": 0.12585,
+      "p_adv": 0.49955,
+      "p_03": 0.12255,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "FaZe Clan",
       "seed": 6,
-      "p_30": 0.12647,
-      "p_adv": 0.49978,
-      "p_03": 0.1259,
+      "p_30": 0.1275,
+      "p_adv": 0.5004,
+      "p_03": 0.12875,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "HEROIC",
       "seed": 7,
-      "p_30": 0.12601,
-      "p_adv": 0.49728,
-      "p_03": 0.12749,
+      "p_30": 0.1272,
+      "p_adv": 0.50165,
+      "p_03": 0.1268,
       "actual": "3-2",
       "advanced": true
      },
      {
       "team": "3DMAX",
       "seed": 8,
-      "p_30": 0.12383,
-      "p_adv": 0.4994,
-      "p_03": 0.12369,
+      "p_30": 0.1227,
+      "p_adv": 0.49595,
+      "p_03": 0.12845,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "The MongolZ",
       "seed": 9,
-      "p_30": 0.12376,
-      "p_adv": 0.49846,
-      "p_03": 0.12568,
+      "p_30": 0.12265,
+      "p_adv": 0.4955,
+      "p_03": 0.1253,
       "actual": "3-0",
       "advanced": true
      },
      {
       "team": "Team Liquid",
       "seed": 10,
-      "p_30": 0.12518,
-      "p_adv": 0.50052,
-      "p_03": 0.12678,
+      "p_30": 0.12675,
+      "p_adv": 0.50135,
+      "p_03": 0.1247,
       "actual": "3-1",
       "advanced": true
      },
      {
       "team": "GamerLegion",
       "seed": 11,
-      "p_30": 0.12391,
-      "p_adv": 0.5007,
-      "p_03": 0.12604,
+      "p_30": 0.12525,
+      "p_adv": 0.50125,
+      "p_03": 0.1248,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "FURIA",
       "seed": 12,
-      "p_30": 0.12642,
-      "p_adv": 0.50205,
-      "p_03": 0.12504,
+      "p_30": 0.1266,
+      "p_adv": 0.5035,
+      "p_03": 0.12585,
       "actual": "2-3",
       "advanced": false
      },
      {
       "team": "paiN Gaming",
       "seed": 13,
-      "p_30": 0.12568,
-      "p_adv": 0.50178,
-      "p_03": 0.12352,
+      "p_30": 0.1197,
+      "p_adv": 0.5033,
+      "p_03": 0.1246,
       "actual": "1-3",
       "advanced": false
      },
      {
       "team": "Wildcard",
       "seed": 14,
-      "p_30": 0.12339,
-      "p_adv": 0.49715,
-      "p_03": 0.12465,
+      "p_30": 0.1232,
+      "p_adv": 0.4935,
+      "p_03": 0.12215,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "BIG",
       "seed": 15,
-      "p_30": 0.12609,
-      "p_adv": 0.50129,
-      "p_03": 0.12452,
+      "p_30": 0.1256,
+      "p_adv": 0.4949,
+      "p_03": 0.12655,
       "actual": "0-3",
       "advanced": false
      },
      {
       "team": "MIBR",
       "seed": 16,
-      "p_30": 0.12462,
-      "p_adv": 0.50043,
-      "p_03": 0.12458,
+      "p_30": 0.1226,
+      "p_adv": 0.49885,
+      "p_03": 0.1247,
       "actual": "2-3",
       "advanced": false
      }
@@ -7718,64 +7718,64 @@
     "picks": [
      {
       "round": "Quarter-finals",
-      "pick": "The MongolZ",
+      "pick": "MOUZ",
       "actual": "MOUZ",
-      "correct": false,
-      "p": 0.51562
+      "correct": true,
+      "p": 0.54895
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.6335
+      "p": 0.65365
      },
      {
       "round": "Quarter-finals",
       "pick": "G2 Esports",
       "actual": "G2 Esports",
       "correct": true,
-      "p": 0.80513
+      "p": 0.79735
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Vitality",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.71512
+      "p": 0.68945
      },
      {
       "round": "Semi-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.37292
+      "p": 0.40595
      },
      {
       "round": "Semi-finals",
       "pick": "G2 Esports",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.49923
+      "p": 0.5155
      },
      {
       "round": "Final",
       "pick": "G2 Esports",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.35258
+      "p": 0.37375
      }
     ],
-    "n_correct": 3,
+    "n_correct": 4,
     "n_picks": 7,
-    "expected_correct": 3.8941,
+    "expected_correct": 3.9846000000000004,
     "matches": [
      {
       "round": 1,
       "a": "The MongolZ",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.5129,
+      "p_a": 0.4503,
       "winner": "MOUZ"
      },
      {
@@ -7783,7 +7783,7 @@
       "a": "Team Liquid",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.3645,
+      "p_a": 0.3392,
       "winner": "Team Spirit"
      },
      {
@@ -7791,7 +7791,7 @@
       "a": "G2 Esports",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8057,
+      "p_a": 0.7971,
       "winner": "G2 Esports"
      },
      {
@@ -7799,7 +7799,7 @@
       "a": "FaZe Clan",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.2838,
+      "p_a": 0.3101,
       "winner": "FaZe Clan"
      },
      {
@@ -7807,7 +7807,7 @@
       "a": "MOUZ",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.403,
+      "p_a": 0.3872,
       "winner": "Team Spirit"
      },
      {
@@ -7815,7 +7815,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.7669,
+      "p_a": 0.7627,
       "winner": "FaZe Clan"
      },
      {
@@ -7823,25 +7823,25 @@
       "a": "Team Spirit",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.6388,
+      "p_a": 0.6321,
       "winner": "Team Spirit"
      }
     ],
     "match_scores": {
      "n": 7,
-     "brier": 0.26107288525912636,
-     "log_loss": 0.7240159978327049,
-     "accuracy": 0.5714285714285714
+     "brier": 0.24311649303051955,
+     "log_loss": 0.6852638587643722,
+     "accuracy": 0.7142857142857143
     },
     "p_champion": {
-     "The MongolZ": 0.08062,
-     "MOUZ": 0.07272,
-     "Team Liquid": 0.04837,
-     "Team Spirit": 0.15407,
-     "G2 Esports": 0.35258,
-     "HEROIC": 0.02204,
-     "FaZe Clan": 0.0362,
-     "Team Vitality": 0.2334
+     "The MongolZ": 0.0563,
+     "MOUZ": 0.0801,
+     "Team Liquid": 0.0405,
+     "Team Spirit": 0.16555,
+     "G2 Esports": 0.37375,
+     "HEROIC": 0.0247,
+     "FaZe Clan": 0.0412,
+     "Team Vitality": 0.2179
     }
    },
    "legacy": {
@@ -7851,61 +7851,61 @@
       "pick": "MOUZ",
       "actual": "MOUZ",
       "correct": true,
-      "p": 0.50811
+      "p": 0.512
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.85869
+      "p": 0.85915
      },
      {
       "round": "Quarter-finals",
       "pick": "G2 Esports",
       "actual": "G2 Esports",
       "correct": true,
-      "p": 0.89773
+      "p": 0.8904
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Vitality",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.76944
+      "p": 0.76305
      },
      {
       "round": "Semi-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.54927
+      "p": 0.5732
      },
      {
       "round": "Semi-finals",
       "pick": "G2 Esports",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.65764
+      "p": 0.65875
      },
      {
       "round": "Final",
       "pick": "G2 Esports",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.50613
+      "p": 0.50745
      }
     ],
     "n_correct": 4,
     "n_picks": 7,
-    "expected_correct": 4.7470099999999995,
+    "expected_correct": 4.763999999999999,
     "matches": [
      {
       "round": 1,
       "a": "The MongolZ",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.4893,
+      "p_a": 0.4877,
       "winner": "MOUZ"
      },
      {
@@ -7913,7 +7913,7 @@
       "a": "Team Liquid",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.1407,
+      "p_a": 0.1359,
       "winner": "Team Spirit"
      },
      {
@@ -7921,7 +7921,7 @@
       "a": "G2 Esports",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8967,
+      "p_a": 0.8885,
       "winner": "G2 Esports"
      },
      {
@@ -7929,7 +7929,7 @@
       "a": "FaZe Clan",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.2292,
+      "p_a": 0.236,
       "winner": "FaZe Clan"
      },
      {
@@ -7937,7 +7937,7 @@
       "a": "MOUZ",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.3635,
+      "p_a": 0.3222,
       "winner": "Team Spirit"
      },
      {
@@ -7945,7 +7945,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.8849,
+      "p_a": 0.8818,
       "winner": "FaZe Clan"
      },
      {
@@ -7953,25 +7953,25 @@
       "a": "Team Spirit",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.7448,
+      "p_a": 0.7552,
       "winner": "Team Spirit"
      }
     ],
     "match_scores": {
      "n": 7,
-     "brier": 0.26347791520742614,
-     "log_loss": 0.7591975412924574,
+     "brier": 0.25626497651400987,
+     "log_loss": 0.7403493353118268,
      "accuracy": 0.7142857142857143
     },
     "p_champion": {
-     "The MongolZ": 0.05007,
-     "MOUZ": 0.05336,
-     "Team Liquid": 0.00322,
-     "Team Spirit": 0.19836,
-     "G2 Esports": 0.50613,
-     "HEROIC": 0.00834,
-     "FaZe Clan": 0.01189,
-     "Team Vitality": 0.16863
+     "The MongolZ": 0.0481,
+     "MOUZ": 0.0456,
+     "Team Liquid": 0.003,
+     "Team Spirit": 0.20965,
+     "G2 Esports": 0.50745,
+     "HEROIC": 0.00885,
+     "FaZe Clan": 0.01235,
+     "Team Vitality": 0.165
     }
    },
    "vrs_only": {
@@ -7981,61 +7981,61 @@
       "pick": "The MongolZ",
       "actual": "MOUZ",
       "correct": false,
-      "p": 0.5637
+      "p": 0.5959
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.87114
+      "p": 0.86285
      },
      {
       "round": "Quarter-finals",
       "pick": "G2 Esports",
       "actual": "G2 Esports",
       "correct": true,
-      "p": 0.91703
+      "p": 0.90225
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Vitality",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.79888
+      "p": 0.792
      },
      {
       "round": "Semi-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.56206
+      "p": 0.5687
      },
      {
       "round": "Semi-finals",
       "pick": "G2 Esports",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.68448
+      "p": 0.67285
      },
      {
       "round": "Final",
       "pick": "G2 Esports",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.53171
+      "p": 0.51535
      }
     ],
     "n_correct": 3,
     "n_picks": 7,
-    "expected_correct": 4.929,
+    "expected_correct": 4.9098999999999995,
     "matches": [
      {
       "round": 1,
       "a": "The MongolZ",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.5611,
+      "p_a": 0.5963,
       "winner": "MOUZ"
      },
      {
@@ -8043,7 +8043,7 @@
       "a": "Team Liquid",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.1284,
+      "p_a": 0.1324,
       "winner": "Team Spirit"
      },
      {
@@ -8051,7 +8051,7 @@
       "a": "G2 Esports",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.9158,
+      "p_a": 0.9007,
       "winner": "G2 Esports"
      },
      {
@@ -8059,7 +8059,7 @@
       "a": "FaZe Clan",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.2001,
+      "p_a": 0.2081,
       "winner": "FaZe Clan"
      },
      {
@@ -8067,7 +8067,7 @@
       "a": "MOUZ",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.3215,
+      "p_a": 0.2724,
       "winner": "Team Spirit"
      },
      {
@@ -8075,7 +8075,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.9104,
+      "p_a": 0.9024,
       "winner": "FaZe Clan"
      },
      {
@@ -8083,25 +8083,25 @@
       "a": "Team Spirit",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.7834,
+      "p_a": 0.7895,
       "winner": "Team Spirit"
      }
     ],
     "match_scores": {
      "n": 7,
-     "brier": 0.27961644000002595,
-     "log_loss": 0.8145893953380982,
+     "brier": 0.2775703611396543,
+     "log_loss": 0.8007344386514551,
      "accuracy": 0.5714285714285714
     },
     "p_champion": {
-     "The MongolZ": 0.06257,
-     "MOUZ": 0.03407,
-     "Team Liquid": 0.00247,
-     "Team Spirit": 0.19651,
-     "G2 Esports": 0.53171,
-     "HEROIC": 0.00582,
-     "FaZe Clan": 0.0071,
-     "Team Vitality": 0.15975
+     "The MongolZ": 0.07365,
+     "MOUZ": 0.0251,
+     "Team Liquid": 0.0028,
+     "Team Spirit": 0.20555,
+     "G2 Esports": 0.51535,
+     "HEROIC": 0.0073,
+     "FaZe Clan": 0.00805,
+     "Team Vitality": 0.1622
     }
    },
    "ens_logit": {
@@ -8111,7 +8111,7 @@
       "pick": "The MongolZ",
       "actual": "MOUZ",
       "correct": false,
-      "p": 0.53981
+      "p": 0.5221
      },
      {
       "round": "Quarter-finals",
@@ -8125,47 +8125,47 @@
       "pick": "G2 Esports",
       "actual": "G2 Esports",
       "correct": true,
-      "p": 0.87005
+      "p": 0.85915
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Vitality",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.75942
+      "p": 0.74345
      },
      {
       "round": "Semi-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.47782
+      "p": 0.50005
      },
      {
       "round": "Semi-finals",
       "pick": "G2 Esports",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.59919
+      "p": 0.59965
      },
      {
       "round": "Final",
       "pick": "G2 Esports",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.44803
+      "p": 0.4499
      }
     ],
     "n_correct": 3,
     "n_picks": 7,
-    "expected_correct": 4.46877,
+    "expected_correct": 4.44875,
     "matches": [
      {
       "round": 1,
       "a": "The MongolZ",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.5371,
+      "p_a": 0.5238,
       "winner": "MOUZ"
      },
      {
@@ -8173,7 +8173,7 @@
       "a": "Team Liquid",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.2252,
+      "p_a": 0.2187,
       "winner": "Team Spirit"
      },
      {
@@ -8181,7 +8181,7 @@
       "a": "G2 Esports",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8704,
+      "p_a": 0.8565,
       "winner": "G2 Esports"
      },
      {
@@ -8189,7 +8189,7 @@
       "a": "FaZe Clan",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.2395,
+      "p_a": 0.2558,
       "winner": "FaZe Clan"
      },
      {
@@ -8197,7 +8197,7 @@
       "a": "MOUZ",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.3613,
+      "p_a": 0.3272,
       "winner": "Team Spirit"
      },
      {
@@ -8205,7 +8205,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.8525,
+      "p_a": 0.845,
       "winner": "FaZe Clan"
      },
      {
@@ -8213,25 +8213,25 @@
       "a": "Team Spirit",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.7167,
+      "p_a": 0.7174,
       "winner": "Team Spirit"
      }
     ],
     "match_scores": {
      "n": 7,
-     "brier": 0.26742484712209474,
-     "log_loss": 0.7555768265941386,
+     "brier": 0.2568027477250657,
+     "log_loss": 0.7285504359374871,
      "accuracy": 0.5714285714285714
     },
     "p_champion": {
-     "The MongolZ": 0.07524,
-     "MOUZ": 0.05276,
-     "Team Liquid": 0.01172,
-     "Team Spirit": 0.18412,
-     "G2 Esports": 0.44803,
-     "HEROIC": 0.01152,
-     "FaZe Clan": 0.01699,
-     "Team Vitality": 0.19962
+     "The MongolZ": 0.06785,
+     "MOUZ": 0.04895,
+     "Team Liquid": 0.01155,
+     "Team Spirit": 0.1936,
+     "G2 Esports": 0.4499,
+     "HEROIC": 0.01415,
+     "FaZe Clan": 0.0193,
+     "Team Vitality": 0.1947
     }
    },
    "ens_prob": {
@@ -8241,61 +8241,61 @@
       "pick": "The MongolZ",
       "actual": "MOUZ",
       "correct": false,
-      "p": 0.53974
+      "p": 0.52165
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.75275
+      "p": 0.75765
      },
      {
       "round": "Quarter-finals",
       "pick": "G2 Esports",
       "actual": "G2 Esports",
       "correct": true,
-      "p": 0.86045
+      "p": 0.85185
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Vitality",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.75675
+      "p": 0.74025
      },
      {
       "round": "Semi-finals",
       "pick": "Team Spirit",
       "actual": "Team Spirit",
       "correct": true,
-      "p": 0.46426
+      "p": 0.48865
      },
      {
       "round": "Semi-finals",
       "pick": "G2 Esports",
       "actual": "FaZe Clan",
       "correct": false,
-      "p": 0.58779
+      "p": 0.59165
      },
      {
       "round": "Final",
       "pick": "G2 Esports",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.43803
+      "p": 0.4429
      }
     ],
     "n_correct": 3,
     "n_picks": 7,
-    "expected_correct": 4.39977,
+    "expected_correct": 4.3946,
     "matches": [
      {
       "round": 1,
       "a": "The MongolZ",
       "b": "MOUZ",
       "bo": 3,
-      "p_a": 0.537,
+      "p_a": 0.5233,
       "winner": "MOUZ"
      },
      {
@@ -8303,7 +8303,7 @@
       "a": "Team Liquid",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.2464,
+      "p_a": 0.2358,
       "winner": "Team Spirit"
      },
      {
@@ -8311,7 +8311,7 @@
       "a": "G2 Esports",
       "b": "HEROIC",
       "bo": 3,
-      "p_a": 0.8608,
+      "p_a": 0.8489,
       "winner": "G2 Esports"
      },
      {
@@ -8319,7 +8319,7 @@
       "a": "FaZe Clan",
       "b": "Team Vitality",
       "bo": 3,
-      "p_a": 0.242,
+      "p_a": 0.2591,
       "winner": "FaZe Clan"
      },
      {
@@ -8327,7 +8327,7 @@
       "a": "MOUZ",
       "b": "Team Spirit",
       "bo": 3,
-      "p_a": 0.3623,
+      "p_a": 0.3298,
       "winner": "Team Spirit"
      },
      {
@@ -8335,7 +8335,7 @@
       "a": "G2 Esports",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.8386,
+      "p_a": 0.8326,
       "winner": "FaZe Clan"
      },
      {
@@ -8343,82 +8343,82 @@
       "a": "Team Spirit",
       "b": "FaZe Clan",
       "bo": 3,
-      "p_a": 0.7111,
+      "p_a": 0.7108,
       "winner": "Team Spirit"
      }
     ],
     "match_scores": {
      "n": 7,
-     "brier": 0.26586800092605894,
-     "log_loss": 0.7480898091175072,
+     "brier": 0.2552473766187584,
+     "log_loss": 0.7218139815155016,
      "accuracy": 0.5714285714285714
     },
     "p_champion": {
-     "The MongolZ": 0.07679,
-     "MOUZ": 0.05467,
-     "Team Liquid": 0.01523,
-     "Team Spirit": 0.18089,
-     "G2 Esports": 0.43803,
-     "HEROIC": 0.01277,
-     "FaZe Clan": 0.01895,
-     "Team Vitality": 0.20267
+     "The MongolZ": 0.0685,
+     "MOUZ": 0.05095,
+     "Team Liquid": 0.0139,
+     "Team Spirit": 0.1922,
+     "G2 Esports": 0.4429,
+     "HEROIC": 0.01485,
+     "FaZe Clan": 0.02085,
+     "Team Vitality": 0.19585
     }
    },
    "coin_flip": {
     "picks": [
      {
       "round": "Quarter-finals",
-      "pick": "The MongolZ",
+      "pick": "MOUZ",
       "actual": "MOUZ",
-      "correct": false,
-      "p": 0.5028
+      "correct": true,
+      "p": 0.5005
      },
      {
       "round": "Quarter-finals",
       "pick": "Team Liquid",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.50165
+      "p": 0.5079
      },
      {
       "round": "Quarter-finals",
       "pick": "G2 Esports",
       "actual": "G2 Esports",
       "correct": true,
-      "p": 0.50122
+      "p": 0.50005
      },
      {
       "round": "Quarter-finals",
       "pick": "FaZe Clan",
       "actual": "FaZe Clan",
       "correct": true,
-      "p": 0.50115
+      "p": 0.50155
      },
      {
       "round": "Semi-finals",
-      "pick": "The MongolZ",
+      "pick": "MOUZ",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.25171
+      "p": 0.2517
      },
      {
       "round": "Semi-finals",
       "pick": "FaZe Clan",
       "actual": "FaZe Clan",
       "correct": true,
-      "p": 0.25152
+      "p": 0.25225
      },
      {
       "round": "Final",
-      "pick": "The MongolZ",
+      "pick": "MOUZ",
       "actual": "Team Spirit",
       "correct": false,
-      "p": 0.12536
+      "p": 0.132
      }
     ],
-    "n_correct": 3,
+    "n_correct": 4,
     "n_picks": 7,
-    "expected_correct": 2.63541,
+    "expected_correct": 2.64595,
     "matches": [
      {
       "round": 1,
@@ -8484,14 +8484,14 @@
      "accuracy": 0.5
     },
     "p_champion": {
-     "The MongolZ": 0.12536,
-     "MOUZ": 0.12498,
-     "Team Liquid": 0.12449,
-     "Team Spirit": 0.12331,
-     "G2 Esports": 0.12624,
-     "HEROIC": 0.12548,
-     "FaZe Clan": 0.12507,
-     "Team Vitality": 0.12507
+     "The MongolZ": 0.1267,
+     "MOUZ": 0.132,
+     "Team Liquid": 0.1269,
+     "Team Spirit": 0.12035,
+     "G2 Esports": 0.12325,
+     "HEROIC": 0.12445,
+     "FaZe Clan": 0.1234,
+     "Team Vitality": 0.12295
     }
    },
    "name": "Playoffs",
@@ -8503,92 +8503,92 @@
    "label": "Configured model (BT)",
    "match_scores": {
     "n": 73,
-    "brier": 0.2100860518206899,
-    "log_loss": 0.6079819797947872,
-    "accuracy": 0.6438356164383562
+    "brier": 0.2148643681527647,
+    "log_loss": 0.6186613563228159,
+    "accuracy": 0.6164383561643836
    },
    "reliability": [
     {
      "lo": 0.0,
      "hi": 0.1,
      "n": 1,
-     "mean_p": 0.09807997172904026,
+     "mean_p": 0.0812358432105802,
      "freq": 0.0
     },
     {
      "lo": 0.1,
      "hi": 0.2,
      "n": 1,
-     "mean_p": 0.16213562937145343,
+     "mean_p": 0.13608894720992437,
      "freq": 0.0
     },
     {
      "lo": 0.2,
      "hi": 0.30000000000000004,
      "n": 5,
-     "mean_p": 0.24857459470169072,
-     "freq": 0.4
+     "mean_p": 0.25566649477950365,
+     "freq": 0.2
     },
     {
      "lo": 0.30000000000000004,
      "hi": 0.4,
-     "n": 7,
-     "mean_p": 0.3552842378977692,
-     "freq": 0.14285714285714285
+     "n": 8,
+     "mean_p": 0.3558014878873067,
+     "freq": 0.25
     },
     {
      "lo": 0.4,
      "hi": 0.5,
-     "n": 9,
-     "mean_p": 0.4508536069886053,
-     "freq": 0.4444444444444444
+     "n": 8,
+     "mean_p": 0.44133382835272555,
+     "freq": 0.625
     },
     {
      "lo": 0.5,
      "hi": 0.6000000000000001,
-     "n": 14,
-     "mean_p": 0.5557420285343406,
-     "freq": 0.35714285714285715
+     "n": 15,
+     "mean_p": 0.5589171551382365,
+     "freq": 0.26666666666666666
     },
     {
      "lo": 0.6000000000000001,
      "hi": 0.7000000000000001,
-     "n": 19,
-     "mean_p": 0.6583236715912737,
-     "freq": 0.631578947368421
+     "n": 18,
+     "mean_p": 0.6570792515954451,
+     "freq": 0.7222222222222222
     },
     {
      "lo": 0.7000000000000001,
      "hi": 0.8,
-     "n": 12,
-     "mean_p": 0.7435909515307348,
-     "freq": 0.8333333333333334
+     "n": 14,
+     "mean_p": 0.748971629630294,
+     "freq": 0.7857142857142857
     },
     {
      "lo": 0.8,
      "hi": 0.9,
-     "n": 4,
-     "mean_p": 0.8137579254835463,
-     "freq": 0.75
+     "n": 2,
+     "mean_p": 0.8357866983657174,
+     "freq": 0.5
     },
     {
      "lo": 0.9,
      "hi": 1.0,
      "n": 1,
-     "mean_p": 0.9100208182636678,
+     "mean_p": 0.928388910767842,
      "freq": 1.0
     }
    ],
    "coins": 2,
    "swiss_stages": 2,
-   "pickem_correct": 10
+   "pickem_correct": 11
   },
   "legacy": {
    "label": "Legacy blend (v1)",
    "match_scores": {
     "n": 73,
-    "brier": 0.21213491957627112,
-    "log_loss": 0.616831842891683,
+    "brier": 0.21496384556789674,
+    "log_loss": 0.6240653426990556,
     "accuracy": 0.6438356164383562
    },
    "reliability": [
@@ -8596,70 +8596,70 @@
      "lo": 0.0,
      "hi": 0.1,
      "n": 4,
-     "mean_p": 0.04265704208394819,
+     "mean_p": 0.04088461110661154,
      "freq": 0.25
     },
     {
      "lo": 0.1,
      "hi": 0.2,
      "n": 4,
-     "mean_p": 0.14780594663225505,
+     "mean_p": 0.1529520471845159,
      "freq": 0.25
     },
     {
      "lo": 0.2,
      "hi": 0.30000000000000004,
      "n": 3,
-     "mean_p": 0.23131257293504526,
+     "mean_p": 0.23063141928063055,
      "freq": 0.3333333333333333
     },
     {
      "lo": 0.30000000000000004,
      "hi": 0.4,
-     "n": 5,
-     "mean_p": 0.3728174640846837,
-     "freq": 0.2
+     "n": 6,
+     "mean_p": 0.3572464192706577,
+     "freq": 0.3333333333333333
     },
     {
      "lo": 0.4,
      "hi": 0.5,
-     "n": 3,
-     "mean_p": 0.45245921058783006,
-     "freq": 0.3333333333333333
+     "n": 2,
+     "mean_p": 0.4744942377210598,
+     "freq": 0.0
     },
     {
      "lo": 0.5,
      "hi": 0.6000000000000001,
-     "n": 11,
-     "mean_p": 0.556779552996177,
-     "freq": 0.18181818181818182
+     "n": 8,
+     "mean_p": 0.5520855588672392,
+     "freq": 0.25
     },
     {
      "lo": 0.6000000000000001,
      "hi": 0.7000000000000001,
-     "n": 7,
-     "mean_p": 0.6566011909200923,
-     "freq": 0.2857142857142857
+     "n": 10,
+     "mean_p": 0.6441902721514077,
+     "freq": 0.3
     },
     {
      "lo": 0.7000000000000001,
      "hi": 0.8,
-     "n": 14,
-     "mean_p": 0.7553417850295074,
-     "freq": 0.7142857142857143
+     "n": 16,
+     "mean_p": 0.7573949918818546,
+     "freq": 0.75
     },
     {
      "lo": 0.8,
      "hi": 0.9,
-     "n": 14,
-     "mean_p": 0.8510060847334933,
-     "freq": 0.8571428571428571
+     "n": 12,
+     "mean_p": 0.8505685707934588,
+     "freq": 0.75
     },
     {
      "lo": 0.9,
      "hi": 1.0,
      "n": 8,
-     "mean_p": 0.9414874452629498,
+     "mean_p": 0.9418931774473489,
      "freq": 0.875
     }
    ],
@@ -8671,8 +8671,8 @@
    "label": "VRS seed/points only",
    "match_scores": {
     "n": 73,
-    "brier": 0.21316642235991096,
-    "log_loss": 0.6215719858717063,
+    "brier": 0.2164181987207793,
+    "log_loss": 0.6296429186118414,
     "accuracy": 0.6438356164383562
    },
    "reliability": [
@@ -8680,244 +8680,244 @@
      "lo": 0.0,
      "hi": 0.1,
      "n": 4,
-     "mean_p": 0.03702061543373947,
+     "mean_p": 0.03595707555887387,
      "freq": 0.25
     },
     {
      "lo": 0.1,
      "hi": 0.2,
      "n": 4,
-     "mean_p": 0.1415522907506817,
+     "mean_p": 0.14938839883668986,
      "freq": 0.25
     },
     {
      "lo": 0.2,
      "hi": 0.30000000000000004,
-     "n": 3,
-     "mean_p": 0.22244707101348524,
-     "freq": 0.3333333333333333
+     "n": 4,
+     "mean_p": 0.23420424564357134,
+     "freq": 0.25
     },
     {
      "lo": 0.30000000000000004,
      "hi": 0.4,
      "n": 5,
-     "mean_p": 0.35761490400443663,
-     "freq": 0.2
+     "mean_p": 0.36277246848824707,
+     "freq": 0.4
     },
     {
      "lo": 0.4,
      "hi": 0.5,
-     "n": 3,
-     "mean_p": 0.44364235495862153,
-     "freq": 0.3333333333333333
+     "n": 2,
+     "mean_p": 0.4493599934489545,
+     "freq": 0.0
     },
     {
      "lo": 0.5,
      "hi": 0.6000000000000001,
-     "n": 9,
-     "mean_p": 0.549989615719406,
-     "freq": 0.2222222222222222
+     "n": 7,
+     "mean_p": 0.5476361495221556,
+     "freq": 0.2857142857142857
     },
     {
      "lo": 0.6000000000000001,
      "hi": 0.7000000000000001,
-     "n": 8,
-     "mean_p": 0.6567655291325509,
-     "freq": 0.375
+     "n": 9,
+     "mean_p": 0.639107562007738,
+     "freq": 0.2222222222222222
     },
     {
      "lo": 0.7000000000000001,
      "hi": 0.8,
-     "n": 14,
-     "mean_p": 0.7557571780737723,
-     "freq": 0.6428571428571429
+     "n": 17,
+     "mean_p": 0.7547895555031654,
+     "freq": 0.7647058823529411
     },
     {
      "lo": 0.8,
      "hi": 0.9,
-     "n": 12,
-     "mean_p": 0.8366114333201713,
-     "freq": 0.8333333333333334
+     "n": 10,
+     "mean_p": 0.8372967681071302,
+     "freq": 0.7
     },
     {
      "lo": 0.9,
      "hi": 1.0,
      "n": 11,
-     "mean_p": 0.9342105745801839,
+     "mean_p": 0.930016730676588,
      "freq": 0.8181818181818182
     }
    ],
-   "coins": 1,
+   "coins": 2,
    "swiss_stages": 2,
-   "pickem_correct": 8
+   "pickem_correct": 11
   },
   "ens_logit": {
    "label": "BT+VRS 50/50 (logit)",
    "match_scores": {
     "n": 73,
-    "brier": 0.20781775414477444,
-    "log_loss": 0.6020843907493817,
-    "accuracy": 0.6164383561643836
+    "brier": 0.2115883654030374,
+    "log_loss": 0.611499793421166,
+    "accuracy": 0.6301369863013698
    },
    "reliability": [
     {
      "lo": 0.0,
      "hi": 0.1,
      "n": 3,
-     "mean_p": 0.07009095269576039,
+     "mean_p": 0.06524188133048035,
      "freq": 0.0
     },
     {
      "lo": 0.1,
      "hi": 0.2,
      "n": 2,
-     "mean_p": 0.1492575442500392,
+     "mean_p": 0.14980934907931373,
      "freq": 0.5
     },
     {
      "lo": 0.2,
      "hi": 0.30000000000000004,
      "n": 6,
-     "mean_p": 0.24908019278267438,
+     "mean_p": 0.2566975139538535,
      "freq": 0.3333333333333333
     },
     {
      "lo": 0.30000000000000004,
      "hi": 0.4,
-     "n": 5,
-     "mean_p": 0.3698292985866135,
-     "freq": 0.2
+     "n": 7,
+     "mean_p": 0.3666645420046077,
+     "freq": 0.2857142857142857
     },
     {
      "lo": 0.4,
      "hi": 0.5,
-     "n": 5,
-     "mean_p": 0.46601377805953775,
-     "freq": 0.6
+     "n": 2,
+     "mean_p": 0.47877786198534866,
+     "freq": 0.5
     },
     {
      "lo": 0.5,
      "hi": 0.6000000000000001,
-     "n": 10,
-     "mean_p": 0.551468054233125,
-     "freq": 0.0
+     "n": 12,
+     "mean_p": 0.5560595113867763,
+     "freq": 0.16666666666666666
     },
     {
      "lo": 0.6000000000000001,
      "hi": 0.7000000000000001,
-     "n": 11,
-     "mean_p": 0.6548071428762118,
-     "freq": 0.6363636363636364
+     "n": 12,
+     "mean_p": 0.6669715448545431,
+     "freq": 0.5833333333333334
     },
     {
      "lo": 0.7000000000000001,
      "hi": 0.8,
-     "n": 17,
-     "mean_p": 0.7435591727817299,
-     "freq": 0.7647058823529411
+     "n": 15,
+     "mean_p": 0.7441080216676723,
+     "freq": 0.8
     },
     {
      "lo": 0.8,
      "hi": 0.9,
-     "n": 12,
-     "mean_p": 0.8551384439540627,
-     "freq": 0.75
+     "n": 11,
+     "mean_p": 0.8437147444913073,
+     "freq": 0.8181818181818182
     },
     {
      "lo": 0.9,
      "hi": 1.0,
-     "n": 2,
-     "mean_p": 0.9494670954414678,
-     "freq": 1.0
+     "n": 3,
+     "mean_p": 0.9304779126483705,
+     "freq": 0.6666666666666666
     }
    ],
-   "coins": 1,
+   "coins": 2,
    "swiss_stages": 2,
-   "pickem_correct": 8
+   "pickem_correct": 10
   },
   "ens_prob": {
    "label": "BT+VRS 50/50 (prob)",
    "match_scores": {
     "n": 73,
-    "brier": 0.2077478017874065,
-    "log_loss": 0.6020179391987763,
-    "accuracy": 0.6164383561643836
+    "brier": 0.21160378992163884,
+    "log_loss": 0.6114557164054166,
+    "accuracy": 0.6301369863013698
    },
    "reliability": [
     {
      "lo": 0.0,
      "hi": 0.1,
-     "n": 1,
-     "mean_p": 0.05787067897113124,
+     "n": 2,
+     "mean_p": 0.06883894890467782,
      "freq": 0.0
     },
     {
      "lo": 0.1,
      "hi": 0.2,
-     "n": 4,
-     "mean_p": 0.13893247245376267,
-     "freq": 0.25
+     "n": 3,
+     "mean_p": 0.15199248670214724,
+     "freq": 0.3333333333333333
     },
     {
      "lo": 0.2,
      "hi": 0.30000000000000004,
-     "n": 6,
-     "mean_p": 0.2602033879796859,
-     "freq": 0.3333333333333333
+     "n": 5,
+     "mean_p": 0.25715189779343683,
+     "freq": 0.2
     },
     {
      "lo": 0.30000000000000004,
      "hi": 0.4,
-     "n": 5,
-     "mean_p": 0.37023359006322504,
-     "freq": 0.2
+     "n": 8,
+     "mean_p": 0.3608491140067358,
+     "freq": 0.375
     },
     {
      "lo": 0.4,
      "hi": 0.5,
-     "n": 5,
-     "mean_p": 0.4661116309860919,
-     "freq": 0.6
+     "n": 2,
+     "mean_p": 0.4789606997530539,
+     "freq": 0.5
     },
     {
      "lo": 0.5,
      "hi": 0.6000000000000001,
-     "n": 10,
-     "mean_p": 0.5511017960814958,
-     "freq": 0.0
+     "n": 12,
+     "mean_p": 0.5555049943652747,
+     "freq": 0.16666666666666666
     },
     {
      "lo": 0.6000000000000001,
      "hi": 0.7000000000000001,
-     "n": 11,
-     "mean_p": 0.652321721092184,
-     "freq": 0.6363636363636364
+     "n": 12,
+     "mean_p": 0.6643385946539806,
+     "freq": 0.5833333333333334
     },
     {
      "lo": 0.7000000000000001,
      "hi": 0.8,
-     "n": 18,
-     "mean_p": 0.741378376318814,
-     "freq": 0.7777777777777778
+     "n": 17,
+     "mean_p": 0.7451637127211544,
+     "freq": 0.8235294117647058
     },
     {
      "lo": 0.8,
      "hi": 0.9,
-     "n": 12,
-     "mean_p": 0.8479098902368594,
-     "freq": 0.75
+     "n": 11,
+     "mean_p": 0.845544965571449,
+     "freq": 0.7272727272727273
     },
     {
      "lo": 0.9,
      "hi": 1.0,
      "n": 1,
-     "mean_p": 0.9498476544494526,
+     "mean_p": 0.9591026601010101,
      "freq": 1.0
     }
    ],
-   "coins": 1,
+   "coins": 2,
    "swiss_stages": 2,
-   "pickem_correct": 9
+   "pickem_correct": 10
   },
   "coin_flip": {
    "label": "Coin flip",
@@ -8930,93 +8930,100 @@
    "reliability": [],
    "coins": 0,
    "swiss_stages": 2,
-   "pickem_correct": 5
+   "pickem_correct": 7
   },
   "outcome_calibration": {
    "3-0": {
-    "brier": 0.08875084408749999,
+    "brier": 0.08896340765625001,
     "reliability": [
      {
       "lo": 0.0,
       "hi": 0.2,
       "n": 24,
-      "mean_p": 0.06352666666666666,
+      "mean_p": 0.06525625,
       "freq": 0.041666666666666664
      },
      {
       "lo": 0.2,
       "hi": 0.4,
       "n": 7,
-      "mean_p": 0.2941628571428571,
+      "mean_p": 0.28835,
       "freq": 0.42857142857142855
      },
      {
       "lo": 0.4,
       "hi": 0.6000000000000001,
       "n": 1,
-      "mean_p": 0.41622,
+      "mean_p": 0.4154,
       "freq": 0.0
      }
     ],
     "n": 32
    },
    "adv": {
-    "brier": 0.17329953246250002,
+    "brier": 0.17465817921875001,
     "reliability": [
      {
       "lo": 0.0,
       "hi": 0.2,
       "n": 5,
-      "mean_p": 0.140734,
+      "mean_p": 0.12357000000000003,
       "freq": 0.0
      },
      {
       "lo": 0.2,
       "hi": 0.4,
-      "n": 7,
-      "mean_p": 0.3272528571428572,
-      "freq": 0.2857142857142857
+      "n": 5,
+      "mean_p": 0.31517,
+      "freq": 0.4
      },
      {
       "lo": 0.4,
       "hi": 0.6000000000000001,
-      "n": 10,
-      "mean_p": 0.496719,
-      "freq": 0.6
+      "n": 11,
+      "mean_p": 0.4727,
+      "freq": 0.45454545454545453
      },
      {
       "lo": 0.6000000000000001,
       "hi": 0.8,
       "n": 5,
-      "mean_p": 0.738126,
+      "mean_p": 0.6921199999999998,
       "freq": 0.8
      },
      {
       "lo": 0.8,
       "hi": 1.0,
-      "n": 5,
-      "mean_p": 0.869548,
-      "freq": 0.8
+      "n": 6,
+      "mean_p": 0.8576666666666665,
+      "freq": 0.8333333333333334
      }
     ],
     "n": 32
    },
    "0-3": {
-    "brier": 0.09678874691874999,
+    "brier": 0.09725190703124999,
     "reliability": [
      {
       "lo": 0.0,
       "hi": 0.2,
       "n": 25,
-      "mean_p": 0.0775844,
+      "mean_p": 0.074072,
       "freq": 0.04
      },
      {
       "lo": 0.2,
       "hi": 0.4,
-      "n": 7,
-      "mean_p": 0.2943414285714286,
-      "freq": 0.42857142857142855
+      "n": 6,
+      "mean_p": 0.28602500000000003,
+      "freq": 0.5
+     },
+     {
+      "lo": 0.4,
+      "hi": 0.6000000000000001,
+      "n": 1,
+      "mean_p": 0.43205,
+      "freq": 0.0
      }
     ],
     "n": 32

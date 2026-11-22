@@ -69,6 +69,28 @@ def _strategies(summ: dict) -> str:
             + ".</p>"
         )
     decision = summ.get("decision")
+    hltv_panel = ""
+    eff = summ.get("hltv_effect")
+    if eff:
+        hrows = "".join(
+            f'<tr><td class="l">{e(st[k]["label"]) if k in st else e(k)}</td>'
+            f"<td>{v['without']:.2f}</td><td>{v['with']:.2f}</td>"
+            f"<td>{v['diff']:+.2f} {_ci(*v['diff_ci'], signed=True)}</td>"
+            f"<td>{v['coins_without']} → {v['coins_with']}</td>"
+            + (
+                f"<td>{v['brier_without']:.3f} → {v['brier_with']:.3f}</td>"
+                if "brier_without" in v
+                else "<td>–</td>"
+            )
+            + "</tr>"
+            for k, v in eff["strategies"].items()
+        )
+        hltv_panel = (
+            '<div class="panel" style="margin-top:14px"><h2>Effect of HLTV form and map stats</h2>'
+            f'<p class="sub">{e(eff["note"])}</p><div class="scroll"><table><thead><tr><th class="l">Strategy</th>'
+            "<th>Without</th><th>With</th><th>Δ correct</th><th>Coins</th><th>Brier</th></tr></thead>"
+            f"<tbody>{hrows}</tbody></table></div></div>"
+        )
     return (
         f'<section id="strategies" style="margin-top:26px"><div class="kicker">Which model earns the most Pick\'Em?</div>'
         f"<h1>Strategy comparison <span>· {len(summ['stages'])} Swiss stages, {len(summ['majors'])} Majors</span></h1>"
@@ -82,7 +104,8 @@ def _strategies(summ: dict) -> str:
         )
         + f'<div class="panel"><div class="scroll"><table><thead><tr><th class="l">Strategy</th><th>Mean correct /10</th>'
         f"<th>Δ vs VRS only</th><th>Δ vs BT</th><th>Coins</th><th>3-0 hit</th><th>Adv hit</th><th>0-3 hit</th>"
-        f"<th>Brier</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>{seed_note}</div></section>"
+        f"<th>Brier</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>{seed_note}</div>"
+        f"{hltv_panel}</section>"
     )
 
 
