@@ -41,6 +41,7 @@ Python ≥ 3.12. With uv instead of pip: `uv venv && uv pip install -e '.[dev]'`
 | `playoffs` | Bracket simulation. Teams come from config, from Stage 3 results, or from projection |
 | `result add A B WINNER [-s STAGE] [--round R]` | Record a finished match (live mode) |
 | `result list / result remove A B` | Show standings and results, or undo a result |
+| `animate -s STAGE [-n SIMS] [--runs 300] [--out site/STAGE.html] [--open]` | Write an animated, self-contained HTML visualisation of the simulation |
 | `next-stage -s stage2 [--write]` | Seed the next stage (invites + qualifiers). `--write` stores the seeding in the YAML |
 
 `--event` selects the config directory under `configs/`. The default is the only (or first) event.
@@ -61,6 +62,37 @@ cs2pickem pickem -s stage2
 Results are stored in `data/results/<stage>.yaml`, which you can edit by hand. Team names accept any alias from `event.yaml`.
 Later stages that are not decided yet are **projected**: Stage 1 is simulated to obtain the most likely qualifiers.
 Projected output is labelled as such.
+
+## Animated visualisation
+
+```bash
+cs2pickem animate --stage stage1 --open        # → site/stage1.html (or: make animate STAGE=stage1)
+cs2pickem animate --stage playoffs             # → site/playoffs.html
+```
+
+![Animated Swiss bracket – screenshot placeholder](docs/animate.png)
+
+<!-- TODO: replace docs/animate.png with a screenshot/GIF of site/stage1.html -->
+
+The output is **one static HTML file**. It has no build step and no CDN; it uses vanilla JS with SVG/CSS and works offline, so you can share it as an attachment or on GitHub Pages.
+The Python side embeds a compact JSON payload of about 0.3 MB for 100k sims:
+
+* **Replay runs.** About 300 fully logged simulated runs, with every match as round, teams, Bo1/Bo3, winner and whether it was a live result. Each match also carries its win probability and predicted veto line.
+* **Convergence tallies.** Cumulative counts over *all* N sims at about 240 log-spaced checkpoints: per-team final record, the correct-pick histogram and upsets. The browser animates 1 → N without the raw data.
+
+On screen you get:
+
+* **Swiss bracket.** It uses the classic Major layout: 0-0 → 1-0/0-1 → … → 3-x advanced / x-3 eliminated. Team badges move between record buckets round by round. Gold marks a Bo3 decider. Hover a match to see its win probability and likely maps.
+  For playoffs, the bracket fills in up to the champion.
+* **Converging probability bars.** Bars for P(3-0), P(advance) and P(0-3), or P(semis), P(final) and P(champion), each with a 95% CI band and a tick for the final value. A sim counter and a sims/sec display sit alongside.
+* **Pick'Em panel.** The recommended picks, a live P(≥5 correct) gauge and a histogram of the number of correct picks. Picks hit or missed in the current replay are highlighted.
+* **Chaos meter.** The share of matches won by the pre-match underdog.
+* **Heatmap.** The final record distribution, team × record.
+
+Controls are play/pause (space), step one run (→), fast-forward to N, reset and a speed slider.
+URL flags: `?ff` jumps straight to the converged state and `?paused` disables autoplay.
+Recorded live results (`data/results/<stage>.yaml`) are respected: those matches are fixed in every run and marked ✓.
+`site/stage1.html` and `site/playoffs.html` are committed as a demo. `.github/workflows/pages.yml` can publish `site/` via GitHub Pages; enable it under Settings → Pages → Source: GitHub Actions.
 
 ## Swiss rules implemented (Valve Major Supplemental Rulebook)
 
@@ -170,6 +202,7 @@ It caches pages in `.cache/` and rate-limits politely.
 make test      # pytest
 make lint      # ruff
 make predict   # simulate + pickem for STAGE=stage1
+make animate   # site/$STAGE.html
 ```
 
 CI (`.github/workflows/ci.yml`) runs ruff, pytest and an offline CLI smoke test.
