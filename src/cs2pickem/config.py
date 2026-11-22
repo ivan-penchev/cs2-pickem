@@ -96,6 +96,7 @@ class EventConfig(BaseModel):
     use_manual_data: bool = True
     map_pool: list[str] = Field(default_factory=lambda: list(DEFAULT_MAP_POOL))
     vrs_date: str | None = None  # VRS standings file date, e.g. 2026_11_02
+    notes: str | None = None  # free text, e.g. documented point-in-time data substitutions
     teams: list[TeamInfo] = Field(default_factory=list)
     rating: RatingParams = Field(default_factory=RatingParams)
     maps: MapParams = Field(default_factory=MapParams)

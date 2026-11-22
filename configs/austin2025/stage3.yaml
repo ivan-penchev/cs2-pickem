@@ -1,0 +1,45 @@
+# BLAST.tv Austin Major 2025 — Stage 3 (generated from Liquipedia)
+name: Stage 3
+type: swiss
+start: '2025-06-12'
+end: '2025-06-15'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/austin2025/results/stage3.yaml
+liquipedia: BLAST/Major/2025/Austin/Stage_3
+teams:
+- Team Vitality
+- MOUZ
+- Team Spirit
+- The MongolZ
+- Aurora Gaming
+- G2 Esports
+- Natus Vincere
+- Team Liquid
+- Legacy
+- Virtus.pro
+- paiN Gaming
+- FURIA
+- FaZe Clan
+- 3DMAX
+- Nemiga Gaming
+- Lynn Vision Gaming
+round1:
+- - Team Vitality
+  - Legacy
+- - MOUZ
+  - Virtus.pro
+- - Team Spirit
+  - paiN Gaming
+- - G2 Esports
+  - 3DMAX
+- - The MongolZ
+  - FURIA
+- - Aurora Gaming
+  - FaZe Clan
+- - Natus Vincere
+  - Nemiga Gaming
+- - Team Liquid
+  - Lynn Vision Gaming

@@ -1,0 +1,200 @@
+# Perfect World Shanghai Major 2024 — Opening Stage actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: FURIA
+  b: GamerLegion
+  winner: GamerLegion
+  bo: 1
+  date: '2024-11-30'
+- round: 1
+  a: Virtus.pro
+  b: MIBR
+  winner: MIBR
+  bo: 1
+  date: '2024-11-30'
+- round: 1
+  a: Team Liquid
+  b: Cloud9
+  winner: Team Liquid
+  bo: 1
+  date: '2024-11-30'
+- round: 1
+  a: Complexity
+  b: FlyQuest
+  winner: FlyQuest
+  bo: 1
+  date: '2024-11-30'
+- round: 1
+  a: BIG
+  b: Passion UA
+  winner: BIG
+  bo: 1
+  date: '2024-11-30'
+- round: 1
+  a: Fnatic
+  b: Wildcard
+  winner: Wildcard
+  bo: 1
+  date: '2024-11-30'
+- round: 1
+  a: The MongolZ
+  b: Rare Atom
+  winner: The MongolZ
+  bo: 1
+  date: '2024-11-30'
+- round: 1
+  a: paiN Gaming
+  b: Imperial Esports
+  winner: paiN Gaming
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: BIG
+  b: FlyQuest
+  winner: FlyQuest
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: The MongolZ
+  b: MIBR
+  winner: The MongolZ
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: Team Liquid
+  b: Wildcard
+  winner: Team Liquid
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: paiN Gaming
+  b: GamerLegion
+  winner: GamerLegion
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: Fnatic
+  b: Cloud9
+  winner: Cloud9
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: Complexity
+  b: Passion UA
+  winner: Passion UA
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: Virtus.pro
+  b: Rare Atom
+  winner: Virtus.pro
+  bo: 1
+  date: '2024-11-30'
+- round: 2
+  a: FURIA
+  b: Imperial Esports
+  winner: FURIA
+  bo: 1
+  date: '2024-11-30'
+- round: 3
+  a: Team Liquid
+  b: FlyQuest
+  winner: Team Liquid
+  bo: 3
+  date: '2024-12-01'
+- round: 3
+  a: GamerLegion
+  b: The MongolZ
+  winner: The MongolZ
+  bo: 3
+  date: '2024-12-01'
+- round: 3
+  a: BIG
+  b: Virtus.pro
+  winner: BIG
+  bo: 1
+  date: '2024-12-01'
+- round: 3
+  a: MIBR
+  b: Passion UA
+  winner: Passion UA
+  bo: 1
+  date: '2024-12-01'
+- round: 3
+  a: FURIA
+  b: Wildcard
+  winner: FURIA
+  bo: 1
+  date: '2024-12-01'
+- round: 3
+  a: paiN Gaming
+  b: Cloud9
+  winner: paiN Gaming
+  bo: 1
+  date: '2024-12-01'
+- round: 3
+  a: Rare Atom
+  b: Fnatic
+  winner: Rare Atom
+  bo: 3
+  date: '2024-12-01'
+- round: 3
+  a: Complexity
+  b: Imperial Esports
+  winner: Complexity
+  bo: 3
+  date: '2024-12-01'
+- round: 4
+  a: BIG
+  b: FURIA
+  winner: FURIA
+  bo: 3
+  date: '2024-12-02'
+- round: 4
+  a: FlyQuest
+  b: paiN Gaming
+  winner: paiN Gaming
+  bo: 3
+  date: '2024-12-02'
+- round: 4
+  a: GamerLegion
+  b: Passion UA
+  winner: GamerLegion
+  bo: 3
+  date: '2024-12-02'
+- round: 4
+  a: MIBR
+  b: Rare Atom
+  winner: MIBR
+  bo: 3
+  date: '2024-12-02'
+- round: 4
+  a: Cloud9
+  b: Complexity
+  winner: Complexity
+  bo: 3
+  date: '2024-12-02'
+- round: 4
+  a: Wildcard
+  b: Virtus.pro
+  winner: Wildcard
+  bo: 3
+  date: '2024-12-02'
+- round: 5
+  a: BIG
+  b: Complexity
+  winner: BIG
+  bo: 3
+  date: '2024-12-03'
+- round: 5
+  a: FlyQuest
+  b: MIBR
+  winner: MIBR
+  bo: 3
+  date: '2024-12-03'
+- round: 5
+  a: Passion UA
+  b: Wildcard
+  winner: Wildcard
+  bo: 3
+  date: '2024-12-03'

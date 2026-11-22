@@ -1,0 +1,45 @@
+# PGL Major Copenhagen 2024 — Opening Stage (generated from Liquipedia)
+name: Opening Stage
+type: swiss
+start: '2024-03-17'
+end: '2024-03-20'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/copenhagen2024/results/stage1.yaml
+liquipedia: PGL/2024/Copenhagen/Opening_Stage
+teams:
+- ENCE
+- Cloud9
+- Eternal Fire
+- HEROIC
+- Apeks
+- GamerLegion
+- FURIA
+- SAW
+- Imperial Esports
+- ECSTATIC
+- The MongolZ
+- Lynn Vision Gaming
+- paiN Gaming
+- AMKAL ESPORTS
+- Legacy
+- KOI
+round1:
+- - Cloud9
+  - ECSTATIC
+- - Eternal Fire
+  - The MongolZ
+- - ENCE
+  - Imperial Esports
+- - Apeks
+  - paiN Gaming
+- - HEROIC
+  - Lynn Vision Gaming
+- - GamerLegion
+  - AMKAL ESPORTS
+- - SAW
+  - KOI
+- - FURIA
+  - Legacy

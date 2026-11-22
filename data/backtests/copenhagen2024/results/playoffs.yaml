@@ -1,0 +1,44 @@
+# PGL Major Copenhagen 2024 — Playoffs actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: Team Spirit
+  b: FaZe Clan
+  winner: FaZe Clan
+  bo: 3
+  date: '2024-03-28'
+- round: 1
+  a: Team Vitality
+  b: Cloud9
+  winner: Team Vitality
+  bo: 3
+  date: '2024-03-28'
+- round: 1
+  a: Eternal Fire
+  b: Natus Vincere
+  winner: Natus Vincere
+  bo: 3
+  date: '2024-03-29'
+- round: 1
+  a: G2 Esports
+  b: MOUZ
+  winner: G2 Esports
+  bo: 3
+  date: '2024-03-29'
+- round: 2
+  a: FaZe Clan
+  b: Team Vitality
+  winner: FaZe Clan
+  bo: 3
+  date: '2024-03-30'
+- round: 2
+  a: Natus Vincere
+  b: G2 Esports
+  winner: Natus Vincere
+  bo: 3
+  date: '2024-03-30'
+- round: 3
+  a: FaZe Clan
+  b: Natus Vincere
+  winner: Natus Vincere
+  bo: 3
+  date: '2024-03-31'

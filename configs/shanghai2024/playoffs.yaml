@@ -1,0 +1,27 @@
+# Perfect World Shanghai Major 2024 — Playoffs (generated from Liquipedia)
+name: Playoffs
+type: playoffs
+start: '2024-12-12'
+end: '2024-12-15'
+playoff_bo: 3
+final_bo: 3
+bracket:
+- - 1
+  - 2
+- - 3
+  - 4
+- - 5
+  - 6
+- - 7
+  - 8
+results_file: data/backtests/shanghai2024/results/playoffs.yaml
+liquipedia: Perfect_World/Major/2024/Shanghai/Playoff_Stage
+teams:
+- The MongolZ
+- MOUZ
+- Team Liquid
+- Team Spirit
+- G2 Esports
+- HEROIC
+- FaZe Clan
+- Team Vitality

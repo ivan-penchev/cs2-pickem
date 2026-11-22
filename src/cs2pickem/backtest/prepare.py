@@ -11,6 +11,7 @@ Writes (all committed, so the backtest is reproducible offline):
 
 from __future__ import annotations
 
+import math
 from collections import Counter
 from collections.abc import Callable
 from datetime import datetime
@@ -58,12 +59,42 @@ def lp_date(s: str | None) -> str | None:
         return None
 
 
+def stage_page(spec: MajorSpec, page: str) -> str:
+    return f"{spec.liquipedia}/{page}" if page else spec.liquipedia
+
+
 def fetch_stage_matches(spec: MajorSpec, ttl_hours: float = 1e6) -> dict[str, list[LpMatch]]:
     out = {}
     for st in spec.stages:
         kind = "swiss" if st.kind == "swiss" else "bracket"
-        out[st.id] = stage_matches(f"{spec.liquipedia}/{st.page}", kind, ttl_hours=ttl_hours)
+        out[st.id] = stage_matches(stage_page(spec, st.page), kind, ttl_hours=ttl_hours)
     return out
+
+
+def hltv_to_vrs_points(hltv_points: float) -> float:
+    """Map HLTV ranking points onto the VRS points scale.
+
+    Least-squares fit of VRS points on ln(HLTV points) over the top 40 of the Budapest 2025 and
+    Cologne 2026 snapshots (corr 0.93-0.94). Only used for Majors that predate VRS."""
+    return 215.0 * math.log(max(float(hltv_points), 1.0)) + 515.0
+
+
+def synthetic_vrs(hr: pd.DataFrame, day: str) -> tuple[pd.DataFrame, pd.DataFrame, list[str]]:
+    """A VRS-shaped standings table derived from an HLTV ranking (rank kept, points rescaled)."""
+    std = pd.DataFrame(
+        {
+            "vrs_date": day.replace("-", "_"),
+            "rank": hr["rank"].astype(int),
+            "points": [round(hltv_to_vrs_points(p), 1) for p in hr["points"]],
+            "team": hr["team"],
+            "roster": "",
+            "details": "synthetic from HLTV ranking",
+        }
+    )
+    vm = pd.DataFrame(
+        columns=["team", "date", "opponent", "result", "vrs_match_id", "age_weight", "h2h_adj", "roster"]
+    )
+    return std, vm, []
 
 
 def swiss_records(matches: list[LpMatch]) -> dict[str, list[int]]:
@@ -90,13 +121,23 @@ def prepare(major: str, log: Callable[[str], None] = print, ttl_hours: float = 1
     matches = fetch_stage_matches(spec, ttl_hours)
 
     # ---- point-in-time strength inputs
-    std, _, _ = vrs.fetch(spec.vrs_date[:4], [], date=spec.vrs_date)
     names = sorted({t for ms in matches.values() for m in ms for t in (m.a, m.b)})
     vrs_name = {n: LP_TO_VRS.get(n, n) for n in names}
-    missing = [n for n, v in vrs_name.items() if v not in set(std.team)]
+    rank_path = "/ranking/teams/" + spec.hltv_ranking
+    hr = hltv.parse_ranking(hltv.get_page(rank_path, ttl_hours=ttl_hours))
+    if spec.synthetic_vrs:
+        std_m, vm, urls = synthetic_vrs(hr, spec.hltv_day)
+        vrs_notes = f"SYNTHETIC: {spec.name} predates VRS. {spec.note or ''}".strip()
+    else:
+        std, _, _ = vrs.fetch(spec.vrs_date[:4], [], date=spec.vrs_date)
+        missing = [n for n, v in vrs_name.items() if v not in set(std.team)]
+        if missing:
+            raise ValueError(f"{spec.id}: teams missing from VRS {spec.vrs_date}: {missing}")
+        std_m, vm, urls = vrs.fetch(spec.vrs_date[:4], list(vrs_name.values()), date=spec.vrs_date)
+        vrs_notes = f"Valve Regional Standings published before {spec.name} (backtest input)"
+    missing = [n for n, v in vrs_name.items() if v not in set(std_m.team)]
     if missing:
-        raise ValueError(f"{spec.id}: teams missing from VRS {spec.vrs_date}: {missing}")
-    std_m, vm, urls = vrs.fetch(spec.vrs_date[:4], list(vrs_name.values()), date=spec.vrs_date)
+        raise ValueError(f"{spec.id}: teams missing from the strength table: {missing}")
     back = {v: k for k, v in vrs_name.items()}
     if not vm.empty:
         vm.insert(1, "team_canonical", vm["team"].map(back))
@@ -105,11 +146,9 @@ def prepare(major: str, log: Callable[[str], None] = print, ttl_hours: float = 1
         spec.vrs_day,
         {"standings": std_m, "matches": vm},
         urls=urls,
-        notes=f"Valve Regional Standings published before {spec.name} (backtest input)",
+        notes=vrs_notes,
         manifest=False,
     )
-    rank_path = "/ranking/teams/" + spec.hltv_ranking
-    hr = hltv.parse_ranking(hltv.get_page(rank_path, ttl_hours=ttl_hours))
     empty_maps = pd.DataFrame(columns=["team", "map", "wins", "losses", "pick_pct", "ban_pct"])
     empty_res = pd.DataFrame(columns=["date", "team", "opponent", "maps_won", "maps_lost"])
     write_snapshot(
@@ -144,6 +183,7 @@ def prepare(major: str, log: Callable[[str], None] = print, ttl_hours: float = 1
         "end": spec.end,
         "liquipedia": spec.liquipedia,
         "vrs_date": spec.vrs_date,
+        **({"notes": spec.note} if spec.note else {}),
         "snapshot_days": {"vrs": spec.vrs_day, "hltv": spec.hltv_day},
         "use_manual_data": False,
         "map_pool": spec.map_pool,
@@ -182,7 +222,7 @@ def prepare(major: str, log: Callable[[str], None] = print, ttl_hours: float = 1
                 "default_bo": 3 if all(m.bo == 3 for m in ms) else 1,
                 "decider_bo": 3,
                 "results_file": res_rel,
-                "liquipedia": f"{spec.liquipedia}/{st.page}",
+                "liquipedia": stage_page(spec, st.page),
                 "teams": seeds,
                 "round1": r1,
             }
@@ -205,7 +245,7 @@ def prepare(major: str, log: Callable[[str], None] = print, ttl_hours: float = 1
                 "final_bo": max(m.bo for m in ms if m.round == max(x.round for x in ms)),
                 "bracket": [[2 * i + 1, 2 * i + 2] for i in range(len(qf))],
                 "results_file": res_rel,
-                "liquipedia": f"{spec.liquipedia}/{st.page}",
+                "liquipedia": stage_page(spec, st.page),
                 "teams": seeds,
             }
             actual[st.id] = {

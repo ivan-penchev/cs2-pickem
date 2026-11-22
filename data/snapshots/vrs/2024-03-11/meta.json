@@ -1,0 +1,12 @@
+{
+  "source": "vrs",
+  "snapshot_date": "2024-03-11",
+  "fetched_at": "2026-11-22T15:25:27+00:00",
+  "tool_version": "0.1.0",
+  "rows": {
+    "standings": 257,
+    "matches": 0
+  },
+  "urls": [],
+  "notes": "SYNTHETIC: PGL Major Copenhagen 2024 predates VRS. Predates the Valve Regional Standings (earliest file in the VRS repo: 2024-08-06). The VRS input is a synthetic table built from the HLTV ranking of 2024-03-11: rank = HLTV rank, points = 215*ln(HLTV points) + 515 (fitted on the Budapest/Cologne snapshots, corr 0.93). No point-in-time match history exists, so BT runs on that prior plus earlier stages of the Major only."
+}

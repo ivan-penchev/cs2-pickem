@@ -1,0 +1,15 @@
+{
+  "source": "hltv",
+  "snapshot_date": "2024-11-25",
+  "fetched_at": "2026-11-22T15:25:35+00:00",
+  "tool_version": "0.1.0",
+  "rows": {
+    "ranking": 261,
+    "maps": 0,
+    "results": 0
+  },
+  "urls": [
+    "https://www.hltv.org/ranking/teams/2024/november/25"
+  ],
+  "notes": "Archived HLTV world ranking before Perfect World Shanghai Major 2024 (backtest input; no map stats archived)"
+}

@@ -1,0 +1,27 @@
+# PGL Major Copenhagen 2024 — Playoffs (generated from Liquipedia)
+name: Playoffs
+type: playoffs
+start: '2024-03-28'
+end: '2024-03-31'
+playoff_bo: 3
+final_bo: 3
+bracket:
+- - 1
+  - 2
+- - 3
+  - 4
+- - 5
+  - 6
+- - 7
+  - 8
+results_file: data/backtests/copenhagen2024/results/playoffs.yaml
+liquipedia: PGL/2024/Copenhagen
+teams:
+- Team Spirit
+- FaZe Clan
+- Team Vitality
+- Cloud9
+- Eternal Fire
+- Natus Vincere
+- G2 Esports
+- MOUZ

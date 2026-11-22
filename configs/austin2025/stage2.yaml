@@ -1,0 +1,45 @@
+# BLAST.tv Austin Major 2025 — Stage 2 (generated from Liquipedia)
+name: Stage 2
+type: swiss
+start: '2025-06-07'
+end: '2025-06-10'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/austin2025/results/stage2.yaml
+liquipedia: BLAST/Major/2025/Austin/Stage_2
+teams:
+- Team Falcons
+- FaZe Clan
+- 3DMAX
+- Virtus.pro
+- FURIA
+- TYLOO
+- MIBR
+- paiN Gaming
+- B8
+- HEROIC
+- BetBoom Team
+- OG
+- Lynn Vision Gaming
+- M80
+- Legacy
+- Nemiga Gaming
+round1:
+- - Team Falcons
+  - B8
+- - FaZe Clan
+  - HEROIC
+- - 3DMAX
+  - BetBoom Team
+- - Virtus.pro
+  - OG
+- - paiN Gaming
+  - Nemiga Gaming
+- - FURIA
+  - Lynn Vision Gaming
+- - MIBR
+  - Legacy
+- - M80
+  - TYLOO

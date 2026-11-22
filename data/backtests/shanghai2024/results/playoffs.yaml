@@ -1,0 +1,44 @@
+# Perfect World Shanghai Major 2024 — Playoffs actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: The MongolZ
+  b: MOUZ
+  winner: MOUZ
+  bo: 3
+  date: '2024-12-12'
+- round: 1
+  a: Team Liquid
+  b: Team Spirit
+  winner: Team Spirit
+  bo: 3
+  date: '2024-12-12'
+- round: 1
+  a: G2 Esports
+  b: HEROIC
+  winner: G2 Esports
+  bo: 3
+  date: '2024-12-13'
+- round: 1
+  a: FaZe Clan
+  b: Team Vitality
+  winner: FaZe Clan
+  bo: 3
+  date: '2024-12-13'
+- round: 2
+  a: MOUZ
+  b: Team Spirit
+  winner: Team Spirit
+  bo: 3
+  date: '2024-12-14'
+- round: 2
+  a: G2 Esports
+  b: FaZe Clan
+  winner: FaZe Clan
+  bo: 3
+  date: '2024-12-14'
+- round: 3
+  a: Team Spirit
+  b: FaZe Clan
+  winner: Team Spirit
+  bo: 3
+  date: '2024-12-15'

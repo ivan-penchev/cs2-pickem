@@ -1,0 +1,45 @@
+# PGL Major Copenhagen 2024 — Elimination Stage (generated from Liquipedia)
+name: Elimination Stage
+type: swiss
+start: '2024-03-21'
+end: '2024-03-24'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/copenhagen2024/results/stage2.yaml
+liquipedia: PGL/2024/Copenhagen/Elimination_Stage
+teams:
+- FaZe Clan
+- Team Spirit
+- Team Vitality
+- MOUZ
+- G2 Esports
+- Natus Vincere
+- Virtus.pro
+- Complexity
+- HEROIC
+- Cloud9
+- Eternal Fire
+- ECSTATIC
+- FURIA
+- The MongolZ
+- Imperial Esports
+- paiN Gaming
+round1:
+- - MOUZ
+  - ECSTATIC
+- - Natus Vincere
+  - The MongolZ
+- - Team Vitality
+  - Eternal Fire
+- - Virtus.pro
+  - Imperial Esports
+- - FaZe Clan
+  - HEROIC
+- - Complexity
+  - paiN Gaming
+- - Team Spirit
+  - Cloud9
+- - G2 Esports
+  - FURIA

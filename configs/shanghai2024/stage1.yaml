@@ -1,0 +1,45 @@
+# Perfect World Shanghai Major 2024 — Opening Stage (generated from Liquipedia)
+name: Opening Stage
+type: swiss
+start: '2024-11-30'
+end: '2024-12-03'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/shanghai2024/results/stage1.yaml
+liquipedia: Perfect_World/Major/2024/Shanghai/Opening_Stage
+teams:
+- The MongolZ
+- FURIA
+- Team Liquid
+- Complexity
+- Virtus.pro
+- paiN Gaming
+- BIG
+- Fnatic
+- Rare Atom
+- GamerLegion
+- Cloud9
+- FlyQuest
+- MIBR
+- Imperial Esports
+- Passion UA
+- Wildcard
+round1:
+- - FURIA
+  - GamerLegion
+- - Virtus.pro
+  - MIBR
+- - Team Liquid
+  - Cloud9
+- - Complexity
+  - FlyQuest
+- - BIG
+  - Passion UA
+- - Fnatic
+  - Wildcard
+- - The MongolZ
+  - Rare Atom
+- - paiN Gaming
+  - Imperial Esports

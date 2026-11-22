@@ -1,0 +1,27 @@
+# BLAST.tv Austin Major 2025 — Playoffs (generated from Liquipedia)
+name: Playoffs
+type: playoffs
+start: '2025-06-19'
+end: '2025-06-22'
+playoff_bo: 3
+final_bo: 3
+bracket:
+- - 1
+  - 2
+- - 3
+  - 4
+- - 5
+  - 6
+- - 7
+  - 8
+results_file: data/backtests/austin2025/results/playoffs.yaml
+liquipedia: BLAST/Major/2025/Austin/Playoffs
+teams:
+- Team Spirit
+- MOUZ
+- Team Vitality
+- Natus Vincere
+- FaZe Clan
+- The MongolZ
+- paiN Gaming
+- FURIA

@@ -1,0 +1,45 @@
+# BLAST.tv Austin Major 2025 — Stage 1 (generated from Liquipedia)
+name: Stage 1
+type: swiss
+start: '2025-06-03'
+end: '2025-06-06'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/austin2025/results/stage1.yaml
+liquipedia: BLAST/Major/2025/Austin/Stage_1
+teams:
+- HEROIC
+- Complexity
+- TYLOO
+- B8
+- FlyQuest
+- Lynn Vision Gaming
+- BetBoom Team
+- Wildcard
+- Chinggis Warriors
+- OG
+- NRG
+- Imperial Esports
+- Fluxo
+- Legacy
+- Nemiga Gaming
+- Metizport
+round1:
+- - Complexity
+  - OG
+- - HEROIC
+  - Chinggis Warriors
+- - B8
+  - Imperial Esports
+- - BetBoom Team
+  - Nemiga Gaming
+- - TYLOO
+  - NRG
+- - Lynn Vision Gaming
+  - Legacy
+- - Wildcard
+  - Metizport
+- - FlyQuest
+  - Fluxo

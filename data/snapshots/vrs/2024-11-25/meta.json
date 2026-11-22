@@ -1,0 +1,38 @@
+{
+  "source": "vrs",
+  "snapshot_date": "2024-11-25",
+  "fetched_at": "2026-11-22T15:25:35+00:00",
+  "tool_version": "0.1.0",
+  "rows": {
+    "standings": 216,
+    "matches": 1208
+  },
+  "urls": [
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/standings_global_2024_11_25.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0013--3dmax--djoko-ex3rcice-graviti-lucky-maka.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0019--big--jdc-krimbo-rigon-syrson-tabsen.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0039--cloud9--ax1le-boombl4-heavygod-icy-interz.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0014--complexity--elige-floppy-grim-hallzerk-jt.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0010--furia--chelo-fallen-kscerato-skullz-yuurih.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0007--faze--broky-frozen-karrigan-rain-ropz.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0020--flyquest--alistair-dexter-ins-liazz-vexite.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0022--fnatic--blamef-bodyy-krimz-matys-nawwk.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0001--g2--hunter--m0nesy-malbsmd-niko-snax.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0029--gamerlegion--fl4mus-sl3nd-tauson-volt-ztr.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0008--heroic--degster-kyxsan-nertz-sjuush-teses.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0035--imperial--decenty-felps-noway-try-vini.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0025--mibr--drop-exit-insani-lucaozy-saffee.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0006--mouz--brollan-jimpphat-siuhy-torzsi-xertion.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0002--natus_vincere--aleksib-b1t-im-jl-w0nderful.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0045--passion_ua--fear-jackasmo-jambo-s-chilla-zerrofix.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0089--rare_atom--childking-kaze-l1hang-somebody-summer.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0011--liquid--jks-naf-twistzz-ultimate-yekindar.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0004--spirit--chopper-donk-magixx-sh1ro-zont1x.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0003--vitality--apex-flamez-mezii-spinx-zywoo.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0005--the_mongolz--910-blitz-mzinho-senzu-techno.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0016--virtus_pro--electronic-fame-fl1t-jame-n0rb3r7.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0032--wildcard--jba-phzy-sonic-stanislaw-susp.md",
+    "https://raw.githubusercontent.com/ValveSoftware/counter-strike_regional_standings/main/live/2024/details/2024_11_25/0017--pain--biguzera-kauez-lux-nqz-snow.md"
+  ],
+  "notes": "Valve Regional Standings published before Perfect World Shanghai Major 2024 (backtest input)"
+}

@@ -1,0 +1,44 @@
+# BLAST.tv Austin Major 2025 — Playoffs actual results (Liquipedia, CC-BY-SA 3.0)
+matches:
+- round: 1
+  a: Team Spirit
+  b: MOUZ
+  winner: MOUZ
+  bo: 3
+  date: '2025-06-19'
+- round: 1
+  a: Team Vitality
+  b: Natus Vincere
+  winner: Team Vitality
+  bo: 3
+  date: '2025-06-20'
+- round: 1
+  a: FaZe Clan
+  b: The MongolZ
+  winner: The MongolZ
+  bo: 3
+  date: '2025-06-20'
+- round: 1
+  a: paiN Gaming
+  b: FURIA
+  winner: paiN Gaming
+  bo: 3
+  date: '2025-06-19'
+- round: 2
+  a: MOUZ
+  b: Team Vitality
+  winner: Team Vitality
+  bo: 3
+  date: '2025-06-21'
+- round: 2
+  a: The MongolZ
+  b: paiN Gaming
+  winner: The MongolZ
+  bo: 3
+  date: '2025-06-21'
+- round: 3
+  a: Team Vitality
+  b: The MongolZ
+  winner: Team Vitality
+  bo: 3
+  date: '2025-06-22'

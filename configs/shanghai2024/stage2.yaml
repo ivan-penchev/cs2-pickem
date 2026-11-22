@@ -1,0 +1,45 @@
+# Perfect World Shanghai Major 2024 — Elimination Stage (generated from Liquipedia)
+name: Elimination Stage
+type: swiss
+start: '2024-12-05'
+end: '2024-12-08'
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/backtests/shanghai2024/results/stage2.yaml
+liquipedia: Perfect_World/Major/2024/Shanghai/Elimination_Stage
+teams:
+- G2 Esports
+- Natus Vincere
+- Team Vitality
+- Team Spirit
+- MOUZ
+- FaZe Clan
+- HEROIC
+- 3DMAX
+- The MongolZ
+- Team Liquid
+- GamerLegion
+- FURIA
+- paiN Gaming
+- Wildcard
+- BIG
+- MIBR
+round1:
+- - G2 Esports
+  - The MongolZ
+- - Natus Vincere
+  - Team Liquid
+- - Team Vitality
+  - GamerLegion
+- - Team Spirit
+  - FURIA
+- - MOUZ
+  - paiN Gaming
+- - FaZe Clan
+  - Wildcard
+- - HEROIC
+  - BIG
+- - 3DMAX
+  - MIBR
