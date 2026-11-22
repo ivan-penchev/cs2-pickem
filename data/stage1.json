@@ -1,0 +1,11 @@
+{
+  "event": "PGL Major Singapore 2026 - Stage 1",
+  "format": "16-team Swiss, Bo1 (advancement/elimination matches Bo3), 3W advance / 3L out, Buchholz pairing from R2",
+  "start": "2026-11-24",
+  "teams": ["PARIVISION","Liquid","Ninjas in Pyjamas","FaZe","HEROIC","100 Thieves","Eternal Fire","9z","GOSH (ex-BC.Game)","M80","DENDELE","FlyQuest","Imperial","Chinggis Warriors","Wildcard","Lynn Vision"],
+  "round1": [
+    ["9z","Lynn Vision"],["HEROIC","Imperial"],["100 Thieves","Chinggis Warriors"],["Ninjas in Pyjamas","M80"],
+    ["Liquid","GOSH (ex-BC.Game)"],["PARIVISION","DENDELE"],["Eternal Fire","FlyQuest"],["FaZe","Wildcard"]
+  ],
+  "notes": ["9z replaced meyern with history", "BC.Game plays as GOSH"]
+}
