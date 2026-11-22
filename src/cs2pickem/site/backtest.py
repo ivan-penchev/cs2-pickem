@@ -10,7 +10,8 @@ from ..paths import home
 from .common import bar, calibration_svg, e, page, pct
 
 MODELS = (
-    ("model", "Blended model", "#ff4655"),
+    ("model", "Model (BT + VRS prior)", "#ff4655"),
+    ("legacy", "Legacy blend", "#f5a623"),
     ("vrs_only", "VRS only", "#3fa9f5"),
     ("coin_flip", "Coin flip", "#8a96b1"),
 )

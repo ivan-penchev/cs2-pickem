@@ -46,10 +46,10 @@ def test_committed_report_schema(major):
     if not path.exists():
         pytest.skip("backtest not run")
     rep = json.loads(path.read_text())
-    assert set(rep["summary"]) >= {"model", "vrs_only", "coin_flip", "outcome_calibration"}
+    assert set(rep["summary"]) >= {"model", "legacy", "vrs_only", "coin_flip", "outcome_calibration"}
     assert rep["summary"]["coin_flip"]["match_scores"]["brier"] == pytest.approx(0.25)
     for st in rep["stages"].values():
-        for key in ("model", "vrs_only", "coin_flip"):
+        for key in ("model", "legacy", "vrs_only", "coin_flip"):
             m = st[key]
             assert all(0 <= x["p_a"] <= 1 for x in m["matches"])
             if st["type"] == "swiss":

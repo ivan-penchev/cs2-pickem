@@ -27,6 +27,12 @@ from .majors import LP_TO_VRS, MAJORS, MajorSpec
 
 SINGAPORE_PARAMS = {
     "rating": {
+        "method": "bt",
+        "temperature": 0.85,
+        "bt_half_life_days": 120,
+        "bt_window_days": 180,
+        "bt_l2": 3.0,
+        "bt_prior_weight": 0.5,
         "w_vrs": 0.4,
         "w_hltv": 0.25,
         "w_elo": 0.35,

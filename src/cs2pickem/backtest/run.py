@@ -32,8 +32,13 @@ from ..playoffs import simulate_bracket
 from ..swiss.simulator import simulate_swiss
 from .majors import MAJORS
 
-MODELS = ("model", "vrs_only", "coin_flip")
-MODEL_LABEL = {"model": "Blended model", "vrs_only": "VRS seed/points only", "coin_flip": "Coin flip"}
+MODELS = ("model", "legacy", "vrs_only", "coin_flip")
+MODEL_LABEL = {
+    "model": "Configured model",
+    "legacy": "Legacy blend (v1)",
+    "vrs_only": "VRS seed/points only",
+    "coin_flip": "Coin flip",
+}
 EPS = 1e-6
 
 
@@ -58,8 +63,20 @@ def _orient(matches: list[dict]) -> pd.DataFrame:
     return pd.DataFrame(rows, columns=["team", "date", "opponent", "result"])
 
 
+def _with_rating(event: Event, **update) -> Event:
+    r = event.config.rating.model_copy(update=update)
+    return event.model_copy(update={"config": event.config.model_copy(update={"rating": r})})
+
+
+def _legacy(event: Event) -> Event:
+    """The original v1 model: VRS/HLTV/Elo z-blend at 200 Elo per sd, no temperature."""
+    return _with_rating(event, method="blend", temperature=1.0, rating_scale=200.0)
+
+
 def _vrs_only(event: Event) -> Event:
-    r = event.config.rating.model_copy(update={"w_hltv": 0.0, "w_elo": 0.0})
+    r = event.config.rating.model_copy(
+        update={"method": "blend", "temperature": 1.0, "w_hltv": 0.0, "w_elo": 0.0}
+    )
     return event.model_copy(update={"config": event.config.model_copy(update={"rating": r})})
 
 
@@ -280,6 +297,7 @@ def run_backtest(major: str, n_sims: int | None = None, log: Callable[[str], Non
         extra = _orient(earlier)
         ctxs = {
             "model": Context.load(event, as_of=stage.start, extra_matches=extra),
+            "legacy": Context.load(_legacy(event), as_of=stage.start, extra_matches=extra),
             "vrs_only": Context.load(_vrs_only(event), as_of=stage.start, extra_matches=extra),
         }
         fn = _swiss_stage if stage.type == "swiss" else _playoff_stage

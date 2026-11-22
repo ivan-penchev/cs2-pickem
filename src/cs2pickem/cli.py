@@ -115,7 +115,7 @@ def rate(
     event: EventOpt = None,
     stage: Annotated[str | None, typer.Option("--stage", "-s", help="Only teams of this stage.")] = None,
 ) -> None:
-    """Blended team ratings (VRS + HLTV + recent-form Elo + manual overrides)."""
+    """Team ratings (Bradley-Terry + VRS prior, or VRS/HLTV/Elo blend) + manual overrides."""
     ev = _event(event)
     ctx = _ctx(ev)
     tab = ctx.ratings.table
@@ -124,8 +124,10 @@ def rate(
 
         teams, _ = stage_teams(ctx, _stage(ev, stage))
         tab = tab.loc[[t for t in tab.index if t in teams]]
-    t = Table(title=f"{ev.config.name} – team ratings")
-    for c in ("#", "team", "rating", "VRS pts", "HLTV pts", "form Elo", "eff. matches", "override"):
+    has_bt = "bt" in tab.columns
+    t = Table(title=f"{ev.config.name} – team ratings ({ev.config.rating.method})")
+    cols = ["#", "team", "rating", "VRS pts", "HLTV pts", "form Elo"] + (["BT"] if has_bt else [])
+    for c in cols + ["eff. matches", "override"]:
         t.add_column(c, justify="right" if c != "team" else "left")
     for i, (team, r) in enumerate(tab.iterrows(), 1):
         f = lambda v, d=0: "–" if v != v else f"{v:.{d}f}"  # noqa: E731
@@ -136,6 +138,7 @@ def rate(
             f(r["vrs"]),
             f(r["hltv"]),
             f(r["elo"]),
+            *([f(r["bt"])] if has_bt else []),
             f(r["n_matches"], 1),
             f(r["override"]),
         )

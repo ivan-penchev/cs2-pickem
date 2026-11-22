@@ -39,8 +39,16 @@ class TeamInfo(BaseModel):
 
 
 class RatingParams(BaseModel):
-    """Weights of the strength blend (z-scored components) and Elo settings."""
+    """Strength model: ``blend`` (z-scored VRS/HLTV/Elo blend) or ``bt`` (fitted Bradley-Terry + VRS prior)."""
 
+    method: Literal["blend", "bt"] = "blend"
+    # final rating = 1500 + temperature * (raw - 1500) + override; < 1 tempers overconfidence (fit with
+    # `cs2pickem backtest tune`)
+    temperature: float = 1.0
+    bt_half_life_days: float = 120.0
+    bt_window_days: int = 180
+    bt_l2: float = 3.0  # prior precision (logit^-2); higher = stick closer to the VRS prior
+    bt_prior_weight: float = 0.5  # VRS points -> prior mean (1.0 = take VRS points as Elo at face value)
     w_vrs: float = 0.40
     w_hltv: float = 0.25
     w_elo: float = 0.35

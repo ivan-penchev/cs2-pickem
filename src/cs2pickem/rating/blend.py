@@ -5,6 +5,10 @@ top-heavy). Missing components are dropped and the remaining weights renormalise
 z is mapped to Elo with ``rating_scale`` points per 1 sd, centred at 1500, then manual ``delta`` from
 ``data/ratings_override.csv`` is added.
 
+With ``rating.method: bt`` the strength is instead a time-decayed Bradley-Terry fit with a VRS prior
+(see :mod:`.bt`); the blend components are still reported for reference. Either way the spread around
+1500 is multiplied by ``rating.temperature`` (backtests show the raw spread is overconfident).
+
 Elo difference → map win probability: ``1 / (1 + 10^(-diff/400))``.
 """
 
@@ -18,6 +22,7 @@ import pandas as pd
 
 from ..config import EventConfig
 from ..inputs import Inputs
+from .bt import bt_ratings
 from .elo import form_elo
 
 
@@ -66,7 +71,14 @@ def compute_ratings(
     num = sum(df[c].fillna(0) * wt for c, wt in w.items())
     den = sum(df[c].notna() * wt for c, wt in w.items()).replace(0, np.nan)
     df["z"] = (num / den).fillna(df[list(w)].mean(axis=1)).fillna(-1.0)
+    if p.method == "bt":
+        bt, bt_n = bt_ratings(cfg, inp.matches, vrs, as_of)
+        df["bt"] = pd.Series({t: bt.get(t, 1300.0) for t in teams})
+        df["n_matches"] = pd.Series({t: round(bt_n.get(t, 0.0), 2) for t in teams})
+        raw = df["bt"]
+    else:
+        raw = 1500 + p.rating_scale * df["z"]
     ov = inp.overrides.groupby("team")["delta"].sum() if not inp.overrides.empty else pd.Series(dtype=float)
     df["override"] = ov.reindex(teams).fillna(0.0)
-    df["rating"] = 1500 + p.rating_scale * df["z"] + df["override"]
+    df["rating"] = 1500 + p.temperature * (raw - 1500) + df["override"]
     return Ratings(df.sort_values("rating", ascending=False))
