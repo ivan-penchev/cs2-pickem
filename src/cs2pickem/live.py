@@ -182,3 +182,26 @@ def write_stage_teams(event: Event, stage: StageConfig, teams: list[str]) -> Pat
         out.append(block)
     p.write_text("".join(out))
     return p
+
+
+def merge_results(existing: list[MatchResult], new: list[MatchResult]) -> tuple[list[MatchResult], list[str]]:
+    """Merge scraped results into recorded ones without ever deleting or overriding a known winner.
+
+    Matches are keyed by the pair of teams. New pairs are appended, missing winners are filled in.
+    Returns ``(merged, changes)`` where ``changes`` are human-readable descriptions.
+    """
+    merged = [MatchResult(r.round, r.a, r.b, r.winner) for r in existing]
+    index = {frozenset((r.a, r.b)): r for r in merged}
+    changes: list[str] = []
+    for n in new:
+        key = frozenset((n.a, n.b))
+        cur = index.get(key)
+        if cur is None:
+            m = MatchResult(n.round, n.a, n.b, n.winner)
+            merged.append(m)
+            index[key] = m
+            changes.append(f"R{n.round} {n.a} vs {n.b}: " + (f"{n.winner} won" if n.winner else "scheduled"))
+        elif cur.winner is None and n.winner is not None:
+            cur.winner = n.winner
+            changes.append(f"R{cur.round} {cur.a} vs {cur.b}: {n.winner} won")
+    return merged, changes

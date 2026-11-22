@@ -2,6 +2,10 @@
 # `teams` is filled automatically by `cs2pickem next-stage` (or edit by hand once Stage 1 is over).
 name: Stage 2
 type: swiss
+start: 2026-11-28
+end: 2026-12-01
+liquipedia: PGL/2026/Singapore/Stage_2
+dfrag: pgl-major-singapore-2026-stage-2
 wins_to_advance: 3
 losses_to_eliminate: 3
 default_bo: 1

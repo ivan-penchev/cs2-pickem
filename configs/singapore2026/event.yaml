@@ -5,6 +5,8 @@
 id: singapore2026
 name: PGL Major Singapore 2026
 start: '2026-11-24'
+end: '2026-12-13'
+liquipedia: PGL/2026/Singapore
 vrs_date: '2026_11_02'
 map_pool:
 - Ancient
@@ -120,6 +122,7 @@ teams:
   tag: 100T
   aliases:
   - 100T
+  - 100 Thieves Roobet
   hltv_id: 8474
   hltv_slug: 100-thieves
   region: AM
@@ -156,6 +159,8 @@ teams:
   - Swisher
 - name: DENDELE
   tag: DEN
+  aliases:
+  - DENDELE CS
   hltv_id: 13926
   hltv_slug: dendele
   region: AM
@@ -197,6 +202,7 @@ teams:
   - GOSH (ex-BC.Game)
   - BC.Game
   - BCGame
+  - BC.Game Esports
   vrs_name: BC.Game
   hltv_id: 12878
   hltv_slug: bcgame

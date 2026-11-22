@@ -139,6 +139,8 @@ class StageConfig(BaseModel):
         None  # Liquipedia page of the stage (live scraping), e.g. PGL/2026/Singapore/Stage_1
     )
     end: date | None = None
+    dfrag: str | None = None  # dfrag.gg event slug (live-scrape fallback)
+    hltv_event: int | None = None  # HLTV event id (live scraping via /results?event=<id>)
     # Optional explicit Round-1 pairs (official draw). Default: seed i vs seed i+n/2.
     round1: list[list[str]] | None = None
 

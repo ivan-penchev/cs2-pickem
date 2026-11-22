@@ -2,6 +2,10 @@
 # Quarter-finals: 1v8, 4v5 (upper half) | 2v7, 3v6 (lower half). Bo3, Grand Final Bo5.
 name: Playoffs
 type: playoffs
+start: 2026-12-10
+end: 2026-12-13
+liquipedia: PGL/2026/Singapore/Playoffs
+dfrag: pgl-major-singapore-2026
 playoff_bo: 3
 final_bo: 5
 bracket: [[1, 8], [4, 5], [2, 7], [3, 6]]

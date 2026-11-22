@@ -21,6 +21,14 @@ result_app = typer.Typer(help="Record completed matches (live mode).", no_args_i
 app.add_typer(result_app, name="result")
 backtest_app = typer.Typer(help="Point-in-time backtests on past Majors.", no_args_is_help=True)
 app.add_typer(backtest_app, name="backtest")
+live_app = typer.Typer(
+    help="Automatic result scraping during an event (GitHub Actions).", no_args_is_help=True
+)
+app.add_typer(live_app, name="live")
+site_app = typer.Typer(
+    help="Build the static site (dashboard, stage pages, backtests).", no_args_is_help=True
+)
+app.add_typer(site_app, name="site")
 console = Console(width=max(Console().width, 110))
 
 EventOpt = Annotated[
@@ -463,6 +471,52 @@ def next_stage(
         raise typer.BadParameter("refusing to --write a projected seeding; finish the previous stage first")
     if write:
         console.print(f"wrote {write_stage_teams(ev, st, teams)}")
+
+
+# ------------------------------------------------------------------------------------------ live
+def _gh_output(key: str, value: str) -> None:
+    import os
+
+    if p := os.environ.get("GITHUB_OUTPUT"):
+        with open(p, "a") as f:
+            f.write(f"{key}={value}\n")
+
+
+def _gh_summary(md: str) -> None:
+    import os
+
+    if p := os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(p, "a") as f:
+            f.write(md)
+
+
+@live_app.command("update")
+def live_update(
+    event: EventOpt = None,
+    stage: Annotated[list[str] | None, typer.Option("--stage", "-s", help="Only these stages.")] = None,
+    force: Annotated[bool, typer.Option("--force", help="Run even outside the event dates.")] = False,
+    today: Annotated[str | None, typer.Option("--today", help="Pretend today is YYYY-MM-DD.")] = None,
+) -> None:
+    """Scrape finished matches (HLTV → Liquipedia → DFRAG), merge into data/results, advance stages.
+
+    Idempotent and fail-soft: never deletes results and always exits 0 (see the job summary).
+    """
+    from datetime import date
+
+    from .livescrape import update
+
+    ev = _event(event)
+    try:
+        rep = update(ev, stage, today=date.fromisoformat(today) if today else None, force=force)
+    except Exception as e:  # noqa: BLE001 – a scrape must never fail the workflow
+        console.print(f"[red]live update failed:[/] {type(e).__name__}: {e}")
+        _gh_summary(f"### cs2pickem live update failed\n\n`{type(e).__name__}: {e}`\n")
+        _gh_output("changed", "false")
+        return
+    console.print(rep.markdown())
+    _gh_summary(rep.markdown())
+    _gh_output("changed", "true" if rep.changed else "false")
+    _gh_output("ran", "true" if rep.ran else "false")
 
 
 # ------------------------------------------------------------------------------------------ animate

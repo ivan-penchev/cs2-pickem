@@ -1,6 +1,10 @@
 # Stage 3 — 8 direct invites + 8 Stage 2 qualifiers. At this Major every Stage 3 match is Bo3.
 name: Stage 3
 type: swiss
+start: 2026-12-02
+end: 2026-12-06
+liquipedia: PGL/2026/Singapore/Stage_3
+dfrag: pgl-major-singapore-2026-stage-3
 wins_to_advance: 3
 losses_to_eliminate: 3
 default_bo: 3

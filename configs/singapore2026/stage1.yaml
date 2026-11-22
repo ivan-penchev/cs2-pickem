@@ -3,6 +3,10 @@
 name: Stage 1
 type: swiss
 start: 2026-11-24
+end: 2026-11-27
+liquipedia: PGL/2026/Singapore/Stage_1
+dfrag: pgl-major-singapore-2026-stage-1
+hltv_event: 9303
 wins_to_advance: 3
 losses_to_eliminate: 3
 default_bo: 1
