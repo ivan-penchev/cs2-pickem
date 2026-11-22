@@ -52,6 +52,11 @@ class SwissResult:
     wins: np.ndarray  # (n_sims, n_teams) int8
     losses: np.ndarray  # (n_sims, n_teams) int8
     rank: np.ndarray  # (n_sims, n_teams) int8 – final standing (0 = 1st)
+    # Match logs of the first ``record_runs`` simulations: runs[s] = [(round, a, b, bo, winner, forced)].
+    runs: list[list[tuple[int, int, int, int, int, bool]]] = field(default_factory=list)
+    # Per simulation: simulated (non-forced) matches won by the pre-match underdog, and simulated matches.
+    upsets: np.ndarray | None = None
+    n_matches: np.ndarray | None = None
 
     @property
     def n_sims(self) -> int:
@@ -92,7 +97,9 @@ def _simulate_chunk(
     known: dict[int, KnownRound],
     n: int,
     seed: int,
-) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    log: list[list[tuple[int, int, int, int, int, bool]]] | None = None,
+    record: int = 0,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     rng = np.random.default_rng(seed)
     T = fmt.n_teams
     W, L = fmt.wins_to_advance, fmt.losses_to_eliminate
@@ -101,6 +108,8 @@ def _simulate_chunk(
     out_w = np.zeros((n, T), np.int8)
     out_l = np.zeros((n, T), np.int8)
     out_r = np.zeros((n, T), np.int8)
+    out_up = np.zeros(n, np.int16)
+    out_m = np.zeros(n, np.int16)
     pair_cache: dict[tuple, list[Pair]] = {}
     P = {bo: m.tolist() for bo, m in probs.items()}
 
@@ -112,6 +121,7 @@ def _simulate_chunk(
         history: list[int] = []
         u = U[s]
         k = 0
+        run_log = [] if log is not None and s < record else None
         for rnd in range(1, fmt.max_rounds + 1):
             active = [t for t in range(T) if wins[t] < W and losses[t] < L]
             if not active:
@@ -138,7 +148,11 @@ def _simulate_chunk(
                 if forced is not None:
                     winner = forced
                 else:
-                    winner = a if u[k] < P[bo][a][b] else b
+                    pa = P[bo][a][b]
+                    winner = a if u[k] < pa else b
+                    out_m[s] += 1
+                    if (pa < 0.5) if winner == a else (pa > 0.5):
+                        out_up[s] += 1
                 k += 1
                 loser = b if winner == a else a
                 wins[winner] += 1
@@ -147,13 +161,17 @@ def _simulate_chunk(
                 opps[b].append(a)
                 played.add(frozenset((a, b)))
                 results.append(winner)
+                if run_log is not None:
+                    run_log.append((rnd, a, b, bo, winner, forced is not None))
             history.extend(results)
+        if run_log is not None:
+            log.append(run_log)  # type: ignore[union-attr]
         out_w[s] = wins
         out_l[s] = losses
         order = standings_order(range(T), wins, losses, opps)
         for pos, t in enumerate(order):
             out_r[s, t] = pos
-    return out_w, out_l, out_r
+    return out_w, out_l, out_r, out_up, out_m
 
 
 def simulate_swiss(
@@ -164,11 +182,14 @@ def simulate_swiss(
     seed: int = 2026,
     round1: list[tuple[str, str]] | None = None,
     known: dict[int, list[tuple[str, str, str | None]]] | None = None,
+    record_runs: int = 0,
 ) -> SwissResult:
     """Simulate a Swiss stage.
 
     ``teams`` is in seed order. ``matrices[bo][i, j]`` = P(i beats j) in a best-of-``bo``.
     ``known`` maps round number → list of ``(team_a, team_b, winner_or_None)``.
+    ``record_runs`` keeps the full match log of the first that many simulations (``SwissResult.runs``);
+    it does not change the random stream, so results are identical with or without it.
     """
     fmt = fmt or SwissFormat(n_teams=len(teams))
     idx = {t: i for i, t in enumerate(teams)}
@@ -188,8 +209,9 @@ def simulate_swiss(
     needed = {fmt.default_bo, fmt.decider_bo}
     probs = {bo: np.asarray(matrices[bo]) for bo in needed}
 
-    w, lo, r = _simulate_chunk(fmt, probs, r1, kn, n_sims, seed)
-    return SwissResult(list(teams), fmt, w, lo, r)
+    log: list = []
+    w, lo, r, up, nm = _simulate_chunk(fmt, probs, r1, kn, n_sims, seed, log, min(record_runs, n_sims))
+    return SwissResult(list(teams), fmt, w, lo, r, log, up, nm)
 
 
 def play_out(

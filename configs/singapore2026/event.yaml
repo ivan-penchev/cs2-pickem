@@ -43,6 +43,7 @@ pickem:
   threshold: 5
 teams:
 - name: Ninjas in Pyjamas
+  tag: NIP
   aliases:
   - NiP
   hltv_id: 4411
@@ -55,6 +56,7 @@ teams:
   - stavn
   - xKacpersky
 - name: PARIVISION
+  tag: PARI
   hltv_id: 12467
   hltv_slug: parivision
   region: EU
@@ -65,6 +67,7 @@ teams:
   - xiELO
   - zweih
 - name: HEROIC
+  tag: HER
   hltv_id: 7175
   hltv_slug: heroic
   region: EU
@@ -75,6 +78,7 @@ teams:
   - nilo
   - susp
 - name: FaZe
+  tag: FAZE
   aliases:
   - FaZe Clan
   hltv_id: 6667
@@ -87,6 +91,7 @@ teams:
   - Neityu
   - Twistzz
 - name: Liquid
+  tag: TL
   aliases:
   - Team Liquid
   hltv_id: 5973
@@ -99,6 +104,7 @@ teams:
   - malbsMd
   - NAF
 - name: Eternal Fire
+  tag: EF
   aliases:
   - EF
   hltv_id: 11251
@@ -111,6 +117,7 @@ teams:
   - regali
   - soulfly
 - name: 100 Thieves
+  tag: 100T
   aliases:
   - 100T
   hltv_id: 8474
@@ -123,6 +130,7 @@ teams:
   - rain
   - sirah
 - name: 9z
+  tag: 9Z
   aliases:
   - 9z Team
   hltv_id: 9996
@@ -136,6 +144,7 @@ teams:
   - max
   roster_changed: '2026-11-10'
 - name: M80
+  tag: M80
   hltv_id: 12376
   hltv_slug: m80
   region: AM
@@ -146,6 +155,7 @@ teams:
   - slaxz-
   - Swisher
 - name: DENDELE
+  tag: DEN
   hltv_id: 13926
   hltv_slug: dendele
   region: AM
@@ -156,6 +166,7 @@ teams:
   - maxxkor
   - rdnzao
 - name: Imperial
+  tag: IMP
   aliases:
   - Imperial Esports
   hltv_id: 9455
@@ -168,6 +179,7 @@ teams:
   - saadzin
   - VINI
 - name: Wildcard
+  tag: WC
   aliases:
   - Wildcard Gaming
   hltv_id: 12257
@@ -180,6 +192,7 @@ teams:
   - nEMANHA
   - reck
 - name: GOSH
+  tag: GOSH
   aliases:
   - GOSH (ex-BC.Game)
   - BC.Game
@@ -195,6 +208,7 @@ teams:
   - s1mple
   - Senzu
 - name: FlyQuest
+  tag: FLY
   hltv_id: 12774
   hltv_slug: flyquest
   region: AS
@@ -205,6 +219,7 @@ teams:
   - nettik
   - Vexite
 - name: Chinggis Warriors
+  tag: CW
   hltv_id: 12646
   hltv_slug: chinggis-warriors
   region: AS
@@ -215,6 +230,7 @@ teams:
   - sk0R
   - tikuak
 - name: Lynn Vision
+  tag: LVG
   aliases:
   - Lynn Vision Gaming
   - LVG
@@ -228,6 +244,7 @@ teams:
   - Westmelon
   - z4KR
 - name: FUT
+  tag: FUT
   aliases:
   - FUT Esports
   hltv_id: 13286
@@ -240,6 +257,7 @@ teams:
   - Krabeni
   - xfl0ud
 - name: Nemiga
+  tag: NEM
   hltv_id: 7969
   hltv_slug: nemiga
   region: EU
@@ -250,6 +268,7 @@ teams:
   - syph0
   - Xant3r
 - name: G2
+  tag: G2
   aliases:
   - G2 Esports
   hltv_id: 5995
@@ -262,6 +281,7 @@ teams:
   - NertZ
   - r1nkle
 - name: 1win
+  tag: 1WIN
   hltv_id: 10621
   hltv_slug: 1win
   region: EU
@@ -272,6 +292,7 @@ teams:
   - fame
   - nafany
 - name: Natus Vincere
+  tag: NAVI
   aliases:
   - NaVi
   - NAVI
@@ -285,6 +306,7 @@ teams:
   - makazze
   - w0nderful
 - name: Astralis
+  tag: AST
   hltv_id: 6665
   hltv_slug: astralis
   region: EU
@@ -295,6 +317,7 @@ teams:
   - siuhy
   - Staehr
 - name: The MongolZ
+  tag: MGLZ
   aliases:
   - MongolZ
   hltv_id: 6248
@@ -307,6 +330,7 @@ teams:
   - nin9
   - Techno
 - name: MIBR
+  tag: MIBR
   hltv_id: 9215
   hltv_slug: mibr
   region: AM
@@ -317,6 +341,7 @@ teams:
   - tomaszin
   - venomzera
 - name: MOUZ
+  tag: MOUZ
   hltv_id: 4494
   hltv_slug: mouz
   region: EU
@@ -327,6 +352,7 @@ teams:
   - xelex
   - xertioN
 - name: Vitality
+  tag: VIT
   aliases:
   - Team Vitality
   hltv_id: 9565
@@ -339,6 +365,7 @@ teams:
   - ropz
   - ZywOo
 - name: FURIA
+  tag: FUR
   hltv_id: 8297
   hltv_slug: furia
   region: AM
@@ -349,6 +376,7 @@ teams:
   - YEKINDAR
   - yuurih
 - name: Aurora
+  tag: AUR
   hltv_id: 11861
   hltv_slug: aurora
   region: EU
@@ -359,6 +387,7 @@ teams:
   - woxic
   - XANTARES
 - name: Spirit
+  tag: SPIR
   aliases:
   - Team Spirit
   hltv_id: 7020
@@ -371,6 +400,7 @@ teams:
   - tN1R
   - zont1x
 - name: BETBOOM
+  tag: BB
   aliases:
   - BetBoom
   - BetBoom Team
@@ -384,6 +414,7 @@ teams:
   - S1ren
   - zorte
 - name: Falcons
+  tag: FLCN
   aliases:
   - Team Falcons
   hltv_id: 11283
@@ -396,6 +427,7 @@ teams:
   - NiKo
   - TeSeS
 - name: Legacy
+  tag: LGC
   hltv_id: 12468
   hltv_slug: legacy
   region: AM

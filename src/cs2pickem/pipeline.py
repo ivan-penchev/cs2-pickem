@@ -66,6 +66,7 @@ def run_swiss(
     n_sims: int | None = None,
     use_results: bool = True,
     use_veto: bool = True,
+    record_runs: int = 0,
 ) -> SwissResult:
     teams = stage.teams or stage_teams(ctx, stage)[0]
     stage = stage.model_copy(update={"teams": teams})
@@ -82,6 +83,7 @@ def run_swiss(
         seed=sim.seed,
         round1=[tuple(p) for p in stage.round1] if stage.round1 else None,  # type: ignore[misc]
         known=known,
+        record_runs=record_runs,
     )
 
 

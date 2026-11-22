@@ -23,6 +23,7 @@ DEFAULT_MAP_POOL = ["Ancient", "Anubis", "Cache", "Dust II", "Inferno", "Mirage"
 class TeamInfo(BaseModel):
     name: str
     aliases: list[str] = Field(default_factory=list)
+    tag: str | None = None  # short display tag (badges in the HTML visualisation)
     vrs_name: str | None = None
     hltv_id: int | None = None
     hltv_slug: str | None = None
