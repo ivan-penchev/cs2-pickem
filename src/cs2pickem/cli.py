@@ -19,6 +19,8 @@ app = typer.Typer(
 )
 result_app = typer.Typer(help="Record completed matches (live mode).", no_args_is_help=True)
 app.add_typer(result_app, name="result")
+backtest_app = typer.Typer(help="Point-in-time backtests on past Majors.", no_args_is_help=True)
+app.add_typer(backtest_app, name="backtest")
 console = Console(width=max(Console().width, 110))
 
 EventOpt = Annotated[
@@ -504,6 +506,66 @@ def animate(
         console.print(f"Bracket expected correct = {pk['expected']:.2f} / {pk['n_picks']}")
     if open_:
         webbrowser.open(path.resolve().as_uri())
+
+
+# ------------------------------------------------------------------------------------------ backtest
+MajorOpt = Annotated[str, typer.Option("--event", "-e", help="Backtest Major id, e.g. budapest2025.")]
+
+
+def _major(name: str) -> str:
+    from .backtest import MAJORS
+
+    if name not in MAJORS:
+        raise typer.BadParameter(f"unknown Major {name!r}; known: {', '.join(MAJORS)}")
+    return name
+
+
+@backtest_app.command("prepare")
+def backtest_prepare(
+    event: MajorOpt,
+    refresh: Annotated[bool, typer.Option("--refresh", help="Ignore cached Liquipedia pages.")] = False,
+) -> None:
+    """Scrape actual results + point-in-time VRS/HLTV snapshots and write configs/<major>/ and data/backtests/."""
+    from .backtest.prepare import prepare
+
+    path = prepare(_major(event), log=console.print, ttl_hours=0 if refresh else 1e6)
+    console.print(f"[green]prepared[/] {path}")
+
+
+@backtest_app.command("run")
+def backtest_run(
+    event: Annotated[
+        list[str] | None, typer.Option("--event", "-e", help="Major id(s); default: all known Majors.")
+    ] = None,
+    sims: SimsOpt = 20000,
+    html: Annotated[bool, typer.Option("--html/--no-html", help="Regenerate site/backtest.html.")] = True,
+) -> None:
+    """Run the point-in-time backtest (model vs VRS-only vs coin flip) and write report.json + backtest.html."""
+    from .backtest import MAJORS
+    from .backtest.run import run_backtest
+    from .site import backtest as bt_html
+
+    for m in event or list(MAJORS):
+        rep = run_backtest(_major(m), n_sims=sims, log=console.print)
+        s = rep["summary"]
+        t = Table(title=f"{rep['name']} – summary")
+        for c in ("model", "Brier", "log-loss", "accuracy", "coins", "Swiss picks"):
+            t.add_column(c, justify="right" if c != "model" else "left")
+        for k, v in s.items():
+            if k == "outcome_calibration":
+                continue
+            ms = v["match_scores"]
+            t.add_row(
+                v["label"],
+                f"{ms['brier']:.3f}",
+                f"{ms['log_loss']:.3f}",
+                _pct(ms["accuracy"]),
+                f"{v['coins']}/{v['swiss_stages']}",
+                f"{v['pickem_correct']}/{10 * v['swiss_stages']}",
+            )
+        console.print(t)
+    if html:
+        console.print(f"[green]wrote[/] {bt_html.write()}")
 
 
 def main() -> None:  # pragma: no cover
