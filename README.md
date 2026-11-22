@@ -78,14 +78,31 @@ The page is one HTML file with no external scripts, so it works offline. It repl
 
 ## Backtests
 
-`cs2pickem backtest run` replays the StarLadder Budapest Major 2025 and the IEM Cologne Major 2026 using only data from before each stage, meaning the VRS file and HLTV ranking from that date and match history cut at the stage start. It compares the current model with the previous blend model, a VRS-seed-only model and a coin flip. Lower Brier is better.
+`cs2pickem backtest run` replays every CS2 Major with a Swiss format using only data from before each stage, meaning the VRS file and HLTV ranking from that date and match history cut at the stage start. That is 13 Swiss stages: PGL Copenhagen 2024 and Perfect World Shanghai 2024 have two each, and BLAST Austin 2025, StarLadder Budapest 2025 and IEM Cologne 2026 have three each. Copenhagen predates the Valve Regional Standings, so its VRS input is a synthetic table built from the HLTV ranking of 2024-03-11, and it has no point-in-time match history. The report says so on the page.
 
-| event (20k sims, 106 matches) | model Brier | old blend | VRS-only | coin flip | model log-loss | model accuracy | coins, model / old blend / VRS-only |
-|---|---|---|---|---|---|---|---|
-| Budapest 2025 | 0.224 | 0.248 | 0.250 | 0.250 | 0.636 | 60.4% | 1 / 2 / 3 of 3 |
-| Cologne 2026 | 0.216 | 0.229 | 0.234 | 0.250 | 0.621 | 65.1% | 1 / 1 / 1 of 3 |
+Match-level Brier over all 464 matches (lower is better):
 
-The model gives clearly better match probabilities than seeding, but that has not turned into more coins. In Budapest, picking straight from VRS seeds earned two more. The model itself gives its picks a 40 to 50% chance of 5 correct per stage, so six stages are far too few to separate the models. Read the picks as a slightly better than seeded guess. Full results are in `site/backtest.html`.
+| event | matches | BT model | BT+VRS ensemble | old blend | VRS-only | coin flip |
+|---|---|---|---|---|---|---|
+| Copenhagen 2024 | 73 | 0.233 | 0.244 | 0.263 | 0.263 | 0.250 |
+| Shanghai 2024 | 73 | 0.210 | 0.208 | 0.212 | 0.213 | 0.250 |
+| Austin 2025 | 106 | 0.248 | 0.250 | 0.255 | 0.256 | 0.250 |
+| Budapest 2025 | 106 | 0.224 | 0.234 | 0.248 | 0.250 | 0.250 |
+| Cologne 2026 | 106 | 0.216 | 0.222 | 0.229 | 0.234 | 0.250 |
+
+What matters for the coin is correct picks, so the backtest also compares pick strategies. All of them use the same simulator (20k sims, fixed seed) and optimiser. Only the win probabilities, the objective and the tie-break change. The intervals are bootstrap 95% CIs over the 13 stages, and the differences are paired per stage.
+
+| strategy | mean correct of 10 | vs VRS-only | coins | Brier |
+|---|---|---|---|---|
+| BT, max P(≥5) (default) | 4.31 [3.69, 4.85] | +0.15 [-0.54, +0.92] | 7/13 | 0.227 |
+| BT, seed-anchored tie-break | 4.31 [3.69, 4.92] | +0.15 [-0.46, +0.77] | 8/13 | 0.227 |
+| BT+VRS 50/50 on probabilities | 4.23 [3.46, 4.92] | +0.08 [-0.46, +0.69] | 7/13 | 0.231 |
+| VRS seeds only | 4.15 [3.31, 4.92] | 0 | 7/13 | 0.244 |
+| BT+VRS 50/50 on logits | 4.15 [3.38, 4.85] | +0.00 [-0.46, +0.46] | 7/13 | 0.232 |
+| old blend | 4.15 [3.54, 4.77] | +0.00 [-0.31, +0.31] | 6/13 | 0.242 |
+| BT, max E[correct] | 4.23 [3.62, 4.77] | +0.08 [-0.62, +0.85] | 6/13 | 0.227 |
+
+The default stays BT optimised for P(≥5). It has the highest mean correct picks, and it was highest or tied for highest on all three simulation seeds tried at 100k sims. The honest reading is that the strategies cannot be told apart. Every paired difference has a CI that straddles zero, and changing only the simulation seed moves a strategy by about 0.2 picks per stage, which is as large as the gaps between them. Since nothing beats BT and it has the best match probabilities, there is no reason to switch. Optimising expected correct picks instead of P(≥5) never helped. Expect a bit over 4 correct picks and a coin in roughly half of the stages. Full results, including per-category hit rates and every pick, are in `site/backtest.html`.
 
 ## Swiss rules
 
