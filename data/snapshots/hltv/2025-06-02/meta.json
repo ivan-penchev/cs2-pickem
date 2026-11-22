@@ -1,15 +1,59 @@
 {
   "source": "hltv",
   "snapshot_date": "2025-06-02",
-  "fetched_at": "2026-11-22T15:25:47+00:00",
+  "fetched_at": "2026-11-22T17:41:34+00:00",
   "tool_version": "0.1.0",
   "rows": {
     "ranking": 257,
-    "maps": 0,
-    "results": 0
+    "maps": 202,
+    "results": 864
   },
   "urls": [
-    "https://www.hltv.org/ranking/teams/2025/june/2"
+    "https://www.hltv.org/ranking/teams/2025/june/2",
+    "https://www.hltv.org/results?team=4914",
+    "https://www.hltv.org/results?team=11861",
+    "https://www.hltv.org/results?team=11241",
+    "https://www.hltv.org/results?team=12394",
+    "https://www.hltv.org/results?team=12646",
+    "https://www.hltv.org/results?team=5005",
+    "https://www.hltv.org/results?team=8297",
+    "https://www.hltv.org/results?team=6667",
+    "https://www.hltv.org/results?team=11837",
+    "https://www.hltv.org/results?team=12774",
+    "https://www.hltv.org/results?team=5995",
+    "https://www.hltv.org/results?team=7175",
+    "https://www.hltv.org/results?team=9455",
+    "https://www.hltv.org/results?team=12468",
+    "https://www.hltv.org/results?team=8840",
+    "https://www.hltv.org/results?team=12376",
+    "https://www.hltv.org/results?team=9215",
+    "https://www.hltv.org/results?team=4494",
+    "https://www.hltv.org/results?team=11641",
+    "https://www.hltv.org/results?team=6673",
+    "https://www.hltv.org/results?team=4608",
+    "https://www.hltv.org/results?team=7969",
+    "https://www.hltv.org/results?team=10503",
+    "https://www.hltv.org/results?team=4863",
+    "https://www.hltv.org/results?team=11283",
+    "https://www.hltv.org/results?team=5973",
+    "https://www.hltv.org/results?team=7020",
+    "https://www.hltv.org/results?team=9565",
+    "https://www.hltv.org/results?team=6248",
+    "https://www.hltv.org/results?team=5378",
+    "https://www.hltv.org/results?team=12257",
+    "https://www.hltv.org/results?team=4773"
   ],
-  "notes": "Archived HLTV world ranking before BLAST.tv Austin Major 2025 (backtest input; no map stats archived)"
+  "notes": "Archived HLTV world ranking before BLAST.tv Austin Major 2025, plus results and per-map W/L of the 32 Major teams backfilled from HLTV results and match pages for [2025-03-04, 2025-06-02). Map stats are summed from individual maps in that window; pick/ban rates are not reconstructable and left empty.",
+  "backfill": {
+    "source": "hltv.org /results?team=<id> + /matches/<id> (Playwright)",
+    "scraped_at": "2026-11-22T17:41:34+00:00",
+    "window": [
+      "2025-03-04",
+      "2025-06-02"
+    ],
+    "teams": 32,
+    "series": 864,
+    "match_pages": 718,
+    "gaps": []
+  }
 }

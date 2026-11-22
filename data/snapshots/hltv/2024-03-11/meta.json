@@ -1,15 +1,51 @@
 {
   "source": "hltv",
   "snapshot_date": "2024-03-11",
-  "fetched_at": "2026-11-22T15:25:27+00:00",
+  "fetched_at": "2026-11-22T17:40:36+00:00",
   "tool_version": "0.1.0",
   "rows": {
     "ranking": 257,
-    "maps": 0,
-    "results": 0
+    "maps": 146,
+    "results": 464
   },
   "urls": [
-    "https://www.hltv.org/ranking/teams/2024/march/11"
+    "https://www.hltv.org/ranking/teams/2024/march/11",
+    "https://www.hltv.org/results?team=12586",
+    "https://www.hltv.org/results?team=9806",
+    "https://www.hltv.org/results?team=5752",
+    "https://www.hltv.org/results?team=5005",
+    "https://www.hltv.org/results?team=11419",
+    "https://www.hltv.org/results?team=4869",
+    "https://www.hltv.org/results?team=11251",
+    "https://www.hltv.org/results?team=8297",
+    "https://www.hltv.org/results?team=6667",
+    "https://www.hltv.org/results?team=5995",
+    "https://www.hltv.org/results?team=9928",
+    "https://www.hltv.org/results?team=7175",
+    "https://www.hltv.org/results?team=9455",
+    "https://www.hltv.org/results?team=12591",
+    "https://www.hltv.org/results?team=12468",
+    "https://www.hltv.org/results?team=8840",
+    "https://www.hltv.org/results?team=4494",
+    "https://www.hltv.org/results?team=4608",
+    "https://www.hltv.org/results?team=10567",
+    "https://www.hltv.org/results?team=7020",
+    "https://www.hltv.org/results?team=9565",
+    "https://www.hltv.org/results?team=6248",
+    "https://www.hltv.org/results?team=5378",
+    "https://www.hltv.org/results?team=4773"
   ],
-  "notes": "Archived HLTV world ranking before PGL Major Copenhagen 2024 (backtest input; no map stats archived)"
+  "notes": "Archived HLTV world ranking before PGL Major Copenhagen 2024, plus results and per-map W/L of the 24 Major teams backfilled from HLTV results and match pages for [2023-12-12, 2024-03-11). Map stats are summed from individual maps in that window; pick/ban rates are not reconstructable and left empty.",
+  "backfill": {
+    "source": "hltv.org /results?team=<id> + /matches/<id> (Playwright)",
+    "scraped_at": "2026-11-22T17:40:36+00:00",
+    "window": [
+      "2023-12-12",
+      "2024-03-11"
+    ],
+    "teams": 24,
+    "series": 464,
+    "match_pages": 277,
+    "gaps": []
+  }
 }

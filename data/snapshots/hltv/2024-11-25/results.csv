@@ -1,1 +1,609 @@
 date,team,opponent,maps_won,maps_lost
+2024-11-22,3DMAX,G2,2,1
+2024-11-21,3DMAX,Eternal Fire,19,16
+2024-11-21,3DMAX,TSM,13,11
+2024-11-03,3DMAX,OG,2,1
+2024-11-02,3DMAX,The MongolZ,0,2
+2024-10-26,3DMAX,BESTIA,2,1
+2024-10-21,3DMAX,OG,2,0
+2024-10-21,3DMAX,Falcons,2,0
+2024-10-19,3DMAX,Nemiga,1,2
+2024-10-18,3DMAX,SAW,2,1
+2024-10-17,3DMAX,Sashi,2,1
+2024-10-16,3DMAX,Nemiga,0,2
+2024-10-15,3DMAX,TSM,2,1
+2024-10-12,3DMAX,Spirit Academy,1,2
+2024-10-10,3DMAX,CYBERSHOKE,2,0
+2024-10-06,3DMAX,Passion UA,1,2
+2024-10-05,3DMAX,PARIVISION,2,1
+2024-10-03,3DMAX,Rhyno,2,1
+2024-09-29,3DMAX,SAW,1,2
+2024-09-28,3DMAX,B8,1,2
+2024-09-28,3DMAX,BETBOOM,1,2
+2024-09-27,3DMAX,9z,2,0
+2024-09-27,3DMAX,Nemiga,2,0
+2024-09-27,3DMAX,CYBERSHOKE,2,1
+2024-09-26,3DMAX,Aurora,2,0
+2024-09-26,3DMAX,Monte,2,0
+2024-09-25,3DMAX,Zero Tenacity,2,0
+2024-09-24,3DMAX,Zero Tenacity,2,1
+2024-09-13,3DMAX,Zero Tenacity,1,2
+2024-09-08,3DMAX,The MongolZ,0,2
+2024-09-07,3DMAX,Wildcard,2,0
+2024-09-06,3DMAX,Spirit,1,2
+2024-09-06,3DMAX,9z,2,0
+2024-09-05,3DMAX,G2,1,2
+2024-09-04,3DMAX,The MongolZ,2,0
+2024-08-27,3DMAX,HEROIC,0,2
+2024-11-22,BIG,Passion UA,2,1
+2024-11-21,BIG,HEROIC,13,8
+2024-11-21,BIG,Sashi,13,9
+2024-11-11,BIG,GUN5,1,2
+2024-11-02,BIG,ALTERNATE aTTaX,2,1
+2024-10-26,BIG,OG,1,2
+2024-10-24,BIG,BESTIA,2,0
+2024-10-24,BIG,Aurora,2,0
+2024-10-07,BIG,FlyQuest,1,2
+2024-10-06,BIG,SAW,2,1
+2024-10-04,BIG,M80,13,7
+2024-10-04,BIG,ODDIK,13,2
+2024-09-25,BIG,ECSTATIC,0,2
+2024-09-24,BIG,Monte,0,2
+2024-09-17,BIG,The MongolZ,1,2
+2024-09-13,BIG,Complexity,2,1
+2024-09-12,BIG,fnatic,2,0
+2024-09-11,BIG,Rooster,2,0
+2024-09-10,BIG,Imperial,1,2
+2024-11-19,Cloud9,FaZe,1,2
+2024-11-19,Cloud9,SINNERS,2,1
+2024-11-18,Cloud9,Sangal,13,2
+2024-11-17,Cloud9,Nemiga,13,5
+2024-11-17,Cloud9,FaZe,8,13
+2024-10-25,Cloud9,fnatic,1,2
+2024-10-22,Cloud9,9z,2,0
+2024-10-22,Cloud9,The MongolZ,0,2
+2024-10-11,Cloud9,Passion UA,1,2
+2024-09-13,Cloud9,Gaimin Gladiators,1,2
+2024-09-07,Cloud9,Zero Tenacity,2,1
+2024-09-06,Cloud9,BETBOOM,2,1
+2024-09-05,Cloud9,ALTERNATE aTTaX,2,1
+2024-09-02,Cloud9,GamerLegion,2,1
+2024-08-29,Cloud9,Insilio,2,0
+2024-08-27,Cloud9,fnatic,0,2
+2024-11-14,Complexity,M80,2,0
+2024-11-13,Complexity,MIBR,0,2
+2024-11-12,Complexity,BOSS,16,12
+2024-11-12,Complexity,BESTIA,13,7
+2024-10-08,Complexity,MOUZ,0,2
+2024-10-08,Complexity,Imperial,2,1
+2024-10-07,Complexity,Liquid,6,13
+2024-09-18,Complexity,Liquid,0,2
+2024-09-17,Complexity,FaZe,2,0
+2024-09-15,Complexity,MOUZ,2,0
+2024-09-14,Complexity,Astralis,2,1
+2024-09-13,Complexity,BIG,1,2
+2024-09-12,Complexity,MOUZ,2,0
+2024-09-11,Complexity,Astralis,2,0
+2024-09-10,Complexity,M80,0,2
+2024-11-15,FURIA,M80,2,0
+2024-11-15,FURIA,9z,2,0
+2024-11-14,FURIA,Liquid,1,2
+2024-11-13,FURIA,BOSS,13,1
+2024-11-12,FURIA,Case,13,5
+2024-11-12,FURIA,Legacy,17,19
+2024-10-12,FURIA,MOUZ,0,2
+2024-10-09,FURIA,Natus Vincere,2,0
+2024-10-07,FURIA,MOUZ,2,1
+2024-10-07,FURIA,FaZe,13,7
+2024-09-17,FURIA,Spirit,0,2
+2024-09-15,FURIA,RED Canids,2,0
+2024-09-14,FURIA,ATOX,2,0
+2024-09-13,FURIA,Virtus.pro,1,2
+2024-09-13,FURIA,RED Canids,2,1
+2024-09-12,FURIA,Vitality,0,2
+2024-09-11,FURIA,Falcons,2,1
+2024-08-30,FURIA,Eternal Fire,1,2
+2024-08-29,FURIA,Spirit,0,2
+2024-08-28,FURIA,Virtus.pro,2,0
+2024-08-27,FURIA,Eternal Fire,19,17
+2024-08-27,FURIA,9 Pandas,2,0
+2024-11-19,FaZe Clan,Cloud9,2,1
+2024-11-19,FaZe Clan,fnatic,2,0
+2024-11-18,FaZe Clan,Vitality,0,2
+2024-11-17,FaZe Clan,Falcons,16,12
+2024-11-17,FaZe Clan,Cloud9,13,8
+2024-11-01,FaZe Clan,Spirit,0,2
+2024-10-31,FaZe Clan,Natus Vincere,2,1
+2024-10-30,FaZe Clan,MOUZ,0,2
+2024-10-09,FaZe Clan,MOUZ,1,2
+2024-10-08,FaZe Clan,Liquid,2,0
+2024-10-07,FaZe Clan,paiN,2,1
+2024-10-07,FaZe Clan,FURIA,7,13
+2024-09-28,FaZe Clan,Natus Vincere,1,2
+2024-09-27,FaZe Clan,Liquid,2,0
+2024-09-26,FaZe Clan,Falcons,2,1
+2024-09-25,FaZe Clan,G2,1,2
+2024-09-17,FaZe Clan,Complexity,0,2
+2024-09-06,FaZe Clan,Sangal,2,0
+2024-09-05,FaZe Clan,Ninjas in Pyjamas,2,1
+2024-09-04,FaZe Clan,FlyQuest,2,0
+2024-09-03,FaZe Clan,Sangal,1,2
+2024-11-13,FlyQuest,Lynn Vision,2,0
+2024-11-13,FlyQuest,DRILLAS,2,1
+2024-11-12,FlyQuest,GR,2,0
+2024-11-11,FlyQuest,TALON,9,13
+2024-10-20,FlyQuest,Mindfreak,3,0
+2024-10-18,FlyQuest,Mindfreak,2,0
+2024-10-07,FlyQuest,BIG,2,1
+2024-10-06,FlyQuest,Wildcard,2,1
+2024-10-04,FlyQuest,SAW,13,9
+2024-10-04,FlyQuest,BETBOOM,13,3
+2024-09-30,FlyQuest,Rooster,13,9
+2024-09-30,FlyQuest,Rooster,13,10
+2024-09-27,FlyQuest,The Art of War,13,2
+2024-09-27,FlyQuest,The Art of War,13,5
+2024-09-26,FlyQuest,Housebets,13,8
+2024-09-26,FlyQuest,Housebets,13,9
+2024-09-25,FlyQuest,Arcade,13,6
+2024-09-25,FlyQuest,Arcade,13,8
+2024-09-07,FlyQuest,Sangal,0,2
+2024-09-06,FlyQuest,Lynn Vision,2,1
+2024-09-04,FlyQuest,FaZe,0,2
+2024-09-03,FlyQuest,Eternal Fire,0,2
+2024-08-30,FlyQuest,Vantage,13,5
+2024-08-30,FlyQuest,Vantage,13,6
+2024-11-20,Fnatic,ECLOT,2,1
+2024-11-19,Fnatic,FaZe,0,2
+2024-11-18,Fnatic,BETBOOM,13,11
+2024-11-17,Fnatic,RBLS,13,3
+2024-11-17,Fnatic,Natus Vincere,9,13
+2024-10-26,Fnatic,HEROIC,0,2
+2024-10-25,Fnatic,Cloud9,2,1
+2024-10-22,Fnatic,The MongolZ,0,2
+2024-10-22,Fnatic,9z,2,1
+2024-10-19,Fnatic,Nemiga,0,2
+2024-10-17,Fnatic,PARIVISION,2,1
+2024-10-16,Fnatic,UNPAID,2,0
+2024-10-10,Fnatic,Metizport,0,2
+2024-09-24,Fnatic,Into the Breach,0,2
+2024-09-14,Fnatic,MOUZ,0,2
+2024-09-12,Fnatic,BIG,0,2
+2024-09-11,Fnatic,M80,0,2
+2024-09-10,Fnatic,Astralis,2,1
+2024-08-29,Fnatic,ECSTATIC,1,2
+2024-08-27,Fnatic,HEROIC,1,2
+2024-08-27,Fnatic,Cloud9,2,0
+2024-11-23,G2 Esports,Spirit,2,1
+2024-11-22,G2 Esports,3DMAX,1,2
+2024-11-21,G2 Esports,9 Pandas,16,13
+2024-11-21,G2 Esports,Ninjas in Pyjamas,13,7
+2024-11-03,G2 Esports,Spirit,3,0
+2024-11-02,G2 Esports,Vitality,2,1
+2024-10-31,G2 Esports,Spirit,2,0
+2024-10-30,G2 Esports,Liquid,2,1
+2024-10-08,G2 Esports,Eternal Fire,0,2
+2024-10-07,G2 Esports,HEROIC,10,13
+2024-09-29,G2 Esports,Natus Vincere,3,1
+2024-09-28,G2 Esports,Vitality,2,1
+2024-09-27,G2 Esports,Spirit,2,0
+2024-09-26,G2 Esports,Natus Vincere,0,2
+2024-09-25,G2 Esports,FaZe,2,1
+2024-09-21,G2 Esports,Natus Vincere,1,2
+2024-09-20,G2 Esports,Liquid,2,1
+2024-09-08,G2 Esports,MIBR,2,0
+2024-09-05,G2 Esports,3DMAX,2,1
+2024-09-03,G2 Esports,KOI,2,0
+2024-11-20,GamerLegion,BETBOOM,2,1
+2024-11-20,GamerLegion,SINNERS,2,1
+2024-11-19,GamerLegion,Falcons,2,1
+2024-11-18,GamerLegion,UNiTY,2,1
+2024-11-17,GamerLegion,ECLOT,11,13
+2024-11-17,GamerLegion,Vitality,8,13
+2024-10-11,GamerLegion,GUN5,0,2
+2024-10-06,GamerLegion,Passion UA,2,1
+2024-10-06,GamerLegion,9 Pandas,2,1
+2024-10-05,GamerLegion,B8,2,0
+2024-10-04,GamerLegion,DRILLAS,2,1
+2024-09-28,GamerLegion,BETBOOM,0,2
+2024-09-28,GamerLegion,Aurora,2,1
+2024-09-27,GamerLegion,B8,2,1
+2024-09-26,GamerLegion,CPH Wolves,2,1
+2024-09-15,GamerLegion,SINNERS,1,2
+2024-09-15,GamerLegion,Gaimin Gladiators,2,1
+2024-09-14,GamerLegion,Zero Tenacity,2,0
+2024-09-13,GamerLegion,Monte Gen,2,0
+2024-09-10,GamerLegion,Sashi,0,2
+2024-09-08,GamerLegion,B8,1,2
+2024-09-08,GamerLegion,Passion UA,2,0
+2024-09-07,GamerLegion,Monte,2,1
+2024-09-06,GamerLegion,Endpoint,2,0
+2024-09-05,GamerLegion,Into the Breach,0,2
+2024-09-02,GamerLegion,Cloud9,1,2
+2024-08-30,GamerLegion,Monte,0,2
+2024-08-29,GamerLegion,SAW,1,2
+2024-08-29,GamerLegion,Aurora,2,0
+2024-11-23,HEROIC,Passion UA,2,1
+2024-11-22,HEROIC,Ninjas in Pyjamas,13,5
+2024-11-21,HEROIC,BIG,8,13
+2024-11-21,HEROIC,PARIVISION,13,8
+2024-11-03,HEROIC,The MongolZ,1,3
+2024-11-02,HEROIC,OG,2,0
+2024-10-26,HEROIC,fnatic,2,0
+2024-10-23,HEROIC,Ninjas in Pyjamas,2,0
+2024-10-23,HEROIC,Legacy,2,1
+2024-10-20,HEROIC,ENCE,1,3
+2024-10-19,HEROIC,B8,2,0
+2024-10-17,HEROIC,ENCE,2,0
+2024-10-17,HEROIC,RBLS,13,10
+2024-10-12,HEROIC,Natus Vincere,1,2
+2024-10-09,HEROIC,Vitality,2,0
+2024-10-08,HEROIC,Astralis,2,0
+2024-10-07,HEROIC,G2,13,10
+2024-09-18,HEROIC,MIBR,1,2
+2024-09-17,HEROIC,Virtus.pro,2,0
+2024-09-08,HEROIC,Sangal,2,0
+2024-09-07,HEROIC,Ninjas in Pyjamas,2,1
+2024-09-05,HEROIC,Sangal,1,2
+2024-09-04,HEROIC,Lynn Vision,2,1
+2024-09-03,HEROIC,Ninjas in Pyjamas,1,2
+2024-08-29,HEROIC,Eternal Fire,0,2
+2024-08-28,HEROIC,paiN,1,2
+2024-08-28,HEROIC,Falcons,2,0
+2024-08-27,HEROIC,fnatic,2,1
+2024-08-27,HEROIC,3DMAX,2,0
+2024-11-15,Imperial Esports,RED Canids,2,0
+2024-11-14,Imperial Esports,KRÜ,2,0
+2024-11-13,Imperial Esports,paiN,5,13
+2024-11-12,Imperial Esports,MIBR,9,13
+2024-11-12,Imperial Esports,Case,13,5
+2024-10-26,Imperial Esports,The MongolZ,1,2
+2024-10-25,Imperial Esports,Ninjas in Pyjamas,2,0
+2024-10-23,Imperial Esports,Legacy,2,1
+2024-10-23,Imperial Esports,Ninjas in Pyjamas,1,2
+2024-10-18,Imperial Esports,RED Canids,1,2
+2024-10-16,Imperial Esports,Sharks,2,0
+2024-10-15,Imperial Esports,inSanitY,0,2
+2024-10-09,Imperial Esports,Solid,13,3
+2024-10-09,Imperial Esports,Solid,13,9
+2024-10-09,Imperial Esports,paiN,19,17
+2024-10-08,Imperial Esports,paiN,3,13
+2024-10-08,Imperial Esports,Complexity,1,2
+2024-10-07,Imperial Esports,Natus Vincere,2,13
+2024-10-06,Imperial Esports,MIBR,8,13
+2024-10-06,Imperial Esports,MIBR,13,7
+2024-10-04,Imperial Esports,RED Canids,1,2
+2024-10-03,Imperial Esports,Hype,16,14
+2024-10-02,Imperial Esports,Hype,13,8
+2024-10-01,Imperial Esports,Sharks,13,9
+2024-10-01,Imperial Esports,Sharks,4,13
+2024-10-01,Imperial Esports,Fluxo,5,13
+2024-09-30,Imperial Esports,Fluxo,15,19
+2024-09-26,Imperial Esports,Sharks,2,1
+2024-09-25,Imperial Esports,BESTIA,7,13
+2024-09-25,Imperial Esports,BESTIA,13,3
+2024-09-25,Imperial Esports,BESTIA,2,0
+2024-09-18,Imperial Esports,Spirit,0,2
+2024-09-14,Imperial Esports,M80,0,2
+2024-09-11,Imperial Esports,MOUZ,2,0
+2024-09-10,Imperial Esports,BIG,2,1
+2024-09-06,Imperial Esports,ODDIK,13,9
+2024-09-06,Imperial Esports,ODDIK,22,20
+2024-09-02,Imperial Esports,Galorys,13,11
+2024-09-02,Imperial Esports,Galorys,13,4
+2024-11-13,MIBR,Complexity,2,0
+2024-11-12,MIBR,Imperial,13,9
+2024-11-12,MIBR,KRÜ,13,5
+2024-10-25,MIBR,Monte,0,2
+2024-10-25,MIBR,Legacy,7,13
+2024-10-20,MIBR,paiN,1,3
+2024-10-20,MIBR,BESTIA,2,1
+2024-10-18,MIBR,paiN,1,2
+2024-10-17,MIBR,RED Canids,2,1
+2024-10-10,MIBR,RED Canids,13,6
+2024-10-09,MIBR,RED Canids,13,8
+2024-10-08,MIBR,KRÜ,13,11
+2024-10-08,MIBR,KRÜ,13,2
+2024-10-08,MIBR,paiN,14,16
+2024-10-08,MIBR,paiN,1,13
+2024-10-06,MIBR,Imperial,13,8
+2024-10-06,MIBR,Imperial,7,13
+2024-10-04,MIBR,Fluxo,7,13
+2024-10-04,MIBR,Fluxo,13,10
+2024-10-04,MIBR,inSanitY,13,5
+2024-10-03,MIBR,inSanitY,9,13
+2024-10-02,MIBR,Case,13,4
+2024-10-01,MIBR,Case,10,13
+2024-10-01,MIBR,Sharks,11,13
+2024-10-01,MIBR,Sharks,13,5
+2024-09-26,MIBR,BESTIA,0,2
+2024-09-25,MIBR,Solid,13,6
+2024-09-25,MIBR,Solid,10,13
+2024-09-25,MIBR,Sharks,0,2
+2024-09-21,MIBR,Eternal Fire,0,2
+2024-09-19,MIBR,M80,2,0
+2024-09-18,MIBR,HEROIC,2,1
+2024-09-08,MIBR,G2,0,2
+2024-09-05,MIBR,Spirit,2,1
+2024-09-03,MIBR,9z,2,0
+2024-11-18,MOUZ,Natus Vincere,2,1
+2024-11-17,MOUZ,Sangal,13,3
+2024-11-17,MOUZ,Nemiga,13,3
+2024-11-01,MOUZ,Vitality,0,2
+2024-10-31,MOUZ,Astralis,0,2
+2024-10-30,MOUZ,FaZe,2,0
+2024-10-13,MOUZ,Natus Vincere,1,3
+2024-10-12,MOUZ,FURIA,2,0
+2024-10-11,MOUZ,Vitality,2,1
+2024-10-09,MOUZ,FaZe,2,1
+2024-10-08,MOUZ,Complexity,2,0
+2024-10-07,MOUZ,FURIA,1,2
+2024-10-07,MOUZ,paiN,13,11
+2024-09-15,MOUZ,Complexity,0,2
+2024-09-14,MOUZ,fnatic,2,0
+2024-09-12,MOUZ,Complexity,0,2
+2024-09-11,MOUZ,Imperial,0,2
+2024-09-10,MOUZ,Rooster,2,1
+2024-08-31,MOUZ,Eternal Fire,0,2
+2024-08-30,MOUZ,Spirit,1,2
+2024-08-29,MOUZ,paiN,2,1
+2024-08-28,MOUZ,Eternal Fire,2,0
+2024-11-19,Natus Vincere,SAW,2,0
+2024-11-18,Natus Vincere,MOUZ,1,2
+2024-11-17,Natus Vincere,SINNERS,13,5
+2024-11-17,Natus Vincere,fnatic,13,9
+2024-10-31,Natus Vincere,FaZe,1,2
+2024-10-30,Natus Vincere,Astralis,0,2
+2024-10-13,Natus Vincere,MOUZ,3,1
+2024-10-12,Natus Vincere,HEROIC,2,1
+2024-10-11,Natus Vincere,Virtus.pro,2,0
+2024-10-09,Natus Vincere,FURIA,0,2
+2024-10-08,Natus Vincere,Liquid,2,1
+2024-10-07,Natus Vincere,Imperial,13,2
+2024-09-29,Natus Vincere,G2,1,3
+2024-09-28,Natus Vincere,FaZe,2,1
+2024-09-26,Natus Vincere,G2,2,0
+2024-09-25,Natus Vincere,Falcons,2,0
+2024-09-22,Natus Vincere,Eternal Fire,3,2
+2024-09-21,Natus Vincere,G2,2,1
+2024-09-20,Natus Vincere,Spirit,2,0
+2024-09-07,Natus Vincere,Eternal Fire,2,0
+2024-09-04,Natus Vincere,Ninjas in Pyjamas,2,0
+2024-09-03,Natus Vincere,Lynn Vision,2,0
+2024-11-24,Passion UA,Astralis,2,0
+2024-11-23,Passion UA,HEROIC,1,2
+2024-11-22,Passion UA,BIG,1,2
+2024-11-21,Passion UA,Spirit,13,11
+2024-11-21,Passion UA,Virtus.pro,16,14
+2024-11-06,Passion UA,500,1,2
+2024-10-29,Passion UA,Permitta,1,2
+2024-10-27,Passion UA,Permitta,0,2
+2024-10-25,Passion UA,9INE,0,2
+2024-10-13,Passion UA,Mission Possible,2,1
+2024-10-13,Passion UA,ex-Enterprise,2,0
+2024-10-12,Passion UA,Mission Possible,10,13
+2024-10-12,Passion UA,FAVBET,1,2
+2024-10-11,Passion UA,Cloud9,2,1
+2024-10-06,Passion UA,GamerLegion,1,2
+2024-10-06,Passion UA,3DMAX,2,1
+2024-10-05,Passion UA,ALTERNATE aTTaX,2,1
+2024-10-05,Passion UA,Permitta,2,1
+2024-10-05,Passion UA,TSM,3,0
+2024-10-04,Passion UA,Aurora,2,0
+2024-10-03,Passion UA,Betclic,2,0
+2024-10-03,Passion UA,GUN5,2,0
+2024-10-01,Passion UA,RUBY,2,0
+2024-10-01,Passion UA,Into the Breach,2,0
+2024-09-30,Passion UA,ECSTATIC,2,1
+2024-09-28,Passion UA,Gaimin Gladiators,2,1
+2024-09-27,Passion UA,CPH Wolves,2,0
+2024-09-26,Passion UA,Sangal,1,2
+2024-09-25,Passion UA,WW,2,0
+2024-09-24,Passion UA,DRILLAS,0,2
+2024-09-23,Passion UA,Lynn Vision,2,0
+2024-09-22,Passion UA,CYBERSHOKE,1,2
+2024-09-22,Passion UA,9INE,2,0
+2024-09-20,Passion UA,Monte Gen,0,2
+2024-09-18,Passion UA,FAVBET,2,1
+2024-09-18,Passion UA,Illuminar,2,0
+2024-09-16,Passion UA,EYEBALLERS,2,0
+2024-09-15,Passion UA,Lazer Cats,2,0
+2024-09-15,Passion UA,TNL,2,1
+2024-09-13,Passion UA,ECSTATIC,1,2
+2024-09-11,Passion UA,HOTU,1,2
+2024-09-10,Passion UA,BLEED,0,2
+2024-09-09,Passion UA,PeeP,2,1
+2024-09-08,Passion UA,GamerLegion,0,2
+2024-09-07,Passion UA,GL Academy,2,0
+2024-09-07,Passion UA,CYBERSHOKE,2,0
+2024-09-06,Passion UA,Gaimin Gladiators,2,0
+2024-09-03,Passion UA,MOLO,0,2
+2024-09-03,Passion UA,AMKAL,0,2
+2024-08-28,Passion UA,Monte,0,2
+2024-11-12,Rare Atom,TALON,2,0
+2024-11-11,Rare Atom,GR,13,4
+2024-10-31,Rare Atom,Spirit Academy,0,2
+2024-10-31,Rare Atom,CYBERSHOKE,2,1
+2024-10-30,Rare Atom,Spirit Academy,0,2
+2024-10-29,Rare Atom,Endpoint,1,2
+2024-10-29,Rare Atom,Johnny Speeds,8,13
+2024-08-29,Rare Atom,TYLOO,2,1
+2024-08-29,Rare Atom,Teamwork,2,0
+2024-08-28,Rare Atom,TYLOO,8,13
+2024-08-27,Rare Atom,CatEvil,13,11
+2024-08-27,Rare Atom,XNL,13,6
+2024-11-14,Team Liquid,FURIA,2,1
+2024-11-13,Team Liquid,BESTIA,13,4
+2024-11-12,Team Liquid,KRÜ,13,2
+2024-11-12,Team Liquid,Wildcard,12,16
+2024-10-31,Team Liquid,Vitality,1,2
+2024-10-30,Team Liquid,G2,1,2
+2024-10-08,Team Liquid,FaZe,0,2
+2024-10-08,Team Liquid,Natus Vincere,1,2
+2024-10-07,Team Liquid,Complexity,13,6
+2024-09-27,Team Liquid,FaZe,0,2
+2024-09-26,Team Liquid,Vitality,0,2
+2024-09-25,Team Liquid,Spirit,2,1
+2024-09-20,Team Liquid,G2,1,2
+2024-09-18,Team Liquid,Complexity,2,0
+2024-09-15,Team Liquid,Vitality,1,2
+2024-09-12,Team Liquid,Virtus.pro,2,0
+2024-09-10,Team Liquid,ENCE,2,0
+2024-09-02,Team Liquid,Legacy,2,0
+2024-09-01,Team Liquid,FLUFFY AIMERS,2,0
+2024-09-01,Team Liquid,Legacy,1,2
+2024-08-31,Team Liquid,FLUFFY AIMERS,2,0
+2024-11-24,Team Spirit,Ninjas in Pyjamas,2,0
+2024-11-24,Team Spirit,Sashi,2,0
+2024-11-23,Team Spirit,G2,1,2
+2024-11-22,Team Spirit,Aurora,13,7
+2024-11-21,Team Spirit,Passion UA,11,13
+2024-11-21,Team Spirit,B8,13,1
+2024-11-03,Team Spirit,G2,0,3
+2024-11-02,Team Spirit,Astralis,2,1
+2024-11-01,Team Spirit,FaZe,2,0
+2024-10-31,Team Spirit,G2,0,2
+2024-10-30,Team Spirit,Vitality,2,0
+2024-09-27,Team Spirit,G2,0,2
+2024-09-26,Team Spirit,Astralis,2,1
+2024-09-25,Team Spirit,Liquid,1,2
+2024-09-20,Team Spirit,Natus Vincere,0,2
+2024-09-18,Team Spirit,Imperial,2,0
+2024-09-17,Team Spirit,FURIA,2,0
+2024-09-06,Team Spirit,3DMAX,2,1
+2024-09-06,Team Spirit,The MongolZ,2,1
+2024-09-05,Team Spirit,MIBR,1,2
+2024-09-04,Team Spirit,Wildcard,2,0
+2024-09-01,Team Spirit,Eternal Fire,3,0
+2024-08-30,Team Spirit,MOUZ,2,1
+2024-08-29,Team Spirit,FURIA,2,0
+2024-08-28,Team Spirit,Falcons,2,0
+2024-11-18,Team Vitality,FaZe,2,0
+2024-11-17,Team Vitality,BETBOOM,13,3
+2024-11-17,Team Vitality,GamerLegion,13,8
+2024-11-02,Team Vitality,G2,1,2
+2024-11-01,Team Vitality,MOUZ,2,0
+2024-10-31,Team Vitality,Liquid,2,1
+2024-10-30,Team Vitality,Spirit,0,2
+2024-10-11,Team Vitality,MOUZ,1,2
+2024-10-09,Team Vitality,HEROIC,0,2
+2024-10-08,Team Vitality,The MongolZ,2,0
+2024-10-07,Team Vitality,9z,13,3
+2024-09-28,Team Vitality,G2,1,2
+2024-09-26,Team Vitality,Liquid,2,0
+2024-09-25,Team Vitality,Astralis,2,0
+2024-09-19,Team Vitality,Eternal Fire,1,2
+2024-09-15,Team Vitality,Liquid,2,1
+2024-09-12,Team Vitality,FURIA,2,0
+2024-09-11,Team Vitality,ATOX,2,0
+2024-11-12,The MongolZ,DRILLAS,2,1
+2024-11-11,The MongolZ,Alter Ego,13,8
+2024-11-03,The MongolZ,HEROIC,3,1
+2024-11-02,The MongolZ,3DMAX,2,0
+2024-10-26,The MongolZ,Imperial,2,1
+2024-10-22,The MongolZ,fnatic,2,0
+2024-10-22,The MongolZ,Cloud9,2,0
+2024-10-19,The MongolZ,ENCE,1,2
+2024-10-16,The MongolZ,B8,2,0
+2024-10-16,The MongolZ,JANO,13,7
+2024-10-09,The MongolZ,Virtus.pro,0,2
+2024-10-09,The MongolZ,Eternal Fire,2,1
+2024-10-08,The MongolZ,Vitality,0,2
+2024-10-07,The MongolZ,Virtus.pro,13,10
+2024-09-18,The MongolZ,Eternal Fire,1,2
+2024-09-17,The MongolZ,BIG,2,1
+2024-09-08,The MongolZ,3DMAX,2,0
+2024-09-07,The MongolZ,9z,2,0
+2024-09-06,The MongolZ,Spirit,1,2
+2024-09-05,The MongolZ,KOI,2,0
+2024-09-04,The MongolZ,3DMAX,0,2
+2024-11-23,Virtus.pro,Sashi,2,1
+2024-11-22,Virtus.pro,9 Pandas,13,10
+2024-11-21,Virtus.pro,TSM,13,10
+2024-11-21,Virtus.pro,Passion UA,14,16
+2024-10-25,Virtus.pro,OG,0,2
+2024-10-21,Virtus.pro,Falcons,2,0
+2024-10-21,Virtus.pro,OG,1,2
+2024-10-11,Virtus.pro,Natus Vincere,0,2
+2024-10-09,Virtus.pro,The MongolZ,2,0
+2024-10-09,Virtus.pro,Astralis,2,0
+2024-10-08,Virtus.pro,9z,2,1
+2024-10-07,Virtus.pro,The MongolZ,10,13
+2024-09-17,Virtus.pro,HEROIC,0,2
+2024-09-13,Virtus.pro,FURIA,2,1
+2024-09-13,Virtus.pro,Falcons,2,1
+2024-09-12,Virtus.pro,Liquid,0,2
+2024-09-10,Virtus.pro,RED Canids,2,0
+2024-08-30,Virtus.pro,paiN,1,2
+2024-08-29,Virtus.pro,Falcons,2,1
+2024-08-28,Virtus.pro,FURIA,0,2
+2024-11-13,Wildcard,9z,2,0
+2024-11-12,Wildcard,paiN,13,10
+2024-11-12,Wildcard,Liquid,16,12
+2024-10-18,Wildcard,NRG,0,2
+2024-10-17,Wildcard,BOSS,2,0
+2024-10-16,Wildcard,Nouns,1,2
+2024-10-06,Wildcard,FlyQuest,1,2
+2024-10-05,Wildcard,M80,2,1
+2024-10-05,Wildcard,ODDIK,2,0
+2024-10-04,Wildcard,M80,8,13
+2024-10-02,Wildcard,BOSS,13,10
+2024-10-02,Wildcard,BOSS,13,0
+2024-09-30,Wildcard,Legacy,1,2
+2024-09-29,Wildcard,Legacy,2,1
+2024-09-28,Wildcard,Marca Registrada,2,0
+2024-09-20,Wildcard,NRG,2,13
+2024-09-19,Wildcard,NRG,11,13
+2024-09-19,Wildcard,E-Xolos LAZER,13,5
+2024-09-18,Wildcard,Revenge Nation,13,3
+2024-09-18,Wildcard,Revenge Nation,13,2
+2024-09-07,Wildcard,3DMAX,0,2
+2024-09-06,Wildcard,KOI,2,0
+2024-09-05,Wildcard,9z,0,2
+2024-09-04,Wildcard,Spirit,0,2
+2024-08-31,Wildcard,NRG,2,0
+2024-08-30,Wildcard,NRG,2,1
+2024-08-29,Wildcard,Party Astronauts,2,0
+2024-08-27,Wildcard,BOSS,2,0
+2024-08-27,Wildcard,E-Xolos LAZER,13,5
+2024-11-14,paiN Gaming,9z,2,0
+2024-11-13,paiN Gaming,Imperial,13,5
+2024-11-12,paiN Gaming,Wildcard,10,13
+2024-11-12,paiN Gaming,Nouns,13,5
+2024-10-27,paiN Gaming,B8,1,2
+2024-10-25,paiN Gaming,Legacy,13,10
+2024-10-25,paiN Gaming,Monte,13,9
+2024-10-20,paiN Gaming,MIBR,3,1
+2024-10-18,paiN Gaming,MIBR,2,1
+2024-10-17,paiN Gaming,inSanitY,2,1
+2024-10-09,paiN Gaming,Imperial,17,19
+2024-10-08,paiN Gaming,Imperial,13,3
+2024-10-08,paiN Gaming,MIBR,16,14
+2024-10-08,paiN Gaming,MIBR,13,1
+2024-10-07,paiN Gaming,FaZe,1,2
+2024-10-07,paiN Gaming,MOUZ,11,13
+2024-10-04,paiN Gaming,BESTIA,0,2
+2024-10-02,paiN Gaming,Fluxo,11,13
+2024-10-02,paiN Gaming,Fluxo,9,13
+2024-10-02,paiN Gaming,RED Canids,16,14
+2024-10-02,paiN Gaming,RED Canids,9,13
+2024-10-01,paiN Gaming,Hype,13,8
+2024-10-01,paiN Gaming,Hype,13,2
+2024-09-30,paiN Gaming,Fluxo,2,1
+2024-09-29,paiN Gaming,Solid,2,0
+2024-09-29,paiN Gaming,RED Canids,2,0
+2024-09-28,paiN Gaming,Solid,1,2
+2024-09-26,paiN Gaming,ODDIK,13,11
+2024-09-25,paiN Gaming,ODDIK,13,8
+2024-09-25,paiN Gaming,Sharks,13,10
+2024-09-24,paiN Gaming,Sharks,13,8
+2024-09-23,paiN Gaming,RED Canids,2,0
+2024-09-23,paiN Gaming,inSanitY,2,0
+2024-09-20,paiN Gaming,KRÜ,13,10
+2024-09-19,paiN Gaming,KRÜ,13,11
+2024-09-18,paiN Gaming,BESTIA,13,10
+2024-09-18,paiN Gaming,BESTIA,13,5
+2024-08-31,paiN Gaming,Eternal Fire,0,2
+2024-08-30,paiN Gaming,Virtus.pro,2,1
+2024-08-29,paiN Gaming,MOUZ,1,2
+2024-08-28,paiN Gaming,HEROIC,2,1
+2024-08-27,paiN Gaming,Falcons,13,10

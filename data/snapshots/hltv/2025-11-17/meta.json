@@ -1,15 +1,59 @@
 {
   "source": "hltv",
   "snapshot_date": "2025-11-17",
-  "fetched_at": "2026-11-22T13:36:17+00:00",
+  "fetched_at": "2026-11-22T17:42:06+00:00",
   "tool_version": "0.1.0",
   "rows": {
     "ranking": 275,
-    "maps": 0,
-    "results": 0
+    "maps": 203,
+    "results": 745
   },
   "urls": [
-    "https://www.hltv.org/ranking/teams/2025/november/17"
+    "https://www.hltv.org/ranking/teams/2025/november/17",
+    "https://www.hltv.org/results?team=4914",
+    "https://www.hltv.org/results?team=6665",
+    "https://www.hltv.org/results?team=11861",
+    "https://www.hltv.org/results?team=11241",
+    "https://www.hltv.org/results?team=8297",
+    "https://www.hltv.org/results?team=6667",
+    "https://www.hltv.org/results?team=11837",
+    "https://www.hltv.org/results?team=12774",
+    "https://www.hltv.org/results?team=4991",
+    "https://www.hltv.org/results?team=5995",
+    "https://www.hltv.org/results?team=9928",
+    "https://www.hltv.org/results?team=9455",
+    "https://www.hltv.org/results?team=12468",
+    "https://www.hltv.org/results?team=8840",
+    "https://www.hltv.org/results?team=12376",
+    "https://www.hltv.org/results?team=9215",
+    "https://www.hltv.org/results?team=4494",
+    "https://www.hltv.org/results?team=6673",
+    "https://www.hltv.org/results?team=4608",
+    "https://www.hltv.org/results?team=4411",
+    "https://www.hltv.org/results?team=12467",
+    "https://www.hltv.org/results?team=12426",
+    "https://www.hltv.org/results?team=7176",
+    "https://www.hltv.org/results?team=11514",
+    "https://www.hltv.org/results?team=4863",
+    "https://www.hltv.org/results?team=11283",
+    "https://www.hltv.org/results?team=5973",
+    "https://www.hltv.org/results?team=7020",
+    "https://www.hltv.org/results?team=9565",
+    "https://www.hltv.org/results?team=12510",
+    "https://www.hltv.org/results?team=6248",
+    "https://www.hltv.org/results?team=4773"
   ],
-  "notes": "Archived HLTV world ranking before StarLadder Budapest Major 2025 (backtest input; no map stats archived)"
+  "notes": "Archived HLTV world ranking before StarLadder Budapest Major 2025, plus results and per-map W/L of the 32 Major teams backfilled from HLTV results and match pages for [2025-08-19, 2025-11-17). Map stats are summed from individual maps in that window; pick/ban rates are not reconstructable and left empty.",
+  "backfill": {
+    "source": "hltv.org /results?team=<id> + /matches/<id> (Playwright)",
+    "scraped_at": "2026-11-22T17:42:06+00:00",
+    "window": [
+      "2025-08-19",
+      "2025-11-17"
+    ],
+    "teams": 32,
+    "series": 745,
+    "match_pages": 728,
+    "gaps": []
+  }
 }

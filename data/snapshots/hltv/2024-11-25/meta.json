@@ -1,15 +1,51 @@
 {
   "source": "hltv",
   "snapshot_date": "2024-11-25",
-  "fetched_at": "2026-11-22T15:25:35+00:00",
+  "fetched_at": "2026-11-22T17:41:00+00:00",
   "tool_version": "0.1.0",
   "rows": {
     "ranking": 261,
-    "maps": 0,
-    "results": 0
+    "maps": 149,
+    "results": 608
   },
   "urls": [
-    "https://www.hltv.org/ranking/teams/2024/november/25"
+    "https://www.hltv.org/ranking/teams/2024/november/25",
+    "https://www.hltv.org/results?team=4914",
+    "https://www.hltv.org/results?team=7532",
+    "https://www.hltv.org/results?team=5752",
+    "https://www.hltv.org/results?team=5005",
+    "https://www.hltv.org/results?team=8297",
+    "https://www.hltv.org/results?team=6667",
+    "https://www.hltv.org/results?team=12774",
+    "https://www.hltv.org/results?team=4991",
+    "https://www.hltv.org/results?team=5995",
+    "https://www.hltv.org/results?team=9928",
+    "https://www.hltv.org/results?team=7175",
+    "https://www.hltv.org/results?team=9455",
+    "https://www.hltv.org/results?team=9215",
+    "https://www.hltv.org/results?team=4494",
+    "https://www.hltv.org/results?team=4608",
+    "https://www.hltv.org/results?team=12426",
+    "https://www.hltv.org/results?team=11514",
+    "https://www.hltv.org/results?team=5973",
+    "https://www.hltv.org/results?team=7020",
+    "https://www.hltv.org/results?team=9565",
+    "https://www.hltv.org/results?team=6248",
+    "https://www.hltv.org/results?team=5378",
+    "https://www.hltv.org/results?team=12257",
+    "https://www.hltv.org/results?team=4773"
   ],
-  "notes": "Archived HLTV world ranking before Perfect World Shanghai Major 2024 (backtest input; no map stats archived)"
+  "notes": "Archived HLTV world ranking before Perfect World Shanghai Major 2024, plus results and per-map W/L of the 24 Major teams backfilled from HLTV results and match pages for [2024-08-27, 2024-11-25). Map stats are summed from individual maps in that window; pick/ban rates are not reconstructable and left empty.",
+  "backfill": {
+    "source": "hltv.org /results?team=<id> + /matches/<id> (Playwright)",
+    "scraped_at": "2026-11-22T17:41:00+00:00",
+    "window": [
+      "2024-08-27",
+      "2024-11-25"
+    ],
+    "teams": 24,
+    "series": 608,
+    "match_pages": 452,
+    "gaps": []
+  }
 }
