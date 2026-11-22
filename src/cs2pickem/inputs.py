@@ -18,7 +18,7 @@ import pandas as pd
 
 from .config import EventConfig
 from .paths import data_dir
-from .snapshots import load_table
+from .snapshots import load_table as _load_table
 
 
 @dataclass
@@ -31,7 +31,7 @@ class Inputs:
     notes: list[str] = field(default_factory=list)
 
 
-def _manual(name: str) -> pd.DataFrame | None:
+def _manual_csv(name: str) -> pd.DataFrame | None:
     p = data_dir() / name
     if not p.exists():
         return None
@@ -39,9 +39,21 @@ def _manual(name: str) -> pd.DataFrame | None:
     return df if not df.empty else None
 
 
-def load_inputs(cfg: EventConfig) -> Inputs:
+def load_inputs(
+    cfg: EventConfig, cutoff: str | None = None, extra_matches: pd.DataFrame | None = None
+) -> Inputs:
+    """Assemble inputs. ``cutoff`` (YYYY-MM-DD) drops every match on/after that day (no leakage in
+    backtests); ``extra_matches`` (team, date, opponent, result[, weight]) are appended, e.g. earlier-stage
+    results of the event being backtested."""
     notes: list[str] = []
     canon = cfg.canonical
+    days = cfg.snapshot_days
+
+    def load_table(source: str, table: str) -> pd.DataFrame | None:
+        return _load_table(source, table, days.get(source))
+
+    def _manual(name: str) -> pd.DataFrame | None:
+        return _manual_csv(name) if cfg.use_manual_data else None
 
     # ---- VRS standings
     std = load_table("vrs", "standings")
@@ -140,7 +152,16 @@ def load_inputs(cfg: EventConfig) -> Inputs:
         if frames
         else pd.DataFrame(columns=["team", "date", "opponent", "result", "roster", "weight", "source"])
     )
+    if extra_matches is not None and not extra_matches.empty:
+        em = extra_matches.copy()
+        em["team"], em["opponent"] = em["team"].map(canon), em["opponent"].map(canon)
+        for col, val in (("roster", None), ("weight", 1.0), ("source", "extra")):
+            if col not in em:
+                em[col] = val
+        matches = pd.concat([matches, em[list(matches.columns)]], ignore_index=True)
     matches = matches.drop_duplicates(["team", "date", "opponent", "source"])
+    if cutoff:
+        matches = matches[matches["date"].astype(str) < cutoff].reset_index(drop=True)
 
     # ---- maps
     mp = load_table("hltv", "maps")

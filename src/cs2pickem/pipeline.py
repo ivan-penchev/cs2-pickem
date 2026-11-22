@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import date
 
 import numpy as np
 
@@ -22,9 +23,11 @@ class Context:
     ratings: Ratings
 
     @classmethod
-    def load(cls, event: Event) -> Context:
-        inp = load_inputs(event.config)
-        return cls(event, inp, compute_ratings(event.config, inp))
+    def load(cls, event: Event, as_of: date | None = None, extra_matches=None) -> Context:
+        """``as_of`` = point-in-time cut-off: only matches strictly before that day are used."""
+        cutoff = as_of.isoformat() if as_of else None
+        inp = load_inputs(event.config, cutoff=cutoff, extra_matches=extra_matches)
+        return cls(event, inp, compute_ratings(event.config, inp, as_of=as_of))
 
     def model(self, teams: list[str], use_veto: bool = True) -> MatchModel:
         cfg = self.event.config

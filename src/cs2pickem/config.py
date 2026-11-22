@@ -79,6 +79,13 @@ class EventConfig(BaseModel):
     id: str
     name: str
     start: date | None = None
+    end: date | None = None  # last day of the event (live scraping only runs between start and end)
+    liquipedia: str | None = None  # Liquipedia page of the event, e.g. PGL/2026/Singapore
+    hltv_event_id: int | None = None
+    # Point-in-time inputs (backtests): pin snapshot days instead of using data/latest.json, and skip the
+    # hand-edited data/*.csv files (they describe *today*, not the past).
+    snapshot_days: dict[str, str] = Field(default_factory=dict)  # source -> YYYY-MM-DD
+    use_manual_data: bool = True
     map_pool: list[str] = Field(default_factory=lambda: list(DEFAULT_MAP_POOL))
     vrs_date: str | None = None  # VRS standings file date, e.g. 2026_11_02
     teams: list[TeamInfo] = Field(default_factory=list)
@@ -128,6 +135,10 @@ class StageConfig(BaseModel):
     final_bo: int = 5
     bracket: list[list[int]] = Field(default_factory=lambda: [[1, 8], [4, 5], [2, 7], [3, 6]])
     results_file: str | None = None
+    liquipedia: str | None = (
+        None  # Liquipedia page of the stage (live scraping), e.g. PGL/2026/Singapore/Stage_1
+    )
+    end: date | None = None
     # Optional explicit Round-1 pairs (official draw). Default: seed i vs seed i+n/2.
     round1: list[list[str]] | None = None
 

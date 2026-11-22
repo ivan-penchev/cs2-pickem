@@ -42,7 +42,9 @@ def write_snapshot(
     urls: list[str] | None = None,
     notes: str | None = None,
     extra: dict | None = None,
+    manifest: bool = True,
 ) -> Path:
+    """Write a dated snapshot. ``manifest=False`` keeps ``data/latest.json`` untouched (historical data)."""
     d = snapshot_root() / source / day
     d.mkdir(parents=True, exist_ok=True)
     for name, df in tables.items():
@@ -60,6 +62,8 @@ def write_snapshot(
     if extra:
         meta.update(extra)
     (d / "meta.json").write_text(json.dumps(meta, indent=2) + "\n")
+    if not manifest:
+        return d
     man = read_manifest()
     man[source] = {"date": day, "path": str(d.relative_to(data_dir())), "tables": sorted(tables)}
     manifest_path().write_text(json.dumps(dict(sorted(man.items())), indent=2) + "\n")
@@ -80,8 +84,12 @@ def latest_dir(source: str) -> Path | None:
     return None
 
 
-def load_table(source: str, table: str) -> pd.DataFrame | None:
-    d = latest_dir(source)
+def load_table(source: str, table: str, day: str | None = None) -> pd.DataFrame | None:
+    """Read a snapshot table – the latest one, or the snapshot of a specific ``day`` (YYYY-MM-DD)."""
+    d = snapshot_root() / source / day if day else latest_dir(source)
     if d is None or not (d / f"{table}.csv").exists():
         return None
-    return pd.read_csv(d / f"{table}.csv")
+    try:
+        return pd.read_csv(d / f"{table}.csv")
+    except pd.errors.EmptyDataError:
+        return None
