@@ -48,10 +48,18 @@ def _team_series(hltv_id: int, start: str, end: str, log: Callable[[str], None])
 
 def _self_names(series: list[dict], cfg_names: set[str]) -> set[str]:
     """HLTV display name(s) of the team whose results page this is (handles renames in the window)."""
-    c = Counter(n for r in series for n in (r["team1"], r["team2"]))
-    own = {n for n, k in c.items() if k >= max(2, 0.25 * len(series))}
-    own |= {n for n in c if _norm(n) in cfg_names}
-    return own
+    names = {n for r in series for n in (r["team1"], r["team2"])}
+    own = {n for n in names if _norm(n) in cfg_names}
+    # Every series on the page contains exactly one own name, so greedily cover the rest with the
+    # most frequent name among uncovered series (a rename); frequent opponents never get added.
+    while True:
+        rest = [r for r in series if r["team1"] not in own and r["team2"] not in own]
+        if not rest:
+            return own
+        n, k = Counter(n for r in rest for n in (r["team1"], r["team2"])).most_common(1)[0]
+        if k < max(2, 0.25 * len(rest)) and own:
+            return own
+        own.add(n)
 
 
 def backfill(major: str, log: Callable[[str], None] = print, window_days: int = WINDOW_DAYS) -> dict:
