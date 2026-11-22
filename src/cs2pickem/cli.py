@@ -463,6 +463,49 @@ def next_stage(
         console.print(f"wrote {write_stage_teams(ev, st, teams)}")
 
 
+# ------------------------------------------------------------------------------------------ animate
+@app.command()
+def animate(
+    stage: StageOpt = "stage1",
+    event: EventOpt = None,
+    sims: SimsOpt = None,
+    runs: Annotated[int, typer.Option("--runs", help="Full simulated runs to embed for replay.")] = 300,
+    out: Annotated[
+        Path | None, typer.Option("--out", "-o", help="Output HTML (default site/<stage>.html).")
+    ] = None,
+    open_: Annotated[bool, typer.Option("--open", help="Open the page in the default browser.")] = False,
+    no_results: Annotated[
+        bool, typer.Option("--no-results", help="Ignore recorded results (pre-stage view).")
+    ] = False,
+) -> None:
+    """Write a self-contained animated HTML visualisation of the Monte Carlo simulation."""
+    import time
+    import webbrowser
+
+    from .viz import build_payload, write_html
+
+    ev = _event(event)
+    st = _stage(ev, stage)
+    ctx = _ctx(ev)
+    t0 = time.perf_counter()
+    payload = build_payload(ctx, st, sims, n_runs=runs, use_results=not no_results)
+    path = write_html(payload, out or Path("site") / f"{st.id}.html")
+    pk = payload["pickem"]
+    size = path.stat().st_size / 1e6
+    console.print(
+        f"[green]wrote[/] {path}  ({size:.2f} MB, {payload['n_sims']:,} sims, "
+        f"{len(payload['runs'])} replay runs, {time.perf_counter() - t0:.1f}s)"
+    )
+    if pk.get("threshold"):
+        console.print(
+            f"Pick'Em P(≥{pk['threshold']} correct) = {pk['p_threshold']:.1%}, E = {pk['expected']:.2f}"
+        )
+    else:
+        console.print(f"Bracket expected correct = {pk['expected']:.2f} / {pk['n_picks']}")
+    if open_:
+        webbrowser.open(path.resolve().as_uri())
+
+
 def main() -> None:  # pragma: no cover
     app()
 

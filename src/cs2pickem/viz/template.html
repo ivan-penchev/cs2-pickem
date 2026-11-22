@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="cs2pickem animate">
+<title>__TITLE__</title>
+<style>
+:root{
+  --bg:#07090f;--bg2:#0d111b;--panel:#111725;--panel2:#161e2f;--line:#232d44;--line2:#2e3a57;
+  --text:#e6ebf5;--dim:#8a96b1;--faint:#55607a;--acc:#ff4655;--acc2:#3fa9f5;--gold:#f5b400;
+  --win:#22d3a6;--lose:#ff4655;--adv:#22d3a6;--elim:#ff4655;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --bw:54px;--bh:22px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:13px/1.4 var(--sans)}
+body{background:
+  radial-gradient(1200px 500px at 10% -10%,rgba(255,70,85,.13),transparent 60%),
+  radial-gradient(900px 500px at 100% 0%,rgba(63,169,245,.12),transparent 60%),var(--bg);min-height:100vh}
+a{color:var(--acc2)}
+.wrap{max-width:1480px;margin:0 auto;padding:18px 20px 40px}
+header{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:flex-end;justify-content:space-between;margin-bottom:14px}
+.brand .kicker{font:700 11px/1 var(--mono);letter-spacing:.22em;color:var(--acc);text-transform:uppercase}
+.brand h1{margin:6px 0 2px;font-size:26px;letter-spacing:.01em;font-weight:800}
+.brand h1 span{color:var(--dim);font-weight:600}
+.brand .sub{color:var(--dim);font-size:12px}
+.counter{display:flex;gap:22px;align-items:flex-end}
+.stat .v{font:800 34px/1 var(--mono);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat .v small{font-size:15px;color:var(--dim);font-weight:600}
+.stat .l{font:600 10px/1 var(--mono);letter-spacing:.16em;color:var(--dim);text-transform:uppercase;margin-top:6px}
+.stat.rate .v{font-size:20px;color:var(--acc2)}
+.progress{height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin:2px 0 14px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--gold))}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;padding:8px 10px;margin-bottom:14px}
+button{font:700 12px var(--sans);color:var(--text);background:var(--panel2);border:1px solid var(--line2);border-radius:8px;
+  padding:7px 12px;cursor:pointer;letter-spacing:.02em;transition:background .15s,border-color .15s}
+button:hover{border-color:var(--acc2);background:#1b2538}
+button.primary{background:var(--acc);border-color:var(--acc);min-width:84px}
+button.primary:hover{background:#ff5d6a}
+.controls label{display:flex;align-items:center;gap:8px;color:var(--dim);font-weight:600;margin-left:6px}
+input[type=range]{accent-color:var(--acc);width:130px}
+.controls .sp{font:700 12px var(--mono);color:var(--text);min-width:42px}
+.controls .runinfo{margin-left:auto;color:var(--dim);font:600 12px var(--mono)}
+.controls .runinfo b{color:var(--text)}
+.kbd{font:600 10px var(--mono);color:var(--faint);margin-left:8px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px}
+.panel{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px;position:relative;min-width:0}
+.panel h2{margin:0 0 10px;font:800 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:flex;gap:10px;align-items:center}
+.panel h2 .tagline{margin-left:auto;letter-spacing:.04em;text-transform:none;font-weight:600;color:var(--faint)}
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+/* ---------- bracket ---------- */
+.bscroll{overflow-x:auto;overflow-y:hidden;padding-bottom:4px}
+.bracket{position:relative;display:flex;gap:14px;min-width:max-content;align-items:stretch}
+.col{display:flex;flex-direction:column;gap:8px;min-width:calc(var(--bw)*2 + 34px)}
+.col.playoff{justify-content:space-around}
+.colh{font:700 10px/1 var(--mono);letter-spacing:.18em;color:var(--faint);text-transform:uppercase;text-align:center;padding:2px 0 4px}
+.box{border:1px solid var(--line2);background:rgba(22,30,47,.75);border-radius:10px;padding:5px 6px 6px}
+.box .bh{display:flex;justify-content:space-between;font:800 11px/1 var(--mono);color:var(--dim);margin:1px 2px 5px}
+.box .bh em{font-style:normal;color:var(--faint);font-weight:600}
+.box.adv{border-color:rgba(34,211,166,.55);background:linear-gradient(180deg,rgba(34,211,166,.13),rgba(34,211,166,.03))}
+.box.adv .bh{color:var(--adv)}
+.box.elim{border-color:rgba(255,70,85,.5);background:linear-gradient(180deg,rgba(255,70,85,.12),rgba(255,70,85,.03))}
+.box.elim .bh{color:var(--elim)}
+.box.champ{border-color:var(--gold);background:linear-gradient(180deg,rgba(245,180,0,.2),rgba(245,180,0,.04))}
+.box.champ .bh{color:var(--gold)}
+.mrow{display:flex;align-items:center;gap:4px;height:calc(var(--bh) + 6px);border-radius:6px;padding:0 2px;cursor:default;position:relative}
+.mrow:hover{background:rgba(63,169,245,.12)}
+.mrow .vs{flex:1;text-align:center;font:700 9px/1 var(--mono);color:var(--faint);white-space:nowrap;overflow:hidden}
+.mrow .vs.bo3{color:var(--gold)}
+.mrow .vs.bo5{color:var(--acc)}
+.mrow.played .vs::after{content:" ✓";color:var(--win)}
+.tslots{display:flex;flex-wrap:wrap;gap:4px}
+.slot{width:var(--bw);height:var(--bh);border-radius:5px;background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.06);flex:none}
+.slot.filled{border:0;background:none}
+.sb{width:100%;height:100%;border-radius:5px;display:flex;align-items:center;justify-content:center;font:800 11px/1 var(--mono);
+  color:#fff;letter-spacing:.02em;background:color-mix(in srgb,var(--c) 58%,#141a28);opacity:.95;white-space:nowrap;overflow:hidden}
+.sb.lose{opacity:.28;filter:grayscale(.7)}
+.sb.win{box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.badge{position:absolute;left:0;top:0;width:var(--bw);height:var(--bh);border-radius:5px;display:flex;align-items:center;justify-content:center;
+  font:800 11px/1 var(--mono);color:#fff;letter-spacing:.02em;text-shadow:0 1px 1px rgba(0,0,0,.45);
+  background:color-mix(in srgb,var(--c) 70%,#141a28);
+  box-shadow:0 2px 6px rgba(0,0,0,.5);transition:transform var(--mt,.55s) cubic-bezier(.2,.8,.2,1),opacity .3s,filter .3s;z-index:3;pointer-events:none;will-change:transform}
+.badge.won{box-shadow:0 0 0 2px var(--win),0 2px 6px rgba(0,0,0,.5)}
+.badge.lost{opacity:.3;filter:grayscale(.8)}
+.badge.adv{box-shadow:0 0 0 1px var(--adv),0 2px 6px rgba(0,0,0,.5)}
+.badge.elim{opacity:.38;filter:grayscale(.85)}
+.badge.champ{box-shadow:0 0 0 2px var(--gold),0 2px 6px rgba(0,0,0,.5)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;color:var(--faint);font:600 11px var(--mono)}
+.legend b{color:var(--gold)} .legend i{font-style:normal;color:var(--win)}
+.runfeed{margin-top:8px;font:600 12px var(--mono);color:var(--dim);min-height:18px}
+.runfeed b{color:var(--text)} .runfeed .up{color:var(--acc)}
+/* ---------- tooltip ---------- */
+#tip{position:fixed;z-index:50;pointer-events:none;background:#0b0f19f2;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;
+  min-width:220px;box-shadow:0 10px 30px rgba(0,0,0,.6);font-size:12px;display:none}
+#tip .th{font:700 10px var(--mono);letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-bottom:6px}
+#tip .tr{display:flex;align-items:center;gap:8px;margin:3px 0}
+#tip .tr .nm{flex:1;font-weight:700}
+#tip .tr .pc{font:800 13px var(--mono)}
+#tip .pbar{height:6px;border-radius:3px;overflow:hidden;display:flex;margin:6px 0}
+#tip .maps{color:var(--dim);margin-top:4px}
+#tip .res{margin-top:4px;font-weight:700}
+/* ---------- pickem ---------- */
+.gaugewrap{display:flex;gap:12px;align-items:center}
+.gauge{width:170px;flex:none}
+.gauge .gv{font:800 30px var(--mono);fill:var(--text)}
+.gauge .gl{font:700 9px var(--mono);fill:var(--dim);letter-spacing:.12em}
+.gmeta{font-size:12px;color:var(--dim);line-height:1.6}
+.gmeta b{color:var(--text);font:800 15px var(--mono)}
+.hist{display:flex;align-items:flex-end;gap:3px;height:84px;margin:10px 0 2px;border-bottom:1px solid var(--line2);position:relative}
+.hist .hb{flex:1;background:var(--line2);border-radius:3px 3px 0 0;position:relative;min-height:1px}
+.hist .hb.ok{background:linear-gradient(180deg,var(--win),rgba(34,211,166,.35))}
+.hist .hb span{position:absolute;bottom:100%;left:0;right:0;text-align:center;font:700 9px var(--mono);color:var(--dim);margin-bottom:2px}
+.hx{display:flex;gap:3px}.hx div{flex:1;text-align:center;font:700 10px var(--mono);color:var(--faint)}
+.picks{margin-top:10px;display:flex;flex-direction:column;gap:3px}
+.pk{display:flex;align-items:center;gap:8px;padding:3px 6px;border-radius:6px;background:rgba(255,255,255,.025)}
+.pk .grp{font:800 10px var(--mono);width:58px;color:var(--dim)}
+.pk .grp.perfect{color:var(--gold)} .pk .grp.advance{color:var(--win)} .pk .grp.winless{color:var(--lose)}
+.pk .nm{flex:1;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pk .pv{font:800 12px var(--mono);width:52px;text-align:right}
+.pk .mini{width:60px;height:5px;background:var(--line);border-radius:3px;overflow:hidden}
+.pk .mini i{display:block;height:100%;background:var(--acc2)}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:18px;padding:0 5px;border-radius:4px;font:800 10px var(--mono);color:#fff;
+  background:color-mix(in srgb,var(--c) 62%,#141a28)}
+/* ---------- chaos ---------- */
+.chaos .meter{height:12px;border-radius:6px;background:linear-gradient(90deg,#1f6f5c,#c99a12 50%,#b3263a);position:relative;margin:10px 0 6px}
+.chaos .needle{position:absolute;top:-5px;width:3px;height:22px;background:#fff;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.6)}
+.chaos .ticks{display:flex;justify-content:space-between;font:700 9px var(--mono);color:var(--faint)}
+.chaos .cv{font:800 26px var(--mono)} .chaos .cl{color:var(--dim);font-size:12px}
+.chaos .flames{font-size:16px;letter-spacing:2px;min-height:22px}
+/* ---------- bars ---------- */
+.lower{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;margin-top:14px}
+.bars{display:grid;grid-template-columns:auto minmax(0,1fr) repeat(var(--nb),minmax(70px,1fr));gap:4px 10px;align-items:center}
+.bars .hh{font:700 10px var(--mono);letter-spacing:.12em;color:var(--faint);text-transform:uppercase;padding-bottom:4px}
+.bars .tn{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bars .tn small{color:var(--faint);font:600 10px var(--mono);margin-left:6px}
+.pchip{font:800 9px var(--mono);padding:1px 4px;border-radius:3px;margin-left:6px;vertical-align:1px}
+.pchip.perfect{background:rgba(245,180,0,.2);color:var(--gold)} .pchip.advance{background:rgba(34,211,166,.16);color:var(--win)}
+.pchip.winless{background:rgba(255,70,85,.18);color:var(--lose)} .pchip.bracket{background:rgba(63,169,245,.18);color:var(--acc2)}
+.bar{position:relative;height:18px;background:rgba(255,255,255,.04);border-radius:4px;overflow:hidden}
+.bar .f{position:absolute;left:0;top:0;bottom:0;border-radius:4px;opacity:.85}
+.bar .ci{position:absolute;top:0;bottom:0;background:rgba(255,255,255,.18)}
+.bar .tg{position:absolute;top:-1px;bottom:-1px;width:2px;background:#fff;opacity:.55}
+.bar .t{position:absolute;right:5px;top:0;bottom:0;display:flex;align-items:center;font:800 11px var(--mono);text-shadow:0 1px 2px #000}
+.heat{display:grid;gap:2px;align-items:center}
+.heat .hh{font:700 10px var(--mono);color:var(--faint);text-align:center;padding-bottom:3px}
+.heat .rn{font:700 11px var(--mono);white-space:nowrap;padding-right:6px}
+.heat .c{height:20px;border-radius:3px;display:flex;align-items:center;justify-content:center;font:700 10px var(--mono);color:rgba(255,255,255,.9)}
+.note{color:var(--faint);font-size:11px;margin-top:8px}
+footer{margin-top:18px;color:var(--faint);font-size:11px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+@media (max-width:1100px){.grid,.lower{grid-template-columns:minmax(0,1fr)}.side{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}}
+@media (max-width:640px){.wrap{padding:12px}.brand h1{font-size:20px}.stat .v{font-size:24px}.controls .runinfo{margin-left:0;width:100%}.kbd{display:none}
+  .bars{grid-template-columns:auto repeat(var(--nb),minmax(56px,1fr))}.bars .tn{display:none}}
+@media (prefers-reduced-motion:reduce){.badge{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="kicker" id="kicker">Monte Carlo · Pick'Em</div>
+      <h1 id="title">—</h1>
+      <div class="sub" id="sub"></div>
+    </div>
+    <div class="counter">
+      <div class="stat"><div class="v" id="simcount">0</div><div class="l">simulations</div></div>
+      <div class="stat rate"><div class="v" id="simrate">0</div><div class="l">sims / sec</div></div>
+    </div>
+  </header>
+  <div class="progress"><i id="prog"></i></div>
+  <div class="controls">
+    <button class="primary" id="play">▶ Play</button>
+    <button id="step" title="Play one full simulated run, then pause (→)">Step run ⏭</button>
+    <button id="ff" title="Fast-forward the counter to all simulations (F)">⏩ <span id="fflabel">100k</span></button>
+    <button id="reset" title="Reset (R)">↺ Reset</button>
+    <label>speed <input type="range" id="speed" min="-2" max="3" step="0.25" value="0"><span class="sp" id="spv">1×</span></label>
+    <span class="kbd">space · → · F · R</span>
+    <div class="runinfo" id="runinfo"></div>
+  </div>
+
+  <div class="grid">
+    <section class="panel">
+      <h2><span id="bracketTitle">Swiss bracket</span><span class="tagline" id="bracketTag"></span></h2>
+      <div class="bscroll"><div class="bracket" id="bracket"></div></div>
+      <div class="runfeed" id="runfeed"></div>
+      <div class="legend" id="legend"></div>
+    </section>
+    <aside class="side">
+      <section class="panel">
+        <h2>Pick'Em<span class="tagline" id="pkrule"></span></h2>
+        <div class="gaugewrap">
+          <svg class="gauge" viewBox="0 0 170 104" id="gauge">
+            <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#ff4655"/><stop offset=".5" stop-color="#f5b400"/><stop offset="1" stop-color="#22d3a6"/></linearGradient></defs>
+            <path d="M15 92 A70 70 0 0 1 155 92" fill="none" stroke="#232d44" stroke-width="13" stroke-linecap="round"/>
+            <path id="garc" d="M15 92 A70 70 0 0 1 155 92" fill="none" stroke="url(#gg)" stroke-width="13" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100"/>
+            <text x="85" y="80" text-anchor="middle" class="gv" id="gval">0%</text>
+            <text x="85" y="100" text-anchor="middle" class="gl" id="glab">P(≥5 CORRECT)</text>
+          </svg>
+          <div class="gmeta" id="gmeta"></div>
+        </div>
+        <div class="hist" id="hist"></div>
+        <div class="hx" id="hx"></div>
+        <div class="picks" id="picks"></div>
+      </section>
+      <section class="panel chaos">
+        <h2>Chaos meter<span class="tagline">underdog wins</span></h2>
+        <div style="display:flex;align-items:baseline;gap:10px"><div class="cv" id="chaosv">0%</div><div class="cl">of simulated matches won by the pre-match underdog</div></div>
+        <div class="meter"><div class="needle" id="needle"></div></div>
+        <div class="ticks"><span>chalk</span><span>spicy</span><span>chaos</span></div>
+        <div class="cl" style="margin-top:10px">This run: <b id="runup">–</b> <span class="flames" id="flames"></span></div>
+        <div class="cl" id="bigup"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="lower">
+    <section class="panel">
+      <h2>Converging probabilities<span class="tagline">bar = live estimate · band = 95% CI · tick = final</span></h2>
+      <div class="bars" id="bars"></div>
+    </section>
+    <section class="panel">
+      <h2><span id="heatTitle">Final record distribution</span><span class="tagline">team × outcome, live</span></h2>
+      <div class="heat" id="heat"></div>
+      <div class="note" id="heatnote"></div>
+    </section>
+  </div>
+  <footer>
+    <div id="foot1"></div>
+    <div id="foot2"></div>
+  </footer>
+</div>
+<div id="tip"></div>
+<script type="application/json" id="data">__DATA__</script>
+<script>
+"use strict";
+const D = JSON.parse(document.getElementById("data").textContent);
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const fmt = (x) => Math.round(x).toLocaleString("en-US");
+const pct = (x, d = 1) => (100 * x).toFixed(d) + "%";
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const T = D.teams.length, C = D.cats.length, SW = D.kind === "swiss";
+const short = (n) => n >= 1e6 ? (n / 1e6).toFixed(n % 1e6 ? 1 : 0) + "M" : n >= 1e3 ? (n / 1e3).toFixed(n % 1e3 ? 1 : 0) + "k" : String(n);
+
+/* ------------------------------------------------------------------ checkpoints (prepend a zero row) */
+const CK = {
+  n: [0, ...D.ck.n],
+  cat: [D.teams.map(() => new Array(C).fill(0)), ...D.ck.cat],
+  hist: [new Array(D.pickem.n_picks + 1).fill(0), ...D.ck.hist],
+  upsets: [0, ...D.ck.upsets],
+  matches: [0, ...D.ck.matches],
+};
+const K = CK.n.length - 1;
+const lerp = (a, b, f) => a + (b - a) * f;
+function stateAt(pos) {
+  pos = Math.max(0, Math.min(K, pos));
+  const i = Math.min(Math.floor(pos), K - 1), f = pos - i, j = i + 1;
+  const n = lerp(CK.n[i], CK.n[j], f);
+  const cat = CK.cat[i].map((row, t) => row.map((v, c) => lerp(v, CK.cat[j][t][c], f)));
+  const hist = CK.hist[i].map((v, k) => lerp(v, CK.hist[j][k], f));
+  return { n, cat, hist, up: lerp(CK.upsets[i], CK.upsets[j], f), m: lerp(CK.matches[i], CK.matches[j], f) };
+}
+
+/* ------------------------------------------------------------------ header */
+$("title").innerHTML = `${esc(D.stage_name)} <span>· ${esc(D.event)}</span>`;
+const howTxt = { config: "teams from config", results: "teams from previous-stage results", projected: "teams projected from previous-stage sims" }[D.teams_from] || "";
+const locked = D.known.filter((m) => m.winner).length;
+$("sub").textContent = `${fmt(D.n_sims)} Monte Carlo runs · ${howTxt}` + (locked ? ` · ${locked} played match${locked > 1 ? "es" : ""} locked in` : "") + ` · generated ${D.generated}`;
+$("kicker").textContent = SW ? `Swiss stage · ${D.format.wins} wins advance · ${D.format.losses} losses out` : `Single elimination · ${D.format.labels.join(" → ")}`;
+$("fflabel").textContent = short(D.n_sims);
+$("foot1").innerHTML = `Model: blended VRS / HLTV / recent-form Elo → per-map win rates → veto simulation → Bo1/Bo3 series odds → Monte Carlo (seed ${D.seed}). Sample replays are real logged simulations.`;
+$("foot2").innerHTML = `made with <b>cs2pickem</b> · not affiliated with Valve, PGL or HLTV`;
+
+/* ------------------------------------------------------------------ bracket geometry */
+const bracket = $("bracket");
+const boxes = {};   // key -> {el, rows:[rowEl], slots:[slotEl]}
+const prob = (a, b, bo) => D.prob[String(bo)][a][b];
+const mapsOf = (a, b, bo) => (D.maps[`${Math.min(a, b)}-${Math.max(a, b)}-${bo}`] || []).map((k) => D.pool[k]);
+
+function mkRow(key, r) {
+  const row = el("div", "mrow");
+  row.dataset.box = key; row.dataset.row = r;
+  const s0 = el("div", "slot"), vs = el("div", "vs", "vs"), s1 = el("div", "slot");
+  row.append(s0, vs, s1);
+  return row;
+}
+function mkBox(key, label, sub, cls, nRows, nSlots) {
+  const b = el("div", "box " + (cls || ""));
+  b.append(el("div", "bh", `<span>${esc(label)}</span><em>${esc(sub || "")}</em>`));
+  const rec = { el: b, rows: [], slots: [] };
+  for (let r = 0; r < nRows; r++) { const row = mkRow(key, r); rec.rows.push(row); b.append(row); }
+  if (nSlots) {
+    const ts = el("div", "tslots");
+    for (let k = 0; k < nSlots; k++) { const s = el("div", "slot"); rec.slots.push(s); ts.append(s); }
+    b.append(ts);
+  }
+  boxes[key] = rec;
+  return b;
+}
+
+let RUNS = [];      // pre-processed sample runs
+if (SW) buildSwiss(); else buildPlayoffs();
+
+function buildSwiss() {
+  const W = D.format.wins, L = D.format.losses;
+  $("bracketTitle").textContent = "Swiss bracket";
+  $("bracketTag").textContent = `Bo${D.format.default_bo} · Bo${D.format.decider_bo} when advancement/elimination is on the line`;
+  $("legend").innerHTML = `<span><b>gold</b> = Bo${D.format.decider_bo} decider</span><span><i>✓</i> = played (live result)</span><span>hover a match for win probability &amp; likely maps</span>`;
+  // Preprocess runs: per round, the record bucket of each match.
+  const maxRows = {}, maxTerm = {};
+  RUNS = D.runs.map((run) => {
+    const w = new Array(T).fill(0), l = new Array(T).fill(0);
+    const rounds = [];
+    const termOrder = {}; // key -> [team...]
+    const termSlot = new Array(T).fill(null);
+    const byRound = {};
+    run.m.forEach((m) => (byRound[m[0]] = byRound[m[0]] || []).push(m));
+    const R = Math.max(...Object.keys(byRound).map(Number));
+    for (let r = 1; r <= R; r++) {
+      const ms = (byRound[r] || []).map((m) => ({ r: m[0], a: m[2], b: m[3], bo: m[4], w: m[5], forced: !!m[6], key: `${w[m[2]]}-${l[m[2]]}` }));
+      const cnt = {};
+      ms.forEach((m) => { m.row = (cnt[m.key] = (cnt[m.key] || 0)) ; cnt[m.key]++; });
+      for (const k in cnt) maxRows[k] = Math.max(maxRows[k] || 0, cnt[k]);
+      ms.forEach((m) => { const lo = m.w === m.a ? m.b : m.a; w[m.w]++; l[lo]++; });
+      ms.forEach((m) => {
+        for (const t of [m.a, m.b]) if (w[t] === W || l[t] === L) {
+          const key = `${w[t]}-${l[t]}`; (termOrder[key] = termOrder[key] || []).push(t);
+          termSlot[t] = { key, k: termOrder[key].length - 1, adv: w[t] === W };
+        }
+      });
+      rounds.push({ r, ms, term: termSlot.slice() });
+    }
+    for (const k in termOrder) maxTerm[k] = Math.max(maxTerm[k] || 0, termOrder[k].length);
+    return { rounds, fin: run.fin };
+  });
+  // Columns: c = w + l; terminal boxes at top (advanced) / bottom (eliminated).
+  for (let c = 0; c < W + L; c++) {
+    const col = el("div", "col");
+    col.append(el("div", "colh", c < W + L - 1 ? `Round ${c + 1}` : "Final"));
+    if (c >= W) { const k = `${W}-${c - W}`; if (maxTerm[k]) col.append(mkBox(k, k, "advance", "adv", 0, maxTerm[k])); }
+    for (let w = Math.min(c, W - 1); w >= 0; w--) {
+      const l = c - w; if (l >= L) continue;
+      const k = `${w}-${l}`;
+      if (maxRows[k]) col.append(mkBox(k, k, w === W - 1 || l === L - 1 ? `Bo${D.format.decider_bo}` : `Bo${D.format.default_bo}`, "", maxRows[k], 0));
+    }
+    if (c >= L) { const k = `${c - L}-${L}`; if (maxTerm[k]) col.append(mkBox(k, k, "eliminated", "elim", 0, maxTerm[k])); }
+    if (col.children.length > 1) bracket.append(col);
+  }
+}
+
+function buildPlayoffs() {
+  const R = D.format.rounds, B = D.format.bracket.length;
+  $("bracketTitle").textContent = "Playoff bracket";
+  $("bracketTag").textContent = D.format.labels.map((l, r) => `${l} Bo${D.format.bo[r]}`).join(" · ");
+  $("legend").innerHTML = `<span>seeds ${D.format.bracket.map((p) => p.join("v")).join(", ")}</span><span><i>✓</i> = played (live result)</span><span>hover a match for win probability &amp; likely maps</span>`;
+  $("heatTitle").textContent = "How far each team goes";
+  RUNS = D.runs.map((run) => {
+    const rounds = [];
+    for (let r = 1; r <= R; r++) rounds.push({ r, ms: run.m.filter((m) => m[0] === r).map((m) => ({ r, a: m[2], b: m[3], bo: m[4], w: m[5], forced: !!m[6], key: `R${r}-${m[1]}`, row: 0 })) });
+    return { rounds, fin: run.fin };
+  });
+  for (let r = 1; r <= R; r++) {
+    const col = el("div", "col playoff");
+    col.append(el("div", "colh", D.format.labels[r - 1]));
+    const n = B >> (r - 1);
+    for (let m = 0; m < n; m++) col.append(mkBox(`R${r}-${m}`, n > 1 ? `${D.format.labels[r - 1].replace(/-finals?/, "F").replace("Quarter", "Q").replace("Semi", "S")} ${m + 1}` : D.format.labels[r - 1], `Bo${D.format.bo[r - 1]}`, "", 1, 0));
+    bracket.append(col);
+  }
+  const col = el("div", "col playoff");
+  col.append(el("div", "colh", "Champion"));
+  col.append(mkBox("champ", "🏆 Champion", "", "champ", 0, 1));
+  bracket.append(col);
+}
+
+/* ------------------------------------------------------------------ live badges */
+const badges = D.teams.map((t, i) => {
+  const b = el("div", "badge", esc(t.tag));
+  b.style.setProperty("--c", t.colour);
+  b.title = t.name;
+  bracket.append(b);
+  return b;
+});
+function slotEl(s) {
+  if (!s) return null;
+  const bx = boxes[s.key]; if (!bx) return null;
+  return s.side == null ? bx.slots[s.k] : bx.rows[s.row].children[s.side ? 2 : 0];
+}
+function place(t, s, cls) {
+  const se = slotEl(s), b = badges[t];
+  if (!se) { b.style.opacity = 0; return; }
+  const br = bracket.getBoundingClientRect(), r = se.getBoundingClientRect();
+  b.style.opacity = "";
+  b.style.transform = `translate(${r.left - br.left}px,${r.top - br.top}px)`;
+  b.className = "badge" + (cls ? " " + cls : "");
+}
+function staticBadge(se, t, cls) {
+  se.className = "slot filled";
+  se.innerHTML = `<div class="sb ${cls || ""}" style="--c:${D.teams[t].colour}">${esc(D.teams[t].tag)}</div>`;
+}
+
+/* ------------------------------------------------------------------ replay state machine
+   step 2k   : pairings of round k+1 shown (teams move in)
+   step 2k+1 : results of round k+1 revealed
+   step 2R   : terminal placement (final)                                        */
+let runIdx = 0, stepIdx = 0;
+const stepsOf = (run) => 2 * run.rounds.length + 1;
+
+function clearBoxes() {
+  for (const k in boxes) {
+    const bx = boxes[k];
+    bx.rows.forEach((row) => {
+      row.classList.remove("played"); row.removeAttribute("data-m");
+      row.children[0].className = "slot"; row.children[0].innerHTML = "";
+      row.children[2].className = "slot"; row.children[2].innerHTML = "";
+      row.children[1].className = "vs"; row.children[1].textContent = "vs";
+    });
+    bx.slots.forEach((s) => { s.className = "slot"; s.innerHTML = ""; });
+  }
+}
+function renderRun() {
+  const run = RUNS[runIdx]; if (!run) return;
+  clearBoxes();
+  const shownRounds = Math.min(run.rounds.length, Math.floor(stepIdx / 2) + 1);
+  const resolved = Math.min(run.rounds.length, Math.ceil(stepIdx / 2));
+  const pos = new Array(T).fill(null), cls = new Array(T).fill("");
+  // static rows for every shown round
+  for (let i = 0; i < shownRounds; i++) {
+    const rd = run.rounds[i], done = i < resolved;
+    rd.ms.forEach((m, mi) => {
+      const bx = boxes[m.key]; if (!bx) return;
+      const row = bx.rows[m.row];
+      row.dataset.m = `${i}:${mi}`;
+      row.classList.toggle("played", m.forced);
+      const vs = row.children[1];
+      vs.className = "vs" + (m.bo === 3 ? " bo3" : m.bo >= 5 ? " bo5" : "");
+      const mp = mapsOf(m.a, m.b, m.bo);
+      vs.textContent = m.bo === 1 && mp.length ? mp[0].replace(/^de_/, "") : `Bo${m.bo}`;
+      staticBadge(row.children[0], m.a, done ? (m.w === m.a ? "win" : "lose") : "");
+      staticBadge(row.children[2], m.b, done ? (m.w === m.b ? "win" : "lose") : "");
+      pos[m.a] = { key: m.key, row: m.row, side: 0 }; pos[m.b] = { key: m.key, row: m.row, side: 1 };
+      if (done) { cls[m.w] = i === resolved - 1 && stepIdx % 2 === 1 ? "won" : ""; cls[m.w === m.a ? m.b : m.a] = SW ? (i === resolved - 1 && stepIdx % 2 === 1 ? "lost" : "") : "lost"; }
+    });
+  }
+  // terminal placement: teams that finished in an earlier round (or all, at the final step)
+  if (SW) {
+    const upto = stepIdx >= 2 * run.rounds.length ? run.rounds.length : shownRounds - 1;
+    if (upto > 0) {
+      const term = run.rounds[upto - 1].term;
+      term.forEach((s, t) => {
+        if (!s) return;
+        const se = boxes[s.key] && boxes[s.key].slots[s.k];
+        if (se) staticBadge(se, t, s.adv ? "" : "lose");
+        pos[t] = { key: s.key, k: s.k }; cls[t] = s.adv ? "adv" : "elim";
+      });
+    }
+  } else if (stepIdx >= 2 * run.rounds.length) {
+    const fin = run.rounds[run.rounds.length - 1].ms[0];
+    staticBadge(boxes.champ.slots[0], fin.w, "win");
+    pos[fin.w] = { key: "champ", k: 0 }; cls[fin.w] = "champ";
+  }
+  for (let t = 0; t < T; t++) place(t, pos[t], cls[t]);
+  updateFeed(run, resolved);
+}
+function updateFeed(run, resolved) {
+  let ups = 0, n = 0, big = null;
+  for (let i = 0; i < resolved; i++) run.rounds[i].ms.forEach((m) => {
+    if (m.forced) return;
+    n++;
+    const pw = prob(m.w, m.w === m.a ? m.b : m.a, m.bo);
+    if (pw < 0.5) { ups++; if (!big || pw < big.p) big = { p: pw, m }; }
+  });
+  const R = run.rounds.length;
+  const stage = stepIdx >= 2 * R ? "final" : `round ${Math.floor(stepIdx / 2) + 1} ${stepIdx % 2 ? "results" : "pairings"}`;
+  $("runinfo").innerHTML = `replay <b>#${runIdx + 1}</b>/${RUNS.length} · ${stage}`;
+  $("runup").textContent = `${ups} upset${ups === 1 ? "" : "s"} in ${n} matches`;
+  $("flames").textContent = "🔥".repeat(Math.min(5, Math.round(n ? (ups / n) * 10 : 0)));
+  $("bigup").innerHTML = big ? `Biggest upset: <b>${esc(D.teams[big.m.w].name)}</b> (${pct(big.p, 0)}) beat ${esc(D.teams[big.m.w === big.m.a ? big.m.b : big.m.a].name)}` : "&nbsp;";
+  if (stepIdx >= 2 * R) {
+    if (SW) {
+      const adv = run.fin.map((k, t) => [k, t]).filter(([k]) => D.cat_style[k] === "adv").map(([, t]) => D.teams[t].tag);
+      $("runfeed").innerHTML = `Run #${runIdx + 1}: <b>${adv.join(" · ")}</b> advance`;
+    } else {
+      const w = run.rounds[R - 1].ms[0].w;
+      $("runfeed").innerHTML = `Run #${runIdx + 1}: 🏆 <b>${esc(D.teams[w].name)}</b> lift the trophy`;
+    }
+  } else $("runfeed").innerHTML = big && resolved ? `<span class="up">upset!</span> ${esc(D.teams[big.m.w].tag)} beat ${esc(D.teams[big.m.w === big.m.a ? big.m.b : big.m.a].tag)}` : "&nbsp;";
+}
+
+/* ------------------------------------------------------------------ tooltip */
+const tip = $("tip");
+bracket.addEventListener("mousemove", (e) => {
+  const row = e.target.closest(".mrow");
+  if (!row || !row.dataset.m) { tip.style.display = "none"; return; }
+  const [i, mi] = row.dataset.m.split(":").map(Number);
+  const m = RUNS[runIdx].rounds[i].ms[mi];
+  const pa = prob(m.a, m.b, m.bo), A = D.teams[m.a], B = D.teams[m.b];
+  const mp = mapsOf(m.a, m.b, m.bo);
+  const resolved = Math.ceil(stepIdx / 2) > i;
+  const lbl = SW ? `Round ${m.r} · ${m.key} pool · Bo${m.bo}` : `${D.format.labels[m.r - 1]} · Bo${m.bo}`;
+  tip.innerHTML = `<div class="th">${lbl}</div>
+    <div class="tr"><span class="chip" style="--c:${A.colour}">${esc(A.tag)}</span><span class="nm">${esc(A.name)} <small style="color:var(--faint)">#${A.seed}</small></span><span class="pc">${pct(pa)}</span></div>
+    <div class="tr"><span class="chip" style="--c:${B.colour}">${esc(B.tag)}</span><span class="nm">${esc(B.name)} <small style="color:var(--faint)">#${B.seed}</small></span><span class="pc">${pct(1 - pa)}</span></div>
+    <div class="pbar"><i style="width:${100 * pa}%;background:${A.colour}"></i><i style="flex:1;background:${B.colour}"></i></div>
+    <div class="maps">${m.bo === 1 ? "Likely map" : "Likely maps"}: ${mp.map(esc).join(" → ") || "–"}</div>
+    ${resolved ? `<div class="res">${m.forced ? "✓ Played: " : "Sim result: "}<span style="color:${D.teams[m.w].colour}">${esc(D.teams[m.w].name)}</span> win${!m.forced && prob(m.w, m.w === m.a ? m.b : m.a, m.bo) < 0.5 ? ' <span style="color:var(--acc)">(upset)</span>' : ""}</div>` : ""}`;
+  tip.style.display = "block";
+  const x = Math.min(e.clientX + 14, window.innerWidth - tip.offsetWidth - 8), y = Math.min(e.clientY + 14, window.innerHeight - tip.offsetHeight - 8);
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+});
+bracket.addEventListener("mouseleave", () => (tip.style.display = "none"));
+
+/* ------------------------------------------------------------------ converging bars + heatmap */
+const pickOf = {};
+D.pickem.picks.forEach((p) => (pickOf[p.team] = pickOf[p.team] || p));
+const barsEl = $("bars");
+barsEl.style.setProperty("--nb", D.bars.length);
+barsEl.append(el("div", "hh", ""), el("div", "hh", "team"));
+D.bars.forEach((b) => barsEl.append(el("div", "hh", b.label)));
+const finalOf = (t, cats) => cats.reduce((s, c) => s + D.final[D.cats[c]][t], 0);
+const order = [...Array(T).keys()];
+const barCells = order.map((t) => {
+  const tm = D.teams[t], p = pickOf[t];
+  const chip = el("span", "chip", esc(tm.tag)); chip.style.setProperty("--c", tm.colour);
+  const pc = p ? `<span class="pchip ${SW ? p.cat : "bracket"}">${SW ? p.group : "pick"}</span>` : "";
+  barsEl.append(chip, el("div", "tn", `${esc(tm.name)}<small>#${tm.seed}</small>${pc}`));
+  return D.bars.map((b) => {
+    const bar = el("div", "bar");
+    const f = el("div", "f"), ci = el("div", "ci"), tg = el("div", "tg"), tx = el("div", "t");
+    f.style.background = b.colour; tg.style.left = `calc(${100 * finalOf(t, b.cats)}% - 1px)`;
+    bar.append(f, ci, tg, tx); barsEl.append(bar);
+    return { f, ci, tx, cats: b.cats };
+  });
+});
+const heat = $("heat");
+heat.style.gridTemplateColumns = `auto repeat(${C}, minmax(34px,1fr))`;
+heat.append(el("div", "hh", ""));
+D.cats.forEach((c) => heat.append(el("div", "hh", esc(c))));
+const heatCells = order.map((t) => {
+  heat.append(el("div", "rn", `<span class="chip" style="--c:${D.teams[t].colour}">${esc(D.teams[t].tag)}</span>`));
+  return D.cats.map((c, k) => { const e = el("div", "c"); e.dataset.k = k; heat.append(e); return e; });
+});
+$("heatnote").textContent = SW ? "Each row sums to 100%: the probability of each final Swiss record." : "Each row sums to 100%: probability of each exit round.";
+
+/* ------------------------------------------------------------------ pick'em panel */
+const NP = D.pickem.n_picks, THR = D.pickem.threshold;
+$("pkrule").textContent = D.pickem.rule;
+$("glab").textContent = THR != null ? `P(≥${THR} CORRECT)` : "E[CORRECT]";
+const histEl = $("hist"), hx = $("hx");
+const hbars = [];
+for (let k = 0; k <= NP; k++) {
+  const b = el("div", "hb" + (THR != null ? (k >= THR ? " ok" : "") : k === NP ? " ok" : ""));
+  b.append(el("span")); histEl.append(b); hbars.push(b);
+  hx.append(el("div", "", String(k)));
+}
+const pickRows = D.pickem.picks.map((p) => {
+  const tm = D.teams[p.team];
+  const row = el("div", "pk");
+  row.append(el("div", "grp " + (SW ? p.cat : ""), esc(p.group)));
+  const chip = el("span", "chip", esc(tm.tag)); chip.style.setProperty("--c", tm.colour); row.append(chip);
+  row.append(el("div", "nm", esc(tm.name)));
+  const mini = el("div", "mini"), bar = el("i"); mini.append(bar); row.append(mini);
+  const pv = el("div", "pv", "–"); row.append(pv);
+  $("picks").append(row);
+  return { bar, pv, p };
+});
+
+/* ------------------------------------------------------------------ live stats render */
+function heatColour(p, style) {
+  const a = Math.min(1, Math.sqrt(p) * 1.05);
+  return style === "adv" ? `rgba(34,211,166,${a})` : `rgba(255,70,85,${a})`;
+}
+let lastPos = -1;
+function renderStats(pos) {
+  if (pos === lastPos) return;
+  lastPos = pos;
+  const s = stateAt(pos), n = s.n;
+  $("simcount").textContent = fmt(n);
+  $("prog").style.width = `${(100 * n) / D.n_sims}%`;
+  const P = (t, cats) => (n > 0 ? cats.reduce((a, c) => a + s.cat[t][c], 0) / n : 0);
+  barCells.forEach((cells, t) => cells.forEach((c) => {
+    const p = P(t, c.cats), ci = n > 0 ? 1.96 * Math.sqrt(Math.max(p * (1 - p), 0.25 / n) / n) : 0;
+    c.f.style.width = `${100 * p}%`;
+    c.ci.style.left = `${100 * Math.max(0, p - ci)}%`; c.ci.style.width = `${100 * (Math.min(1, p + ci) - Math.max(0, p - ci))}%`;
+    c.tx.textContent = n > 0 ? pct(p) : "–";
+  }));
+  heatCells.forEach((cells, t) => cells.forEach((e, k) => {
+    const p = n > 0 ? s.cat[t][k] / n : 0;
+    e.style.background = heatColour(p, D.cat_style[k]);
+    e.textContent = p >= 0.005 ? Math.round(100 * p) : "";
+  }));
+  const tot = s.hist.reduce((a, b) => a + b, 0) || 1;
+  const hp = s.hist.map((v) => v / tot), mx = Math.max(...hp, 1e-9);
+  hbars.forEach((b, k) => { b.style.height = `${(100 * hp[k]) / mx}%`; b.firstChild.textContent = n > 0 && hp[k] >= 0.005 ? Math.round(100 * hp[k]) : ""; });
+  const exp = hp.reduce((a, p, k) => a + p * k, 0);
+  let g;
+  if (THR != null) { g = hp.slice(THR).reduce((a, b) => a + b, 0); $("gval").textContent = n > 0 ? pct(g) : "–"; }
+  else { g = exp / NP; $("gval").textContent = n > 0 ? exp.toFixed(2) : "–"; }
+  $("garc").setAttribute("stroke-dasharray", `${n > 0 ? 100 * g : 0} 100`);
+  $("gmeta").innerHTML = THR != null
+    ? `E[correct] <b>${n > 0 ? exp.toFixed(2) : "–"}</b> / ${NP}<br>perfect ${NP}/${NP}: <b>${n > 0 ? pct(hp[NP], 2) : "–"}</b><br><span style="color:var(--faint)">final: ${pct(D.pickem.p_threshold)} · ${D.pickem.expected.toFixed(2)}</span>`
+    : `of <b>${NP}</b> bracket picks<br>perfect bracket: <b>${n > 0 ? pct(hp[NP], 2) : "–"}</b><br><span style="color:var(--faint)">final E: ${D.pickem.expected.toFixed(2)}</span>`;
+  pickRows.forEach((r) => { const p = P(r.p.team, r.p.cats); r.bar.style.width = `${100 * p}%`; r.pv.textContent = n > 0 ? pct(p) : "–"; });
+  const rate = s.m > 0 ? s.up / s.m : 0;
+  $("chaosv").textContent = s.m > 0 ? pct(rate) : "–";
+  $("needle").style.left = `calc(${Math.min(100, (rate / 0.5) * 100)}% - 1px)`;
+}
+
+/* ------------------------------------------------------------------ main loop */
+let playing = false, speed = 1, pos = 0, ffFrom = null, stepping = false;
+let phaseT = 0, lastT = null, rateEMA = 0, prevN = 0;
+const CK_PER_SEC = 4;          // counter speed at 1× (log-spaced checkpoints)
+const PHASE_MS = 750;          // replay phase length at 1×
+function setPlaying(p) { playing = p; $("play").textContent = p ? "❚❚ Pause" : "▶ Play"; if (p) lastT = null; }
+function nextStep() {
+  const run = RUNS[runIdx];
+  stepIdx++;
+  if (stepIdx > stepsOf(run) + 1) {  // +1 = hold on the final state for one phase
+    runIdx = (runIdx + 1) % RUNS.length; stepIdx = 0;
+    if (stepping) { stepping = false; setPlaying(false); stepIdx = stepsOf(RUNS[runIdx]) - 1; runIdx = (runIdx + RUNS.length - 1) % RUNS.length; }
+  }
+  if (stepIdx <= stepsOf(RUNS[runIdx]) - 1) renderRun();
+}
+function frame(t) {
+  if (lastT == null) lastT = t;
+  const dt = Math.min(0.1, (t - lastT) / 1000); lastT = t;
+  if (ffFrom != null) {
+    pos = Math.min(K, pos + dt * Math.max(K / 1.4, 1));
+    if (pos >= K) ffFrom = null;
+  } else if (playing && !stepping) pos = Math.min(K, pos + dt * CK_PER_SEC * speed);
+  if (playing) {
+    phaseT += dt * 1000;
+    const ph = PHASE_MS / Math.min(speed, stepping ? 3 : 8);
+    document.documentElement.style.setProperty("--mt", `${Math.min(0.55, ph / 1000 * 0.8)}s`);
+    while (phaseT >= ph) { phaseT -= ph; nextStep(); if (!playing) break; }
+  }
+  const n = stateAt(pos).n;
+  if (dt > 0) rateEMA = rateEMA * 0.9 + ((n - prevN) / dt) * 0.1;
+  prevN = n;
+  $("simrate").textContent = (playing || ffFrom != null) && pos < K ? fmt(rateEMA) : pos >= K ? "done" : "0";
+  renderStats(pos);
+  requestAnimationFrame(frame);
+}
+$("play").onclick = () => { stepping = false; setPlaying(!playing); };
+$("step").onclick = () => {
+  if (stepping) return;
+  runIdx = stepIdx === 0 ? runIdx : (runIdx + 1) % RUNS.length; stepIdx = 0; phaseT = 0; renderRun();
+  pos = Math.min(K, Math.floor(pos) + 1);
+  stepping = true; setPlaying(true);
+};
+$("ff").onclick = () => { ffFrom = pos; };
+$("reset").onclick = () => { setPlaying(false); stepping = false; ffFrom = null; pos = 0; runIdx = 0; stepIdx = 0; phaseT = 0; lastPos = -1; rateEMA = 0; prevN = 0; renderRun(); renderStats(0); };
+$("speed").oninput = (e) => { speed = Math.pow(2, +e.target.value); $("spv").textContent = (speed < 1 ? speed.toFixed(2).replace(/0$/, "") : speed.toFixed(speed % 1 ? 1 : 0)) + "×"; };
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT") return;
+  if (e.code === "Space") { e.preventDefault(); $("play").click(); }
+  else if (e.key === "ArrowRight") $("step").click();
+  else if (e.key === "f" || e.key === "F") $("ff").click();
+  else if (e.key === "r" || e.key === "R") $("reset").click();
+});
+let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(renderRun, 80); });
+
+renderRun();
+renderStats(0);
+const qs = new URLSearchParams(location.search + "&" + location.hash.slice(1));
+if (qs.has("ff")) { pos = K; stepIdx = stepsOf(RUNS[0]) - 1; renderRun(); }
+requestAnimationFrame(frame);
+const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!qs.has("paused") && !reduced) setTimeout(() => setPlaying(true), 700);
+</script>
+</body>
+</html>

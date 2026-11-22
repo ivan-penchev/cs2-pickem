@@ -1,7 +1,7 @@
 PY ?= .venv/bin/python
 STAGE ?= stage1
 
-.PHONY: install install-scrape lint format test predict lock
+.PHONY: install install-scrape lint format test predict animate lock
 
 install:
 	python3 -m venv .venv
@@ -26,6 +26,9 @@ test:
 predict:
 	$(PY) -m cs2pickem.cli simulate --stage $(STAGE)
 	$(PY) -m cs2pickem.cli pickem --stage $(STAGE)
+
+animate:
+	$(PY) -m cs2pickem.cli animate --stage $(STAGE)
 
 lock:
 	$(PY) -m pip freeze --exclude-editable | grep -v '^-e' > requirements.lock
