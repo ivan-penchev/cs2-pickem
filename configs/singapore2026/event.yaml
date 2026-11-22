@@ -1,0 +1,407 @@
+# PGL Major Singapore 2026 — event-level configuration.
+# Team registry: canonical names, aliases (VRS/HLTV/Liquipedia spellings), HLTV ids and current rosters.
+# 9z: history replaced meyern (roster_changed is an estimate; older matches are down-weighted).
+# GOSH: the former BC.Game roster (s1mple) playing under a new name.
+id: singapore2026
+name: PGL Major Singapore 2026
+start: '2026-11-24'
+vrs_date: '2026_11_02'
+map_pool:
+- Ancient
+- Anubis
+- Cache
+- Dust II
+- Inferno
+- Mirage
+- Nuke
+stages:
+- stage1
+- stage2
+- stage3
+- playoffs
+rating:
+  w_vrs: 0.4
+  w_hltv: 0.25
+  w_elo: 0.35
+  elo_k: 32
+  elo_half_life_days: 30
+  elo_window_days: 90
+  min_roster_overlap: 4
+  old_roster_weight: 0.35
+  rating_scale: 200
+maps:
+  prior_maps: 8
+  max_offset: 0.8
+  veto_temperature: 0.0
+sim:
+  n_sims: 100000
+  seed: 2026
+pickem:
+  n_30: 2
+  n_03: 2
+  n_advance: 6
+  threshold: 5
+teams:
+- name: Ninjas in Pyjamas
+  aliases:
+  - NiP
+  hltv_id: 4411
+  hltv_slug: ninjas-in-pyjamas
+  region: EU
+  roster:
+  - adamb
+  - Krimbo
+  - sjuush
+  - stavn
+  - xKacpersky
+- name: PARIVISION
+  hltv_id: 12467
+  hltv_slug: parivision
+  region: EU
+  roster:
+  - FL1T
+  - HObbit
+  - Jame
+  - xiELO
+  - zweih
+- name: HEROIC
+  hltv_id: 7175
+  hltv_slug: heroic
+  region: EU
+  roster:
+  - Brollan
+  - Chr1zN
+  - MartinezSa
+  - nilo
+  - susp
+- name: FaZe
+  aliases:
+  - FaZe Clan
+  hltv_id: 6667
+  hltv_slug: faze
+  region: EU
+  roster:
+  - frozen
+  - JBOEN
+  - jcobbb
+  - Neityu
+  - Twistzz
+- name: Liquid
+  aliases:
+  - Team Liquid
+  hltv_id: 5973
+  hltv_slug: liquid
+  region: AM
+  roster:
+  - EliGE
+  - Jorko
+  - JT
+  - malbsMd
+  - NAF
+- name: Eternal Fire
+  aliases:
+  - EF
+  hltv_id: 11251
+  hltv_slug: eternal-fire
+  region: EU
+  roster:
+  - jottAAA
+  - Kvem
+  - MisteM
+  - regali
+  - soulfly
+- name: 100 Thieves
+  aliases:
+  - 100T
+  hltv_id: 8474
+  hltv_slug: 100-thieves
+  region: AM
+  roster:
+  - device
+  - Gizmy
+  - poiii
+  - rain
+  - sirah
+- name: 9z
+  aliases:
+  - 9z Team
+  hltv_id: 9996
+  hltv_slug: 9z
+  region: AM
+  roster:
+  - dgt
+  - history
+  - HUASOPEEK
+  - luchov
+  - max
+  roster_changed: '2026-11-10'
+- name: M80
+  hltv_id: 12376
+  hltv_slug: m80
+  region: AM
+  roster:
+  - JBa
+  - Lake
+  - s1n
+  - slaxz-
+  - Swisher
+- name: DENDELE
+  hltv_id: 13926
+  hltv_slug: dendele
+  region: AM
+  roster:
+  - doc
+  - gafolo
+  - koala
+  - maxxkor
+  - rdnzao
+- name: Imperial
+  aliases:
+  - Imperial Esports
+  hltv_id: 9455
+  hltv_slug: imperial
+  region: AM
+  roster:
+  - chelo
+  - decenty
+  - noway
+  - saadzin
+  - VINI
+- name: Wildcard
+  aliases:
+  - Wildcard Gaming
+  hltv_id: 12257
+  hltv_slug: wildcard
+  region: AM
+  roster:
+  - Cxzi
+  - fr3nd
+  - HexT
+  - nEMANHA
+  - reck
+- name: GOSH
+  aliases:
+  - GOSH (ex-BC.Game)
+  - BC.Game
+  - BCGame
+  vrs_name: BC.Game
+  hltv_id: 12878
+  hltv_slug: bcgame
+  region: EU
+  roster:
+  - asap
+  - Magisk
+  - mzinho
+  - s1mple
+  - Senzu
+- name: FlyQuest
+  hltv_id: 12774
+  hltv_slug: flyquest
+  region: AS
+  roster:
+  - aliStair
+  - INS
+  - jks
+  - nettik
+  - Vexite
+- name: Chinggis Warriors
+  hltv_id: 12646
+  hltv_slug: chinggis-warriors
+  region: AS
+  roster:
+  - cool4st
+  - fury5k
+  - ROUX
+  - sk0R
+  - tikuak
+- name: Lynn Vision
+  aliases:
+  - Lynn Vision Gaming
+  - LVG
+  hltv_id: 8840
+  hltv_slug: lynn-vision
+  region: AS
+  roster:
+  - C4LLM3SU3
+  - EmiliaQAQ
+  - Starry
+  - Westmelon
+  - z4KR
+- name: FUT
+  aliases:
+  - FUT Esports
+  hltv_id: 13286
+  hltv_slug: fut
+  region: EU
+  roster:
+  - cmtry
+  - dem0n
+  - dziugss
+  - Krabeni
+  - xfl0ud
+- name: Nemiga
+  hltv_id: 7969
+  hltv_slug: nemiga
+  region: EU
+  roster:
+  - KaiR0N-
+  - khaN
+  - robo
+  - syph0
+  - Xant3r
+- name: G2
+  aliases:
+  - G2 Esports
+  hltv_id: 5995
+  hltv_slug: g2
+  region: EU
+  roster:
+  - HeavyGod
+  - huNter-
+  - MATYS
+  - NertZ
+  - r1nkle
+- name: 1win
+  hltv_id: 10621
+  hltv_slug: 1win
+  region: EU
+  roster:
+  - ArtFr0st
+  - Ax1Le
+  - BELCHONOKK
+  - fame
+  - nafany
+- name: Natus Vincere
+  aliases:
+  - NaVi
+  - NAVI
+  hltv_id: 4608
+  hltv_slug: natus-vincere
+  region: EU
+  roster:
+  - Aleksib
+  - b1t
+  - iM
+  - makazze
+  - w0nderful
+- name: Astralis
+  hltv_id: 6665
+  hltv_slug: astralis
+  region: EU
+  roster:
+  - jabbi
+  - phzy
+  - ryu
+  - siuhy
+  - Staehr
+- name: The MongolZ
+  aliases:
+  - MongolZ
+  hltv_id: 6248
+  hltv_slug: the-mongolz
+  region: AS
+  roster:
+  - '910'
+  - bLitz
+  - cobrazera
+  - nin9
+  - Techno
+- name: MIBR
+  hltv_id: 9215
+  hltv_slug: mibr
+  region: AM
+  roster:
+  - insani
+  - LNZ
+  - nqz
+  - tomaszin
+  - venomzera
+- name: MOUZ
+  hltv_id: 4494
+  hltv_slug: mouz
+  region: EU
+  roster:
+  - PR
+  - Spinx
+  - torzsi
+  - xelex
+  - xertioN
+- name: Vitality
+  aliases:
+  - Team Vitality
+  hltv_id: 9565
+  hltv_slug: vitality
+  region: EU
+  roster:
+  - flameZ
+  - jL
+  - mezii
+  - ropz
+  - ZywOo
+- name: FURIA
+  hltv_id: 8297
+  hltv_slug: furia
+  region: AM
+  roster:
+  - FalleN
+  - KSCERATO
+  - molodoy
+  - YEKINDAR
+  - yuurih
+- name: Aurora
+  hltv_id: 11861
+  hltv_slug: aurora
+  region: EU
+  roster:
+  - Jimpphat
+  - kyxsan
+  - Wicadia
+  - woxic
+  - XANTARES
+- name: Spirit
+  aliases:
+  - Team Spirit
+  hltv_id: 7020
+  hltv_slug: spirit
+  region: EU
+  roster:
+  - donk
+  - magixx
+  - sh1ro
+  - tN1R
+  - zont1x
+- name: BETBOOM
+  aliases:
+  - BetBoom
+  - BetBoom Team
+  hltv_id: 12394
+  hltv_slug: betboom
+  region: EU
+  roster:
+  - Boombl4
+  - d1Ledez
+  - Magnojez
+  - S1ren
+  - zorte
+- name: Falcons
+  aliases:
+  - Team Falcons
+  hltv_id: 11283
+  hltv_slug: falcons
+  region: EU
+  roster:
+  - karrigan
+  - kyousuke
+  - m0NESY
+  - NiKo
+  - TeSeS
+- name: Legacy
+  hltv_id: 12468
+  hltv_slug: legacy
+  region: AM
+  roster:
+  - arT
+  - dumau
+  - latto
+  - n1ssim
+  - try

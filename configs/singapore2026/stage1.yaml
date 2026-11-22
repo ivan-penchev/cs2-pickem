@@ -1,0 +1,27 @@
+# Stage 1 — 16-team Swiss. Teams listed in seed order (seed 1 first), seeded by VRS (2026-11-02).
+# Round 1 pairs seed i vs seed i+8 (1v9 ... 8v16).
+name: Stage 1
+type: swiss
+start: 2026-11-24
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/results/stage1.yaml
+teams:
+  - Ninjas in Pyjamas   # 1  (VRS 1564)
+  - PARIVISION          # 2  (1560)
+  - HEROIC              # 3  (1548)
+  - FaZe                # 4  (1539)
+  - Liquid              # 5  (1528)
+  - Eternal Fire        # 6  (1513)
+  - 100 Thieves         # 7  (1511)
+  - 9z                  # 8  (1490)
+  - M80                 # 9  (1489)
+  - DENDELE             # 10 (1466)
+  - Imperial            # 11 (1406)
+  - Wildcard            # 12 (1391)
+  - GOSH                # 13 (1337, as BC.Game)
+  - FlyQuest            # 14 (1318)
+  - Chinggis Warriors   # 15 (1272)
+  - Lynn Vision         # 16 (1267)

@@ -1,0 +1,11 @@
+# Playoffs — 8-team single elimination seeded by final Stage 3 seed.
+# Quarter-finals: 1v8, 4v5 (upper half) | 2v7, 3v6 (lower half). Bo3, Grand Final Bo5.
+name: Playoffs
+type: playoffs
+playoff_bo: 3
+final_bo: 5
+bracket: [[1, 8], [4, 5], [2, 7], [3, 6]]
+results_file: data/results/playoffs.yaml
+source:
+  qualifiers_from: stage3
+teams: []

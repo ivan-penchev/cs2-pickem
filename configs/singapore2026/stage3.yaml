@@ -1,0 +1,20 @@
+# Stage 3 — 8 direct invites + 8 Stage 2 qualifiers. At this Major every Stage 3 match is Bo3.
+name: Stage 3
+type: swiss
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 3
+decider_bo: 3
+results_file: data/results/stage3.yaml
+source:
+  qualifiers_from: stage2
+  invites:
+    - MOUZ       # VRS 1960
+    - Vitality   # 1922
+    - FURIA      # 1912
+    - Aurora     # 1860
+    - Spirit     # 1842
+    - BETBOOM    # 1786
+    - Falcons    # 1764
+    - Legacy     # 1662
+teams: []

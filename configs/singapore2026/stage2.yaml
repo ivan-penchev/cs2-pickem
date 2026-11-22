@@ -1,0 +1,21 @@
+# Stage 2 — 8 direct invites (seeds 1-8 by VRS) + 8 Stage 1 qualifiers (seeds 9-16 by their final Stage 1 seed).
+# `teams` is filled automatically by `cs2pickem next-stage` (or edit by hand once Stage 1 is over).
+name: Stage 2
+type: swiss
+wins_to_advance: 3
+losses_to_eliminate: 3
+default_bo: 1
+decider_bo: 3
+results_file: data/results/stage2.yaml
+source:
+  qualifiers_from: stage1
+  invites:
+    - FUT            # VRS 1721
+    - Nemiga         # 1650
+    - G2             # 1616
+    - 1win           # 1598
+    - Natus Vincere  # 1589
+    - Astralis       # 1572
+    - The MongolZ    # 1554
+    - MIBR           # 1546
+teams: []
