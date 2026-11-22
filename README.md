@@ -12,6 +12,9 @@ It ships configured for the **PGL Major Singapore 2026**. Every stage and every 
   * Bracket: maximise expected correct picks
 * **Live mode**: enter finished matches and every remaining round is re-simulated conditional on them.
   Stage N+1 is then built from the Stage N qualifiers plus the direct invites.
+* **Point-in-time backtests** on the last two Majors (Budapest 2025, Cologne 2026) against VRS-only and coin-flip baselines
+* **Hourly live updates** via GitHub Actions: scrape results, re-simulate, keep an append-only prediction history,
+  and publish a dashboard at **<https://ivan-penchev.github.io/cs2-pickem/>**
 * Offline by default from committed data snapshots. `fetch --refresh` re-scrapes the sources.
   User-editable CSVs override anything.
 
@@ -42,6 +45,9 @@ Python ≥ 3.12. With uv instead of pip: `uv venv && uv pip install -e '.[dev]'`
 | `result add A B WINNER [-s STAGE] [--round R]` | Record a finished match (live mode) |
 | `result list / result remove A B` | Show standings and results, or undo a result |
 | `animate -s STAGE [-n SIMS] [--runs 300] [--out site/STAGE.html] [--open]` | Write an animated, self-contained HTML visualisation of the simulation |
+| `backtest prepare / backtest run [--event budapest2025]` | Point-in-time backtest → `data/backtests/<major>/report.json` + `site/backtest.html` |
+| `live update [--force] [--today YYYY-MM-DD]` | Scrape finished matches (HLTV → Liquipedia → DFRAG) into `data/results/`, build the next stage when one finishes |
+| `site build [-n SIMS] [--no-record]` | Re-run every stage, append to the prediction history, rebuild `site/` (index, stage pages, history, backtest) |
 | `next-stage -s stage2 [--write]` | Seed the next stage (invites + qualifiers). `--write` stores the seeding in the YAML |
 
 `--event` selects the config directory under `configs/`. The default is the only (or first) event.
@@ -62,6 +68,57 @@ cs2pickem pickem -s stage2
 Results are stored in `data/results/<stage>.yaml`, which you can edit by hand. Team names accept any alias from `event.yaml`.
 Later stages that are not decided yet are **projected**: Stage 1 is simulated to obtain the most likely qualifiers.
 Projected output is labelled as such.
+
+### Automatic updates (GitHub Actions) and the dashboard
+
+`.github/workflows/live.yml` runs every hour. A tiny gate job reads `start`/`end` from the event config and exits
+within seconds outside the event window (± 1 day); `workflow_dispatch` with `force: true` overrides it.
+Inside the window it:
+
+1. **Scrapes** finished matches for the active stage(s): HLTV via headless Playwright first; when Cloudflare blocks
+   the runner it falls back to the Liquipedia MediaWiki API (`action=parse`, descriptive User-Agent, ≥2.5 s between
+   calls), then DFRAG. Team names are normalised through the aliases in `event.yaml`.
+2. **Merges** them into `data/results/<stage>.yaml`. This is idempotent: existing results are never deleted or
+   overwritten by a failed or partial scrape, and the source used is logged in the job summary.
+3. **Advances** the event: when a Swiss stage has 8 decided qualifiers, the next stage's seeding is written
+   (invites + qualifiers), using the published Round 1 draw when Liquipedia has it.
+4. **Re-predicts** with `cs2pickem site build`, commits `data/` and `site/` back to `main` as `github-actions[bot]`
+   with `[skip ci]`, and deploys GitHub Pages directly (pushes made with `GITHUB_TOKEN` don't trigger other workflows,
+   so there are no loops).
+
+The job never fails because of a scrape problem. It reports "no new data" and leaves everything as it was.
+
+**Prediction history.** Every `site build` appends a snapshot to `data/predictions/<stage>/<UTC timestamp>.json`
+(per-team P(3-0)/P(advance)/P(0-3), recommended picks, P(≥5), known results and the match that triggered it) –
+but only when the known results changed. The first snapshot of a stage is flagged `"baseline": true` and is never
+overwritten. The dashboard (`site/index.html`) and the per-stage history pages (`site/<stage>-history.html`) show:
+
+* live Swiss standings, the last scraped matches, the data source and the last-updated time;
+* the **original vs current** probabilities side by side, with ▲▼ deltas;
+* a per-team **probability timeline** with each update labelled by its trigger (e.g. "R1: Wildcard beat FaZe");
+* a **picks changed** log, and the **original picks graded** against actual outcomes as the stage resolves.
+
+```bash
+make live    # cs2pickem live update
+make site    # cs2pickem site build  → site/index.html
+```
+
+## Backtests
+
+`cs2pickem backtest run` replays the **StarLadder Budapest Major 2025** and the **IEM Cologne Major 2026** using only
+information available before each stage began: the VRS file dated just before the event, the HLTV ranking from
+that date, and match history cut off at the stage start (no leakage). Actual results are snapshotted in
+`data/backtests/<major>/actual.yaml`; the configs live in `configs/budapest2025/` and `configs/cologne2026/`.
+For every stage it records the Pick'Em picks and how many were right, the per-match Brier score / log-loss,
+a reliability table and P(3-0)/P(adv)/P(0-3) vs reality, and compares the model with VRS-seed-only and coin-flip
+baselines. The results are in `site/backtest.html`.
+
+| event (20k sims) | model Brier | VRS-only Brier | coin flip | model log-loss | match accuracy | Pick'Em coins (model / VRS-only) |
+|---|---|---|---|---|---|---|
+| Budapest 2025 | **0.248** | 0.250 | 0.250 | 0.699 | 61.3% | 2/3 (S1 5, S2 4, S3 5 of 10) / 3/3 |
+| Cologne 2026 | **0.229** | 0.234 | 0.250 | 0.654 | 62.3% | 1/3 (S1 4, S2 5, S3 1 of 10) / 1/3 |
+
+The edge over seeding alone is real but small; CS2 Swiss Bo1s are noisy. Treat the picks as an informed baseline.
 
 ## Animated visualisation
 
@@ -92,7 +149,8 @@ On screen you get:
 Controls are play/pause (space), step one run (→), fast-forward to N, reset and a speed slider.
 URL flags: `?ff` jumps straight to the converged state and `?paused` disables autoplay.
 Recorded live results (`data/results/<stage>.yaml`) are respected: those matches are fixed in every run and marked ✓.
-`site/stage1.html` and `site/playoffs.html` are committed as a demo. `.github/workflows/pages.yml` can publish `site/` via GitHub Pages; enable it under Settings → Pages → Source: GitHub Actions.
+The whole `site/` folder is committed and published at <https://ivan-penchev.github.io/cs2-pickem/> by
+`.github/workflows/pages.yml` (on pushes to `main` that touch `site/`) and by `live.yml` after each update.
 
 ## Swiss rules implemented (Valve Major Supplemental Rulebook)
 

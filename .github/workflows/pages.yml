@@ -1,6 +1,7 @@
 name: Pages
 
-# Publishes the committed site/ folder (cs2pickem animate output) to GitHub Pages.
+# Publishes the committed site/ folder (cs2pickem site build output) to GitHub Pages.
+# live.yml deploys on its own after bot commits (GITHUB_TOKEN pushes don't trigger workflows).
 # Enable it under Settings → Pages → Source: "GitHub Actions".
 on:
   push:

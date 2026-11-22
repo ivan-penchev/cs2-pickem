@@ -33,5 +33,11 @@ animate:
 backtest:
 	$(PY) -m cs2pickem.cli backtest run
 
+live:
+	$(PY) -m cs2pickem.cli live update
+
+site:
+	$(PY) -m cs2pickem.cli site build
+
 lock:
 	$(PY) -m pip freeze --exclude-editable | grep -v '^-e' > requirements.lock

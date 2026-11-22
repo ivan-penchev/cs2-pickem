@@ -1,0 +1,118 @@
+name: Live
+
+# Hourly during the Major: scrape finished matches (HLTV → Liquipedia → DFRAG), append to
+# data/results/, re-run predictions (append-only data/predictions/ log), rebuild site/,
+# commit back to main and redeploy Pages. Outside the event window the gate job exits in seconds.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run even outside the event window and rebuild the site"
+        type: boolean
+        default: false
+      event:
+        description: "Event config (configs/<event>)"
+        type: string
+        default: singapore2026
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: live
+  cancel-in-progress: false
+
+env:
+  EVENT: ${{ inputs.event || 'singapore2026' }}
+  FORCE: ${{ inputs.force && 'true' || 'false' }}
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      go: ${{ steps.check.outputs.go }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: configs
+      - id: check
+        name: Inside event window? (stdlib only, no install)
+        run: |
+          python3 - <<'PY'
+          import datetime as dt, os, re, pathlib
+          txt = pathlib.Path(f"configs/{os.environ['EVENT']}/event.yaml").read_text()
+          get = lambda k: dt.date.fromisoformat(re.search(rf"^{k}:\s*'?([\d-]+)", txt, re.M).group(1))
+          today, slack = dt.date.today(), dt.timedelta(days=1)
+          go = os.environ["FORCE"] == "true" or get("start") - slack <= today <= get("end") + slack
+          msg = f"{today}: window {get('start')} … {get('end')} → {'run' if go else 'skip'}"
+          print(msg)
+          open(os.environ["GITHUB_OUTPUT"], "a").write(f"go={'true' if go else 'false'}\n")
+          open(os.environ["GITHUB_STEP_SUMMARY"], "a").write(f"### Live gate\n\n{msg}\n")
+          PY
+
+  update:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    outputs:
+      pushed: ${{ steps.commit.outputs.pushed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install -U pip
+          python -m pip install -e '.[scrape]'
+          python -m playwright install --with-deps chromium || echo "::warning::Playwright install failed; HLTV source disabled"
+      - id: upd
+        name: Scrape results (fail-soft)
+        run: cs2pickem live update --event "$EVENT" $([ "$FORCE" = true ] && echo --force)
+      - name: Re-run predictions and rebuild site
+        if: steps.upd.outputs.changed == 'true' || env.FORCE == 'true'
+        run: cs2pickem site build --event "$EVENT"
+      - id: commit
+        name: Commit data + site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/results data/predictions configs site
+          if git diff --cached --quiet; then
+            echo "nothing to commit"; echo "pushed=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          git commit -q -m "live: update results and predictions [skip ci]"
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && break
+            sleep $((i * 5))
+          done
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+          echo "Committed $(git rev-parse --short HEAD)" >> "$GITHUB_STEP_SUMMARY"
+
+  # Pushes made with GITHUB_TOKEN don't trigger pages.yml, so deploy from here.
+  deploy:
+    needs: update
+    if: needs.update.outputs.pushed == 'true' || inputs.force
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
