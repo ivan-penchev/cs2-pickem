@@ -515,8 +515,43 @@ def live_update(
         return
     console.print(rep.markdown())
     _gh_summary(rep.markdown())
+    if rep.ran:
+        from .site.build import write_status
+
+        srcs = [u.source for u in rep.stages if u.source]
+        write_status(
+            srcs[-1] if srcs else None, [c for u in rep.stages for c in u.changes], rep.ran, rep.reason
+        )
     _gh_output("changed", "true" if rep.changed else "false")
     _gh_output("ran", "true" if rep.ran else "false")
+
+
+@site_app.command("build")
+def site_build(
+    event: EventOpt = None,
+    sims: SimsOpt = None,
+    runs: Annotated[int, typer.Option("--runs", help="Full simulated runs to embed per stage.")] = 300,
+    out: Annotated[Path | None, typer.Option("--out", "-o", help="Output dir (default site/).")] = None,
+    no_record: Annotated[
+        bool, typer.Option("--no-record", help="Don't append to the prediction history.")
+    ] = False,
+    today: Annotated[str | None, typer.Option("--today", help="Pretend today is YYYY-MM-DD.")] = None,
+) -> None:
+    """Re-run every stage, append changed predictions to data/predictions/, and rebuild site/."""
+    from datetime import date
+
+    from .site.build import build
+
+    idx = build(
+        _event(event),
+        n_sims=sims,
+        n_runs=runs,
+        out_dir=out,
+        record=not no_record,
+        today=date.fromisoformat(today) if today else None,
+        log=lambda m: console.print(f"[dim]{m}[/]"),
+    )
+    console.print(f"[green]site ready:[/] {idx}")
 
 
 # ------------------------------------------------------------------------------------------ animate
