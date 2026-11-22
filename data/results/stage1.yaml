@@ -1,0 +1,34 @@
+# Stage 1 results – edit by hand or use `cs2pickem result add`
+matches:
+- round: 1
+  a: HEROIC
+  b: Imperial
+  winner: null
+- round: 1
+  a: 9z
+  b: Lynn Vision
+  winner: null
+- round: 1
+  a: Ninjas in Pyjamas
+  b: M80
+  winner: null
+- round: 1
+  a: 100 Thieves
+  b: Chinggis Warriors
+  winner: null
+- round: 1
+  a: PARIVISION
+  b: DENDELE
+  winner: null
+- round: 1
+  a: Liquid
+  b: GOSH
+  winner: null
+- round: 1
+  a: FaZe
+  b: Wildcard
+  winner: null
+- round: 1
+  a: Eternal Fire
+  b: FlyQuest
+  winner: null
