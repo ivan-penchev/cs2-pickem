@@ -15,20 +15,84 @@ matches:
 - round: 1
   a: 100 Thieves
   b: Chinggis Warriors
-  winner: null
+  winner: 100 Thieves
 - round: 1
   a: PARIVISION
   b: DENDELE
-  winner: null
+  winner: PARIVISION
 - round: 1
   a: Liquid
   b: GOSH
-  winner: null
+  winner: Liquid
 - round: 1
   a: FaZe
   b: Wildcard
-  winner: null
+  winner: Wildcard
 - round: 1
   a: Eternal Fire
   b: FlyQuest
+  winner: FlyQuest
+- round: 2
+  a: HEROIC
+  b: Chinggis Warriors
+  winner: HEROIC
+- round: 2
+  a: Ninjas in Pyjamas
+  b: Lynn Vision
+  winner: Ninjas in Pyjamas
+- round: 2
+  a: 9z
+  b: M80
+  winner: M80
+- round: 2
+  a: 100 Thieves
+  b: Imperial
+  winner: Imperial
+- round: 2
+  a: Eternal Fire
+  b: DENDELE
+  winner: Eternal Fire
+- round: 2
+  a: PARIVISION
+  b: FlyQuest
+  winner: FlyQuest
+- round: 2
+  a: Liquid
+  b: Wildcard
+  winner: Liquid
+- round: 2
+  a: FaZe
+  b: GOSH
+  winner: FaZe
+- round: 3
+  a: Imperial
+  b: FlyQuest
+  winner: null
+- round: 3
+  a: Ninjas in Pyjamas
+  b: Liquid
+  winner: null
+- round: 3
+  a: HEROIC
+  b: M80
+  winner: null
+- round: 3
+  a: Eternal Fire
+  b: 100 Thieves
+  winner: null
+- round: 3
+  a: Wildcard
+  b: Lynn Vision
+  winner: null
+- round: 3
+  a: PARIVISION
+  b: FaZe
+  winner: null
+- round: 3
+  a: 9z
+  b: DENDELE
+  winner: null
+- round: 3
+  a: GOSH
+  b: Chinggis Warriors
   winner: null

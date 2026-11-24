@@ -1,11 +1,18 @@
 {
- "last_change": "2026-11-24 06:05 UTC",
+ "last_change": "2026-11-24 17:49 UTC",
  "last_changes": [
-  "R1 HEROIC vs Imperial: Imperial won",
-  "R1 9z vs Lynn Vision: Lynn Vision won",
-  "R1 Ninjas in Pyjamas vs M80: Ninjas in Pyjamas won"
+  "R2 Liquid vs Wildcard: Liquid won",
+  "R2 FaZe vs GOSH: FaZe won",
+  "R3 Imperial vs FlyQuest: scheduled",
+  "R3 Ninjas in Pyjamas vs Liquid: scheduled",
+  "R3 HEROIC vs M80: scheduled",
+  "R3 Eternal Fire vs 100 Thieves: scheduled",
+  "R3 Wildcard vs Lynn Vision: scheduled",
+  "R3 PARIVISION vs FaZe: scheduled",
+  "R3 9z vs DENDELE: scheduled",
+  "R3 GOSH vs Chinggis Warriors: scheduled"
  ],
- "last_check": "2026-11-24 06:05 UTC",
+ "last_check": "2026-11-24 17:49 UTC",
  "last_reason": "2026-11-24: stages stage1",
  "ran": true,
  "source": "hltv"
