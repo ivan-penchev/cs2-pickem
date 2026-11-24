@@ -1,0 +1,318 @@
+{
+ "schema": 1,
+ "stage": "stage1",
+ "stage_name": "Stage 1",
+ "type": "swiss",
+ "teams_from": "config",
+ "n_sims": 100000,
+ "teams": [
+  {
+   "name": "Ninjas in Pyjamas",
+   "tag": "NIP",
+   "colour": "#ff4655",
+   "seed": 1
+  },
+  {
+   "name": "PARIVISION",
+   "tag": "PARI",
+   "colour": "#3fa9f5",
+   "seed": 2
+  },
+  {
+   "name": "HEROIC",
+   "tag": "HER",
+   "colour": "#f5b400",
+   "seed": 3
+  },
+  {
+   "name": "FaZe",
+   "tag": "FAZE",
+   "colour": "#22d3a6",
+   "seed": 4
+  },
+  {
+   "name": "Liquid",
+   "tag": "TL",
+   "colour": "#a66bff",
+   "seed": 5
+  },
+  {
+   "name": "Eternal Fire",
+   "tag": "EF",
+   "colour": "#ff8a3d",
+   "seed": 6
+  },
+  {
+   "name": "100 Thieves",
+   "tag": "100T",
+   "colour": "#4ade80",
+   "seed": 7
+  },
+  {
+   "name": "9z",
+   "tag": "9Z",
+   "colour": "#ec4899",
+   "seed": 8
+  },
+  {
+   "name": "M80",
+   "tag": "M80",
+   "colour": "#06b6d4",
+   "seed": 9
+  },
+  {
+   "name": "DENDELE",
+   "tag": "DEN",
+   "colour": "#eab308",
+   "seed": 10
+  },
+  {
+   "name": "Imperial",
+   "tag": "IMP",
+   "colour": "#8b5cf6",
+   "seed": 11
+  },
+  {
+   "name": "Wildcard",
+   "tag": "WC",
+   "colour": "#f97316",
+   "seed": 12
+  },
+  {
+   "name": "GOSH",
+   "tag": "GOSH",
+   "colour": "#14b8a6",
+   "seed": 13
+  },
+  {
+   "name": "FlyQuest",
+   "tag": "FLY",
+   "colour": "#ef4444",
+   "seed": 14
+  },
+  {
+   "name": "Chinggis Warriors",
+   "tag": "CW",
+   "colour": "#60a5fa",
+   "seed": 15
+  },
+  {
+   "name": "Lynn Vision",
+   "tag": "LVG",
+   "colour": "#84cc16",
+   "seed": 16
+  }
+ ],
+ "metrics": [
+  {
+   "label": "P(3-0)",
+   "colour": "#f5b400",
+   "values": [
+    0.3586,
+    0.18042,
+    0.0,
+    0.21252,
+    0.17833,
+    0.16186,
+    0.16494,
+    0.0,
+    0.0,
+    0.09727,
+    0.25451,
+    0.06539,
+    0.04651,
+    0.09799,
+    0.04073,
+    0.14093
+   ]
+  },
+  {
+   "label": "P(advance)",
+   "colour": "#22d3a6",
+   "values": [
+    0.43915,
+    0.43945,
+    0.62739,
+    0.45305,
+    0.42168,
+    0.4453,
+    0.40432,
+    0.29746,
+    0.37097,
+    0.33082,
+    0.45405,
+    0.25027,
+    0.19895,
+    0.35322,
+    0.17322,
+    0.3407
+   ]
+  },
+  {
+   "label": "P(0-3)",
+   "colour": "#ff4655",
+   "values": [
+    0.0,
+    0.07507,
+    0.08974,
+    0.06241,
+    0.07508,
+    0.08213,
+    0.08325,
+    0.23846,
+    0.21212,
+    0.15083,
+    0.0,
+    0.21059,
+    0.2687,
+    0.15144,
+    0.30018,
+    0.0
+   ]
+  }
+ ],
+ "picks": [
+  {
+   "group": "3-0",
+   "team": "Ninjas in Pyjamas",
+   "cats": [
+    0
+   ]
+  },
+  {
+   "group": "3-0",
+   "team": "Imperial",
+   "cats": [
+    0
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "HEROIC",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "FaZe",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "Eternal Fire",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "PARIVISION",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "Liquid",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "100 Thieves",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "0-3",
+   "team": "Chinggis Warriors",
+   "cats": [
+    5
+   ]
+  },
+  {
+   "group": "0-3",
+   "team": "GOSH",
+   "cats": [
+    5
+   ]
+  }
+ ],
+ "cats": [
+  "3-0",
+  "3-1",
+  "3-2",
+  "2-3",
+  "1-3",
+  "0-3"
+ ],
+ "threshold": 5,
+ "p_threshold": 0.35198,
+ "expected": 3.9732,
+ "n_picks": 10,
+ "known": [
+  {
+   "round": 1,
+   "a": "HEROIC",
+   "b": "Imperial",
+   "winner": "Imperial"
+  },
+  {
+   "round": 1,
+   "a": "9z",
+   "b": "Lynn Vision",
+   "winner": "Lynn Vision"
+  },
+  {
+   "round": 1,
+   "a": "Ninjas in Pyjamas",
+   "b": "M80",
+   "winner": "Ninjas in Pyjamas"
+  },
+  {
+   "round": 1,
+   "a": "100 Thieves",
+   "b": "Chinggis Warriors",
+   "winner": null
+  },
+  {
+   "round": 1,
+   "a": "PARIVISION",
+   "b": "DENDELE",
+   "winner": null
+  },
+  {
+   "round": 1,
+   "a": "Liquid",
+   "b": "GOSH",
+   "winner": null
+  },
+  {
+   "round": 1,
+   "a": "FaZe",
+   "b": "Wildcard",
+   "winner": null
+  },
+  {
+   "round": 1,
+   "a": "Eternal Fire",
+   "b": "FlyQuest",
+   "winner": null
+  }
+ ],
+ "source": "hltv",
+ "ts": "2026-11-24T06:06:00Z",
+ "baseline": false,
+ "trigger": "R1: Imperial beat HEROIC; R1: Lynn Vision beat 9z; R1: Ninjas in Pyjamas beat M80"
+}

@@ -3,15 +3,15 @@ matches:
 - round: 1
   a: HEROIC
   b: Imperial
-  winner: null
+  winner: Imperial
 - round: 1
   a: 9z
   b: Lynn Vision
-  winner: null
+  winner: Lynn Vision
 - round: 1
   a: Ninjas in Pyjamas
   b: M80
-  winner: null
+  winner: Ninjas in Pyjamas
 - round: 1
   a: 100 Thieves
   b: Chinggis Warriors
