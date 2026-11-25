@@ -67,7 +67,7 @@ matches:
 - round: 3
   a: Imperial
   b: FlyQuest
-  winner: null
+  winner: FlyQuest
 - round: 3
   a: Ninjas in Pyjamas
   b: Liquid
@@ -75,23 +75,23 @@ matches:
 - round: 3
   a: HEROIC
   b: M80
-  winner: null
+  winner: M80
 - round: 3
   a: Eternal Fire
   b: 100 Thieves
-  winner: null
+  winner: Eternal Fire
 - round: 3
   a: Wildcard
   b: Lynn Vision
-  winner: null
+  winner: Lynn Vision
 - round: 3
   a: PARIVISION
   b: FaZe
-  winner: null
+  winner: PARIVISION
 - round: 3
   a: 9z
   b: DENDELE
-  winner: null
+  winner: 9z
 - round: 3
   a: GOSH
   b: Chinggis Warriors
