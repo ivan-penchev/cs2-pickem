@@ -95,4 +95,28 @@ matches:
 - round: 3
   a: GOSH
   b: Chinggis Warriors
+  winner: Chinggis Warriors
+- round: 4
+  a: M80
+  b: Eternal Fire
+  winner: null
+- round: 4
+  a: Lynn Vision
+  b: PARIVISION
+  winner: null
+- round: 4
+  a: Imperial
+  b: Liquid
+  winner: null
+- round: 4
+  a: HEROIC
+  b: FaZe
+  winner: null
+- round: 4
+  a: 100 Thieves
+  b: 9z
+  winner: null
+- round: 4
+  a: Wildcard
+  b: Chinggis Warriors
   winner: null
