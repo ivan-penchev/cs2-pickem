@@ -1,15 +1,10 @@
 {
- "last_change": "2026-11-25 11:30 UTC",
+ "last_change": "2026-11-25 13:00 UTC",
  "last_changes": [
-  "R3 Eternal Fire vs 100 Thieves: Eternal Fire won",
-  "R3 HEROIC vs M80: M80 won",
-  "R3 Wildcard vs Lynn Vision: Lynn Vision won",
-  "R3 PARIVISION vs FaZe: PARIVISION won",
-  "R3 9z vs DENDELE: 9z won",
-  "R3 Imperial vs FlyQuest: FlyQuest won"
+  "R3 Ninjas in Pyjamas vs Liquid: Ninjas in Pyjamas won"
  ],
- "last_check": "2026-11-25 12:23 UTC",
+ "last_check": "2026-11-25 13:00 UTC",
  "last_reason": "2026-11-25: stages stage1",
  "ran": true,
- "source": "liquipedia"
+ "source": "hltv"
 }

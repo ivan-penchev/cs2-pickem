@@ -71,7 +71,7 @@ matches:
 - round: 3
   a: Ninjas in Pyjamas
   b: Liquid
-  winner: null
+  winner: Ninjas in Pyjamas
 - round: 3
   a: HEROIC
   b: M80
