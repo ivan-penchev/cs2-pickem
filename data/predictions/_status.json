@@ -1,15 +1,10 @@
 {
- "last_change": "2026-11-25 15:31 UTC",
+ "last_change": "2026-11-26 10:25 UTC",
  "last_changes": [
-  "R3 GOSH vs Chinggis Warriors: Chinggis Warriors won",
-  "R4 M80 vs Eternal Fire: scheduled",
-  "R4 Lynn Vision vs PARIVISION: scheduled",
-  "R4 Imperial vs Liquid: scheduled",
-  "R4 HEROIC vs FaZe: scheduled",
-  "R4 100 Thieves vs 9z: scheduled",
-  "R4 Wildcard vs Chinggis Warriors: scheduled"
+  "R4 M80 vs Eternal Fire: Eternal Fire won",
+  "R4 HEROIC vs FaZe: HEROIC won"
  ],
- "last_check": "2026-11-26 05:07 UTC",
+ "last_check": "2026-11-26 10:25 UTC",
  "last_reason": "2026-11-26: stages stage1",
  "ran": true,
  "source": "hltv"
