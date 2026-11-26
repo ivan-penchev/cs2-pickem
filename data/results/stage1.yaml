@@ -103,11 +103,11 @@ matches:
 - round: 4
   a: Lynn Vision
   b: PARIVISION
-  winner: null
+  winner: PARIVISION
 - round: 4
   a: Imperial
   b: Liquid
-  winner: null
+  winner: Liquid
 - round: 4
   a: HEROIC
   b: FaZe
@@ -115,7 +115,7 @@ matches:
 - round: 4
   a: 100 Thieves
   b: 9z
-  winner: null
+  winner: 100 Thieves
 - round: 4
   a: Wildcard
   b: Chinggis Warriors
