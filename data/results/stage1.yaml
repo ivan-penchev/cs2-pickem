@@ -127,8 +127,8 @@ matches:
 - round: 5
   a: M80
   b: 100 Thieves
-  winner: null
+  winner: 100 Thieves
 - round: 5
   a: Imperial
   b: Wildcard
-  winner: null
+  winner: Imperial

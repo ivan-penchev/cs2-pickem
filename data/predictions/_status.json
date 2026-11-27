@@ -1,10 +1,12 @@
 {
- "last_change": "2026-11-27 09:42 UTC",
+ "last_change": "2026-11-27 17:38 UTC",
  "last_changes": [
-  "R5 Lynn Vision vs HEROIC: Lynn Vision won"
+  "R5 Imperial vs Wildcard: Imperial won",
+  "R5 M80 vs 100 Thieves: 100 Thieves won",
+  "stage2 seeds set from results: FUT, Nemiga, G2, 1win, Natus Vincere, Astralis, The MongolZ, MIBR, FlyQuest, Ninjas in Pyjamas, Liquid, Eternal Fire, PARIVISION, Imperial, Lynn Vision, 100 Thieves"
  ],
- "last_check": "2026-11-27 09:42 UTC",
+ "last_check": "2026-11-27 17:38 UTC",
  "last_reason": "2026-11-27: stages stage1, stage2",
  "ran": true,
- "source": "hltv"
+ "source": "dfrag"
 }

@@ -1,0 +1,269 @@
+{
+ "schema": 1,
+ "stage": "stage2",
+ "stage_name": "Stage 2",
+ "type": "swiss",
+ "teams_from": "config",
+ "n_sims": 100000,
+ "teams": [
+  {
+   "name": "FUT",
+   "tag": "FUT",
+   "colour": "#ff4655",
+   "seed": 1
+  },
+  {
+   "name": "Nemiga",
+   "tag": "NEM",
+   "colour": "#3fa9f5",
+   "seed": 2
+  },
+  {
+   "name": "G2",
+   "tag": "G2",
+   "colour": "#f5b400",
+   "seed": 3
+  },
+  {
+   "name": "1win",
+   "tag": "1WIN",
+   "colour": "#22d3a6",
+   "seed": 4
+  },
+  {
+   "name": "Natus Vincere",
+   "tag": "NAVI",
+   "colour": "#a66bff",
+   "seed": 5
+  },
+  {
+   "name": "Astralis",
+   "tag": "AST",
+   "colour": "#ff8a3d",
+   "seed": 6
+  },
+  {
+   "name": "The MongolZ",
+   "tag": "MGLZ",
+   "colour": "#4ade80",
+   "seed": 7
+  },
+  {
+   "name": "MIBR",
+   "tag": "MIBR",
+   "colour": "#ec4899",
+   "seed": 8
+  },
+  {
+   "name": "FlyQuest",
+   "tag": "FLY",
+   "colour": "#06b6d4",
+   "seed": 9
+  },
+  {
+   "name": "Ninjas in Pyjamas",
+   "tag": "NIP",
+   "colour": "#eab308",
+   "seed": 10
+  },
+  {
+   "name": "Liquid",
+   "tag": "TL",
+   "colour": "#8b5cf6",
+   "seed": 11
+  },
+  {
+   "name": "Eternal Fire",
+   "tag": "EF",
+   "colour": "#f97316",
+   "seed": 12
+  },
+  {
+   "name": "PARIVISION",
+   "tag": "PARI",
+   "colour": "#14b8a6",
+   "seed": 13
+  },
+  {
+   "name": "Imperial",
+   "tag": "IMP",
+   "colour": "#ef4444",
+   "seed": 14
+  },
+  {
+   "name": "Lynn Vision",
+   "tag": "LVG",
+   "colour": "#60a5fa",
+   "seed": 15
+  },
+  {
+   "name": "100 Thieves",
+   "tag": "100T",
+   "colour": "#84cc16",
+   "seed": 16
+  }
+ ],
+ "metrics": [
+  {
+   "label": "P(3-0)",
+   "colour": "#f5b400",
+   "values": [
+    0.33971,
+    0.22831,
+    0.13208,
+    0.14097,
+    0.13515,
+    0.12785,
+    0.16314,
+    0.13269,
+    0.05396,
+    0.09123,
+    0.10664,
+    0.09748,
+    0.08639,
+    0.06992,
+    0.02948,
+    0.065
+   ]
+  },
+  {
+   "label": "P(advance)",
+   "colour": "#22d3a6",
+   "values": [
+    0.49707,
+    0.48714,
+    0.4253,
+    0.43207,
+    0.40289,
+    0.40239,
+    0.42316,
+    0.42054,
+    0.26912,
+    0.37506,
+    0.36139,
+    0.36506,
+    0.36414,
+    0.30567,
+    0.16134,
+    0.30766
+   ]
+  },
+  {
+   "label": "P(0-3)",
+   "colour": "#ff4655",
+   "values": [
+    0.02559,
+    0.04931,
+    0.09071,
+    0.08543,
+    0.0922,
+    0.10198,
+    0.07694,
+    0.09049,
+    0.2103,
+    0.13766,
+    0.1211,
+    0.13365,
+    0.13678,
+    0.16646,
+    0.29762,
+    0.18378
+   ]
+  }
+ ],
+ "picks": [
+  {
+   "group": "3-0",
+   "team": "FUT",
+   "cats": [
+    0
+   ]
+  },
+  {
+   "group": "3-0",
+   "team": "Nemiga",
+   "cats": [
+    0
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "1win",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "G2",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "The MongolZ",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "MIBR",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "Natus Vincere",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "3-1/3-2",
+   "team": "Astralis",
+   "cats": [
+    1,
+    2
+   ]
+  },
+  {
+   "group": "0-3",
+   "team": "Lynn Vision",
+   "cats": [
+    5
+   ]
+  },
+  {
+   "group": "0-3",
+   "team": "FlyQuest",
+   "cats": [
+    5
+   ]
+  }
+ ],
+ "cats": [
+  "3-0",
+  "3-1",
+  "3-2",
+  "2-3",
+  "1-3",
+  "0-3"
+ ],
+ "threshold": 5,
+ "p_threshold": 0.25759,
+ "expected": 3.5823,
+ "n_picks": 10,
+ "known": [],
+ "source": "dfrag",
+ "ts": "2026-11-27T17:38:38Z",
+ "baseline": true,
+ "trigger": "pre-stage baseline"
+}
