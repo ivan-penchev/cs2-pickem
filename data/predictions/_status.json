@@ -1,12 +1,15 @@
 {
- "last_change": "2026-11-27 17:38 UTC",
+ "last_change": "2026-11-27 18:42 UTC",
  "last_changes": [
-  "R5 Imperial vs Wildcard: Imperial won",
-  "R5 M80 vs 100 Thieves: 100 Thieves won",
-  "stage2 seeds set from results: FUT, Nemiga, G2, 1win, Natus Vincere, Astralis, The MongolZ, MIBR, FlyQuest, Ninjas in Pyjamas, Liquid, Eternal Fire, PARIVISION, Imperial, Lynn Vision, 100 Thieves"
+  "R1 FUT vs FlyQuest: scheduled",
+  "R1 The MongolZ vs Lynn Vision: scheduled",
+  "R1 Astralis vs Imperial: scheduled",
+  "R1 G2 vs Liquid: scheduled",
+  "R1 Natus Vincere vs PARIVISION: scheduled",
+  "R1 MIBR vs 100 Thieves: scheduled"
  ],
- "last_check": "2026-11-27 17:38 UTC",
+ "last_check": "2026-11-27 18:42 UTC",
  "last_reason": "2026-11-27: stages stage1, stage2",
  "ran": true,
- "source": "dfrag"
+ "source": "liquipedia"
 }

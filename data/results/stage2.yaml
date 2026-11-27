@@ -1,0 +1,26 @@
+# Stage 2 results – edit by hand or use `cs2pickem result add`
+matches:
+- round: 1
+  a: FUT
+  b: FlyQuest
+  winner: null
+- round: 1
+  a: The MongolZ
+  b: Lynn Vision
+  winner: null
+- round: 1
+  a: Astralis
+  b: Imperial
+  winner: null
+- round: 1
+  a: G2
+  b: Liquid
+  winner: null
+- round: 1
+  a: Natus Vincere
+  b: PARIVISION
+  winner: null
+- round: 1
+  a: MIBR
+  b: 100 Thieves
+  winner: null
