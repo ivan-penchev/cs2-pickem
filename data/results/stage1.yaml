@@ -119,7 +119,7 @@ matches:
 - round: 4
   a: Wildcard
   b: Chinggis Warriors
-  winner: null
+  winner: Wildcard
 - round: 5
   a: Lynn Vision
   b: HEROIC
@@ -127,4 +127,8 @@ matches:
 - round: 5
   a: M80
   b: 100 Thieves
+  winner: null
+- round: 5
+  a: Imperial
+  b: Wildcard
   winner: null

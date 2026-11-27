@@ -1,11 +1,11 @@
 {
- "last_change": "2026-11-26 15:21 UTC",
+ "last_change": "2026-11-27 00:37 UTC",
  "last_changes": [
-  "R5 Lynn Vision vs HEROIC: scheduled",
-  "R5 M80 vs 100 Thieves: scheduled"
+  "R4 Wildcard vs Chinggis Warriors: Wildcard won",
+  "R5 Imperial vs Wildcard: scheduled"
  ],
- "last_check": "2026-11-26 15:21 UTC",
- "last_reason": "2026-11-26: stages stage1",
+ "last_check": "2026-11-27 00:37 UTC",
+ "last_reason": "2026-11-27: stages stage1, stage2",
  "ran": true,
  "source": "hltv"
 }
