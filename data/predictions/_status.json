@@ -1,14 +1,18 @@
 {
- "last_change": "2026-11-27 18:42 UTC",
+ "last_change": "2026-11-28 11:50 UTC",
  "last_changes": [
-  "R1 FUT vs FlyQuest: scheduled",
-  "R1 The MongolZ vs Lynn Vision: scheduled",
-  "R1 Astralis vs Imperial: scheduled",
-  "R1 G2 vs Liquid: scheduled",
-  "R1 Natus Vincere vs PARIVISION: scheduled",
-  "R1 MIBR vs 100 Thieves: scheduled"
+  "R1 Astralis vs Imperial: Astralis won",
+  "R1 G2 vs Liquid: G2 won",
+  "R1 Natus Vincere vs PARIVISION: Natus Vincere won",
+  "R1 MIBR vs 100 Thieves: 100 Thieves won",
+  "R2 G2 vs Ninjas in Pyjamas: G2 won",
+  "R2 FUT vs 100 Thieves: scheduled",
+  "R2 Natus Vincere vs Astralis: scheduled",
+  "R2 Liquid vs Eternal Fire: Liquid won",
+  "R2 MIBR vs Imperial: scheduled",
+  "R2 FlyQuest vs PARIVISION: scheduled"
  ],
- "last_check": "2026-11-28 02:44 UTC",
+ "last_check": "2026-11-28 11:50 UTC",
  "last_reason": "2026-11-28: stages stage1, stage2",
  "ran": true,
  "source": "liquipedia"

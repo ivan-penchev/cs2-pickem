@@ -3,24 +3,48 @@ matches:
 - round: 1
   a: FUT
   b: FlyQuest
-  winner: null
+  winner: FUT
 - round: 1
   a: The MongolZ
   b: Lynn Vision
-  winner: null
+  winner: The MongolZ
 - round: 1
   a: Astralis
   b: Imperial
-  winner: null
+  winner: Astralis
 - round: 1
   a: G2
   b: Liquid
-  winner: null
+  winner: G2
 - round: 1
   a: Natus Vincere
   b: PARIVISION
-  winner: null
+  winner: Natus Vincere
 - round: 1
   a: MIBR
   b: 100 Thieves
+  winner: 100 Thieves
+- round: 2
+  a: G2
+  b: Ninjas in Pyjamas
+  winner: G2
+- round: 2
+  a: FUT
+  b: 100 Thieves
+  winner: null
+- round: 2
+  a: Natus Vincere
+  b: Astralis
+  winner: null
+- round: 2
+  a: Liquid
+  b: Eternal Fire
+  winner: Liquid
+- round: 2
+  a: MIBR
+  b: Imperial
+  winner: null
+- round: 2
+  a: FlyQuest
+  b: PARIVISION
   winner: null
